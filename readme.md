@@ -1,8 +1,16 @@
-# vamos a hacer una pagina de un emprendimiento de distinta ropa 
-# nuestro publico esta destinado a hombres y mujeres entre 15 y 25 años, que tengan un estilo de ropa  moderno  y casual,
-# referentes: paz cornu,wanama,zara,forever 21,hym  y kingofthekongo
-# integrantes: 
-# Julian Viera, 22 años, San José, Entre Ríos, Argentina.
-# Julieta Nuñez
-# Melina Nuñes
-# Benjamin Guerra, 20 años, Mendoza, Argentina.
+# Emprendimiento de Ropa "Zaphir".
+## integrantes:
+- Benjamin Guerra, 20 años, Mendoza, Argentina,
+- Julián Viera, 22 años, San José, Entre Ríos, Argentina.
+- Julieta Nuñez, <!-- completar -->
+- Melina Nuñez, <!-- completar -->
+## Publico Objetivo:
+Este sitio está destinado a Hombres como Mujeres entre 15 y 25 años, que buscan un estilo de ropa moderno, casual y que quieran estar actualizados con moda.
+##  Sitios de Referencias:
+- Paz Cornu
+- Zara
+- Forever 21
+- H y M
+- Kingo of the Kongo
+
+Elegimos estos sitios, porque además de representar nuestro rubro, consideramos que sus estilos son elegantes, modernos, sencillos y que esas caracterissticas se ajustan a nuestro publico objetivo.
