@@ -2,5 +2,5 @@
 
 1. [***TEMÁTICA***](./Documentos/Tematica.md "Archivo de Tematica")
 2. [***REFERENTES***](./Documentos/Referentes.md "Archivo dee Referentes")
-3. [***EQUIPO***](./Documentos/Equipo.md "Archivo dee Equipo")
-4. [***DISEÑO***](./Documentos/dise%C3%B1os/Wireframes "Carpeta de Diseños")
+3. [***EQUIPO***](./Documentos/Equipo.md "Archivo de Equipo")
+4. [***DISEÑO***](./Documentos/Wireframes.md "Archivos Wireframes")
