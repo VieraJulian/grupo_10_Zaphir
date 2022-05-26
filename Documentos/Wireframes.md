@@ -1,6 +1,6 @@
 ### Home
 
-![Image text](Documentos/dise%C3%B1os/Wireframes/Home-1.png)
+![Image text](https://github.com/VieraJulian/grupo_10_Zaphir/blob/mainDocumentos/dise%C3%B1os/Wireframes/Home-1.png)
 ![Image text](Documentos/dise%C3%B1os/Wireframes/Home-2.png)
 ![Image text](Documentos/dise%C3%B1os/Wireframes/Home_3.png)
 ![Image text](Documentos/dise%C3%B1os/Wireframes/Home-4.png)
