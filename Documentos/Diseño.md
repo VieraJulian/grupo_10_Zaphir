@@ -4,3 +4,4 @@ Figma: https://www.figma.com/file/SHtLtym0r6AX9UgFdGSMIv/Grupo_10_Zaphir?node-id
 
 # Logo
 
+![img](/Documentos/dise%C3%B1os/Wireframes/Logo_Zaphir.png)
