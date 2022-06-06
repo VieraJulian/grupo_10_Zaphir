@@ -4,9 +4,9 @@ Elegimos estos sitios porque, además de representar nuestro rubro, consideramos
 
 - Kingo of the Kongo (https://kingofthekongo.com.ar/)
 
-    - Diseño de la barra de navegación, con sus categorias.
+    - Diseño de la barra de navegación, con sus categorías.
     - Barra de búsqueda, iconos de login, crear cuenta, y carrito.
-    - Menú desplegable con las categorias.
+    - Menú desplegable con las categorías.
     - Banner al principio del home.
     - Sección destacados.
     - Footer: categorías, contactános y redes.
@@ -15,8 +15,8 @@ Elegimos estos sitios porque, además de representar nuestro rubro, consideramos
 
 - Paz Cornu (https://www.pazcornu.com.ar/)
 
-    - Diseño para mostrar las categorias en el home.
-    - Logo de whatsapp en la parte inferiro izquierda.
+    - Diseño para mostrar las categorías en el home.
+    - Logo de whatsapp en la parte inferior izquierda.
 
 - Zara (https://www.zara.com/ar/)
 
@@ -24,7 +24,7 @@ Elegimos estos sitios porque, además de representar nuestro rubro, consideramos
 
 - Forever 21 (https://www.forever21.com/)
 
-    - Diseño para el detalle de producto: imagenes, descripción, filtros.
+    - Diseño para el detalle de producto: imágenes, descripción, filtros.
 
 - H y M (https://www2.hm.com/es_es/index.html/)
 
