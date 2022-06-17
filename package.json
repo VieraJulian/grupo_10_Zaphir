@@ -4,7 +4,8 @@
   "description": "1. [***TEMÁTICA***](./Documentos/Tematica.md \"Archivo de Tematica\")\r 2. [***REFERENTES***](./Documentos/Referentes.md \"Archivo dee Referentes\")\r 3. [***EQUIPO***](./Documentos/Equipo.md \"Archivo de Equipo\")\r 4. [***DISEÑO***](./Documentos/Diseño.md \"Archivos Wireframes\")",
   "main": "app.js",
   "scripts": {
-    "test": "node source/app.js"
+    "test": "node source/app.js",
+    "start": "node source/app.js"
   },
   "repository": {
     "type": "git",
