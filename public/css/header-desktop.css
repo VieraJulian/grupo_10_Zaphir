@@ -1,13 +1,13 @@
 @media (min-width: 1024px){
-    header .header-logo a{
+    .header-logo a{
         margin-left: 25px;
     }
-    header .header-icon{
+    .header-icon{
         margin-right: 25px;
     }
 }
 @media (min-width: 1280px){
-    header .header-logo a img{
+    .header-logo a img{
         position: absolute;
         width: 80px;
         height: 80px;
