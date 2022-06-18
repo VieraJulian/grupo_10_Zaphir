@@ -24,6 +24,10 @@ header{
     width: 33.3%;
     justify-content: center;
 }
+.header-logo a{
+    width: 64px;
+    height: 64px;
+}
 .header-logo img{
     width: 64px;
     height: 64px;
@@ -118,8 +122,4 @@ header{
 ::placeholder{
     color: #000;
     font-family: 'Montserrat', sans-serif;
-}
-
-@media screen and (min-width: 400px) {
-
 }
