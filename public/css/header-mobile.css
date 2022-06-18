@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 8px 8px;
+    justify-content: space-between;
+    border-bottom: 1px solid #909090;
+    position: fixed;
+    background-color: #FEFEFE;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    padding-bottom: 22px;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    width: 33.3%;
+    justify-content: center;
+}
+.header-logo img{
+    width: 64px;
+    height: 64px;
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+}
+.header-bottom{
+    order: 2;
+}
+.header-form{
+    order: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+}
+.header-form form{
+    width: 90%;
+    position: absolute;
+    bottom: -13px;
+}
+.header-form fieldset input{
+    width: 100%;
+    height: 27px;
+    border: none;
+    border-radius: 1px;
+    padding: 4px 8px;
+    outline: none;
+    top: 0;
+    right: 0;
+    border: 1px solid #909090;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.header-form fieldset{
+    display: flex;
+    border: none;
+    position: relative;
+}
+.header-form button{
+    background-color: #fff;
+    border: 1px solid #909090;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-left: none;
+    
+}
+.lupa{
+    color: #000;
+    padding: 6px;
+    top: 4px;
+    right: 2px;
+    background-color: #fff;
+}
+.header-bars{
+    display: flex;
+    align-items: center;
+    width: 33.3%;
+    justify-content: start;
+}
+.header-bars a{
+    color: #000;
+    font-size: 25px;
+    margin: 10px 10px 10px 18px;
+}
+.header-icon{
+    display: flex;
+    align-items: center;
+    width: 33.3%;
+    justify-content: end;
+}
+.header-icon nav{
+    margin-right: 10px;
+}
+.header-icon a{
+    color: #000;
+    font-size: 20px;
+}
+.user{
+    margin-right: 3px;
+}
+.heart{
+    margin-right: 4px;
+}
+.header-bottom{
+    display: none;
+}
+::placeholder{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 400px) {
+
+}

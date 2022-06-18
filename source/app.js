@@ -9,3 +9,5 @@ const public = path.resolve(__dirname, '../public');
 app.use(express.static(public));
 
 app.get("/", (req, res) => res.sendFile(path.resolve(__dirname, "views/home.html")));
+
+app.get("/header", (req, res) => res.sendFile(path.resolve(__dirname, "views/header-mobile.html")));
