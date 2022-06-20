@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 140px;
+    width: 100%;
+}
+.imagenes-pequeñas{
+    display: none;
+}
+.img-principal{
+    order: -2;
+    width: 100%;
+}
+.img-principal figure{
+    padding: 12px 12px 0;
+}
+.img-principal img{
+    width: 100%;
+}
+.info{
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+}
+.info h2{
+    text-align: start;
+    margin: 0px 5px;
+    font-size: 22px;
+    width: 80%;
+}
+.precio{
+    width: 100%;
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.descuento{
+    margin-left: 5px;
+}
+.precio1{
+    text-decoration: line-through;
+}
+.descripcion{
+    order: 1;
+}
+.boton-carrito{
+    order: 2;
+}
+.colores{
+   padding: 10px;
+   width: 100%;
+   border-top: 1px solid #909090;
+   margin: 10px 0 0;
+}
+.colores button{
+    margin-right: 8px;
+    padding: 2px 2px 0;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #909090;
+    
+}
+.colores button img{
+    border: 1px solid #909090;
+}
+.talles{
+    width: 100%;
+    padding: 10px;
+}
+.talles button{
+    margin-right: 8px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border: 1px solid #909090;
+}
+.quantity{
+    width: 100%;
+    padding: 10px;
+}
+.quantity p{
+    width: 100%;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+.quantity select{
+    width: 100px;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+.detalle-titulo{
+    padding: 10px 10px 0;
+    font-weight: 600;
+}
+.detalle{
+    text-align: justify;
+    padding: 10px
+}
+.boton-carrito{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    padding: 10px 5px;
+}
+.boton-carrito button{
+    width: 100%;
+    height: 40px;
+    background-color: #d9d9d9;
+    border: none;
+    font-weight: 600;
+}
+.boton-carrito nav{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-carrito nav a{
+    color: red;
+}
+.corazon{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart2{
+    color: red;
+    font-size: 20px;
+}
+@media screen and (min-width: 600px) {
+    .heart2{
+        font-size: 25px;
+    }
+}

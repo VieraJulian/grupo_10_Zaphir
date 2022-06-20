@@ -14,8 +14,7 @@ header{
     position: fixed;
     background-color: #FEFEFE;
     z-index: 9;
-    top: 0;
-    left: 0;
+    top: 0px;
     padding-bottom: 22px;
 }
 .header-logo{
