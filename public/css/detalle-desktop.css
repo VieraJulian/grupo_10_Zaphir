@@ -1,0 +1,50 @@
+@media (min-width: 1024px) {
+    main{
+        justify-content: space-evenly;
+    }
+    .img-principal figure{
+        padding: 0;
+    }
+    .imagenes-pequeñas{
+        display: flex;
+        flex-wrap: wrap;
+        order: -2;
+        width: 30%;
+        margin: 10px;
+        justify-content: space-between;
+        
+    }
+    .descripcion1{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+    }
+    .imagenes-pequeñas figure{
+        width: 30%;
+        height: 40%;
+        margin: 5px;
+    }
+    .imagenes-pequeñas figure img{
+        width: 100%;
+    }
+    .descripcion{
+        display: none;
+    }
+    .img-principal{
+        width: 30%;
+    }
+    .section-right{
+        width: 30%;
+    }
+    .detalle-titulo{
+        margin-top: 0;
+    }
+    .section-descripcion1{
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        height: 40%;
+    }
+}
