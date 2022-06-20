@@ -37,6 +37,32 @@ header{
 .header-bottom{
     order: 2;
 }
+.navbar-main{
+    display: none;
+}
+#menu-1{
+    display: none;
+}
+#menu-1 a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    border-top: 1px solid #909090;
+}
+#menu-1:target{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FEFEFE;
+    border: 1px solid #909090;
+    width: 80%;
+}
+.fa-x{
+    padding: 10px 0;
+    width: 100%;
+}
 .header-form{
     order: 1;
     display: flex;
@@ -114,9 +140,6 @@ header{
 }
 .heart{
     margin-right: 4px;
-}
-.header-bottom{
-    display: none;
 }
 ::placeholder{
     color: #000;
