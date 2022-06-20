@@ -36,6 +36,7 @@ main{
     margin: 0px 5px;
     font-size: 22px;
     width: 80%;
+    align-self: center;
 }
 .precio{
     width: 100%;
@@ -108,14 +109,39 @@ main{
     text-align: justify;
     padding: 10px
 }
-.boton-carrito{
+.boton-carrito1{
     display: flex;
     justify-content: start;
     width: 100%;
     padding: 10px 5px;
 }
-.boton-carrito button{
+.boton-carrito1 button{
+    width: 90%;
+    height: 40px;
+    background-color: #d9d9d9;
+    border: none;
+    font-weight: 600;
+}
+.boton-carrito1 nav{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-carrito1 nav a{
+    color: red;
+}
+.boton-carrito1{
+    display: none;
+}
+.boton-carrito{
+    display: flex;
+    justify-content: center;
     width: 100%;
+    padding: 10px 5px;
+}
+.boton-carrito button{
+    width: 90%;
     height: 40px;
     background-color: #d9d9d9;
     border: none;
@@ -139,6 +165,24 @@ main{
 .heart2{
     color: red;
     font-size: 20px;
+}
+.section-right{
+    width: 100%;
+}
+@media screen and (min-width: 450px) {
+    .boton-carrito{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 5px;
+    }
+    .boton-carrito button{
+        width: 90%;
+        height: 40px;
+        background-color: #d9d9d9;
+        border: none;
+        font-weight: 600;
+    }
 }
 @media screen and (min-width: 600px) {
     .heart2{
