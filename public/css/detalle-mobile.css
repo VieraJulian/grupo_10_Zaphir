@@ -10,6 +10,7 @@ main{
     font-family: 'Montserrat', sans-serif;
     margin-top: 140px;
     width: 100%;
+    padding-bottom: 50px;
 }
 .imagenes-pequeñas{
     display: none;
@@ -52,6 +53,7 @@ main{
 }
 .descripcion{
     order: 1;
+    padding-bottom: 15px;
 }
 .boton-carrito{
     order: 2;
@@ -80,6 +82,14 @@ main{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.talles a:target .talles{
+    border: 1px solid #000;
 }
 .talles nav{
     display: flex;
@@ -117,51 +127,32 @@ main{
     padding: 10px
 }
 .boton-carrito1{
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    padding: 10px 5px;
-}
-.boton-carrito1 button{
-    width: 90%;
-    height: 40px;
-    background-color: #d9d9d9;
-    border: none;
-    font-weight: 600;
-}
-.boton-carrito1 nav{
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.boton-carrito1 nav a{
-    color: red;
-}
-.boton-carrito1{
     display: none;
 }
 .boton-carrito{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px 5px;
 }
-.boton-carrito button{
-    width: 90%;
-    height: 40px;
-    background-color: #d9d9d9;
-    border: none;
-    font-weight: 600;
-}
 .boton-carrito nav{
-    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    height: 40px;
+    background-color: #d9d9d9;
+    font-weight: 600;
 }
 .boton-carrito nav a{
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 .corazon{
     width: 15%;

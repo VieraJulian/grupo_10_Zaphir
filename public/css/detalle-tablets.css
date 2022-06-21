@@ -20,13 +20,29 @@
        margin-top: 10px;
     }
     .boton-carrito1{
-        flex-grow: 1;
         display: flex;
+        justify-content: start;
         align-items: flex-end;
-        justify-content: center;
+        width: 100%;
+        padding: 10px 5px;
+        flex-grow: 1;
     }
-    .boton-carrito1 button{
-        width: 95%;
+    .boton-carrito1 nav{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 40px;
+        background-color: #d9d9d9;
+        font-weight: 600;
+    }
+    .boton-carrito1 nav a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
     }
     .detalle-titulo{
         margin-top: 20px;
