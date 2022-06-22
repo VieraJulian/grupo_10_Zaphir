@@ -99,39 +99,26 @@
                     <span class="precio">$ 7.499</span>
                     <span class="precio1">$ 9.999</span><span class="descuento">25% OFF</span>
             </section>
-            <section class="colores">
-                <nav>
-                    <a href=""><img src="/assets/colores/beige.jpg" alt=""></a>
-                </nav>
-                <nav>
-                    <a href=""><img src="/assets/colores/blanco.jpg" alt=""></a>
-                </nav>
-                <nav>
-                    <a href=""><img src="/assets/colores/negro.jpg" alt=""></a>
-                </nav>
-            </section>
-            <section class="talles">
-                <nav>
-                    <a href="#" class="xs">XS</a>
-                </nav>
-                <nav>
-                    <a href="#" class="s">S</a>
-                </nav>
-                <nav>
-                    <a href="#">M</a>
-                </nav>
-                <nav>
-                    <a href="#">L</a>
-                </nav>
-                <nav>
-                    <a href="#">XL</a>
-                </nav>
-            </section>
-            <section class="quantity">
+            <form action="/carrito" method="get" id="agregar-compra">
+                <fieldset class="colores">
+                    <label>Color</label>
+                    <button type="button" name="color"><img src="/assets/colores/beige.jpg" alt=""></button>
+                    <button type="button" name="color"><img src="/assets/colores/blanco.jpg" alt=""></button>
+                    <button type="button" name="color"><img src="/assets/colores/negro.jpg" alt=""></button>
+                </fieldset>
+                <fieldset class="talles">
+                    <label>Talle</label>
+                    <button type="button" name="talle">XS</button>
+                    <button type="button" name="talle">S</button>
+                    <button type="button" name="talle">M</button>
+                    <button type="button" name="talle">L</button>
+                    <button type="button" name="talle">XL</button>
+                </fieldset>
+                <fieldset class="quantity">
                     <section>
                         <p>Cantidad</p>
                     </section>
-                        <select name="cantidad" id="cantidad">
+                         <select name="cantidad" id="cantidad">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -142,19 +129,14 @@
                             <option value="8">8</option>
                             <option value="9">9</option>
                             <option value="10">10</option>
-                        </select>
-                </section>
-            <section class="boton-carrito1">
-                    <nav>
-                        <a href="#">AGREGAR AL CARRITO</a>
-                    </nav>
-            </section>
-        </section>
-        <section class="boton-carrito">
-            <nav>
-                <a href="#">AGREGAR AL CARRITO</a>
-            </nav>
-        </section>
+                         </select>
+                </fieldset>
+                <fieldset class="form-boton">
+                    <button>
+                        AGREGAR AL CARRITO
+                    </button>
+                </fieldset>
+            </form>
     </main>
 </body>
 </html>
