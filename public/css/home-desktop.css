@@ -1,117 +1,18 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-@media screen and (min-width : 1024px){ 
-main {
-    font-family: 'Montserrat', sans-serif;
-}
-img.Imagen-Zaphir{
-    width: 100% 
-}
-
-button {
-    border: none;
-    
-}
-.secciones {
-    text-align: center;
-}
-
-h2.titulo {
-    padding: 10px;
-    text-align: center;
-}
-.imagenDest {
-    width: 300px;
-    height: 400px;
-    padding: 8px 8px 0px 8px;
-}
-.productosdestacados{
-    text-align: center;
-    position: relative;
-    display: flex;
-    margin-left: 160px;
-}
-.productos {
-    position: relative;
-    display: inline-block;
-    
-}
-.JeansPalabra{
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    background-color: #ebebeb;
-    font-size: 20px;
-}
-.jeans {
-    margin-left: 60px;
-    margin-top: 60px;
-    width: 400px;
-    height: 500px;
-    object-fit: cover;
-}
-.remeras {
-    margin-top : 60px;
-    width: 300px;
-    height: 250px;
-    padding-left:15px ;
-}
-.remeraspalabra {
-    position: absolute;
-    bottom: 40%;
-    left: 40%;
-    background-color: #ebebeb;
-    font-size: 20px;
-}
-.camperas {
-    margin-top :60px;
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    padding-left: 15px;
-}
-.camperasPalabra {
-    position: absolute;
-    bottom: 40%;
-    left: 40%;
-    background-color: #ebebeb;
-    font-size: 20px;
-}
-.buzos{
-    
-    margin-top : 60px;
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    padding-left: 15px;
-}
-.buzosPalabra {
-    position: absolute;
-    bottom: 40%;
-    left: 40%;
-    background-color: #ebebeb;
-    font-size: 20px;
-}
-
-.bodies {
-    position: fixed;
-    position : relative; 
-    top : -563px;
-    left : 240px;
-    margin-top : 60px;
-    width: 892px;
-    height: 245px;
-    object-fit: cover;
-    float : left
-}
-.bodiesPalabra {
-    position: absolute;
-    bottom: 220%;
-    left: 65%;
-    background-color: #ebebeb;
-    font-size: 20px;
-}
+@media (min-width: 1024px){
+    .secciones{
+        justify-content: start;
+    }
+    .jeans{
+        height: 100%;
+    }
+    .contenedor-jeans{
+        background-color: aqua;
+    }
+    .productosdestacados{
+        justify-content: space-between;
+    }
+    .productosdestacados article{
+        width: 23%;
+        margin: 5px;
+    }
 }
