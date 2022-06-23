@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    padding: 10px;
+    margin-top: 140px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 80px;
+}
+.form-fieldset{
+    display: flex;
+    flex-direction: column;
+}
+fieldset{
+    border: none;
+}
+.my-cart{
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #909090;
+}
+.carrito{
+    margin-right: 5px;
+}
+.imagen{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: stretch;
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+}
+.section1{
+    width: 75%;
+}
+.fieldset1{
+   display: flex;
+   padding-top: 10px;
+}
+.section1{
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.stock{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.color, .size{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.section1 label{
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.fieldset2{
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.fieldset2{
+    display: flex;
+    justify-content: space-between;
+}
+.fieldset-precio{
+    width: 33.3%;
+}
+.precio-titulo{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.precio1{
+    color: red;
+}
+.precio2{
+    text-decoration: line-through;
+}
+.cantidad{
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+.quantity{
+    width: 33.3%;
+}
+.quantity select{
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #909090;
+    width: 100%;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.total{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.precio3{
+    text-decoration: line-through;
+}
+.fieldset3{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.fieldset-item{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #909090;
+    margin-bottom: 50px;
+}
+.fieldset-item p{
+    font-weight: 700;
+}
+.fieldset4 label{
+    font-weight: 500;
+}
+.fieldset4 input{
+    margin-top: 10px;
+    border: 1px solid #909090;
+    border-radius: 2px 0 0 2px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border-right: none;
+    width: 70%;
+    padding: 5px 10px;
+}
+.boton1{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0 2px 2px 0;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 30%;
+}
+.fieldset-promo{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
+.boton2{
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0 2px 2px 0;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}

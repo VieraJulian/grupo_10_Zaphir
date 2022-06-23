@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin-top: 140px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 80px;
+}
+.section-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu-2{
+    display: none;
+    z-index: 10;
+}
+#menu-2:target{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F4F6F8;
+    border: 1px solid #909090;
+    width: 90%;
+}
+.section-left{
+    display: none;
+}
+.section-top{
+    width: 100%;
+    display: flex;
+    
+}
+.section-nav{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.section-secundaria{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+.section-secundaria article{
+    width: 46%;
+    padding: 5px;
+    border-bottom: 1px solid #909090;
+    margin: 5px;
+}
+.section-secundaria article figure{
+    width: 100%;
+}
+.section-secundaria article figure img{
+    width: 100%;
+}
+.article-precio{
+    font-weight: 600;
+}
+.article-p{
+    text-align: center;
+}
+.section-secundaria article section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-1 a{
+    color: #000;
+    text-decoration: none;
+}
+.nav-1 i{
+    margin-left: 8px;
+}
+.nav-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu-2 section p{
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding-top: 10px;
+    margin-left: 8px;
+}
+#menu-2 section{
+    display: flex;
+    flex-direction: column;
+}
+#menu-2 section input{
+    width: 100%;
+    border-color: 1px solid #909090;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-left: 8px;
+    outline-color: #000;
+}
+#menu-2 div{
+    display: flex;
+    margin-bottom: 10px;
+}
+.x{
+    margin-left: 8px;
+}
+.filtros{
+    width: 50%;
+    text-align: center;
+}
+.filtrarpor{
+    width: 70%;
+    border: 1px solid #909090;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 2px;
+    padding: 5px 10px;
+}

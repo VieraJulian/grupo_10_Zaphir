@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header-mobile.css">
+    <link rel="stylesheet" href="/css/header-tablets.css">
+    <link rel="stylesheet" href="/css/header-desktop.css">
+    <link rel="stylesheet" href="/css/productos-mobile.css">
+    <link rel="stylesheet" href="/css/productos-tablets.css">
+    <link rel="stylesheet" href="/css/productos-desktop.css">
+    <link rel="stylesheet" href="/css/footer-mobile.css">
+    <link rel="stylesheet" href="/css/footer-tablets.css">
+    <link rel="stylesheet" href="/css/footer-desktop.css">
+    <title>Zaphir</title>
+</head>
+<body>
+    <header>
+        <section class="header-bars">
+            <a href="#menu-1"><i class="fa-solid fa-bars"></i></a>
+        </section>
+        <figure class="header-logo">
+            <a href="/"><img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir"></a>
+        </figure>
+        <section class="header-form">
+            <form action="#" method="get">
+                <fieldset>
+                    <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?" required>
+                    <button><i class="fa-solid fa-magnifying-glass lupa"></i></button>
+                </fieldset>
+            </form>
+        </section>
+        <section class="header-icon">
+            <nav>
+                <a href="#"><i class="fa-regular fa-user user"></i></a>
+                <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </nav>
+        </section>
+        <section class="header-bottom">
+                <nav class="navbar-main">
+                    <a href="/">INICIO</a>
+                    <a href="#menu-1">PRENDAS</a>
+                    <a href="/">SALE</a>
+                    <a href="/">AYUDA</a>
+                </nav>
+                <nav id="menu-1">
+                    <nav>
+                        <a href="#"><i class="fa-solid fa-x"></i></a>
+                    </nav>
+                        <a href="/">REMERAS</a>
+                        <a href="/">BUZOS</a>
+                        <a href="/">CAMPERAS</a>
+                        <a href="/">CHALECOS</a>
+                        <a href="/">VESTIDOS</a>
+                        <a href="/">POLERAS</a>
+                        <a href="/">BODYS</a>
+                        <a href="/">TOPS</a>
+                        <a href="/">SWEATERS</a>
+                        <a href="/">JEANS</a>
+                        <a href="/">BABUCHAS</a>
+                        <a href="/">CARGOS</a>
+                    </nav>
+        </section>
+    </header>
+    <main>
+        <section class="section-principal">
+            <section class="section-top">
+                <section class="section-nav">
+                    <nav class="nav-1">
+                        <a href="#menu-2">Filtrar<i class="fa-solid fa-filter"></i></a>
+                    </nav>
+                    <nav id=menu-2>
+                        <a href="#"><i class="fa-solid fa-x x"></i></a>
+                        <section>
+                            <p>Talle</p>
+                            <div>
+                                <input type="checkbox" name="talle" id="xs">XS
+                            </div>
+                            <div><input type="checkbox" name="talle" id="s">S
+                            </div>
+                            <div><input type="checkbox" name="talle" id="m">M
+                            </div>
+                            <div><input type="checkbox" name="talle" id="l">L
+                            </div>
+                            <div><input type="checkbox" name="talle" id="xl">XL
+                            </div>
+                        </section>
+                        <section>
+                            <p>Color</p>
+                            <div><input type="checkbox" name="color" id="blanco">Blanco</div>
+                            <div><input type="checkbox" name="color" id="negro">Negro</div>
+                            <div><input type="checkbox" name="color" id="rosa">Rosa</div>
+                            <div><input type="checkbox" name="color" id="rojo"">Rojo</div>
+                        </section>
+                    </nav>
+                </section>
+                <section class="filtros">
+                    <select name="filtrarpor" id="filtrarpor" class="filtrarpor">
+                        <option value="precio-">Precio: Menor a Mayor</option>
+                        <option value="precio+">Precio: Mayor a Menor</option>
+                        <option value="az">A -Z</option>
+                        <option value="za">Z -A</option>
+                        <option value="nuevo">Más Nuevo al más Viejo</option>
+                        <option value="viejo">Más Viejo al más Nuevo</option>
+                        <option value="mas-vendido">Más Vendidos</option>
+                        <option value="destacado">Destacados</option>
+                    </select>
+                </section>
+            </section>
+            <section class="section-left">
+                <section class="talle">
+                    <p>Talle</p>
+                    <div>
+                        <input type="checkbox" name="talle" id="xs">XS
+                    </div>
+                    <div><input type="checkbox" name="talle" id="s">S
+                    </div>
+                    <div><input type="checkbox" name="talle" id="m">M
+                    </div>
+                    <div><input type="checkbox" name="talle" id="l">L
+                    </div>
+                    <div><input type="checkbox" name="talle" id="xl">XL
+                    </div>
+                </section>
+                <section class="color">
+                    <p>Color</p>
+                    <div><input type="checkbox" name="color" id="blanco">Blanco</div>
+                    <div><input type="checkbox" name="color" id="negro">Negro</div>
+                    <div><input type="checkbox" name="color" id="rosa">Rosa</div>
+                    <div><input type="checkbox" name="color" id="rojo"">Rojo</div>
+                </section>
+                <section class="precio">
+                    <p>Precio</p>
+                    <input type="range" name="range-precio" id="range-precio" min="1000" max="50000">
+                </section>
+            </section>
+            <section class="section-secundaria">
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido1.jpg" alt="Minivestido de cuadros vichy"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Minivestido de cuadros vichy</p>
+                        <p class="article-precio">$ 5.800</p>
+                    </section>
+                </article>
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido2.jpg" alt="Vestido largo evasé cruzado"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Vestido largo evasé cruzado</p>
+                        <p class="article-precio">$ 4.500</p>
+                    </section>
+                </article>
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido3.jpg" alt="Minivestido de malla"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Minivestido de malla con volantes recortados</p>
+                        <p class="article-precio">$ 3.900</p>
+                    </section>
+                </article>
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido4.jpg" alt="Vestido con abertura a rayas"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Vestido con abertura a rayas</p>
+                        <p class="article-precio">$ 4.000</p>
+                    </section>
+                </article>
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido5.jpg" alt="Vestido con abertura en la pierna"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Vestido con abertura en la pierna</p>
+                        <p class="article-precio">$ 6.600</p>
+                    </section>
+                </article>
+                <article>
+                    <Figure>
+                        <a href="#"><img src="/assets/productos/vestido6.jpg" alt="Vestido de malla con estampado floral"></a>
+                    </Figure>
+                    <section>
+                        <p class="article-p">Vestido de malla con estampado floral</p>
+                        <p class="article-precio">$ 3.990</p>
+                    </section>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="contenedor1">
+            <h4>Categorías</h4>
+            <a href="/">INICIO</a>
+            <a href="#">PRENDAS</a>
+            <a href="#">SALE</a>
+            <a href="#">AYUDA</a>
+        </section>
+        <section class="contenedor2">
+            <h4>Contactános</h4>
+            <a href="#"><i class="fa-brands fa-whatsapp-square whatsapp"></i>3816337838</a>
+            <a href="#"><i class="fa-solid fa-square-envelope email"></i>zaphirargentina@gmail.com</a>
+        </section>
+        <section class="contenedor3">
+            <h4>Encontrános en</h4>
+            <section>
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i><a>
+            </section>
+        </section>
+        <figure>
+            <img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir">
+        </figure>
+    </footer>
+</body>
+</html>
