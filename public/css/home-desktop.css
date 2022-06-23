@@ -15,6 +15,9 @@ button {
     border: none;
     
 }
+.secciones {
+    text-align: center;
+}
 
 h2.titulo {
     padding: 10px;
@@ -34,8 +37,7 @@ h2.titulo {
 .productos {
     position: relative;
     display: inline-block;
-    text-align: center;
-    height: 100%;
+    
 }
 .JeansPalabra{
     position: absolute;
@@ -79,6 +81,7 @@ h2.titulo {
     font-size: 20px;
 }
 .buzos{
+    
     margin-top : 60px;
     width: 300px;
     height: 250px;
@@ -94,9 +97,21 @@ h2.titulo {
 }
 
 .bodies {
+    position: fixed;
+    position : relative; 
+    top : -563px;
+    left : 240px;
     margin-top : 60px;
-    width: 300px;
-    height: 250px;
+    width: 892px;
+    height: 245px;
     object-fit: cover;
+    float : left
+}
+.bodiesPalabra {
+    position: absolute;
+    bottom: 220%;
+    left: 65%;
+    background-color: #ebebeb;
+    font-size: 20px;
 }
 }
