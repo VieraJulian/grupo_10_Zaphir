@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header-mobile.css">
+    <link rel = "stylesheet" href="/css/header-tablets.css">
+    <link rel="stylesheet" href="/css/header-desktop.css">
+    <link rel = "stylesheet" href="/css/login-mobile.css">
+    <link rel="stylesheet" href="/css/footer-mobile.css">
+    <link rel="stylesheet" href="/css/footer-tablets.css">
+    <link rel="stylesheet" href="/css/footer-desktop.css">
+
+</head>
+<body>
+    <header>
+        <section class="header-bars">
+            <a href="#menu-1"><i class="fa-solid fa-bars"></i></a>
+        </section>
+        <figure class="header-logo">
+            <a href="/"><img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir"></a>
+        </figure>
+        <section class="header-form">
+            <form action="#" method="get">
+                <fieldset>
+                    <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?" required>
+                    <button><i class="fa-solid fa-magnifying-glass lupa"></i></button>
+                </fieldset>
+            </form>
+        </section>
+        <section class="header-icon">
+            <nav>
+                <a href="#"><i class="fa-regular fa-user user"></i></a>
+                <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </nav>
+        </section>
+        <section class="header-bottom">
+                <nav class="navbar-main">
+                    <a href="/">INICIO</a>
+                    <a href="#menu-1">PRENDAS</a>
+                    <a href="/">SALE</a>
+                    <a href="/">AYUDA</a>
+                </nav>
+                <nav id="menu-1">
+                    <nav>
+                        <a href="#"><i class="fa-solid fa-x"></i></a>
+                    </nav>
+                        <a href="/">REMERAS</a>
+                        <a href="/">BUZOS</a>
+                        <a href="/">CAMPERAS</a>
+                        <a href="/">CHALECOS</a>
+                        <a href="/">VESTIDOS</a>
+                        <a href="/">POLERAS</a>
+                        <a href="/">BODYS</a>
+                        <a href="/">TOPS</a>
+                        <a href="/">SWEATERS</a>
+                        <a href="/">JEANS</a>
+                        <a href="/">BABUCHAS</a>
+                        <a href="/">CARGOS</a>
+                    </nav>
+        </section>
+    </header>
+    <main>
+        <section class = "login">
+            <h1> Inicia sesión </h1>
+        </section>
+        <form action = "/views/login.html" method = "post" >
+            <fieldset class="NombreUsuario">
+                <label>Nombre de usuario</label>
+                <input type="text" name="nombre" id="nombre" placeholder="ej: JuanPerez10" required>
+            </fieldset>
+            <fieldset class="Contraseña">
+                <label>Contraseña</label>
+                <input type="password" name="password" id="password"required>
+            </fieldset>
+            <fieldset class="button">
+                <button>Iniciar sesión</button>
+            </fieldset>
+            <fielset class = "form-password">
+                <a href = "#">¿Olvidaste tu contraseña?</a>
+            </fielset>
+            <fieldset class="registro">
+                <a href="/registro">¿Todavía no tenés una cuenta?<span>Crear cuenta</span></a>
+            </fieldset>
+            
+        </form>
+    </main>
+    <footer>
+        <section class="contenedor1">
+            <h4>Categorías</h4>
+            <a href="/">INICIO</a>
+            <a href="#">PRENDAS</a>
+            <a href="#">SALE</a>
+            <a href="#">AYUDA</a>
+        </section>
+        <section class="contenedor2">
+            <h4>Contactános</h4>
+            <a href="#"><i class="fa-brands fa-whatsapp-square whatsapp"></i>3816337838</a>
+            <a href="#"><i class="fa-solid fa-square-envelope email"></i>zaphirargentina@gmail.com</a>
+        </section>
+        <section class="contenedor3">
+            <h4>Encontrános en</h4>
+            <section>
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i><a>
+            </section>
+        </section>
+        <figure>
+            <img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir">
+        </figure>
+    </footer>
+</body>
+</html>
