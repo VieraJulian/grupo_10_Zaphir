@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/LogoZP.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/header-mobile.css">
+        <link rel="stylesheet" href="/css/header-tablets.css">
+        <link rel="stylesheet" href="/css/header-desktop.css">
+        <link rel="stylesheet" href="/css/carrito-mobile.css">
+        <link rel="stylesheet" href="/css/carrito-tablets.css">
+        <link rel="stylesheet" href="/css/carrito-desktop.css">
+        <title>Zaphir</title>
+    </head>
+    <body>
+        <header>
+            <section class="header-bars">
+                <a href="#menu-1"><i class="fa-solid fa-bars"></i></a>
+            </section>
+            <figure class="header-logo">
+                <a href="/"><img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir"></a>
+            </figure>
+            <section class="header-form">
+                <form action="#" method="get">
+                    <fieldset>
+                        <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?" required>
+                        <button><i class="fa-solid fa-magnifying-glass lupa"></i></button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="header-icon">
+                <nav>
+                    <a href="#"><i class="fa-regular fa-user user"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                </nav>
+            </section>
+            <section class="header-bottom">
+                    <nav class="navbar-main">
+                        <a href="/">INICIO</a>
+                        <a href="#menu-1">PRENDAS</a>
+                        <a href="/">SALE</a>
+                        <a href="/">AYUDA</a>
+                    </nav>
+                    <nav id="menu-1">
+                        <nav>
+                            <a href="#"><i class="fa-solid fa-x"></i></a>
+                        </nav>
+                            <a href="/">REMERAS</a>
+                            <a href="/">BUZOS</a>
+                            <a href="/">CAMPERAS</a>
+                            <a href="/">CHALECOS</a>
+                            <a href="/">VESTIDOS</a>
+                            <a href="/">POLERAS</a>
+                            <a href="/">BODYS</a>
+                            <a href="/">TOPS</a>
+                            <a href="/">SWEATERS</a>
+                            <a href="/">JEANS</a>
+                            <a href="/">BABUCHAS</a>
+                            <a href="/">CARGOS</a>
+                    </nav>
+            </section>
+        </header>
+        <main>
+            <form action="#" method="get">
+                <fieldset class="my-cart">
+                    <p><i class="fa-solid fa-bag-shopping carrito"></i>MI CARRITO</p>
+                </fieldset>
+                <fieldset class="form-fieldset">
+                    <fieldset class="fieldset1">
+                        <figure class="imagen">
+                            <img src="/assets/productos/malibu-main.png" alt="">
+                        </figure>
+                        <section class="section1">
+                            <p class="title">Campera Malibu De Rústico</p>
+                            <p class="color">Color: Negro</p>
+                            <p class="size">Size: Xs</p>
+                            <p class="stock">En Stock 25% 0ff!</p>
+                            <input type="radio">
+                            <label>Envio a domicilio</label>
+                        </section>
+                    </fieldset>
+                    <fieldset class="fieldset2">
+                        <fieldset class="fieldset-precio">
+                            <p class="precio-titulo">Precio</p>
+                            <p class="precio1">$ 7.499</p>
+                            <p class="precio2">$ 9.999</p>
+                            <p class="descuento">25% OFF</p>
+                        </fieldset>
+                        <fieldset class="quantity">
+                            <label class="cantidad">Cantidad</label>
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="fieldset3">
+                            <p class="total">Total</p>
+                            <p>$ 7.499</p>
+                            <p class="precio3">$ 9.999</p>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <p>1 producto</p>
+                        <p>$ 7.499</p>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="fieldset4">
+                    <fieldset>
+                        <label>Ingresa tu código promocional</label>
+                        <input type="text" name="codigo" id="codigo"><button class="boton1">ENVIAR</button>
+                        <fieldset class="fieldset-promo">
+                            <p>Descuento</p>
+                            <p>$ -2500</p>
+                        </fieldset> 
+                        <button class="boton2">Comprar</button>
+                    </fieldset>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>

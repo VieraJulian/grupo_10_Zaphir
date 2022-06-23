@@ -1,0 +1,23 @@
+@media (min-width: 1024px){
+    .form-fieldset{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .form-fieldset{
+        width: 70%;
+        padding: 15px 8px;
+    }
+    .fieldset4{
+        width: 30%;
+        padding: 15px 8px;
+    }
+    .fieldset-item{
+        width: 100%;
+    }
+    .fieldset1{
+        width: 50%;
+    }
+    .fieldset2{
+        width: 50%;
+    }
+}
