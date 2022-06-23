@@ -15,4 +15,3 @@ app.get("/detalle-producto", (req, res) => res.sendFile(path.resolve(__dirname, 
 app.get("/carrito", (req, res) => res.sendFile(path.resolve(__dirname, "views/carrito.html")));
 
 app.get("/productos", (req, res) => res.sendFile(path.resolve(__dirname, "views/productos.html")));
-
