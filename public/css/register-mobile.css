@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding: 10px;
+}
+.section-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.section-register h1{
+    margin-bottom: 15px;
+}
+.section-register p{
+    text-align: center;
+}
+form fieldset{
+    border: none;
+}
+.form-name{
+    display: flex;
+    flex-direction: column;
+}
+.form-name input{
+    border-color: 1px solid #909090;
+    height: 40px;
+    padding: 10px 12px;
+}
+.form-email{
+    display: flex;
+    flex-direction: column;
+}
+.form-email input{
+    border-color: 1px solid #909090;
+    height: 40px;
+    padding: 10px 12px;
+}
+.form-tel{
+    display: flex;
+    flex-direction: column;
+}
+.form-tel input{
+    border-color: 1px solid #909090;
+    height: 40px;
+    padding: 10px 12px;
+}
+.form-password{
+    display: flex;
+    flex-direction: column;
+}
+.form-password input{
+    border-color: 1px solid #909090;
+    height: 40px;
+    padding: 10px 12px;
+}
+.form-confirm{
+    display: flex;
+    flex-direction: column;
+}
+.form-confirm input{
+    border-color: 1px solid #909090;
+    height: 40px;
+    padding: 10px 12px;
+}
+.form-button{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-bottom: 10px;
+}
+fieldset{
+    margin-top: 30px;
+}
+.form-button button{
+    height: 40px;
+    background-color: #909090;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.form-linklogin a{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+.form-linklogin span{
+    margin-left: 5px;
+    font-weight: 600;
+}
+@media screen and (min-width: 580px){
+    main{
+        margin: auto;
+        max-width: 580px;
+    }
+}
