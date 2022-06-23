@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-app.listen(4000, () => console.log('Servidor corriendo en puerto 3000'));
+app.listen(3000, () => console.log('Servidor corriendo en puerto 3000'));
 
 const public = path.resolve(__dirname, '../public');
 
@@ -16,4 +16,8 @@ app.get("/carrito", (req, res) => res.sendFile(path.resolve(__dirname, "views/ca
 
 app.get("/productos", (req, res) => res.sendFile(path.resolve(__dirname, "views/productos.html")));
 
+
 app.get("/login", (req, res) => res.sendFile(path.resolve(__dirname,"views/login.html")))
+
+app.get("/registro", (req, res) => res.sendFile(path.resolve(__dirname, "views/register.html")));
+

@@ -1,19 +1,84 @@
-@media screen and (min-width : 320px) and (max-width :768px){
-    main {
-        margin-top: 50%;
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        
     }
-    fieldset {
+    .login {
+        
+        text-align: center;
+    }
+    main{
+        max-width: 580px;
+        margin-top: 100px;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    form {
+        max-width: 580px;
+        
+    }
+   
+    form fieldset {
         display: flex;
         flex-direction: column;
         border : none
     }
-    p.titulo {
+    section.login {
         text-align: center;
-        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 20px;
     }
     input{
-        width: 80%;
         height: 40px;
         padding: 10px 12px;
     }
-}
+    fieldset.NombreUsuario {
+        margin-top: 65px;
+        display: flex;
+        flex-direction: column;
+    }
+    fieldset.Contraseña {
+        display: flex;
+        flex-direction: column;
+    }
+    fieldset {
+        margin-top: 30px;
+    }
+    label {
+        margin-bottom: 10px;
+    }
+
+    .button button {
+        height: 40px;
+        background-color: #909090;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+    .registro a {
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+    }
+    .registro span {
+        margin-left: 5px;
+        font-weight: 600;
+    }
+    .form-password a {
+        text-decoration: none;
+        color: #000;
+        
+    }
+    .form-password {
+        
+        font-weight: 500;
+    }
+    @media screen and (min-width: 580px){
+        main{
+            margin: auto;
+            max-width: 580px;
+        }
+    }
+    
