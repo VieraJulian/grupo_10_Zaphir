@@ -1,7 +1,4 @@
 @media (min-width: 768px) {
-    .boton-carrito{
-        display: none;
-    }
     .img-principal{
         width: 50%;
     }
@@ -12,37 +9,26 @@
     }
     .colores{
         padding-top: 20px;
+        width: 100%;
     }
     .talles{
        margin-top: 10px;
+       width: 100%;
     }
     .quantity{
        margin-top: 10px;
+       width: 100%;
     }
-    .boton-carrito1{
+    form{
         display: flex;
-        justify-content: start;
-        align-items: flex-end;
-        width: 100%;
-        padding: 10px 5px;
         flex-grow: 1;
+        flex-direction: column;
     }
-    .boton-carrito1 nav{
+    .form-boton{
+        flex-grow: 1;
         display: flex;
-        justify-content: center;
-        width: 90%;
-        height: 40px;
-        background-color: #d9d9d9;
-        font-weight: 600;
-    }
-    .boton-carrito1 nav a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000;
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
+        align-items: flex-end;
+        margin: 0;
     }
     .detalle-titulo{
         margin-top: 20px;

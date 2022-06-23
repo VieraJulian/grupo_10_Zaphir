@@ -4,6 +4,7 @@
     }
     .img-principal figure{
         padding: 0;
+        height: 100%;
     }
     .imagenes-pequeñas{
         display: flex;
@@ -13,13 +14,6 @@
         margin: 10px;
         justify-content: space-between;
         
-    }
-    .descripcion1{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: start;
-        width: 100%;
     }
     .imagenes-pequeñas figure{
         width: 30%;
