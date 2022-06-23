@@ -69,11 +69,15 @@
     .form-password a {
         text-decoration: none;
         color: #000;
+        text-align: center;
+        margin-top: 15px;
+
         
     }
     .form-password {
-        
         font-weight: 500;
+        display: flex;
+        justify-content: center;
     }
     @media screen and (min-width: 580px){
         main{

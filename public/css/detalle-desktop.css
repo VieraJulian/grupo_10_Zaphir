@@ -41,4 +41,15 @@
         flex-grow: 1;
         height: 40%;
     }
+    main{
+        max-width: 1024px;
+    }
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer{
+        width: 100%;
+    }
 }
