@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+    .section-secundaria article{
+        width: 24%;
+    }
+    .section-secundaria{
+        width: 80%;
+    }
+    .section-left{
+        width: 20%;
+    }
+    .precio{
+        width: 60%;
+    }
+}
