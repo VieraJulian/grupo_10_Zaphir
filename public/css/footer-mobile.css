@@ -9,11 +9,12 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 footer h4{
     margin-bottom: 20px;
     margin-top: 40px;
+    font-size: 20px;
 }
 .contenedor1{
     display: flex;
@@ -38,7 +39,7 @@ footer h4{
 .contenedor2{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 .contenedor2 i{
     display: none;
@@ -46,7 +47,7 @@ footer h4{
 .contenedor3{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 .contenedor3 i{
     font-size: 25px;
@@ -57,5 +58,5 @@ footer figure{
     margin-top: 40px;
 }
 footer figure img{
-    width: 40%;
+    width: 100px
 }
