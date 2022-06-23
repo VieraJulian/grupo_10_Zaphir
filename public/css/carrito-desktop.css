@@ -31,4 +31,7 @@
     footer{
         width: 100%;
     }
+    main{
+        margin-bottom: 300px;
+    }
 }
