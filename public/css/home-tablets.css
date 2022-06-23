@@ -1,0 +1,106 @@
+@media screen and (min-width: 768px) and (max-width:1203px){
+    main {
+        font-family: 'Montserrat', sans-serif;
+    }
+    img.Imagen-Zaphir{
+        width: 100% 
+    }
+    h2.titulo {
+        padding: 10px;
+        text-align: center;
+    }
+   
+    .imagenDest {
+      
+        height: 400px;
+        padding: 8px 8px 0px 8px;
+    }
+    article.articulos {
+        width: 50%;
+    }
+    .productosdestacados {
+        width: 100%;
+    }
+    .productos {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        height: 100%;
+    }
+    .JeansPalabra{
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        background-color: #ebebeb;
+        font-size: 20px;
+    }
+    .jeans {
+        margin: 60px 60px 0 60px;
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        position: relative;
+        text-align: center;
+    }
+    .remeras {
+        margin-top : 40px;
+        width: 300px;
+        height: 250px;
+        padding-left:15px ;
+    }
+    .remeraspalabra {
+        position: absolute;
+        bottom: 40%;
+        left: 40%;
+        background-color: #ebebeb;
+        font-size: 20px;
+    }
+    .camperas {
+        margin-top :40px;
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    .camperasPalabra {
+        position: absolute;
+        bottom: 40%;
+        left: 40%;
+        background-color: #ebebeb;
+        font-size: 20px;
+    }
+    .buzos{
+        margin-top : 40px;
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        padding-left: 15px;
+    }
+    .buzosPalabra {
+        position: absolute;
+        bottom: 40%;
+        left: 40%;
+        background-color: #ebebeb;
+        font-size: 20px;
+    }
+    
+    .bodies {
+        margin-top : 40px;
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    .bodiesPalabra{
+        position: absolute;
+        bottom: 40%;
+        left: 40%;
+        background-color: #ebebeb;
+        font-size: 20px;
+    }
+    .secciones {
+        text-align: center;
+    }
+}
