@@ -1,0 +1,19 @@
+@media screen and (min-width : 320px) and (max-width :768px){
+    main {
+        margin-top: 50%;
+    }
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        border : none
+    }
+    p.titulo {
+        text-align: center;
+        font-size: 24px;
+    }
+    input{
+        width: 80%;
+        height: 40px;
+        padding: 10px 12px;
+    }
+}

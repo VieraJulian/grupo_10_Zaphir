@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia sesion</title>
+    <link rel="stylesheet" href="/css/header-mobile.css">
+    <link rel = "stylesheet" href="/css/header-tablets.css">
+    <link rel="stylesheet" href="/css/header-desktop.css">
+    <link rel = "stylesheet" href="/css/login-mobile.css">
+
+</head>
+<body>
+    <header>
+        <section class="header-bars">
+            <a href="#menu-1"><i class="fa-solid fa-bars"></i></a>
+        </section>
+        <figure class="header-logo">
+            <a href="/"><img src="/assets/Logo_Zaphir.png" alt="Logo Zaphir"></a>
+        </figure>
+        <section class="header-form">
+            <form action="#" method="get">
+                <fieldset>
+                    <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?" required>
+                    <button><i class="fa-solid fa-magnifying-glass lupa"></i></button>
+                </fieldset>
+            </form>
+        </section>
+        <section class="header-icon">
+            <nav>
+                <a href="#"><i class="fa-regular fa-user user"></i></a>
+                <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </nav>
+        </section>
+        <section class="header-bottom">
+                <nav class="navbar-main">
+                    <a href="/">INICIO</a>
+                    <a href="#menu-1">PRENDAS</a>
+                    <a href="/">SALE</a>
+                    <a href="/">AYUDA</a>
+                </nav>
+                <nav id="menu-1">
+                    <nav>
+                        <a href="#"><i class="fa-solid fa-x"></i></a>
+                    </nav>
+                        <a href="/">REMERAS</a>
+                        <a href="/">BUZOS</a>
+                        <a href="/">CAMPERAS</a>
+                        <a href="/">CHALECOS</a>
+                        <a href="/">VESTIDOS</a>
+                        <a href="/">POLERAS</a>
+                        <a href="/">BODYS</a>
+                        <a href="/">TOPS</a>
+                        <a href="/">SWEATERS</a>
+                        <a href="/">JEANS</a>
+                        <a href="/">BABUCHAS</a>
+                        <a href="/">CARGOS</a>
+                    </nav>
+        </section>
+    </header>
+    <main>
+        <form action = "/views/login.html" method = "post" >
+            <fieldset>
+                <p class = "titulo">INICIÁ SESIÓN</p>
+                <label><b>Nombre de usuario</b></label>
+                <input class = "usuario" type = "text" name = "usuario" id = "usuario" placeholder="ej: JuanPerez10" required>
+                <label><b>Contraseña</b></label>
+                <input class = "contraseña" type = "password" name = "contraseña" id = "contraseña" required>
+                <button type = "submit" class = "ingreso" id = "botonIngreso"><a href = "/"></a>Enviar</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
