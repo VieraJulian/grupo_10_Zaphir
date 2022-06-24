@@ -87,6 +87,10 @@ fieldset{
     color: #FFFFFF;
     font-weight: 600;
 }
+.form-linklogin{
+    display: flex;
+    justify-content: center;
+}
 .form-linklogin a{
     text-decoration: none;
     color: #000;
@@ -100,5 +104,7 @@ fieldset{
     main{
         margin: auto;
         max-width: 580px;
+        margin-bottom: 80px;
+        margin-top: 110px;
     }
 }

@@ -15,4 +15,11 @@
         width: 23%;
         margin: 5px;
     }
+    .productos{
+        
+    }
+    .secciones article > article{
+        background-color: aqua;
+    }
+    
 }

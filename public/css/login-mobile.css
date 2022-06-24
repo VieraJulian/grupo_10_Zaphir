@@ -6,12 +6,12 @@
         
     }
     .login {
-        
+
         text-align: center;
     }
     main{
         max-width: 580px;
-        margin-top: 100px;
+        margin-top: 140px;
         padding: 10px;
         font-family: 'Montserrat', sans-serif;
     }
@@ -35,7 +35,7 @@
         padding: 10px 12px;
     }
     fieldset.NombreUsuario {
-        margin-top: 65px;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
     }
@@ -83,6 +83,8 @@
         main{
             margin: auto;
             max-width: 580px;
+            margin-bottom: 80px;
+            margin-top: 110px;
         }
     }
     
