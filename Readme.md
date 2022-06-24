@@ -4,3 +4,5 @@
 2. [***REFERENTES***](./Documentos/Referentes.md "Archivo dee Referentes")
 3. [***EQUIPO***](./Documentos/Equipo.md "Archivo de Equipo")
 4. [***DISEÑO***](./Documentos/Diseño.md "Archivos Wireframes")
+5. [***TRELLO***](./Documentos/Trello.md "link trello")
+6. [***Retrospectiva***](./Documentos/Retrospectiva.md" "Retro")

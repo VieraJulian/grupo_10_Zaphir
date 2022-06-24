@@ -4,4 +4,3 @@
 - Mayor organización.
 - Mayor cooperación.
 - Mayor compromiso.
-

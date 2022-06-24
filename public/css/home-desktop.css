@@ -1,6 +1,6 @@
 @media (min-width: 1024px){
     .secciones{
-        justify-content: start;
+        justify-content: space-between;
     }
     .jeans{
         height: 100%;
@@ -16,10 +16,6 @@
         margin: 5px;
     }
     .productos{
-        
+        width: 23%;
     }
-    .secciones article > article{
-        background-color: aqua;
-    }
-    
 }
