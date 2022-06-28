@@ -19,6 +19,9 @@
        margin-top: 10px;
        width: 100%;
     }
+    .imagenes-pequeñas{
+        display: none;
+    }
     form{
         display: flex;
         flex-grow: 1;
@@ -33,5 +36,8 @@
     .detalle-titulo{
         margin-top: 20px;
         margin-bottom: 5px;
+    }
+    .descripcion{
+        display: block;
     }
 }

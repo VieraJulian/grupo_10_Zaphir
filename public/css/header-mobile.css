@@ -57,7 +57,20 @@ header{
     left: 0;
     background-color: #F4F6F8;
     border: 1px solid #909090;
-    width: 90%;
+    width: 95%;
+    height: 100%;
+}
+.menu-bottom{
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    justify-content: end;
+}
+.menu-bottom a{
+    border: 1px solid #909090;
+    background-color: #909090;
+    margin: 5px;
+    font-weight: 400;
 }
 .fa-x{
     padding: 10px 0;

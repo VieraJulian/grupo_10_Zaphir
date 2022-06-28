@@ -15,7 +15,20 @@ main{
     margin-bottom: 80px;
 }
 .imagenes-pequeñas{
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    width: 100%;
+}
+.descripcion1{
     display: none;
+}
+.imagenes-pequeñas figure{
+    width: 33.3%;
+    padding: 5px;
+}
+.imagenes-pequeñas img{
+    width: 100%;
 }
 .img-principal{
     order: -2;
