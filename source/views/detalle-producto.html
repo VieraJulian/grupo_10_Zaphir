@@ -101,23 +101,29 @@
             </section>
             <form action="/carrito" method="get" id="agregar-compra">
                 <fieldset class="colores">
-                    <label>Color</label>
-                    <button type="button" name="color"><img src="/assets/colores/beige.jpg" alt=""></button>
-                    <button type="button" name="color"><img src="/assets/colores/blanco.jpg" alt=""></button>
-                    <button type="button" name="color"><img src="/assets/colores/negro.jpg" alt=""></button>
+                    <p>Color</p>
+                    <input type="radio" name="color" id="beige">
+                    <label for="beige"><img src="/assets/colores/beige.jpg" alt=""></label>
+                    <input type="radio" name="color" id="blanco">
+                    <label for="blanco"><img src="/assets/colores/blanco.jpg" alt=""></label>
+                    <input type="radio" name="color" id="negro">
+                    <label for="negro"><img src="/assets/colores/negro.jpg" alt=""></label>
                 </fieldset>
                 <fieldset class="talles">
-                    <label>Talle</label>
-                    <button type="button" name="talle">XS</button>
-                    <button type="button" name="talle">S</button>
-                    <button type="button" name="talle">M</button>
-                    <button type="button" name="talle">L</button>
-                    <button type="button" name="talle">XL</button>
+                    <p>Talles</p>
+                    <input type="radio" name="talle" id="xs">
+                    <label for="xs" class="label-talle">XS</label>
+                    <input type="radio" name="talle" id="s">
+                    <label for="s">S</label>
+                    <input type="radio" name="talle" id="m">
+                    <label for="m">M</label>
+                    <input type="radio" name="talle" id="l">
+                    <label for="l">L</label>
+                    <input type="radio" name="talle" id="xl">
+                    <label for="xl">XL</label>
                 </fieldset>
                 <fieldset class="quantity">
-                    <section>
                         <p>Cantidad</p>
-                    </section>
                          <select name="cantidad" id="cantidad">
                             <option value="1">1</option>
                             <option value="2">2</option>

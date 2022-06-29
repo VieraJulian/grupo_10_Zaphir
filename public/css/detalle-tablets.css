@@ -8,11 +8,10 @@
         flex-direction: column;
     }
     .colores{
-        padding-top: 20px;
+        padding-top: 10px;
         width: 100%;
     }
     .talles{
-       margin-top: 10px;
        width: 100%;
     }
     .quantity{
