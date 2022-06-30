@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) and (max-width:1203px) {
+    .login {
+        
+        text-align: center;
+    }
+    main{
+        margin-left: auto;
+        max-width: 580px;
+        margin-top: 100px;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}

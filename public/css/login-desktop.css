@@ -1,0 +1,9 @@
+@media (min-width: 1024px) {
+    main{
+        max-width: 580px;
+        margin-top: 100px;
+        margin-left: 30%;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
