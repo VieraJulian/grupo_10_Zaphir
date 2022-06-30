@@ -47,25 +47,26 @@
         text-decoration: none;
         padding: 12px;
         border: none;
-        width: 130px;
-        
+        width: 120px;
     }
     #menu-1:target{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         flex-wrap: wrap;
         position: fixed;
         top: 126px;
-        left: 25%;
+        left: 15%;
         background-color: #F4F6F8;
         border: 1px solid #909090;
-        width: 50%;
+        width: 70%;
+        height: auto;
         border-top: none;
-        justify-content: start;
     }
-    #menu-1 nav{
+    #menu-1 :first-child{
         width: 100%;
+    }
+    .menu-bottom{
+        display: none;
     }
     .header-form{
         order: 0;

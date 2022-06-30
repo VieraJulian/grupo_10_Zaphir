@@ -41,6 +41,9 @@
         flex-grow: 1;
         height: 40%;
     }
+    .descripcion1{
+        display: block;
+    }
     main{
         max-width: 1024px;
     }

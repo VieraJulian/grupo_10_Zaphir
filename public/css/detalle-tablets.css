@@ -8,16 +8,18 @@
         flex-direction: column;
     }
     .colores{
-        padding-top: 20px;
+        padding-top: 10px;
         width: 100%;
     }
     .talles{
-       margin-top: 10px;
        width: 100%;
     }
     .quantity{
        margin-top: 10px;
        width: 100%;
+    }
+    .imagenes-pequeñas{
+        display: none;
     }
     form{
         display: flex;
@@ -33,5 +35,8 @@
     .detalle-titulo{
         margin-top: 20px;
         margin-bottom: 5px;
+    }
+    .descripcion{
+        display: block;
     }
 }

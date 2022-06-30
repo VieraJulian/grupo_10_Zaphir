@@ -15,7 +15,20 @@ main{
     margin-bottom: 80px;
 }
 .imagenes-pequeñas{
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    width: 100%;
+}
+.descripcion1{
     display: none;
+}
+.imagenes-pequeñas figure{
+    width: 33.3%;
+    padding: 5px;
+}
+.imagenes-pequeñas img{
+    width: 100%;
 }
 .img-principal{
     order: -2;
@@ -67,40 +80,38 @@ form fieldset{
 .colores{
     padding: 10px;
     border-top: 1px solid #909090;
+    display: flex;
+    flex-wrap: wrap;
 }
-.colores label{
-    font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-}
-.colores button{
+.colores p{
     background-color: #ffffff;
     padding: 2px 2px 0px;
+    width: 100%;
+    margin-bottom: 10px;
 }
-.colores button img{
+.colores input{
+    display: none;
+}
+.colores label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    height: 40px;
+    width: 35px;
+}
+.colores img{
     border: 1px solid #909090;
 }
-.talles{
-    padding: 10px;
-    border-top: 1px solid #909090;
-}
-.talles label{
-   font-weight: 600;
-   display: block;
-   margin-bottom: 5px;
-}
-.talles button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    border-color: #909090;
+.colores img:hover{
+    border: 2px solid #909090;
 }
 .quantity{
     width: 100%;
     padding: 10px;
     border-top: 1px solid #909090;
-
+    
 }
 .quantity p{
     width: 100%;
@@ -137,6 +148,32 @@ form fieldset{
     font-weight: 600;
     width: 90%;
 }
+.talles{
+    padding: 10px;
+    border-top: 1px solid #909090;
+    display: flex;
+    flex-wrap: wrap;
+}
+.talles p{
+    width: 100%;
+    font-weight: 600;
+}
+.talles input{
+    display: none;
+}
+.talles label{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.talles label:hover{
+    border: 1px solid #909090;
+    border-radius: 100%;
+}
 .corazon{
     width: 15%;
     display: flex;
@@ -168,5 +205,9 @@ form fieldset{
 @media screen and (min-width: 600px) {
     .heart2{
         font-size: 25px;
+        transition: all 100ms;
+    }
+    .heart2:hover{
+        font-size: 30px;
     }
 }
