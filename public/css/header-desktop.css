@@ -5,6 +5,10 @@
     .header-icon{
         margin-right: 25px;
     }
+    #menu-1:target{
+        width: 40%;
+        left: 30%;
+    }
 }
 @media (min-width: 1280px){
     .header-logo a img{

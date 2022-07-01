@@ -109,20 +109,18 @@ header{
 }
 .header-form button{
     background-color: #fff;
-    border: 1px solid #909090;
+    border: none;
     cursor: pointer;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 2px;
+    right: 1px;
     border-left: none;
     
 }
 .lupa{
-    color: #000;
-    padding: 6px;
-    top: 4px;
-    right: 2px;
+    padding: 5px;
     background-color: #fff;
+    height: 100%;
 }
 .header-bars{
     display: flex;

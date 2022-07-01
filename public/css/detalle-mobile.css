@@ -147,6 +147,11 @@ form fieldset{
     border: 1px solid #909090;
     font-weight: 600;
     width: 90%;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.form-boton button:hover{
+    background-color: #b8b8b8;
 }
 .talles{
     padding: 10px;
@@ -205,9 +210,9 @@ form fieldset{
 @media screen and (min-width: 600px) {
     .heart2{
         font-size: 25px;
-        transition: all 100ms;
+        transition: all 250ms;
     }
     .heart2:hover{
-        font-size: 30px;
+        font-size: 28px;
     }
 }
