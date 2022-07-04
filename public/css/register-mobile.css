@@ -5,8 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 main{
-    margin-top: 100px;
-    margin-bottom: 80px;
     padding: 10px;
 }
 .section-register{
@@ -86,6 +84,10 @@ fieldset{
     border: none;
     color: #FFFFFF;
     font-weight: 600;
+    cursor: pointer;
+}
+.form-button button:hover{
+    background-color: #515151;;
 }
 .form-linklogin{
     display: flex;

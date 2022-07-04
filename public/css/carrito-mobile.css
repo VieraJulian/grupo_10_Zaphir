@@ -60,6 +60,10 @@ fieldset{
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+.section1 input{
+    cursor: pointer;
 }
 .title{
     font-weight: 600;
@@ -149,6 +153,7 @@ fieldset{
     border: none;
     padding: 10px;
     width: 30%;
+    cursor: pointer;
 }
 .fieldset-promo{
     margin-top: 5px;
@@ -167,4 +172,11 @@ fieldset{
     border: none;
     padding: 10px;
     width: 100%;
+    cursor: pointer;
+}
+.boton1:hover{
+    background-color: #242424;
+}
+.boton2:hover{
+    background-color: #242424;
 }
