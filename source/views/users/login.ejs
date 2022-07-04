@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %> 
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+        <section class = "login">
+            <h1> Inicia sesión </h1>
+        </section>
+        <form action = "/" method = "post" >
+            <fieldset class="NombreUsuario">
+                <label>Nombre de usuario</label>
+                <input type="text" name="nombre" id="nombre" placeholder="ej: JuanPerez10" required>
+            </fieldset>
+            <fieldset class="Contraseña">
+                <label>Contraseña</label>
+                <input type="password" name="password" id="password"required>
+            </fieldset>
+            <fieldset class="button">
+                <button>Iniciar sesión</button>
+            </fieldset>
+            <fielset class = "form-password">
+                <a href = "/">¿Olvidaste tu contraseña?</a>
+            </fielset>
+            <fieldset class="registro">
+                <a href="/usuario/registro">¿Todavía no tenés una cuenta?<span>Crear cuenta</span></a>
+            </fieldset>
+            
+        </form>
+    </main>
+    <%- include("../partials/footer.ejs") %> 
+</body>
+</html>

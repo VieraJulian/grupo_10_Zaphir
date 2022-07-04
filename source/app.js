@@ -7,17 +7,9 @@ app.listen(port, start);
 app.use(public);
 app.set("views", resolve(__dirname, "views"));
 app.set("view engine", "ejs");
-
-
+app.use(require("./routes/main.routes"))
+app.use("/productos", require("./routes/products.routes"))
+app.use("/usuario", require("./routes/users.routes"))
 
 app.get("/detalle", (req, res) => res.sendFile(resolve(__dirname, "views/products/detalle-producto.html")));
-
-app.get("/carrito", (req, res) => res.sendFile(resolve(__dirname, "views/carrito.html")));
-
 app.get("/productos", (req, res) => res.sendFile(resolve(__dirname, "views/products/productos.html")));
-
-app.get("/ingresar", (req, res) => res.sendFile(resolve(__dirname,"views/login.html")))
-
-app.get("/registro", (req, res) => res.sendFile(resolve(__dirname, "views/register.html")));
-
-app.use(require("./routes/products.routes"))

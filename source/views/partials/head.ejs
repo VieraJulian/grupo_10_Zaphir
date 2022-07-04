@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="/css/header-mobile.css">
     <link rel="stylesheet" href="/css/header-tablets.css">
     <link rel="stylesheet" href="/css/header-desktop.css">
-    <link rel = "stylesheet" href = "/css/home-mobile.css">
-    <link rel = "stylesheet" href= "/css/home-tablets.css"> 
-    <link rel = "stylesheet" href = "/css/home-desktop.css">
-    <link rel = "stylesheet" href="/css/footer-mobile.css">
-    <link rel = "stylesheet" href="/css/footer-deskop.css">
-    <link rel = "stylesheet" href="/css/footer-tablets.css">
-    <title>Zaphir</title>
+    <link rel="stylesheet" href="/css/footer-mobile.css">
+    <link rel="stylesheet" href="/css/footer-tablets.css">
+    <link rel="stylesheet" href="/css/footer-desktop.css">
+    <% if(styles && styles.length > 0) { %>
+        <% styles.forEach(styles => { %>
+            <link rel="stylesheet" href="/css/<%= styles %>.css">
+        <% }) %>
+    <% } %> 
+    <title><%= title %></title>
 </head>

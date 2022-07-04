@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %> 
+    <body>
+        <%- include("../partials/header.ejs") %> 
+        <main>
+            <form action="#" method="get">
+                    <p class="my-cart"><i class="fa-solid fa-bag-shopping carrito"></i>MI CARRITO</p>
+                <fieldset class="form-fieldset">
+                    <fieldset class="fieldset1">
+                        <figure class="imagen">
+                            <img src="/assets/productos/malibu-main.png" alt="">
+                        </figure>
+                        <section class="section1">
+                            <p class="title">Campera Malibu De Rústico</p>
+                            <p class="color">Color: Negro</p>
+                            <p class="size">Size: Xs</p>
+                            <p class="stock">En Stock 25% 0ff!</p>
+                            <input type="radio" id="envio">
+                            <label for="envio">Envio a domicilio</label>
+                        </section>
+                    </fieldset>
+                    <fieldset class="fieldset2">
+                        <fieldset class="fieldset-precio">
+                            <p class="precio-titulo">Precio</p>
+                            <p class="precio1">$ 7.499</p>
+                            <p class="precio2">$ 9.999</p>
+                            <p class="descuento">25% OFF</p>
+                        </fieldset>
+                        <fieldset class="quantity">
+                            <label class="cantidad">Cantidad</label>
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="fieldset3">
+                            <p class="total">Total</p>
+                            <p>$ 7.499</p>
+                            <p class="precio3">$ 9.999</p>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <p>1 producto</p>
+                        <p>$ 7.499</p>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="fieldset4">
+                    <fieldset>
+                        <label>Ingresa tu código promocional</label>
+                        <input type="text" name="codigo" id="codigo"><button class="boton1">ENVIAR</button>
+                        <fieldset class="fieldset-promo">
+                            <p>Descuento</p>
+                            <p>$ -2500</p>
+                        </fieldset> 
+                        <button class="boton2">Comprar</button>
+                    </fieldset>
+                </fieldset>
+            </form>
+        </main>
+        <%- include("../partials/footer.ejs") %> 
+    </body>
+</html>

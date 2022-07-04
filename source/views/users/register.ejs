@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %> 
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+        <section class="section-register">
+            <h1>Crear cuenta</h1>
+            <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
+        </section>
+        <form action="/registro" method="post">
+            <fieldset class="form-name">
+                <label>Nombre y apellido</label>
+                <input type="text" name="nombre" id="nombre" placeholder="ej: Juan Perez" required>
+            </fieldset>
+            <fieldset class="form-email">
+                <label>E-mail</label>
+                <input type="email" name="email" id="email" placeholder="ej: tunombre@email.com" required>
+            </fieldset>
+            <fieldset class="form-tel">
+                <label>Teléfono (opcional)</label>
+                <input type="tel" name="tel" id="tel" placeholder="ej: 1123445567">
+            </fieldset>
+            <fieldset class="form-password">
+                <label>Contraseña</label>
+                <input type="password" name="password" id="password" required>
+            </fieldset>
+            <fieldset class="form-confirm">
+                <label>Confirmar contraseña</label>
+                <input type="password" name="password" id="confirm-password" required>
+            </fieldset>
+            <fieldset class="form-button">
+                <button>Crear cuenta</button>
+            </fieldset>
+            <fieldset class="form-linklogin">
+                <a href="/usuario/ingresar">¿Ya tenés una cuenta?<span>Iniciá sesión</span></a>
+            </fieldset>
+        </form>
+    </main>
+    <%- include("../partials/footer.ejs") %> 
+</body>
+</html>

@@ -1,7 +1,8 @@
     *{
         padding: 0;
         margin: 0;
-        box-sizing: border-box;   
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif; 
     }
     .login {
 
@@ -9,7 +10,8 @@
     }
     main{
         max-width: 580px;
-        margin-top: 140px;
+        margin-top: 100px;
+        margin-bottom: 60px;
         padding: 10px;
         font-family: 'Montserrat', sans-serif;
     }
