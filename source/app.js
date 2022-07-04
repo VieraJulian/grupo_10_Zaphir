@@ -10,8 +10,6 @@ app.set("view engine", "ejs");
 
 
 
-app.get("/", (req, res) => res.sendFile(resolve(__dirname, "views/home.html")));
-
 app.get("/detalle", (req, res) => res.sendFile(resolve(__dirname, "views/products/detalle-producto.html")));
 
 app.get("/carrito", (req, res) => res.sendFile(resolve(__dirname, "views/carrito.html")));
