@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
+    <%- include("../partials/head.ejs") %>
 <body>
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
     <main>
        <section class="imagenes-pequeñas">
             <figure>
@@ -36,7 +36,7 @@
                     <span class="precio">$ 7.499</span>
                     <span class="precio1">$ 9.999</span><span class="descuento">25% OFF</span>
             </section>
-            <form action="/carrito" method="get" id="agregar-compra">
+            <form action="/productos/carrito" method="get" id="agregar-compra">
                 <fieldset class="colores">
                     <p>Color</p>
                     <input type="radio" name="color" id="beige">
@@ -81,6 +81,6 @@
                 </fieldset>
             </form>
     </main>
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
