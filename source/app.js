@@ -9,7 +9,6 @@ app.set("views", resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(require("./routes/main.routes"))
 app.use("/productos", require("./routes/products.routes"))
+app.use("/detalle-producto", require("./routes/products.routes"))
 app.use("/usuario", require("./routes/users.routes"))
 
-app.get("/detalle", (req, res) => res.sendFile(resolve(__dirname, "views/products/detalle-producto.html")));
-app.get("/productos", (req, res) => res.sendFile(resolve(__dirname, "views/products/productos.html")));
