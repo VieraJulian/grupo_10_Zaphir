@@ -179,6 +179,19 @@ article{
     text-align: center;
     margin: 40px 10px 30px;
 }
+.a-wts{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+}
+.a-wts img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #1bd741
+}
 @media screen and (min-width: 425px){
     .productos{
         width: 50%;
