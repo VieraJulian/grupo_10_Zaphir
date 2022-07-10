@@ -1,4 +1,10 @@
 @media (min-width: 1024px){
+    .titulo{
+        margin-top: 4rem
+    }
+    .section-categorias{
+        margin-top: 10rem
+    }
     .secciones{
         justify-content: space-between;
     }
