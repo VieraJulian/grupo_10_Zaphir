@@ -146,8 +146,11 @@ header{
     color: #000;
     font-size: 20px;
 }
+.fa-circle-plus{
+    margin-right: 4px;
+}
 .user{
-    margin-right: 3px;
+    margin-right: 4px;
 }
 .heart{
     margin-right: 4px;

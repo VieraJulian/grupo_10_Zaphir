@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nombre": "Buzo Aria",
+    "descripcion": "Buzo oversize en calidad corderito con capucha y cordon para ajustar. Puños en manga y tanca en bajo para ajustar y regular la altura. Bolsillos en frente. Modelo canchero y super abrigado para toda ocasion de uso.",
+    "categoria": "Buzos",
+    "colores": [
+      "Violeta",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 13000
+  }
+]
