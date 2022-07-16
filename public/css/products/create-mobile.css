@@ -33,6 +33,7 @@ label{
     width: 100%;
 }
 textarea{
+    resize: none;
     min-height: 80px;
     max-height: 80px;
     width: 100%;

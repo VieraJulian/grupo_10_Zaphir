@@ -4,8 +4,8 @@
   "description": "Zaphir Ropa",
   "main": "app.js",
   "scripts": {
-    "test": "node source/app.js",
-    "start": "nodemon source/app.js -e json,js,mjs,ejs"
+    "test": "nodemon source/app.js -e json,js,mjs,ejs",
+    "start": "nodemon source/app.js"
   },
   "repository": {
     "type": "git",

@@ -36,6 +36,7 @@ label{
     cursor: pointer;
 }
 textarea{
+    resize: none;
     min-height: 80px;
     max-height: 80px;
     width: 100%;
