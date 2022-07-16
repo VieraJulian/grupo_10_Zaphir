@@ -76,60 +76,17 @@
                 </section>
             </section>
             <section class="section-secundaria">
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido1.jpg" alt="Minivestido de cuadros vichy"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Minivestido de cuadros vichy</p>
-                        <p class="article-precio">$ 5.800</p>
-                    </section>
-                </article>
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido2.jpg" alt="Vestido largo evasé cruzado"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Vestido largo evasé cruzado</p>
-                        <p class="article-precio">$ 4.500</p>
-                    </section>
-                </article>
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido3.jpg" alt="Minivestido de malla"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Minivestido de malla con volantes recortados</p>
-                        <p class="article-precio">$ 3.900</p>
-                    </section>
-                </article>
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido4.jpg" alt="Vestido con abertura a rayas"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Vestido con abertura a rayas</p>
-                        <p class="article-precio">$ 4.000</p>
-                    </section>
-                </article>
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido5.jpg" alt="Vestido con abertura en la pierna"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Vestido con abertura en la pierna</p>
-                        <p class="article-precio">$ 6.600</p>
-                    </section>
-                </article>
-                <article>
-                    <Figure>
-                        <a href="/productos/detalle"><img src="/assets/productos/vestido6.jpg" alt="Vestido de malla con estampado floral"></a>
-                    </Figure>
-                    <section>
-                        <p class="article-p">Vestido de malla con estampado floral</p>
-                        <p class="article-precio">$ 3.990</p>
-                    </section>
-                </article>
+                <% products.forEach(element => { %>
+                    <article>
+                        <Figure>
+                            <a href="/productos/detalle"><img src="<%= element.imagen[0] %>" alt="<%= element.nombre %>"></a>
+                        </Figure>
+                        <section>
+                            <p class="article-p"><%= element.nombre %></p>
+                            <p class="article-precio">$<%= element.precio %></p>
+                        </section>
+                    </article>
+                <% }) %>
             </section>
         </section>
         <%- include("../partials/logo-wts.ejs") %> 

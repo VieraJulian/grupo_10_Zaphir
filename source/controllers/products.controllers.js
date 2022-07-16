@@ -9,7 +9,11 @@ module.exports = {
     },
 
     save: (req, res) => {
-        req.body.imagen = req.files.filename;
+        let acumulador = [];
+        for(let index = 0; index < req.files.length; index++) {
+            acumulador.push(req.files[index].filename);
+        }
+        req.body.imagen = acumulador
         let products = index();
         let newProduct = create(req.body);
         products.push(newProduct);
@@ -34,6 +38,7 @@ module.exports = {
 
     productos: (req, res) => res.render("products/productos", {
         title: "Zaphir",
-        styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"]  
+        styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+        products: index()
     })
 }
