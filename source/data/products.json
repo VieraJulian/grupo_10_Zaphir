@@ -47,7 +47,7 @@
       ""
     ],
     "stock": 8,
-    "precio": 7499,
+    "precio": 7800,
     "imagen": [
       "malibu-main.png",
       "campera-malibu1.jpg",
@@ -109,6 +109,34 @@
       "imagen-1658086188996-99700584.jpg",
       "imagen-1658086189010-449369178.jpg",
       "imagen-1658086189016-938595963.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Remera Disney Ballo M.",
+    "descripcion": "Remera manga corta de jersey con cuello redondo aplicado. Detalle de dobladillo en ruedo de manga. Largo a la cadera. Molderia cuadrada. estampado centrada en delantero con personaje de Disney. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Remeras",
+    "colores": [
+      "Blanco",
+      "Negro",
+      "Azul",
+      "Naranja",
+      "Verde"
+    ],
+    "talle": [
+      "XS",
+      "L",
+      "M",
+      "S",
+      "XXL"
+    ],
+    "stock": 23,
+    "precio": 4900,
+    "imagen": [
+      "imagen-1658092159228-759223721.jpg",
+      "imagen-1658092159237-992410859.jpg",
+      "imagen-1658092159241-757701277.jpg",
+      "imagen-1658092159247-572033248.jpg"
     ]
   }
 ]

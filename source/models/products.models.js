@@ -12,7 +12,7 @@ module.exports = {
         let file = resolve(__dirname, "../data/products.json");
         let data = readFileSync(file);
         let products = JSON.parse(data);
-        products = products.find(product => product.id === id)
+        return products.find(product => product.id === id)
     },
     create: function(data){
         let file = resolve(__dirname, "../data/products.json");

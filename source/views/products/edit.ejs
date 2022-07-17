@@ -5,46 +5,46 @@
     <%- include("../partials/header.ejs") %> 
     <main>
         <h1>Editar producto</h1>
-        <form action="/editar" method="post" enctype="multipart/form-data">
+        <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
             <fieldset>
                 <label>Nombre del producto</label>
-                <input class="input" type="text" name="nombre" placeholder="Nombre del producto" required>
+                <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= product.nombre %>">
             </fieldset>
             <fieldset>
                 <label>Descripción</label>
-                <textarea name="descripcion" placeholder="Descripción" required></textarea>
+                <textarea name="descripcion" placeholder="Descripción"><%= product.descripcion %></textarea>
             </fieldset>
             <fieldset>
                 <label>Imagen</label>
-                <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" required>
+                <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
             </fieldset>
             <fieldset>
                 <label>Categoría</label>
-                <input class="input" type="text" name="categoria" placeholder="Categoría" required>
+                <input class="input" type="text" name="categoria" placeholder="Categoría" value="<%= product.categoria %>">
             </fieldset>
             <fieldset>
                 <label>Colores</label>
-                <input class="input" type="text" name="colores" placeholder="Color 1" required>
-                <input class="input" type="text" name="colores" placeholder="Color 2">
-                <input class="input" type="text" name="colores" placeholder="Color 3">
-                <input class="input" type="text" name="colores" placeholder="Color 4">
-                <input class="input" type="text" name="colores" placeholder="Color 5">
+                <input class="input" type="text" name="colores" placeholder="Color 1" value="<%= product.colores[0] %>">
+                <input class="input" type="text" name="colores" placeholder="Color 2" value="<%= product.colores[1] %>">
+                <input class="input" type="text" name="colores" placeholder="Color 3" value="<%= product.colores[2] %>">
+                <input class="input" type="text" name="colores" placeholder="Color 4" value="<%= product.colores[3] %>">
+                <input class="input" type="text" name="colores" placeholder="Color 5" value="<%= product.colores[4] %>">
             </fieldset>
             <fieldset>
                 <label>Talle</label>
-                <input class="input" type="text" name="talle" placeholder="Talle 1" required>
-                <input class="input" type="text" name="talle" placeholder="Talle 2">
-                <input class="input" type="text" name="talle" placeholder="Talle 3">
-                <input class="input" type="text" name="talle" placeholder="Talle 4">
-                <input class="input" type="text" name="talle" placeholder="Talle 5">
+                <input class="input" type="text" name="talle" placeholder="Talle 1" value="<%= product.talle[0] %>">
+                <input class="input" type="text" name="talle" placeholder="Talle 2" value="<%= product.talle[1] %>">
+                <input class="input" type="text" name="talle" placeholder="Talle 3" value="<%= product.talle[2] %>">
+                <input class="input" type="text" name="talle" placeholder="Talle 4" value="<%= product.talle[3] %>">
+                <input class="input" type="text" name="talle" placeholder="Talle 5" value="<%= product.talle[4] %>">
             </fieldset>
             <fieldset>
                 <label>Stock</label>
-                <input class="input" type="number" name="stock" placeholder="Stock" required>
+                <input class="input" type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
             </fieldset>
             <fieldset>
                 <label>Precio</label>
-                <input class="input" type="number" name="precio" placeholder="Precio" required>
+                <input class="input" type="number" name="precio" placeholder="Precio" value="<%= product.precio %>">
             </fieldset>
         <button class="button-editar">
             Editar
