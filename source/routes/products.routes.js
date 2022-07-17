@@ -4,7 +4,7 @@ const {create, edit, carrito, detalle, productos, save} = require("../controller
 
 const multer = require("multer");
 const storage = require("../modules/storage")
-const upload = multer({ storage: storage("productos") });
+const upload = multer({ storage: storage("public/assets/productos") });
 
 router.get("/", productos);
 

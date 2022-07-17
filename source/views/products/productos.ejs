@@ -79,7 +79,7 @@
                 <% products.forEach(element => { %>
                     <article>
                         <Figure>
-                            <a href="/productos/detalle"><img src="<%= element.imagen[0] %>" alt="<%= element.nombre %>"></a>
+                            <a href="/productos/detalle"><img src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>"></a>
                         </Figure>
                         <section>
                             <p class="article-p"><%= element.nombre %></p>

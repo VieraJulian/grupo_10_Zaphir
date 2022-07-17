@@ -1,7 +1,7 @@
 const { diskStorage } = require("multer");
 const { extname, resolve } = require("path");
 
-let destination = folder => (req, file, cb) => cb(null, resolve(__dirname, "../../uploads/" + folder));
+let destination = folder => (req, file, cb) => cb(null, resolve(__dirname, "../../" + folder));
 
 let filename = (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
