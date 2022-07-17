@@ -55,4 +55,12 @@
     footer{
         width: 100%;
     }
+    .form-eliminar,
+    .form-editar{
+        width: 50%;
+    }
+    .form-eliminar button,
+    .form-editar button{
+        width: 80%;
+    }
 }
