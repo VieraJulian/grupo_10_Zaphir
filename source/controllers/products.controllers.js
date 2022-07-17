@@ -10,7 +10,7 @@ module.exports = {
 
     save: (req, res) => {
         let acumulador = [];
-        for(let index = 0; index < req.files.length; index++) {
+        for (let index = 0; index < req.files.length; index++) {
             acumulador.push(req.files[index].filename);
         }
         req.body.imagen = acumulador
@@ -24,7 +24,7 @@ module.exports = {
     edit: (req, res) => {
         let product = one(parseInt(req.params.id))
 
-        if(!product){
+        if (!product) {
             return res.redirect("/productos")
         }
 
@@ -37,13 +37,13 @@ module.exports = {
 
     modify: (req, res) => {
         let acumulador = [];
-        for(let index = 0; index < req.files.length; index++) {
-        acumulador.push(req.files[index].filename);
+        for (let index = 0; index < req.files.length; index++) {
+            acumulador.push(req.files[index].filename);
         }
         let products = index();
         let product = one(parseInt(req.params.id))
-        let productsModifieds = products.map(p =>{
-            if(p.id === product.id){
+        let productsModifieds = products.map(p => {
+            if (p.id === product.id) {
                 p.nombre = req.body.nombre;
                 p.descripcion = req.body.descripcion;
                 p.categoria = req.body.categoria;

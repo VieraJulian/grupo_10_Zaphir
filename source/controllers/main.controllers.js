@@ -1,10 +1,10 @@
 const { index } = require("../models/products.models");
 
 module.exports = {
-    home: (req, res) =>{
+    home: (req, res) => {
         let products = index();
 
-        if(req.query && req.query.name){
+        if (req.query && req.query.name) {
 
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
 
@@ -14,6 +14,7 @@ module.exports = {
                 products: products
             })
         }
+
         return res.render("home", {
             title: "Zaphir",
             styles: ["home-mobile", "home-tablets", "home-desktop"],
