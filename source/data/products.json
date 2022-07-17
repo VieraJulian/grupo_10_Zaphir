@@ -31,6 +31,7 @@
     "id": 2,
     "nombre": "Campera Malibu",
     "descripcion": "Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.",
+    "categoria": "Camperas",
     "colores": [
       "Beige",
       "Blanco",
@@ -52,6 +53,62 @@
       "campera-malibu1.jpg",
       "campera-malibu3.jpg",
       "campera-malibu4.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Vestido Groovy",
+    "descripcion": "Vestido tubo de microfibra estampada. Detalle de aberturas en laterales con jaretas, esto permite regular la abertura. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Azul",
+      "Marrón",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "L",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 16,
+    "precio": 8600,
+    "imagen": [
+      "imagen-1658085944907-444179695.jpg",
+      "imagen-1658085944913-169403004.jpg",
+      "imagen-1658085944916-299414407.jpg",
+      "imagen-1658085944922-289471290.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Jean Relax Cross",
+    "descripcion": "Jean 5 bolsillos calce relax, con la cintura cruzada y el botón desplazado en delantero. Pierna rectas bordes de bolsillos y ruedos gastados.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 11999,
+    "imagen": [
+      "imagen-1658086188988-539864499.jpg",
+      "imagen-1658086188996-99700584.jpg",
+      "imagen-1658086189010-449369178.jpg",
+      "imagen-1658086189016-938595963.jpg"
     ]
   }
 ]
