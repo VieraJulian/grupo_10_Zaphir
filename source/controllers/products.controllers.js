@@ -73,5 +73,17 @@ module.exports = {
         title: "Zaphir",
         styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
         products: index()
-    })
+    }),
+
+    list : (req, res) => {
+        let products = index();
+        if (req.query && req.query.name){
+            products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+        }
+        return res.render("/products/list", {
+            title : "Lista de productos",
+            styles : ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+            products : products
+        })
+}
 }

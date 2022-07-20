@@ -1,6 +1,6 @@
 const {Router} = require("express");
 const router = Router();
-const {create, edit, carrito, detalle, productos, save, modify } = require("../controllers/products.controllers");
+const {create, edit, carrito, detalle, productos, save, modify, list } = require("../controllers/products.controllers");
 
 const multer = require("multer");
 const storage = require("../modules/storage")
@@ -16,5 +16,7 @@ router.put("/editar/:id", [upload.any()], modify);
 
 router.get("/carrito", carrito);
 router.get("/detalle", detalle);
+
+router.get('/', list)
 
 module.exports = router;
