@@ -222,5 +222,61 @@
       "imagen-1658528082394-454876038.jpg",
       "imagen-1658528082400-52165902.jpg"
     ]
+  },
+  {
+    "id": 9,
+    "nombre": "Campera Jean Marine",
+    "descripcion": "Campera de jean oversize, calce relajado, tono azul gastado con roturas.",
+    "categoria": "Camperas",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 19999,
+    "imagen": [
+      "imagen-1658529293705-157776591.jpg",
+      "imagen-1658529293719-875816984.jpg",
+      "imagen-1658529293725-6479119.jpg",
+      "imagen-1658529293730-636168750.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Campera Finlandia",
+    "descripcion": "Campera en calidad polar combinado con nylon al tono. Detalle de vivo reflectivo, con capucha y cordon para ajustar. Puños en manga y bolsillos delanteros. Modelo canchero y super abrigado para toda ocasion de uso.",
+    "categoria": "Camperas",
+    "colores": [
+      "Blanco",
+      "Morado",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "XXL",
+      "",
+      "",
+      ""
+    ],
+    "stock": 13,
+    "precio": 14999,
+    "imagen": [
+      "imagen-1658529438220-981599344.jpg",
+      "imagen-1658529438224-965269642.jpg",
+      "imagen-1658529438227-159036177.jpg",
+      "imagen-1658529438231-421265090.jpg"
+    ]
   }
 ]
