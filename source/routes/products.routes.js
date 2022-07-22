@@ -17,6 +17,4 @@ router.put("/editar/:id", [upload.any()], modify);
 router.get("/carrito", carrito);
 router.get("/detalle", detalle);
 
-router.get('/', list)
-
 module.exports = router;
