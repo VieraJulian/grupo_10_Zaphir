@@ -62,9 +62,23 @@ module.exports = {
         styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"]
     }),
 
-    productos: (req, res) => res.render("products/productos", {
+    productos: (req, res) => {
+
+        let products = index();
+
+        if (req.query && req.query.name) {
+
+            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
+        }
+
+        if(req.params && req.params.categorias){
+
+            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
+        }
+
+    res.render("products/productos", {
         title: "Zaphir",
         styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
-        products: index()
-    }),
+        products: products
+    })},
 }

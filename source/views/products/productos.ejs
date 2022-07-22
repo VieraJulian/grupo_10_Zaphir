@@ -4,6 +4,7 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
+        <% if (products.length > 0) { %>
         <section class="section-principal">
             <section class="section-top">
                 <section class="section-nav">
@@ -90,6 +91,9 @@
             </section>
         </section>
         <%- include("../partials/logo-wts.ejs") %> 
+        <% } else { %>
+         <h2>No hay productos</h2>
+        <% } %>
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>
