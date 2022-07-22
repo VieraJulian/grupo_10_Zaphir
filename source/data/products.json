@@ -225,17 +225,26 @@
   },
   {
     "id": 9,
+<<<<<<< HEAD
     "nombre": "Buzo Disney Sisu M.",
     "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
     "categoria": "Buzo",
     "colores": [
       "Negro",
+=======
+    "nombre": "Campera Jean Marine",
+    "descripcion": "Campera de jean oversize, calce relajado, tono azul gastado con roturas.",
+    "categoria": "Camperas",
+    "colores": [
+      "Azul",
+>>>>>>> d6742e314e6d65a3d9bdccfc0958001530d381ad
       "",
       "",
       "",
       ""
     ],
     "talle": [
+<<<<<<< HEAD
       "XS",
       "XXL",
       "XL",
@@ -249,16 +258,40 @@
       "imagen-1658530037945-932180676.jpg",
       "imagen-1658530037949-863927098.jpg",
       "imagen-1658530037952-125018367.jpg"
+=======
+      "M",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 19999,
+    "imagen": [
+      "imagen-1658529293705-157776591.jpg",
+      "imagen-1658529293719-875816984.jpg",
+      "imagen-1658529293725-6479119.jpg",
+      "imagen-1658529293730-636168750.jpg"
+>>>>>>> d6742e314e6d65a3d9bdccfc0958001530d381ad
     ]
   },
   {
     "id": 10,
+<<<<<<< HEAD
     "nombre": "Buzo Disney Boo M.",
     "descripcion": "Buzo básico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. estampado centrada en frente con personaje de Disney Pixar. Grifa institucional en ruedo izquierdo.",
     "categoria": "Buzos",
     "colores": [
       "Blanco",
       "",
+=======
+    "nombre": "Campera Finlandia",
+    "descripcion": "Campera en calidad polar combinado con nylon al tono. Detalle de vivo reflectivo, con capucha y cordon para ajustar. Puños en manga y bolsillos delanteros. Modelo canchero y super abrigado para toda ocasion de uso.",
+    "categoria": "Camperas",
+    "colores": [
+      "Blanco",
+      "Morado",
+>>>>>>> d6742e314e6d65a3d9bdccfc0958001530d381ad
       "",
       "",
       ""
@@ -266,6 +299,7 @@
     "talle": [
       "XS",
       "XXL",
+<<<<<<< HEAD
       "M",
       "",
       ""
@@ -277,6 +311,19 @@
       "imagen-1658530167240-596657759.jpg",
       "imagen-1658530167245-287991811.jpg",
       "imagen-1658530167248-177430151.jpg"
+=======
+      "",
+      "",
+      ""
+    ],
+    "stock": 13,
+    "precio": 14999,
+    "imagen": [
+      "imagen-1658529438220-981599344.jpg",
+      "imagen-1658529438224-965269642.jpg",
+      "imagen-1658529438227-159036177.jpg",
+      "imagen-1658529438231-421265090.jpg"
+>>>>>>> d6742e314e6d65a3d9bdccfc0958001530d381ad
     ]
   }
 ]
