@@ -25,8 +25,7 @@
       "imagen-1658078617469-585662589.jpg",
       "imagen-1658078617474-31409026.jpg",
       "imagen-1658078617484-493068682.jpg"
-    ],
-    "oferta": false
+    ]
   },
   {
     "id": 2,
@@ -54,8 +53,7 @@
       "campera-malibu1.jpg",
       "campera-malibu3.jpg",
       "campera-malibu4.jpg"
-    ],
-    "oferta": false
+    ]
   },
   {
     "id": 3,
@@ -83,8 +81,7 @@
       "imagen-1658085944913-169403004.jpg",
       "imagen-1658085944916-299414407.jpg",
       "imagen-1658085944922-289471290.jpg"
-    ],
-    "oferta": true
+    ]
   },
   {
     "id": 4,
@@ -112,8 +109,7 @@
       "imagen-1658086188996-99700584.jpg",
       "imagen-1658086189010-449369178.jpg",
       "imagen-1658086189016-938595963.jpg"
-    ],
-    "oferta": true
+    ]
   },
   {
     "id": 5,
@@ -141,8 +137,7 @@
       "imagen-1658092159237-992410859.jpg",
       "imagen-1658092159241-757701277.jpg",
       "imagen-1658092159247-572033248.jpg"
-    ],
-    "oferta": true
+    ]
   },
   {
     "id": 6,
@@ -170,8 +165,7 @@
       "imagen-1658523525961-754978210.jpg",
       "imagen-1658523525966-277581079.jpg",
       "imagen-1658523525970-646916049.jpg"
-    ],
-    "oferta": true
+    ]
   },
   {
     "id": 7,
@@ -199,8 +193,7 @@
       "imagen-1658527797629-758142735.jpg",
       "imagen-1658527797633-283538886.jpg",
       "imagen-1658527797635-2409880.jpg"
-    ],
-    "oferta": false
+    ]
   },
   {
     "id": 8,
@@ -228,46 +221,16 @@
       "imagen-1658528082391-217564116.jpg",
       "imagen-1658528082394-454876038.jpg",
       "imagen-1658528082400-52165902.jpg"
-    ],
-    "oferta": false
+    ]
   },
   {
     "id": 9,
-    "nombre": "Campera Jean Marine",
-    "descripcion": "Campera de jean oversize, calce relajado, tono azul gastado con roturas.",
-    "categoria": "Camperas",
+    "nombre": "Buzo Disney Sisu M.",
+    "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Buzo",
     "colores": [
-      "Azul",
+      "Negro",
       "",
-      "",
-      "",
-      ""
-    ],
-    "talle": [
-      "M",
-      "L",
-      "",
-      "",
-      ""
-    ],
-    "stock": 8,
-    "precio": 19999,
-    "imagen": [
-      "imagen-1658529293705-157776591.jpg",
-      "imagen-1658529293719-875816984.jpg",
-      "imagen-1658529293725-6479119.jpg",
-      "imagen-1658529293730-636168750.jpg"
-    ],
-    "oferta": false
-  },
-  {
-    "id": 10,
-    "nombre": "Campera Finlandia",
-    "descripcion": "Campera en calidad polar combinado con nylon al tono. Detalle de vivo reflectivo, con capucha y cordon para ajustar. Puños en manga y bolsillos delanteros. Modelo canchero y super abrigado para toda ocasion de uso.",
-    "categoria": "Camperas",
-    "colores": [
-      "Blanco",
-      "Morado",
       "",
       "",
       ""
@@ -275,18 +238,45 @@
     "talle": [
       "XS",
       "XXL",
+      "XL",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 9599,
+    "imagen": [
+      "imagen-1658530037940-965966374.jpg",
+      "imagen-1658530037945-932180676.jpg",
+      "imagen-1658530037949-863927098.jpg",
+      "imagen-1658530037952-125018367.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Buzo Disney Boo M.",
+    "descripcion": "Buzo básico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. estampado centrada en frente con personaje de Disney Pixar. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Buzos",
+    "colores": [
+      "Blanco",
+      "",
       "",
       "",
       ""
     ],
-    "stock": 13,
-    "precio": 14999,
-    "imagen": [
-      "imagen-1658529438220-981599344.jpg",
-      "imagen-1658529438224-965269642.jpg",
-      "imagen-1658529438227-159036177.jpg",
-      "imagen-1658529438231-421265090.jpg"
+    "talle": [
+      "XS",
+      "XXL",
+      "M",
+      "",
+      ""
     ],
-    "oferta": false
+    "stock": 11,
+    "precio": 8799,
+    "imagen": [
+      "imagen-1658530167236-723134601.jpg",
+      "imagen-1658530167240-596657759.jpg",
+      "imagen-1658530167245-287991811.jpg",
+      "imagen-1658530167248-177430151.jpg"
+    ]
   }
 ]
