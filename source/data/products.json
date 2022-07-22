@@ -166,5 +166,61 @@
       "imagen-1658523525966-277581079.jpg",
       "imagen-1658523525970-646916049.jpg"
     ]
+  },
+  {
+    "id": 7,
+    "nombre": "Campera No Limits",
+    "descripcion": "Campera de frisa liviana. Molderia oversize. Cierre metálico. Estampado centrada en espalda, frente ubicación logo y en mangas. Capucha forrada en jersey",
+    "categoria": "Camperas",
+    "colores": [
+      "Blanco",
+      "Negro",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": 14,
+    "precio": 12999,
+    "imagen": [
+      "imagen-1658527797625-102302788.jpg",
+      "imagen-1658527797629-758142735.jpg",
+      "imagen-1658527797633-283538886.jpg",
+      "imagen-1658527797635-2409880.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Campera Berta",
+    "descripcion": "Campera de nylon con guata matelaseada y forrada al tono. Posee múltiples bolsillos y capucha incorporada. Detalle de elástico en puño y bajo con tanca regulable",
+    "categoria": "Camperas",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "stock": 12,
+    "precio": 29999,
+    "imagen": [
+      "imagen-1658528082386-525314238.jpg",
+      "imagen-1658528082391-217564116.jpg",
+      "imagen-1658528082394-454876038.jpg",
+      "imagen-1658528082400-52165902.jpg"
+    ]
   }
 ]
