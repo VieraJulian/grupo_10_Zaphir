@@ -222,5 +222,61 @@
       "imagen-1658528082394-454876038.jpg",
       "imagen-1658528082400-52165902.jpg"
     ]
+  },
+  {
+    "id": 9,
+    "nombre": "Buzo Disney Sisu M.",
+    "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Buzo",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "XXL",
+      "XL",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 9599,
+    "imagen": [
+      "imagen-1658530037940-965966374.jpg",
+      "imagen-1658530037945-932180676.jpg",
+      "imagen-1658530037949-863927098.jpg",
+      "imagen-1658530037952-125018367.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Buzo Disney Boo M.",
+    "descripcion": "Buzo básico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. estampado centrada en frente con personaje de Disney Pixar. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Buzos",
+    "colores": [
+      "Blanco",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "XXL",
+      "M",
+      "",
+      ""
+    ],
+    "stock": 11,
+    "precio": 8799,
+    "imagen": [
+      "imagen-1658530167236-723134601.jpg",
+      "imagen-1658530167240-596657759.jpg",
+      "imagen-1658530167245-287991811.jpg",
+      "imagen-1658530167248-177430151.jpg"
+    ]
   }
 ]
