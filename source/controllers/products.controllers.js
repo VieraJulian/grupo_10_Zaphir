@@ -9,11 +9,7 @@ module.exports = {
     },
 
     save: (req, res) => {
-        let acumulador = [];
-        for (let index = 0; index < req.files.length; index++) {
-            acumulador.push(req.files[index].filename);
-        }
-        req.body.imagen = acumulador
+        req.body.imagen = req.files.map(file => file.filename)
         let products = index();
         let newProduct = create(req.body);
         products.push(newProduct);
@@ -36,10 +32,7 @@ module.exports = {
     },
 
     modify: (req, res) => {
-        let acumulador = [];
-        for (let index = 0; index < req.files.length; index++) {
-            acumulador.push(req.files[index].filename);
-        }
+        let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
         let productsModifieds = products.map(p => {
@@ -51,7 +44,7 @@ module.exports = {
                 p.talle = req.body.talle;
                 p.stock = parseInt(req.body.stock);
                 p.precio = parseInt(req.body.precio);
-                p.imagen = req.files && req.files.length > 0 ? acumulador : p.imagen;
+                p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
             }
             return p
         })

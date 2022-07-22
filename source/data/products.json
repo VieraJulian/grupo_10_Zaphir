@@ -138,5 +138,33 @@
       "imagen-1658092159241-757701277.jpg",
       "imagen-1658092159247-572033248.jpg"
     ]
+  },
+  {
+    "id": 6,
+    "nombre": "Campera Bomber Rhode",
+    "descripcion": "Campera tipo bomber de frisa liviana combinada en dos colores. Cuello y puños tejidos rayados en combinación con colorido de prenda.Broches a presión en delantero. Parche en ubicación logo y estampado centrada en espalda.",
+    "categoria": "Camperas",
+    "colores": [
+      "Verde",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 7,
+    "precio": 12999,
+    "imagen": [
+      "imagen-1658523525953-367108139.jpg",
+      "imagen-1658523525961-754978210.jpg",
+      "imagen-1658523525966-277581079.jpg",
+      "imagen-1658523525970-646916049.jpg"
+    ]
   }
 ]
