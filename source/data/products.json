@@ -288,5 +288,92 @@
       "imagen-1658530167248-177430151.jpg"
     ],
     "descuento": 0
+  },
+  {
+    "id": 11,
+    "nombre": "Buzo Essential",
+    "descripcion": "Buzo basico de plush. Puños en ruedo, cuello y mangas de tela base. Largo por debajo de la cadera. Detalle de grifa personalizada en ruedo frente delantero.",
+    "categoria": "Buzos",
+    "colores": [
+      "Negro",
+      "Gris",
+      "Morado",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 21,
+    "precio": 9500,
+    "imagen": [
+      "imagen-1658535809965-317396306.jpg",
+      "imagen-1658535809971-55401857.jpg",
+      "imagen-1658535809974-822011894.jpg",
+      "imagen-1658535809979-674204879.jpg"
+    ],
+    "descuento": 500
+  },
+  {
+    "id": 12,
+    "nombre": "Buzo Patchwork",
+    "descripcion": "Buzo combinado con tecnica patchwork de rústico esmerilado. Cuello redondo y puños aplicados. Molderia relax. Grifa institucional en lateral izquierdo.",
+    "categoria": "Buzos",
+    "colores": [
+      "Marrón",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 7999,
+    "imagen": [
+      "imagen-1658535983921-925183628.jpg",
+      "imagen-1658535983929-400010793.jpg",
+      "imagen-1658535983934-719455623.jpg",
+      "imagen-1658535983937-159526344.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 13,
+    "nombre": "Buzo Finlandia",
+    "descripcion": "Buzo oversize en calidad polar combinado con nylon al tono. Detalle de vivo reflectivo, con capucha y cordon para ajustar. Puños en manga y tanca en bajo para ajustar y regular la altura. Modelo canchero y super abrigado para toda ocasion de uso.",
+    "categoria": "Buzos",
+    "colores": [
+      "Negro",
+      "Blanco",
+      "Morado",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 12999,
+    "imagen": [
+      "imagen-1658536132097-54538370.jpg",
+      "imagen-1658536132105-435955276.jpg",
+      "imagen-1658536132114-195026675.jpg",
+      "imagen-1658536132116-966899474.jpg"
+    ],
+    "descuento": 0
   }
 ]

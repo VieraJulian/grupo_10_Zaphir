@@ -28,7 +28,8 @@ module.exports = {
             talle: data.talle,
             stock: parseInt(data.stock),
             precio: parseInt(data.precio),
-            imagen: data.imagen
+            imagen: data.imagen,
+            descuento: parseInt(data.descuento)
         })
     },
     write: function(data){

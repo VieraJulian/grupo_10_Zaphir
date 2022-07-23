@@ -45,6 +45,7 @@ module.exports = {
                 p.stock = parseInt(req.body.stock);
                 p.precio = parseInt(req.body.precio);
                 p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
+                p.descuento = parseInt(req.body.descuento);
             }
             return p
         })
@@ -52,33 +53,34 @@ module.exports = {
         return res.redirect("/productos")
     },
 
+    productos: (req, res) => {
+        
+        let products = index();
+        
+        if (req.query && req.query.name) {
+            
+            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
+        }
+        
+        if(req.params && req.params.categorias){
+            
+            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
+        }
+        
+        res.render("products/productos", {
+            title: "Zaphir",
+            styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+            products: products
+        })
+    },
+
     carrito: (req, res) => res.render("products/carrito", {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
     }),
-
+    
     detalle: (req, res) => res.render("products/detalle", {
         title: "Detalle de producto",
         styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"]
     }),
-
-    productos: (req, res) => {
-
-        let products = index();
-
-        if (req.query && req.query.name) {
-
-            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
-        }
-
-        if(req.params && req.params.categorias){
-
-            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
-        }
-
-    res.render("products/productos", {
-        title: "Zaphir",
-        styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
-        products: products
-    })},
 }
