@@ -3,7 +3,7 @@ const { index } = require("../models/products.models");
 module.exports = {
     home: (req, res) => {
 
-        let products = index().filter(product => product.descuento > 0);
+        let products = index().filter(product => product.descuento);
 
         return res.render("home", {
             title: "Zaphir",
