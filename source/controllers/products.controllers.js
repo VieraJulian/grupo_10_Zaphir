@@ -62,10 +62,26 @@ module.exports = {
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
         
+        if(req.query && req.query.talle){
+
+            products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
+        }
+
+        if(req.query && req.query.color){
+
+            products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
+        }
+
+        if(req.query && req.query.range){
+
+            products = products.filter(products => products.precio >= (req.query.range));
+        }
+
         if(req.params && req.params.categorias){
             
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
+
         
         res.render("products/productos", {
             title: "Zaphir",

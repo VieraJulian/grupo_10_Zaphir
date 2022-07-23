@@ -102,7 +102,7 @@ main{
     margin-left: 8px;
     outline-color: #000;
 }
-#menu-2 div{
+div{
     display: flex;
     margin-bottom: 10px;
 }
@@ -126,6 +126,7 @@ main{
     right: 30px;
     bottom: 30px;
     border-radius: 100%;
+    z-index: 10;
 }
 .a-wts img{
     width: 45px;

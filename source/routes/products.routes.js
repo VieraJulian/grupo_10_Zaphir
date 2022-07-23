@@ -15,6 +15,7 @@ router.put("/editar/:id", [upload.any()], modify);
 router.get("/carrito", carrito);
 router.get("/detalle", detalle);
 
+router.get("/:talle?&:color?&:range-precio?", productos);
 router.get("/:categorias?", productos);
 
 module.exports = router;
