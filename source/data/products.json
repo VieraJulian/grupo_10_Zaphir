@@ -578,5 +578,208 @@
       "imagen-1658702079058-455851991.jpg"
     ],
     "descuento": 200
+  },
+  {
+    "id": 21,
+    "nombre": "Jacket Jean Rockwell",
+    "descripcion": "Campera de jean fit en lona rigida 100% algodón. Largo debajo de la cintura. Abertura central con botones metálicos personalizados en baño negro.",
+    "categoria": "Camperas",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "L",
+      "S",
+      "",
+      ""
+    ],
+    "stock": 13,
+    "precio": 19800,
+    "imagen": [
+      "imagen-1658702381296-962376759.jpg",
+      "imagen-1658702381311-864392822.jpg",
+      "imagen-1658702381316-36442892.jpg",
+      "imagen-1658702381320-84765048.jpg"
+    ],
+    "descuento": null
+  },
+  {
+    "id": 22,
+    "nombre": "Jean Relax Fast",
+    "descripcion": "Jean 5 bolsillos calce relax (tiro alto), color azul claro con localizado, en lona 100% algodón. Tajos en rodillas al corte. Mini tajos laterales en ruedos. Avíos metálicos personalizados baño níquel.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 10999,
+    "imagen": [
+      "imagen-1658702479155-884719423.jpg",
+      "imagen-1658702479162-582848695.jpg",
+      "imagen-1658702479165-310979035.jpg",
+      "imagen-1658702479167-99641533.jpg"
+    ],
+    "descuento": null
+  },
+  {
+    "id": 23,
+    "nombre": "Jean Mom United",
+    "descripcion": "Jean 5 bolsillos calce mom (tiro alto ajustado en la cintura) color azul medio en lona 100% algodón, con secuencia de maxi-roturas en ambas piernas. Ruedo desflecado.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XL",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "stock": 5,
+    "precio": 11000,
+    "imagen": [
+      "imagen-1658702705882-411971075.jpg",
+      "imagen-1658702705887-464225172.jpg",
+      "imagen-1658702705891-242218510.jpg",
+      "imagen-1658702705895-965049952.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 24,
+    "nombre": "Jean Long Straight Linn",
+    "descripcion": "Jean 5 bolsillos calce long straight (tiro medio-alto y pierna recta larga) con tajos externos en ruedo y maxiroturas en rodillas. Terminación de ruedo desflecado.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "L",
+      "M",
+      "",
+      "",
+      ""
+    ],
+    "stock": 27,
+    "precio": 11000,
+    "imagen": [
+      "imagen-1658702835925-404616808.jpg",
+      "imagen-1658702835926-739189828.jpg",
+      "imagen-1658702835931-114755843.jpg",
+      "imagen-1658702835935-44903835.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 25,
+    "nombre": "Jean Straight Charlie",
+    "descripcion": "Jean 5 bolsillos calce straight (pierna recta), en lona 100% algodón, color azul con roturas en las rodillas y terminación de ruedo al corte. Avíos metálicos personalizados.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 16,
+    "precio": 10000,
+    "imagen": [
+      "imagen-1658702962776-463140003.jpg",
+      "imagen-1658702962784-839682207.jpg",
+      "imagen-1658702962787-297041884.jpg",
+      "imagen-1658702962790-566683894.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 26,
+    "nombre": "Jacket Jean Friday",
+    "descripcion": "Jacket denim long fitt lavado gastado con roturas.",
+    "categoria": "Camperas",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XL",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 11000,
+    "imagen": [
+      "imagen-1658703087215-299014339.jpg",
+      "imagen-1658703087231-386345879.jpg",
+      "imagen-1658703087235-450573249.jpg",
+      "imagen-1658703087240-168013123.jpg"
+    ],
+    "descuento": null
+  },
+  {
+    "id": 27,
+    "nombre": "Jean H Relax Tadow",
+    "descripcion": "Jean 5 bolsillos calce high relax (tiro alto relajado), color azul claro en lona 100% algodón. Roturas en rodillas y bordes de bolsillos gastados. Avíos metálicos personalizados baño níquel.",
+    "categoria": "Jeans",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "L",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "stock": 17,
+    "precio": 7200,
+    "imagen": [
+      "imagen-1658703240101-776950700.jpg",
+      "imagen-1658703240111-722946826.jpg",
+      "imagen-1658703240116-853957611.jpg",
+      "imagen-1658703240120-440059432.jpg"
+    ],
+    "descuento": 400
   }
 ]
