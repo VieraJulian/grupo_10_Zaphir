@@ -433,5 +433,150 @@
       "imagen-1658701270626-727931336.png"
     ],
     "descuento": 300
+  },
+  {
+    "id": 16,
+    "nombre": "Remera Alabama",
+    "descripcion": "Remera manga corta de jersey con cuello redondo aplicado de ribb. Molderia relax. Largo por debajo de la cintura. Estampado centrada en delantero.",
+    "categoria": "Remeras",
+    "colores": [
+      "Blanco",
+      "Gris",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XXL",
+      "M",
+      "",
+      "",
+      ""
+    ],
+    "stock": 12,
+    "precio": 2500,
+    "imagen": [
+      "imagen-1658701562514-996703689.jpg",
+      "imagen-1658701562523-594337658.jpg",
+      "imagen-1658701562527-78051264.jpg",
+      "imagen-1658701562530-846995035.jpg"
+    ],
+    "descuento": 200
+  },
+  {
+    "id": 17,
+    "nombre": "Remera Legend Star Wars K.",
+    "descripcion": "Remera de jersey 24/1 cuello redondo manga corta. Molderia oversize. Largo a la cadera. Estampa centrada en frente con personaje de Disney Star Wars.",
+    "categoria": "Remeras",
+    "colores": [
+      "Negro",
+      "Blanco",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XXL",
+      "XS",
+      "",
+      "",
+      ""
+    ],
+    "stock": 32,
+    "precio": 4000,
+    "imagen": [
+      "imagen-1658701711071-449039892.jpg",
+      "imagen-1658701711080-708238919.jpg",
+      "imagen-1658701711081-285240597.jpg",
+      "imagen-1658701711084-539836820.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 18,
+    "nombre": "Remera Arizona",
+    "descripcion": "Remera básica manga corta de jersey batik. Cuello redondo aplicado. Largo a la primer cadera. estampado centrada en frente.",
+    "categoria": "Remeras",
+    "colores": [
+      "Violeta",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "XS",
+      "",
+      "",
+      ""
+    ],
+    "stock": 28,
+    "precio": 5000,
+    "imagen": [
+      "imagen-1658701819674-580536482.jpg",
+      "imagen-1658701819692-292708450.jpg",
+      "imagen-1658701819697-229914652.jpg",
+      "imagen-1658701819712-517682309.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 19,
+    "nombre": "Remera Strangers",
+    "descripcion": "Remera basica manga corta de jersey. Cuello redondo aplicado. Largo a la primer cadera. Estampa centrada en frente.",
+    "categoria": "Remeras",
+    "colores": [
+      "Blanco",
+      "Negro",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "L",
+      "XS",
+      "XXL"
+    ],
+    "stock": 24,
+    "precio": 4000,
+    "imagen": [
+      "imagen-1658701935727-141755924.jpg",
+      "imagen-1658701935742-880258785.jpg",
+      "imagen-1658701935746-268468083.jpg",
+      "imagen-1658701935749-439918141.jpg"
+    ],
+    "descuento": 200
+  },
+  {
+    "id": 20,
+    "nombre": "Remera Spatial",
+    "descripcion": "Remera basica manga corta de jersey. Cuello redondo aplicado. Largo a la primer cadera. Estampa centrada en frente.",
+    "categoria": "Remeras",
+    "colores": [
+      "Blanco",
+      "Negro",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "L",
+      "",
+      ""
+    ],
+    "stock": 9,
+    "precio": 4300,
+    "imagen": [
+      "imagen-1658702079044-931826453.jpg",
+      "imagen-1658702079050-921305749.jpg",
+      "imagen-1658702079054-217530393.jpg",
+      "imagen-1658702079058-455851991.jpg"
+    ],
+    "descuento": 200
   }
 ]
