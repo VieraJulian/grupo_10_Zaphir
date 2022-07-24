@@ -95,8 +95,22 @@ module.exports = {
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
     }),
     
-    detalle: (req, res) => res.render("products/detalle", {
-        title: "Detalle de producto",
-        styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"]
-    }),
+    detalle: (req, res) =>{
+
+        let product = one(parseInt(req.params.id))
+
+        let precio = product.precio
+        let descuento = product.descuento
+        
+        function resta(precio, descuento){
+            return precio - descuento
+        }
+
+        res.render("products/detalle", {
+            title: "Detalle de producto",
+            styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
+            product: product,
+            resta: resta(precio, descuento)
+        })
+    },
 }

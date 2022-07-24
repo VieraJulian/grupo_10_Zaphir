@@ -13,7 +13,8 @@ router.get("/editar/:id", edit);
 router.put("/editar/:id", [upload.any()], modify);
 
 router.get("/carrito", carrito);
-router.get("/detalle", detalle);
+
+router.get("/detalle/:id", detalle);
 
 router.get("/:talle?", productos);
 router.get("/:color?", productos);

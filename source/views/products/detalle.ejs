@@ -6,63 +6,76 @@
     <main>
        <section class="imagenes-pequeñas">
             <figure>
-                <img src="/assets/productos/campera-malibu3.jpg" alt="Campera Malibu">
+                <img src="/assets/productos/<%= product.imagen[1] %>" alt="<%= product.nombre %>">
             </figure>
             <figure>
-                <img src="/assets/productos/campera-malibu1.jpg" alt="Campera Malibu">
+                <img src="/assets/productos/<%= product.imagen[2] %>" alt="<%= product.nombre %>">
             </figure>
             <figure>
-                <img src="/assets/productos/campera-malibu4.png" alt="Campera Malibu">
+                <img src="/assets/productos/<%= product.imagen[3] %>" alt="<%= product.nombre %>">
             </figure>
             <section class="section-descripcion1">
                 <section class="descripcion1">
                     <p class="detalle-titulo">Descripción</p>
-                    <p class="detalle">Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.</p>
+                    <p class="detalle"><%= product.descripcion %></p>
                 </section>
             </section>
         </section>
        <section class="descripcion">
             <p class="detalle-titulo">Descripción</p>
-            <p class="detalle">Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.</p>
+            <p class="detalle"><%= product.descripcion %></p>
        </section>
        <section class="img-principal">
             <figure>
-                <img src="/assets/productos/malibu-main.png" alt="Campera Malibu">
+                <img src="/assets/productos/<%= product.imagen[0] %>" alt="Campera Malibu">
             </figure>
        </section>
        <section class="section-right">
             <section class="info">
-                    <h2>Campera Malibu De Rústico</h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
-                    <span class="precio">$ 7.499</span>
-                    <span class="precio1">$ 9.999</span><span class="descuento">25% OFF</span>
+                    <h2><%= product.nombre %></h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
+                    <span class="precio">$ <%= resta %></span>
+                    <span class="precio1">$ <%= product.precio %></span><span class="descuento">- <%= product.descuento %> OFF</span>
             </section>
             <form action="/productos/carrito" method="get" id="agregar-compra">
                 <fieldset class="colores">
                     <p>Color</p>
-                    <input type="radio" name="color" id="beige">
-                    <label for="beige"><img src="/assets/colores/beige.jpg" alt=""></label>
-                    <input type="radio" name="color" id="blanco">
-                    <label for="blanco"><img src="/assets/colores/blanco.jpg" alt=""></label>
-                    <input type="radio" name="color" id="negro">
-                    <label for="negro"><img src="/assets/colores/negro.jpg" alt=""></label>
+                    <input type="radio" name="color" id="<%= product.colores[0] %>">
+                    <label for="<%= product.colores[0] %>"><img src="/assets/colores/<%= product.colores[0] %>.jpg" alt="<%= product.colores[0] %>"></label>
+
+                    <input type="radio" name="color" id="<%= product.colores[1] %>">
+                    <label for="<%= product.colores[1] %>"><img src="/assets/colores/<%= product.colores[1] %>.jpg" alt="<%= product.colores[1] %>"></label>
+
+                    <input type="radio" name="color" id="<%= product.colores[2] %>">
+                    <label for="<%= product.colores[2] %>"><img src="/assets/colores/<%= product.colores[2] %>.jpg" alt="<%= product.colores[2] %>"></label>
+
+                    <input type="radio" name="color" id="<%= product.colores[3] %>">
+                    <label for="<%= product.colores[3] %>"><img src="/assets/colores/<%= product.colores[3] %>.jpg" alt="<%= product.colores[3] %>"></label>
+
+                    <input type="radio" name="color" id="<%= product.colores[4] %>">
+                    <label for="<%= product.colores[4] %>"><img src="/assets/colores/<%= product.colores[4] %>.jpg" alt="<%= product.colores[4] %>"></label>
                 </fieldset>
                 <fieldset class="talles">
                     <p>Talles</p>
-                    <input type="radio" name="talle" id="xs">
-                    <label for="xs" class="label-talle">XS</label>
-                    <input type="radio" name="talle" id="s">
-                    <label for="s">S</label>
-                    <input type="radio" name="talle" id="m">
-                    <label for="m">M</label>
-                    <input type="radio" name="talle" id="l">
-                    <label for="l">L</label>
-                    <input type="radio" name="talle" id="xl">
-                    <label for="xl">XL</label>
+                    <label for="<%= product.talle[0] %>" class="label-talle"><%= product.talle[0] %></label>
+                    <input type="radio" name="talle" id="<%= product.talle[0] %>">
+
+                    <label for="<%= product.talle[1] %>" class="label-talle"><%= product.talle[1] %></label>
+                    <input type="radio" name="talle" id="<%= product.talle[1] %>">
+
+                    <label for="<%= product.talle[2] %>" class="label-talle"><%= product.talle[2] %></label>
+                    <input type="radio" name="talle" id="<%= product.talle[2] %>">
+
+                    <label for="<%= product.talle[3] %>" class="label-talle"><%= product.talle[3] %></label>
+                    <input type="radio" name="talle" id="<%= product.talle[3] %>">
+
+                    <label for="<%= product.talle[4] %>" class="label-talle"><%= product.talle[4] %></label>
+                    <input type="radio" name="talle" id="<%= product.talle[4] %>">
                 </fieldset>
                 <fieldset class="quantity">
                         <p>Cantidad</p>
                          <select name="cantidad" id="cantidad">
-                            <option value="1">1</option>
+                           
+                            <!-- <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -71,7 +84,7 @@
                             <option value="7">7</option>
                             <option value="8">8</option>
                             <option value="9">9</option>
-                            <option value="10">10</option>
+                            <option value="10">10</option> -->
                          </select>
                 </fieldset>
                 <fieldset class="form-boton">
