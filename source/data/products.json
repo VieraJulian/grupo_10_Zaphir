@@ -375,5 +375,63 @@
       "imagen-1658536132116-966899474.jpg"
     ],
     "descuento": 0
+  },
+  {
+    "id": 14,
+    "nombre": "Campera Helen",
+    "descripcion": "Campera inflada con guata interna mateladad con forma de rombo. Bolsillos delanteros. Avios al tono personalizados.",
+    "categoria": "Camperas",
+    "colores": [
+      "Marrón",
+      "Negro",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "",
+      "",
+      ""
+    ],
+    "stock": 23,
+    "precio": 32999,
+    "imagen": [
+      "imagen-1658701166451-339350022.jpg",
+      "imagen-1658701166456-895162949.jpg",
+      "imagen-1658701166460-3680074.jpg",
+      "imagen-1658701166465-718783303.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 15,
+    "nombre": "Campera Juana K.",
+    "descripcion": "Campera oversize de frisa liviana. Capucha. Detalle de puños con ruedo. Tiracierre personalizado de linea Mich. Cordones al tono de la base. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Camperas",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 5,
+    "precio": 9700,
+    "imagen": [
+      "imagen-1658701270618-600922628.png",
+      "imagen-1658701270622-633216846.png",
+      "imagen-1658701270625-725317062.png",
+      "imagen-1658701270626-727931336.png"
+    ],
+    "descuento": 300
   }
 ]
