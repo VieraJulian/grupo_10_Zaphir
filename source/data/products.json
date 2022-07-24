@@ -781,5 +781,150 @@
       "imagen-1658703240120-440059432.jpg"
     ],
     "descuento": 400
+  },
+  {
+    "id": 28,
+    "nombre": "Vestido Long Chiara",
+    "descripcion": "Vestido tubo de ribb complemento. Escote off shoulder. Manga larga. Detalle de terminación con roulotte en escote. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Naranja",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "L",
+      "",
+      ""
+    ],
+    "stock": 13,
+    "precio": 7000,
+    "imagen": [
+      "imagen-1658703450676-570413203.jpg",
+      "imagen-1658703450680-581761553.jpg",
+      "imagen-1658703450684-681638677.jpg",
+      "imagen-1658703450690-971316070.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 29,
+    "nombre": "Vestido Jazzy",
+    "descripcion": "Vestido corto en crepe liviano. Falda evasé, manga balloon y escote redondo con pequeños frunces. Acceso en espalda con abertura en escote.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Negro",
+      "Marrón",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "XXL",
+      "",
+      "",
+      ""
+    ],
+    "stock": 14,
+    "precio": 8800,
+    "imagen": [
+      "imagen-1658703577066-283316613.jpg",
+      "imagen-1658703577072-889673960.jpg",
+      "imagen-1658703577076-489079456.jpg",
+      "imagen-1658703577079-207966050.jpg"
+    ],
+    "descuento": 200
+  },
+  {
+    "id": 30,
+    "nombre": "Vestido Tori Lurex",
+    "descripcion": "Vestido tubo de tramado lurex. Escote asimetrico con tiras, las cuales permiten abrocharlo de distintas formas al cuello. Manga larga. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Azul",
+      "Marrón",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XS"
+    ],
+    "stock": 24,
+    "precio": 13000,
+    "imagen": [
+      "imagen-1658703701104-642671446.jpg",
+      "imagen-1658703701120-671333981.jpg",
+      "imagen-1658703701125-92479956.jpg",
+      "imagen-1658703701131-924820818.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 31,
+    "nombre": "Vestido Levelup K.",
+    "descripcion": "Vestido de escote a un hombro con una manga larga con sustracción. Cuerpo con sustracción en abdomen. Falda larga con tajo lateral.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "S",
+      "",
+      ""
+    ],
+    "stock": 23,
+    "precio": 15999,
+    "imagen": [
+      "imagen-1658703814009-217502045.jpg",
+      "imagen-1658703814013-44702618.jpg",
+      "imagen-1658703814016-387317464.jpg",
+      "imagen-1658703814020-686652873.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 32,
+    "nombre": "Vestido Sparkele",
+    "descripcion": "Vestido corto en creppe con lúrex, bustier entallado y espalda descubierta. Falda con vuelo.",
+    "categoria": "Vestidos",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "X",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 14,
+    "precio": 9600,
+    "imagen": [
+      "imagen-1658703919401-418956069.jpg",
+      "imagen-1658703919406-521953696.jpg",
+      "imagen-1658703919409-219483356.jpg",
+      "imagen-1658703919414-857473540.jpg"
+    ],
+    "descuento": 400
   }
 ]
