@@ -1,1 +1,58 @@
-[]
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "email": "juanperez2020@gmail.com",
+        "password": "23467287",
+        "isAdmin": false
+    },
+    {
+        "id": 2,
+        "nombre": "María",
+        "apellido": "Martinez",
+        "email": "mariamartinez123@gmail.com",
+        "password": "0968705",
+        "isAdmin": false
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "Garcia",
+        "email": "cargarcia1983@gmail.com",
+        "password": "42138790",
+        "isAdmin": false
+    },
+    {
+        "id": 4,
+        "nombre": "Ana",
+        "apellido": "Noir",
+        "email": "noirAnalarioja@gmail.com",
+        "password": "5768456",
+        "isAdmin": false
+    },
+    {
+        "id": 5,
+        "nombre": "Pilar",
+        "apellido": "Blanc",
+        "email": "pilarbsas@hotmail.com",
+        "password": "29853948",
+        "isAdmin": false
+    },
+    {
+        "id": 6,
+        "nombre": "Celeste",
+        "apellido": "Fernandez",
+        "email": "mariaceleste2022@gmail.com",
+        "password": "celeste42487386",
+        "isAdmin": true
+    },
+    {
+        "id": 7,
+        "nombre": "Andrea",
+        "apellido": "Ramirez",
+        "email": "ramirezrocioandre1989@gmail.com",
+        "password": "20983472893",
+        "isAdmin": true
+    }
+]
