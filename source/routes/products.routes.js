@@ -16,9 +16,9 @@ router.get("/carrito", carrito);
 
 router.get("/detalle/:id", detalle);
 
+router.get("/:categorias?", productos);
 router.get("/:talle?", productos);
 router.get("/:color?", productos);
 router.get("/:range-precio?", productos);
-router.get("/:categorias?", productos);
 
 module.exports = router;

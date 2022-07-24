@@ -33,58 +33,34 @@
        <section class="section-right">
             <section class="info">
                     <h2><%= product.nombre %></h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
-                    <span class="precio">$ <%= resta %></span>
-                    <span class="precio1">$ <%= product.precio %></span><span class="descuento">- <%= product.descuento %> OFF</span>
+                    <% if (product.descuento == 0) { %>
+                        <span class="precio">$ <%= resta %></span>
+                    <% } else { %>
+                        <span class="precio">$ <%= resta %></span>
+                        <span class="precio1">$ <%= product.precio %></span><span class="descuento"><%= porciento %>% OFF</span>
+                    <% } %>
             </section>
             <form action="/productos/carrito" method="get" id="agregar-compra">
                 <fieldset class="colores">
                     <p>Color</p>
-                    <input type="radio" name="color" id="<%= product.colores[0] %>">
-                    <label for="<%= product.colores[0] %>"><img src="/assets/colores/<%= product.colores[0] %>.jpg" alt="<%= product.colores[0] %>"></label>
-
-                    <input type="radio" name="color" id="<%= product.colores[1] %>">
-                    <label for="<%= product.colores[1] %>"><img src="/assets/colores/<%= product.colores[1] %>.jpg" alt="<%= product.colores[1] %>"></label>
-
-                    <input type="radio" name="color" id="<%= product.colores[2] %>">
-                    <label for="<%= product.colores[2] %>"><img src="/assets/colores/<%= product.colores[2] %>.jpg" alt="<%= product.colores[2] %>"></label>
-
-                    <input type="radio" name="color" id="<%= product.colores[3] %>">
-                    <label for="<%= product.colores[3] %>"><img src="/assets/colores/<%= product.colores[3] %>.jpg" alt="<%= product.colores[3] %>"></label>
-
-                    <input type="radio" name="color" id="<%= product.colores[4] %>">
-                    <label for="<%= product.colores[4] %>"><img src="/assets/colores/<%= product.colores[4] %>.jpg" alt="<%= product.colores[4] %>"></label>
+                    <% for( let index = 0; index < product.colores.length; index++ ) { %>
+                        <label for="<%= product.colores[index] %>"><img src="/assets/colores/<%= product.colores[index] %>.jpg" alt="<%= product.colores[index] %>"></label>
+                        <input type="radio" name="color" id="<%= product.colores[index] %>" value="<%= product.colores[index] %>">
+                    <% } %>
                 </fieldset>
                 <fieldset class="talles">
                     <p>Talles</p>
-                    <label for="<%= product.talle[0] %>" class="label-talle"><%= product.talle[0] %></label>
-                    <input type="radio" name="talle" id="<%= product.talle[0] %>">
-
-                    <label for="<%= product.talle[1] %>" class="label-talle"><%= product.talle[1] %></label>
-                    <input type="radio" name="talle" id="<%= product.talle[1] %>">
-
-                    <label for="<%= product.talle[2] %>" class="label-talle"><%= product.talle[2] %></label>
-                    <input type="radio" name="talle" id="<%= product.talle[2] %>">
-
-                    <label for="<%= product.talle[3] %>" class="label-talle"><%= product.talle[3] %></label>
-                    <input type="radio" name="talle" id="<%= product.talle[3] %>">
-
-                    <label for="<%= product.talle[4] %>" class="label-talle"><%= product.talle[4] %></label>
-                    <input type="radio" name="talle" id="<%= product.talle[4] %>">
+                    <% for( let index = 0; index < product.talle.length; index++ ) { %>
+                        <label for="<%= product.talle[index] %>" class="label-talle"><%= product.talle[index] %></label>
+                        <input type="radio" name="talle" id="<%= product.talle[index] %>" value="<%= product.talle[index] %>">
+                    <% } %>
                 </fieldset>
                 <fieldset class="quantity">
                         <p>Cantidad</p>
-                         <select name="cantidad" id="cantidad">
-                           
-                            <!-- <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option> -->
+                        <select name="cantidad" id="cantidad">
+                            <% for( let index = 1; index <= stock; index++ ) { %>
+                                <option value="<%= index %>"><%= index %></option>
+                            <% } %>
                          </select>
                 </fieldset>
                 <fieldset class="form-boton">
@@ -94,7 +70,7 @@
                 </fieldset>
             </form>
         </section>
-        <form class="form-editar" action="/productos/editar" method="get">
+        <form class="form-editar" action="/productos/editar/<%= product.id %>" method="get">
             <button>
                 EDITAR
             </button>

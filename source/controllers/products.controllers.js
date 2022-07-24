@@ -106,11 +106,18 @@ module.exports = {
             return precio - descuento
         }
 
+        function porciento(precio, descuento){
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
+
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
             product: product,
-            resta: resta(precio, descuento)
+            resta: resta(precio, descuento),
+            porciento: porciento(precio, descuento),
+            stock: product.stock
         })
     },
 }

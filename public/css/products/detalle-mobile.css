@@ -63,6 +63,7 @@ main{
 }
 .descuento{
     margin-left: 5px;
+    color: #00a721;
 }
 .precio1{
     text-decoration: line-through;
@@ -103,6 +104,8 @@ form fieldset{
 }
 .colores img{
     border: 1px solid #909090;
+    width: 30px;
+    height: 30px;
 }
 .colores img:hover{
     border: 2px solid #909090;
