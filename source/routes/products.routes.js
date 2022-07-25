@@ -1,6 +1,6 @@
 const {Router} = require("express");
 const router = Router();
-const {create, edit, carrito, detalle, productos, save, modify, list } = require("../controllers/products.controllers");
+const {create, edit, carrito, detalle, productos, save, modify, destroid } = require("../controllers/products.controllers");
 
 const multer = require("multer");
 const storage = require("../modules/storage")
@@ -21,6 +21,6 @@ router.get("/:talle?", productos);
 router.get("/:color?", productos);
 router.get("/:range-precio?", productos);
 
-router.delete('/delete/:id', productos);
+router.delete('/delete/:id', destroid);
 
 module.exports = router;

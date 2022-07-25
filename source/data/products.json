@@ -725,35 +725,6 @@
     "descuento": 0
   },
   {
-    "id": 26,
-    "nombre": "Jacket Jean Friday",
-    "descripcion": "Jacket denim long fitt lavado gastado con roturas.",
-    "categoria": "Camperas",
-    "colores": [
-      "Azul",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "talle": [
-      "XL",
-      "L",
-      "",
-      "",
-      ""
-    ],
-    "stock": 8,
-    "precio": 11000,
-    "imagen": [
-      "imagen-1658703087215-299014339.jpg",
-      "imagen-1658703087231-386345879.jpg",
-      "imagen-1658703087235-450573249.jpg",
-      "imagen-1658703087240-168013123.jpg"
-    ],
-    "descuento": null
-  },
-  {
     "id": 27,
     "nombre": "Jean H Relax Tadow",
     "descripcion": "Jean 5 bolsillos calce high relax (tiro alto relajado), color azul claro en lona 100% algodón. Roturas en rodillas y bordes de bolsillos gastados. Avíos metálicos personalizados baño níquel.",
