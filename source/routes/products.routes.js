@@ -21,4 +21,6 @@ router.get("/:talle?", productos);
 router.get("/:color?", productos);
 router.get("/:range-precio?", productos);
 
+router.delete('/delete/:id', productos);
+
 module.exports = router;

@@ -75,9 +75,9 @@
                 EDITAR
             </button>
         </form>
-        <form class="form-eliminar" action="/productos/eliminar" method="get">
-            <button>
-                ELIMINAR
+        <form class="form-eliminar" action="/productos/eliminar/<%= product.id %>?m=DELETED" method="POST">
+            <button type="submit">
+                <i class = "fa fa-trash"></i>
             </button>
         </form>
         <%- include("../partials/logo-wts.ejs") %> 

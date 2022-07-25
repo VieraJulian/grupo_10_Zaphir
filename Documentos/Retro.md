@@ -12,3 +12,5 @@ Nuevamente como grupo creemos que necesitamos más organización, más compromis
 En este sprint nos ayudamos también bastante entre nosotros. 
 Creemos que mejoramos un poco más la comunicación que es lo que nos habiamos propuesto en el sprint anterior, pero es algo que debemos seguir mejorando.
 Para el proximo sprint esperamos poder seguir creciendo con la confianza entre nosotros para poder comunicarnos mejor, y también adoptar el compromiso con las tareas que que nos toca hacer, cumplirlas en tiempo y horario.
+
+Sprint 4: 

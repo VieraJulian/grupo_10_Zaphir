@@ -120,4 +120,14 @@ module.exports = {
             stock: product.stock
         })
     },
+    destroid : (req, res) => {
+        let product = one(parseInt(req.params.id))
+        if (!product) {
+            return res.redirect('/productos/')
+        }
+        let products = index()
+        let productsDeleted = products.filter( p => p.id !== product.id)
+        write(productsDeleted)
+        return res.redirect('/productos/')
+    },
 }
