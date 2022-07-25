@@ -14,3 +14,5 @@ Creemos que mejoramos un poco más la comunicación que es lo que nos habiamos p
 Para el proximo sprint esperamos poder seguir creciendo con la confianza entre nosotros para poder comunicarnos mejor, y también adoptar el compromiso con las tareas que que nos toca hacer, cumplirlas en tiempo y horario.
 
 Sprint 4: 
+Mejoramos la comunicación entre nosotros que es lo que nos habiamos propuesto en el sprint anterior, seguimos teniendo cosas para mejorar igualmente como grupo para poder estar en un mismo balance todos. 
+Para el próximo sprint queremos lo mismo que el sprint anterior, seguir con el compromiso de las tareas que nos toca, pedir ayuda al grupo en caso de trabarnos con algún problema, entre otras cosas. 
