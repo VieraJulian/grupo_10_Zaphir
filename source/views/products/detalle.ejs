@@ -34,10 +34,10 @@
             <section class="info">
                     <h2><%= product.nombre %></h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
                     <% if (product.descuento == 0) { %>
-                        <span class="precio">$ <%= resta %></span>
+                        <span class="precio">$ <%= product.precio %></span>
                     <% } else { %>
-                        <span class="precio">$ <%= resta %></span>
-                        <span class="precio1">$ <%= product.precio %></span><span class="descuento"><%= porciento %>% OFF</span>
+                        <span class="precio">$ <%= product.precioFinal %></span>
+                        <span class="precio1">$ <%= product.precio %></span><span class="descuento"><%= product.porciento %>% OFF</span>
                     <% } %>
             </section>
             <form action="/productos/carrito" method="get" id="agregar-compra">
@@ -58,7 +58,7 @@
                 <fieldset class="quantity">
                         <p>Cantidad</p>
                         <select name="cantidad" id="cantidad">
-                            <% for( let index = 1; index <= stock; index++ ) { %>
+                            <% for( let index = 1; index <= product.stock; index++ ) { %>
                                 <option value="<%= index %>"><%= index %></option>
                             <% } %>
                          </select>

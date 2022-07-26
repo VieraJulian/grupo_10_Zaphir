@@ -35,6 +35,10 @@ module.exports = {
         let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
+        function porciento(precio, descuento){
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
         let productsModifieds = products.map(p => {
             if (p.id === product.id) {
                 p.nombre = req.body.nombre;
@@ -46,6 +50,8 @@ module.exports = {
                 p.precio = parseInt(req.body.precio);
                 p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
                 p.descuento = parseInt(req.body.descuento);
+                p.precioFinal = parseInt(req.body.precio - req.body.descuento),
+                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
@@ -90,34 +96,29 @@ module.exports = {
         })
     },
 
-    carrito: (req, res) => res.render("products/carrito", {
-        title: "Carrito de compras",
-        styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
-    }),
-    
     detalle: (req, res) =>{
-
+        
         let product = one(parseInt(req.params.id))
-
-        let precio = product.precio
+        
+        /* let precio = product.precio
         let descuento = product.descuento
         
         function resta(precio, descuento){
             return precio - descuento
         }
-
+        
         function porciento(precio, descuento){
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
-        }
-
+        } */
+        
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
             product: product,
-            resta: resta(precio, descuento),
+            /* resta: resta(precio, descuento),
             porciento: porciento(precio, descuento),
-            stock: product.stock
+            stock: product.stock */
         })
     },
     destroid: (req, res) => {
@@ -130,4 +131,9 @@ module.exports = {
         write(productsDeleted)
         return res.redirect('/productos/')
     },
+
+    carrito: (req, res) => res.render("products/carrito", {
+        title: "Carrito de compras",
+        styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
+    }),
 }

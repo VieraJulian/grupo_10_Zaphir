@@ -8,8 +8,7 @@ module.exports = {
         return res.render("home", {
             title: "Zaphir",
             styles: ["home-mobile", "home-tablets", "home-desktop"],
-            products: products
-
+            products: products,
         })
     }
 }
