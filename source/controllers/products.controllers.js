@@ -132,6 +132,44 @@ module.exports = {
         return res.redirect('/productos/')
     },
 
+    ofertas: (req, res) => {
+        let products = index();
+
+        products = products.filter(products => products.descuento > 0)
+
+        if (req.query && req.query.name) {
+            
+            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
+        }
+        
+        if(req.query && req.query.talle){
+
+            products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
+        }
+
+        if(req.query && req.query.color){
+
+            products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
+        }
+
+        if(req.query && req.query.range){
+
+            products = products.filter(products => products.precio >= req.query.range);
+        }
+
+        if(req.params && req.params.categorias){
+            
+            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
+        }
+
+        return res.render("products/ofertas", {
+            title: products,
+            styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+            products: products
+        })
+
+    },
+
     carrito: (req, res) => res.render("products/carrito", {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]

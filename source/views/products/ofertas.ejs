@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <% if (products.length > 0) { %>
+        <section class="section-principal">
+            <section class="section-top">
+                <section class="section-nav">
+                    <nav class="nav-1">
+                        <a href="#menu-2">Filtrar<i class="fa-solid fa-filter"></i></a>
+                    </nav>
+                    <nav id=menu-2>
+                        <a href="#"><i class="fa-solid fa-x x"></i></a>
+                        <form action="/productos/" method="get">
+                            <p>Talle</p>
+                            <div>
+                                <input type="checkbox" name="talle" id="xs" value="XS">XS
+                            </div>
+                            <div>
+                                <input type="checkbox" name="talle" id="s" value="S">S
+                            </div>
+                            <div>
+                                <input type="checkbox" name="talle" id="m" value="M">M
+                            </div>
+                            <div>
+                                <input type="checkbox" name="talle" id="l" value="L">L
+                            </div>
+                            <div>
+                                <input type="checkbox" name="talle" id="xl" value="XL">XL
+                            </div>
+                            <p>Color</p>
+                            <div>
+                                <input type="checkbox" name="color" id="blanco" value="Blanco">Blanco
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="negro" value="Negro">Negro
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="rosa" value="Rosa">Rosa
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="rojo" value="Rojo">Rojo
+                            </div>
+                            <button>Filtrar</button>
+                        </form>
+                    </nav>
+                </section>
+                <section class="filtros">
+                    <select name="filtrarpor" id="filtrarpor" class="filtrarpor">
+                        <option value="precio-">Precio: Menor a Mayor</option>
+                        <option value="precio+">Precio: Mayor a Menor</option>
+                        <option value="az">A -Z</option>
+                        <option value="za">Z -A</option>
+                        <option value="nuevo">Más Nuevo al más Viejo</option>
+                        <option value="viejo">Más Viejo al más Nuevo</option>
+                        <option value="mas-vendido">Más Vendidos</option>
+                        <option value="destacado">Destacados</option>
+                    </select>
+                </section>
+            </section>
+            <section class="section-left">
+                <form action="/productos/" method="get">
+                    <p>Talle</p>
+                    <div>
+                        <input type="checkbox" name="talle" id="xs" value="XS">XS
+                    </div>
+                    <div>
+                        <input type="checkbox" name="talle" id="s" value="S">S
+                    </div>
+                    <div>
+                        <input type="checkbox" name="talle" id="m" value="M">M
+                    </div>
+                    <div>
+                        <input type="checkbox" name="talle" id="l" value="L">L
+                    </div>
+                    <div>
+                        <input type="checkbox" name="talle" id="xl" value="XL">XL
+                    </div>
+                    <p>Color</p>
+                    <div>
+                        <input type="checkbox" name="color" id="blanco" value="Blanco">Blanco
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" id="negro" value="Negro">Negro
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" id="rosa" value="Rosa">Rosa
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" id="rojo" value="Rojo">Rojo
+                    </div>
+                    <p>Precio</p>
+                    <input class="range" type="range" name="range" id="range" min="1000" max="50000" value="1000">
+                    <button class="boton-filtrar">Filtrar</button>
+                </form>
+            </section>
+            <section class="section-secundaria">
+                <% products.forEach(element => { %>
+                    <% if (element.descuento == 0) { %>
+                        <article>
+                            <Figure>
+                                <a href="/productos/detalle/<%= element.id %>"><img src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>"></a>
+                            </Figure>
+                            <section>
+                                <p class="article-p"><%= element.nombre %></p>
+                                <p class="article-precio">$ <%= element.precio %></p>
+                            </section>
+                        </article>
+                    <% } else { %>
+                        <article>
+                            <Figure>
+                                <a href="/productos/detalle/<%= element.id %>"><img src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>"></a>
+                            </Figure>
+                            <section>
+                                <p class="article-p"><%= element.nombre %></p>
+                                <p class="article-precio">$ <%= element.precioFinal %></p>
+                            </section>
+                        </article>
+                    <% } %>
+                <% }) %>
+            </section>
+        </section>
+        <%- include("../partials/logo-wts.ejs") %> 
+        <% } else { %>
+         <h2>No hay productos</h2>
+        <% } %>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
