@@ -164,7 +164,7 @@ module.exports = {
         }
 
         return res.render("products/ofertas", {
-            title: products,
+            title: "Ofertas",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
             products: products
         })
