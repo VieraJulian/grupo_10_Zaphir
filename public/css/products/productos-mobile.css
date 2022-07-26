@@ -46,6 +46,7 @@ main{
     flex-wrap: wrap;
     width: 100%;
     margin-top: 20px;
+    justify-content: space-between;
 }
 .section-secundaria article{
     width: 46%;
@@ -134,4 +135,9 @@ div{
     border-radius: 50%;
     padding: 5px;
     background-color: #1bd741
+}
+@media screen and (min-width: 520px) {
+    .section-secundaria article{
+        width: 48%;
+    }
 }
