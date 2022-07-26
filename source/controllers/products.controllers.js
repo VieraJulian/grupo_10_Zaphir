@@ -80,7 +80,7 @@ module.exports = {
 
         if(req.query && req.query.range){
 
-            products = products.filter(products => products.precio >= req.query.range);
+            products = products.filter(products => products.precioFinal >= req.query.range);
         }
 
         if(req.params && req.params.categorias){
@@ -154,7 +154,7 @@ module.exports = {
 
         if(req.query && req.query.range){
 
-            products = products.filter(products => products.precio >= req.query.range);
+            products = products.filter(products => products.precioFinal >= req.query.range);
         }
 
         if(req.params && req.params.categorias){
