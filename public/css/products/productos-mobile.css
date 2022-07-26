@@ -46,7 +46,7 @@ main{
     flex-wrap: wrap;
     width: 100%;
     margin-top: 20px;
-    justify-content: space-between;
+    
 }
 .section-secundaria article{
     width: 46%;
