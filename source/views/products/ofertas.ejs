@@ -46,22 +46,47 @@
                             <div>
                                 <input type="checkbox" name="color" id="rojo" value="Rojo">Rojo
                             </div>
+                            <div>
+                                <input type="checkbox" name="color" id="naranja" value="Naranja">Naranja
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="azul" value="Azul">Azul
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="verde" value="Verde">Verde
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="marron" value="Marrón">Marrón
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="gris" value="Gris">Gris
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="violeta" value="Violeta">Violeta
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="beige" value="Beige">Beige
+                            </div>
+                            <div>
+                                <input type="checkbox" name="color" id="morado" value="Morado">Morado
+                            </div>
                             <button>Filtrar</button>
                         </form>
                     </nav>
                 </section>
-                <section class="filtros">
+                <form class="filtros" action="/productos/" method="get">
                     <select name="filtrarpor" id="filtrarpor" class="filtrarpor">
-                        <option value="precio-">Precio: Menor a Mayor</option>
-                        <option value="precio+">Precio: Mayor a Menor</option>
-                        <option value="az">A - Z</option>
-                        <option value="za">Z - A</option>
+                        <option value="menor">Precio: Menor a Mayor</option>
+                        <option value="mayor">Precio: Mayor a Menor</option>
+                        <option value="a">A - Z</option>
+                        <option value="z">Z - A</option>
                         <option value="nuevo">Más Nuevo al más Viejo</option>
                         <option value="viejo">Más Viejo al más Nuevo</option>
-                        <option value="mas-vendido">Más Vendidos</option>
+                        <option value="masVendido">Más Vendidos</option>
                         <option value="destacado">Destacados</option>
                     </select>
-                </section>
+                    <button class="boton-filtrar">Filtrar</button>
+                </form>
             </section>
             <section class="section-left">
                 <form action="/productos/ofertas/" method="get">
@@ -80,6 +105,9 @@
                     </div>
                     <div>
                         <input type="checkbox" name="talle" id="xl" value="XL">XL
+                    </div>
+                    <div>
+                        <input type="checkbox" name="talle" id="xxl" value="XL">XXL
                     </div>
                     <p>Color</p>
                     <div>
