@@ -88,6 +88,7 @@ module.exports = {
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
 
+        /* ----------------------------------------------------------------- */
         
         res.render("products/productos", {
             title: "Zaphir",

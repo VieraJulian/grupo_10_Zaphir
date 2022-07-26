@@ -53,13 +53,4 @@
     .range{
         width: 80%;
     }
-    .boton-filtrar{
-        margin-top: 10px;
-        width: 60px;
-        border: 1px solid #909090;
-        height: 30px;
-        font-family: 'Montserrat', sans-serif;
-        border-radius: 2px;
-        padding: 5px 10px;
-    }
 }

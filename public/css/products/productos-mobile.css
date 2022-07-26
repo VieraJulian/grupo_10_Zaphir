@@ -136,6 +136,15 @@ div{
     padding: 5px;
     background-color: #1bd741
 }
+.boton-filtrar{
+    margin-top: 10px;
+    width: 60px;
+    border: 1px solid #909090;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 2px;
+    padding: 5px 10px;
+}
 @media screen and (min-width: 520px) {
     .section-secundaria article{
         width: 48%;
