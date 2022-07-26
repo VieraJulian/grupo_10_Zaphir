@@ -113,7 +113,7 @@ article{
     width: 120px;
     height: 25px;
 }
-.bodiesPalabra{
+.pantalonesPalabra{
     position: absolute;
     bottom: 0;
     top: 0;
@@ -122,7 +122,7 @@ article{
     margin: auto;
     background-color: #ebebeb;
     font-size: 20px;
-    width: 100px;
+    width: 145px;
     height: 25px;
 }
 .contenedor{
@@ -165,7 +165,7 @@ article{
     padding: 10px;
     border: 1px solid #909090
 }
-.bodies{
+.pantalones{
     /* width: 300px;
     height: 250px;
     object-fit: cover; */

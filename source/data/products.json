@@ -897,5 +897,179 @@
       "imagen-1658703919414-857473540.jpg"
     ],
     "descuento": 400
+  },
+  {
+    "id": 33,
+    "nombre": "Pantalón Mashup",
+    "descripcion": "Pantalón de Microfibra Estampada Tipo Palazzo.",
+    "categoria": "Pantalones",
+    "colores": [
+      "Azul",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "L",
+      "",
+      "",
+      ""
+    ],
+    "stock": 24,
+    "precio": 7000,
+    "imagen": [
+      "imagen-1658793359922-616725907.jpg",
+      "imagen-1658793359927-27977739.jpg",
+      "imagen-1658793359935-882446704.jpg",
+      "imagen-1658793359937-130293105.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 34,
+    "nombre": "Pantalón Rich",
+    "descripcion": "Pantalón tiro alto de bengalina elastizada, con tajos a laterales sobre ruedo. cintura ancha tipo caderín. Cierre invisible en centro de espalda. .",
+    "categoria": "Pantalones",
+    "colores": [
+      "Negro",
+      "Marrón",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "L",
+      "M",
+      "",
+      ""
+    ],
+    "stock": 13,
+    "precio": 15000,
+    "imagen": [
+      "imagen-1658793537644-129724103.jpg",
+      "imagen-1658793537648-84543476.jpg",
+      "imagen-1658793537652-257996495.jpg",
+      "imagen-1658793537659-914396255.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 35,
+    "nombre": "Pantalón Geometric",
+    "descripcion": "Pantalón de creppe sastrero full print personalizado. Cintura elastizada en espalda. Piernas semi oxford.",
+    "categoria": "Pantalones",
+    "colores": [
+      "Verde",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "",
+      "",
+      ""
+    ],
+    "stock": 23,
+    "precio": 11500,
+    "imagen": [
+      "imagen-1658793661039-696329427.jpg",
+      "imagen-1658793661046-990491792.jpg",
+      "imagen-1658793661050-672783123.jpg",
+      "imagen-1658793661054-463948387.jpg"
+    ],
+    "descuento": 0
+  },
+  {
+    "id": 36,
+    "nombre": "Pantalón Patchwork",
+    "descripcion": "Pantalon recto tipo palazzo combinado con tecnica patchwork en rústico esmerilado. Cintura elastizada con cordón tubular con puntera metálica. Grifa personalizada en pierna izquierda.",
+    "categoria": "Pantalones",
+    "colores": [
+      "Verde",
+      "Marrón",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      ""
+    ],
+    "stock": 23,
+    "precio": 8700,
+    "imagen": [
+      "imagen-1658793776409-304237625.jpg",
+      "imagen-1658793776413-308581905.jpg",
+      "imagen-1658793776418-336811701.jpg",
+      "imagen-1658793776426-343235291.jpg"
+    ],
+    "descuento": 300
+  },
+  {
+    "id": 37,
+    "nombre": "Pantalón Traficc",
+    "descripcion": "Pantalón tipo babucha cargo de gabardina. Cintura elastizada sólo en la espalda y acceso en el frente con cartera (cierre) y botón. Bolsillos cargo laterales.",
+    "categoria": "Pantalones",
+    "colores": [
+      "Blanco",
+      "Verde",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "S",
+      "L",
+      "XS",
+      "XXL"
+    ],
+    "stock": 34,
+    "precio": 20000,
+    "imagen": [
+      "imagen-1658793935253-94752309.jpg",
+      "imagen-1658793935258-714556449.jpg",
+      "imagen-1658793935260-645074015.jpg",
+      "imagen-1658793935266-69567085.jpg"
+    ],
+    "descuento": 2000
+  },
+  {
+    "id": 38,
+    "nombre": "Pantalón Streetsmart",
+    "descripcion": "Pantalón de gabardina esmerilada 100% algodón, tipo cargo con pierna recta y maxibolsillos de frente con tapa y fuelle) debajo de la rodilla. Tirilla lateral tipo carpintera.",
+    "categoria": "Pantalones",
+    "colores": [
+      "Negro",
+      "Verde",
+      "Morado",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "L",
+      "S",
+      "M",
+      ""
+    ],
+    "stock": 15,
+    "precio": 23000,
+    "imagen": [
+      "imagen-1658794413267-295185203.jpg",
+      "imagen-1658794413271-295590147.jpg",
+      "imagen-1658794413274-157949109.jpg",
+      "imagen-1658794413275-664238666.jpg"
+    ],
+    "descuento": 2000
   }
 ]
