@@ -1,2 +1,2 @@
-const register= require('../validaciones/register')
-module.exports = register
+const register = require("../validations/register.validations")
+module.exports = [register]

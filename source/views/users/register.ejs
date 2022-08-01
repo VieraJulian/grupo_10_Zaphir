@@ -16,7 +16,7 @@
                     placeholder="ej: Juan Perez" 
                     value = "<%= locals.oldData ? oldData.nombre : null %>">
                     <% if (locals.errors && errors.nombre) { %>
-                        <p class="msg-error"> <%= errors.nombre.msg %> </p>
+                        <p class="msg-error"><%= errors.nombre.msg %></p>
                     <% } %>
             </fieldset>
             <fieldset class="form-email">
@@ -27,7 +27,7 @@
                     placeholder="ej: tunombre@email.com" 
                     value = "<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
-                        <p class="msg-error"> <%= errors.email.msg %> </p>
+                        <p class="msg-error"><%= errors.email.msg %></p>
                     <% } %>
             </fieldset>
             <fieldset class="form-tel">

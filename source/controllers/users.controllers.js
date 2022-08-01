@@ -1,5 +1,5 @@
-const {validationResult} = require('express-validator');
-const {index,create,write } = require('../models/users.model');
+const { validationResult } = require('express-validator');
+const { index, create, write } = require('../models/users.model');
 
 const usersControllers = {
     register: (req, res) => res.render("users/register", {
@@ -28,4 +28,5 @@ const usersControllers = {
         return res.redirect('/users/login')
     }
 }
+
 module.exports = usersControllers
