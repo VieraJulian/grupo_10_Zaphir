@@ -1,92 +1,100 @@
 [
-    {
-        "id": 1,
-        "nombre": "Juan",
-        "apellido": "Perez",
-        "email": "juanperez2020@gmail.com",
-        "password": "23467287",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 2,
-        "nombre": "María",
-        "apellido": "Martinez",
-        "email": "mariamartinez123@gmail.com",
-        "password": "0968705",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 3,
-        "nombre": "Carlos",
-        "apellido": "Garcia",
-        "email": "cargarcia1983@gmail.com",
-        "password": "42138790",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 4,
-        "nombre": "Ana",
-        "apellido": "Noir",
-        "email": "noirAnalarioja@gmail.com",
-        "password": "5768456",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 5,
-        "nombre": "Pilar",
-        "apellido": "Blanc",
-        "email": "pilarbsas@hotmail.com",
-        "password": "29853948",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 6,
-        "nombre": "Celeste",
-        "apellido": "Fernandez",
-        "email": "mariaceleste2022@zaphir.com",
-        "password": "celeste42487386",
-        "isAdmin": true,
-        "imagen": ""
-    },
-    {
-        "id": 7,
-        "nombre": "Andrea",
-        "apellido": "Ramirez",
-        "email": "ramirezrocioandre1989@zaphir.com",
-        "password": "20983472893",
-        "isAdmin": true,
-        "imagen": ""
-    },
-    {
-        "id": 8,
-        "nombre": "Valentina",
-        "apellido": "Acosta",
-        "email": "acosta424875622@gmail.com",
-        "password": "Valentina321",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 9,
-        "nombre": "Ivan",
-        "apellido": "Campos",
-        "email": "camposivan898@homtail.com",
-        "password": "42387878casa321",
-        "isAdmin": false,
-        "imagen": ""
-    },
-    {
-        "id": 10,
-        "nombre": "Erica",
-        "apellido": "Diaz",
-        "email": "ericadiaz20152022@gmail.com",
-        "password": "3287472637",
-        "isAdmin": false,
-        "imagen": ""
-    }
+  {
+    "id": 1,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "email": "juanperez2020@gmail.com",
+    "password": "23467287",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 2,
+    "nombre": "María",
+    "apellido": "Martinez",
+    "email": "mariamartinez123@gmail.com",
+    "password": "0968705",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos",
+    "apellido": "Garcia",
+    "email": "cargarcia1983@gmail.com",
+    "password": "42138790",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 4,
+    "nombre": "Ana",
+    "apellido": "Noir",
+    "email": "noirAnalarioja@gmail.com",
+    "password": "5768456",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 5,
+    "nombre": "Pilar",
+    "apellido": "Blanc",
+    "email": "pilarbsas@hotmail.com",
+    "password": "29853948",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 6,
+    "nombre": "Celeste",
+    "apellido": "Fernandez",
+    "email": "mariaceleste2022@zaphir.com",
+    "password": "celeste42487386",
+    "isAdmin": true,
+    "imagen": ""
+  },
+  {
+    "id": 7,
+    "nombre": "Andrea",
+    "apellido": "Ramirez",
+    "email": "ramirezrocioandre1989@zaphir.com",
+    "password": "20983472893",
+    "isAdmin": true,
+    "imagen": ""
+  },
+  {
+    "id": 8,
+    "nombre": "Valentina",
+    "apellido": "Acosta",
+    "email": "acosta424875622@gmail.com",
+    "password": "Valentina321",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 9,
+    "nombre": "Ivan",
+    "apellido": "Campos",
+    "email": "camposivan898@homtail.com",
+    "password": "42387878casa321",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 10,
+    "nombre": "Erica",
+    "apellido": "Diaz",
+    "email": "ericadiaz20152022@gmail.com",
+    "password": "3287472637",
+    "isAdmin": false,
+    "imagen": ""
+  },
+  {
+    "id": 11,
+    "nombre": "Julián Viera",
+    "email": "julianviera2019@hotmail.com",
+    "password": "$2a$10$MfX7vvAvruTUJVpG/pdz6O3giwLuIZQoPfzx2SDVGcD0wHCg0H6O2",
+    "telefono": null,
+    "isAdmin": false
+  }
 ]

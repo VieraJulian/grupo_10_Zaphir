@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %> 
-<body>
-    <%- include("../partials/header.ejs") %> 
-    <main>
-        <section class="section-register">
-            <h1>Crear cuenta</h1>
-            <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
-        </section>
-        <form action="/usuario/registro" method="post">
-            <fieldset class="form-name">
-                <label for = "nombre">Nombre y apellido</label>
-                <input type="text" 
-                    name="nombre" id="nombre" 
-                    placeholder="ej: Juan Perez" 
-                    value="<%= locals.oldData ? oldData.nombre : null %>">
-                    <% if (locals.errors && errors.nombre) { %>
-                        <p class="msg-error"><%= errors.nombre.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="form-email">
-                <label for = "email">Email</label>
-                <input type="email" 
-                    name="email" 
-                    id="email" 
-                    placeholder="ej: tunombre@email.com" 
-                    value="<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <p class="msg-error"><%= errors.email.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="form-tel">
-                <label>Teléfono (opcional)</label>
-                <input type="tel" name="tel" id="tel" placeholder="ej: 1123445567">
-            </fieldset>
-            <fieldset class="form-password">
-                <label for  = "password">Contraseña</label>
-                <input type="password" 
-                    name="password" 
-                    id="password" 
-                    value="<%= locals.oldData ? oldData.password : null %>">
-                    <% if (locals.errors && errors.password) { %>
-                        <p class="msg-error"><%= errors.password.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="form-confirm">
-                <label for = "contraseña">Confirmar contraseña</label>
-                <input type="password" 
-                    name="password" 
-                    id="confirm-password" 
-                    value="<%= locals.oldData ? oldData.password : null %>">
-                    <% if (locals.errors && errors.password) { %>
-                        <p class="msg-error"> <%= errors.password.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="form-button">
-                <button>Crear cuenta</button>
-            </fieldset>
-            <fieldset class="form-linklogin">
-                <a href="/usuario/ingresar">¿Ya tenés una cuenta?<span>Iniciá sesión</span></a>
-            </fieldset>
-        </form>
-        <%- include("../partials/logo-wts.ejs") %> 
-    </main>
-    <%- include("../partials/footer.ejs") %> 
-</body>
+<%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <section class="section-register">
+                    <h1>Crear cuenta</h1>
+                    <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
+                </section>
+                <form action="/usuario/registro" method="post">
+                    <fieldset class="form-name">
+                        <label for="nombre">Nombre y apellido</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="ej: Juan Perez"
+                            value="<%= locals.errors ? oldData.nombre : null %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p class="msg-error">
+                                <%= errors.nombre.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="form-email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="ej: tunombre@email.com"
+                            value="<%= locals.errors ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="msg-error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="form-tel">
+                        <label>Teléfono (opcional)</label>
+                        <input type="tel" name="telefono" id="tel" placeholder="ej: 1123445567">
+                    </fieldset>
+                    <fieldset class="form-password">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password"
+                            value="<%= locals.errors ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="form-confirm">
+                        <label for="contraseña">Confirmar contraseña</label>
+                        <input type="password" name="passwordConfirm" id="confirm-password"
+                            value="<%= locals.errors ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="form-button">
+                        <button>Crear cuenta</button>
+                    </fieldset>
+                    <fieldset class="form-linklogin">
+                        <a href="/usuario/ingresar">¿Ya tenés una cuenta?<span>Iniciá sesión</span></a>
+                    </fieldset>
+                </form>
+                <%- include("../partials/logo-wts.ejs") %>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

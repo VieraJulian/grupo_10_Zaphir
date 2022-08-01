@@ -3,7 +3,7 @@ const router = Router();
 
 const { login, register, process } = require("../controllers/users.controllers");
 
-const middlewareRegister = require('../middlewares/register');
+const middlewareRegister = require('../middlewares/register.middlewares');
 
 router.get("/registro", register);
 router.post("/registro", middlewareRegister, process)
