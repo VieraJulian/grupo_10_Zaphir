@@ -31,8 +31,6 @@
     "porciento": 0
   },
   {
-<<<<<<< HEAD
-=======
     "id": 2,
     "nombre": "Campera Malibu",
     "descripcion": "Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.",
@@ -64,7 +62,6 @@
     "porciento": 4
   },
   {
->>>>>>> 98377fc13a80cca4be6aaa3ab94e0a91b985d704
     "id": 3,
     "nombre": "Vestido Groovy",
     "descripcion": "Vestido tubo de microfibra estampada. Detalle de aberturas en laterales con jaretas, esto permite regular la abertura. Grifa institucional en ruedo izquierdo.",
@@ -251,8 +248,6 @@
     "porciento": 0
   },
   {
-<<<<<<< HEAD
-=======
     "id": 9,
     "nombre": "Buzo Disney Sisu M.",
     "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
@@ -284,7 +279,6 @@
     "porciento": 6
   },
   {
->>>>>>> 98377fc13a80cca4be6aaa3ab94e0a91b985d704
     "id": 10,
     "nombre": "Buzo Disney Boo M.",
     "descripcion": "Buzo básico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. estampado centrada en frente con personaje de Disney Pixar. Grifa institucional en ruedo izquierdo.",

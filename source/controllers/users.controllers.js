@@ -15,6 +15,7 @@ const usersControllers = {
         let {errors} = validaciones
         if(errors && errors.length > 0){
         return res.render('users/register',{
+        title: "Crear cuenta",
         styles:["users/register-mobile"],
         oldData: req.body,
         errors: validaciones.mapped()
