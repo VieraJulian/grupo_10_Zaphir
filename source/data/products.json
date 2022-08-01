@@ -29,35 +29,6 @@
     "descuento": 0
   },
   {
-    "id": 2,
-    "nombre": "Campera Malibu",
-    "descripcion": "Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.",
-    "categoria": "Camperas",
-    "colores": [
-      "Beige",
-      "Blanco",
-      "Negro",
-      "",
-      ""
-    ],
-    "talle": [
-      "M",
-      "L",
-      "S",
-      "",
-      ""
-    ],
-    "stock": 8,
-    "precio": 7800,
-    "imagen": [
-      "malibu-main.png",
-      "campera-malibu1.jpg",
-      "campera-malibu3.jpg",
-      "campera-malibu4.png"
-    ],
-    "descuento": 500
-  },
-  {
     "id": 3,
     "nombre": "Vestido Groovy",
     "descripcion": "Vestido tubo de microfibra estampada. Detalle de aberturas en laterales con jaretas, esto permite regular la abertura. Grifa institucional en ruedo izquierdo.",
@@ -230,35 +201,6 @@
       "imagen-1658528082400-52165902.jpg"
     ],
     "descuento": 0
-  },
-  {
-    "id": 9,
-    "nombre": "Buzo Disney Sisu M.",
-    "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
-    "categoria": "Buzos",
-    "colores": [
-      "Negro",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "talle": [
-      "XS",
-      "XXL",
-      "XL",
-      "",
-      ""
-    ],
-    "stock": 10,
-    "precio": 9599,
-    "imagen": [
-      "imagen-1658530037940-965966374.jpg",
-      "imagen-1658530037945-932180676.jpg",
-      "imagen-1658530037949-863927098.jpg",
-      "imagen-1658530037952-125018367.jpg"
-    ],
-    "descuento": 600
   },
   {
     "id": 10,
