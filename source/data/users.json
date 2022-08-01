@@ -96,5 +96,13 @@
     "password": "$2a$10$MfX7vvAvruTUJVpG/pdz6O3giwLuIZQoPfzx2SDVGcD0wHCg0H6O2",
     "telefono": null,
     "isAdmin": false
+  },
+  {
+    "id": 12,
+    "nombre": "benjamin guerra",
+    "email": "benjaminguerra6440@gmail.com",
+    "password": "$2a$10$5N/nOpuK/l8uIk.kB94ac.aG6VQf8HIN30bB5eCq6eMWgngik8jq2",
+    "telefono": null,
+    "isAdmin": false
   }
 ]
