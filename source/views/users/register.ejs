@@ -8,13 +8,13 @@
             <h1>Crear cuenta</h1>
             <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
         </section>
-        <form action="/usuario/registro" method="post" enctype="multipart/form-data">
+        <form action="/usuario/registro" method="post">
             <fieldset class="form-name">
                 <label for = "nombre">Nombre y apellido</label>
                 <input type="text" 
                     name="nombre" id="nombre" 
                     placeholder="ej: Juan Perez" 
-                    value = "<%= locals.oldData ? oldData.nombre : null %>">
+                    value="<%= locals.oldData ? oldData.nombre : null %>">
                     <% if (locals.errors && errors.nombre) { %>
                         <p class="msg-error"><%= errors.nombre.msg %></p>
                     <% } %>
@@ -25,7 +25,7 @@
                     name="email" 
                     id="email" 
                     placeholder="ej: tunombre@email.com" 
-                    value = "<%= locals.oldData ? oldData.email : null %>">
+                    value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                         <p class="msg-error"><%= errors.email.msg %></p>
                     <% } %>
@@ -41,7 +41,7 @@
                     id="password" 
                     value="<%= locals.oldData ? oldData.password : null %>">
                     <% if (locals.errors && errors.password) { %>
-                        <p class="msg-error"> <%= errors.password.msg %> </p>
+                        <p class="msg-error"><%= errors.password.msg %></p>
                     <% } %>
             </fieldset>
             <fieldset class="form-confirm">
@@ -51,7 +51,7 @@
                     id="confirm-password" 
                     value="<%= locals.oldData ? oldData.password : null %>">
                     <% if (locals.errors && errors.password) { %>
-                        <p class="msg-error"> <%= errors.password.msg %> </p>
+                        <p class="msg-error"> <%= errors.password.msg %></p>
                     <% } %>
             </fieldset>
             <fieldset class="form-button">
