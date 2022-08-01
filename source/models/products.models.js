@@ -18,6 +18,10 @@ module.exports = {
         let file = resolve(__dirname, "../data/products.json");
         let info = readFileSync(file);
         let products = JSON.parse(info);
+        function porciento(precio, descuento){
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
         let lastProduct = products[products.length - 1];
         return Object({
             id: products.length == 0 ? 1 : lastProduct.id + 1,
@@ -29,7 +33,9 @@ module.exports = {
             stock: parseInt(data.stock),
             precio: parseInt(data.precio),
             imagen: data.imagen,
-            descuento: parseInt(data.descuento)
+            descuento: parseInt(data.descuento),
+            precioFinal: parseInt(data.precio - data.descuento),
+            porciento: parseInt(porciento(data.precio, data.descuento)),
         })
     },
     write: function(data){

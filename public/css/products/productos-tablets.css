@@ -50,4 +50,7 @@
     .precio input{
         width: 100%;
     }
+    .range{
+        width: 80%;
+    }
 }

@@ -22,13 +22,13 @@
         </section>
     </section>
         <main>
-            <h2 class = "titulo">PRODUCTOS DESTACADOS</h2>
+            <h2 class = "titulo">EN OFERTA</h2>
             <section class = "productosdestacados">
                 <% products.forEach(element => { %>
                     <article>
                         <a href="/productos/detalle/<%= element.id %>"><img src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>" class = "imagenDest"></a>
                         <p class = "nombreProducto"><%= element.nombre %></p>
-                        <p class = "precio">$ <%= element.precio %></p>
+                        <p class = "precio">$ <%= element.precioFinal %></p>
                     </article>
                 <% }) %>
             </section>
@@ -61,7 +61,7 @@
                 <article class = "productos"> 
                     <section class="contenedor">
                         <a href="/productos/pantalones"><img src="/assets/productos/imagen-1658793935260-645074015.jpg" alt="Pantalones" class = "pantalones"></a>
-                        <p class = "pantalonesPalabra">Pantalones</p>
+                        <p class = "pantalonesPalabra">PANTALONES</p>
                      </section>
                 </article>
             </section>

@@ -35,6 +35,10 @@ module.exports = {
         let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
+        function porciento(precio, descuento){
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
         let productsModifieds = products.map(p => {
             if (p.id === product.id) {
                 p.nombre = req.body.nombre;
@@ -46,6 +50,8 @@ module.exports = {
                 p.precio = parseInt(req.body.precio);
                 p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
                 p.descuento = parseInt(req.body.descuento);
+                p.precioFinal = parseInt(req.body.precio - req.body.descuento),
+                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
@@ -74,7 +80,7 @@ module.exports = {
 
         if(req.query && req.query.range){
 
-            products = products.filter(products => products.precio >= req.query.range);
+            products = products.filter(products => products.precioFinal >= req.query.range);
         }
 
         if(req.params && req.params.categorias){
@@ -82,6 +88,7 @@ module.exports = {
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
 
+        /* ----------------------------------------------------------------- */
         
         res.render("products/productos", {
             title: "Zaphir",
@@ -90,34 +97,29 @@ module.exports = {
         })
     },
 
-    carrito: (req, res) => res.render("products/carrito", {
-        title: "Carrito de compras",
-        styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
-    }),
-    
     detalle: (req, res) =>{
-
+        
         let product = one(parseInt(req.params.id))
-
-        let precio = product.precio
+        
+        /* let precio = product.precio
         let descuento = product.descuento
         
         function resta(precio, descuento){
             return precio - descuento
         }
-
+        
         function porciento(precio, descuento){
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
-        }
-
+        } */
+        
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
             product: product,
-            resta: resta(precio, descuento),
+            /* resta: resta(precio, descuento),
             porciento: porciento(precio, descuento),
-            stock: product.stock
+            stock: product.stock */
         })
     },
     destroid: (req, res) => {
@@ -130,4 +132,47 @@ module.exports = {
         write(productsDeleted)
         return res.redirect('/productos/')
     },
+
+    ofertas: (req, res) => {
+        let products = index();
+
+        products = products.filter(products => products.descuento > 0)
+
+        if (req.query && req.query.name) {
+            
+            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
+        }
+        
+        if(req.query && req.query.talle){
+
+            products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
+        }
+
+        if(req.query && req.query.color){
+
+            products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
+        }
+
+        if(req.query && req.query.range){
+
+            products = products.filter(products => products.precioFinal >= req.query.range);
+        }
+
+        if(req.params && req.params.categorias){
+            
+            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
+        }
+
+        return res.render("products/ofertas", {
+            title: "Ofertas",
+            styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+            products: products
+        })
+
+    },
+
+    carrito: (req, res) => res.render("products/carrito", {
+        title: "Carrito de compras",
+        styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
+    }),
 }

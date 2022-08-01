@@ -26,9 +26,45 @@
       "imagen-1658078617474-31409026.jpg",
       "imagen-1658078617484-493068682.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 10999,
+    "porciento": 0
   },
   {
+<<<<<<< HEAD
+=======
+    "id": 2,
+    "nombre": "Campera Malibu",
+    "descripcion": "Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.",
+    "categoria": "Camperas",
+    "colores": [
+      "Beige",
+      "Blanco",
+      "Negro",
+      "",
+      ""
+    ],
+    "talle": [
+      "M",
+      "L",
+      "S",
+      "",
+      ""
+    ],
+    "stock": 8,
+    "precio": 8000,
+    "imagen": [
+      "malibu-main.png",
+      "campera-malibu1.jpg",
+      "campera-malibu3.jpg",
+      "campera-malibu4.png"
+    ],
+    "descuento": 350,
+    "precioFinal": 7650,
+    "porciento": 4
+  },
+  {
+>>>>>>> 98377fc13a80cca4be6aaa3ab94e0a91b985d704
     "id": 3,
     "nombre": "Vestido Groovy",
     "descripcion": "Vestido tubo de microfibra estampada. Detalle de aberturas en laterales con jaretas, esto permite regular la abertura. Grifa institucional en ruedo izquierdo.",
@@ -55,7 +91,9 @@
       "imagen-1658085944916-299414407.jpg",
       "imagen-1658085944922-289471290.jpg"
     ],
-    "descuento": 200
+    "descuento": 200,
+    "precioFinal": 8400,
+    "porciento": 2
   },
   {
     "id": 4,
@@ -84,7 +122,9 @@
       "imagen-1658086189010-449369178.jpg",
       "imagen-1658086189016-938595963.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 11999,
+    "porciento": 0
   },
   {
     "id": 5,
@@ -113,7 +153,9 @@
       "imagen-1658092159241-757701277.jpg",
       "imagen-1658092159247-572033248.jpg"
     ],
-    "descuento": null
+    "descuento": 500,
+    "precioFinal": 4400,
+    "porciento": 10
   },
   {
     "id": 6,
@@ -142,7 +184,9 @@
       "imagen-1658523525966-277581079.jpg",
       "imagen-1658523525970-646916049.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 12999,
+    "porciento": 0
   },
   {
     "id": 7,
@@ -171,7 +215,9 @@
       "imagen-1658527797633-283538886.jpg",
       "imagen-1658527797635-2409880.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 12999,
+    "porciento": 0
   },
   {
     "id": 8,
@@ -200,9 +246,45 @@
       "imagen-1658528082394-454876038.jpg",
       "imagen-1658528082400-52165902.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 29999,
+    "porciento": 0
   },
   {
+<<<<<<< HEAD
+=======
+    "id": 9,
+    "nombre": "Buzo Disney Sisu M.",
+    "descripcion": "Buzo basico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. Estampa centrada en frente y espalda con personaje de Disney. Grifa institucional en ruedo izquierdo.",
+    "categoria": "Buzos",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "XXL",
+      "XL",
+      "",
+      ""
+    ],
+    "stock": 10,
+    "precio": 9600,
+    "imagen": [
+      "imagen-1658530037940-965966374.jpg",
+      "imagen-1658530037945-932180676.jpg",
+      "imagen-1658530037949-863927098.jpg",
+      "imagen-1658530037952-125018367.jpg"
+    ],
+    "descuento": 600,
+    "precioFinal": 9000,
+    "porciento": 6
+  },
+  {
+>>>>>>> 98377fc13a80cca4be6aaa3ab94e0a91b985d704
     "id": 10,
     "nombre": "Buzo Disney Boo M.",
     "descripcion": "Buzo básico de frisa liviana. Puños en ruedo, cuello y mangas de morley complemento. Largo por debajo de la cadera. estampado centrada en frente con personaje de Disney Pixar. Grifa institucional en ruedo izquierdo.",
@@ -229,7 +311,9 @@
       "imagen-1658530167245-287991811.jpg",
       "imagen-1658530167248-177430151.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 8799,
+    "porciento": 0
   },
   {
     "id": 11,
@@ -258,7 +342,9 @@
       "imagen-1658535809974-822011894.jpg",
       "imagen-1658535809979-674204879.jpg"
     ],
-    "descuento": 500
+    "descuento": 500,
+    "precioFinal": 9000,
+    "porciento": 5
   },
   {
     "id": 12,
@@ -287,7 +373,9 @@
       "imagen-1658535983934-719455623.jpg",
       "imagen-1658535983937-159526344.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 7999,
+    "porciento": 0
   },
   {
     "id": 13,
@@ -316,7 +404,9 @@
       "imagen-1658536132114-195026675.jpg",
       "imagen-1658536132116-966899474.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 12999,
+    "porciento": 0
   },
   {
     "id": 14,
@@ -345,7 +435,9 @@
       "imagen-1658701166460-3680074.jpg",
       "imagen-1658701166465-718783303.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 32999,
+    "porciento": 0
   },
   {
     "id": 15,
@@ -367,14 +459,16 @@
       ""
     ],
     "stock": 5,
-    "precio": 9700,
+    "precio": 10000,
     "imagen": [
       "imagen-1658701270618-600922628.png",
       "imagen-1658701270622-633216846.png",
       "imagen-1658701270625-725317062.png",
       "imagen-1658701270626-727931336.png"
     ],
-    "descuento": 300
+    "descuento": 300,
+    "precioFinal": 9700,
+    "porciento": 3
   },
   {
     "id": 16,
@@ -396,14 +490,16 @@
       ""
     ],
     "stock": 12,
-    "precio": 2500,
+    "precio": 3700,
     "imagen": [
       "imagen-1658701562514-996703689.jpg",
       "imagen-1658701562523-594337658.jpg",
       "imagen-1658701562527-78051264.jpg",
       "imagen-1658701562530-846995035.jpg"
     ],
-    "descuento": 200
+    "descuento": 500,
+    "precioFinal": 3200,
+    "porciento": 13
   },
   {
     "id": 17,
@@ -432,7 +528,9 @@
       "imagen-1658701711081-285240597.jpg",
       "imagen-1658701711084-539836820.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 4000,
+    "porciento": 0
   },
   {
     "id": 18,
@@ -461,7 +559,9 @@
       "imagen-1658701819697-229914652.jpg",
       "imagen-1658701819712-517682309.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 5000,
+    "porciento": 0
   },
   {
     "id": 19,
@@ -490,7 +590,9 @@
       "imagen-1658701935746-268468083.jpg",
       "imagen-1658701935749-439918141.jpg"
     ],
-    "descuento": 200
+    "descuento": 200,
+    "precioFinal": 3800,
+    "porciento": 5
   },
   {
     "id": 20,
@@ -519,7 +621,9 @@
       "imagen-1658702079054-217530393.jpg",
       "imagen-1658702079058-455851991.jpg"
     ],
-    "descuento": 200
+    "descuento": 300,
+    "precioFinal": 4000,
+    "porciento": 7
   },
   {
     "id": 21,
@@ -548,7 +652,9 @@
       "imagen-1658702381316-36442892.jpg",
       "imagen-1658702381320-84765048.jpg"
     ],
-    "descuento": null
+    "descuento": 0,
+    "precioFinal": 19800,
+    "porciento": 0
   },
   {
     "id": 22,
@@ -570,14 +676,16 @@
       ""
     ],
     "stock": 10,
-    "precio": 10999,
+    "precio": 10000,
     "imagen": [
       "imagen-1658702479155-884719423.jpg",
       "imagen-1658702479162-582848695.jpg",
       "imagen-1658702479165-310979035.jpg",
       "imagen-1658702479167-99641533.jpg"
     ],
-    "descuento": null
+    "descuento": 1400,
+    "precioFinal": 8600,
+    "porciento": 14
   },
   {
     "id": 23,
@@ -606,7 +714,9 @@
       "imagen-1658702705891-242218510.jpg",
       "imagen-1658702705895-965049952.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 11000,
+    "porciento": 0
   },
   {
     "id": 24,
@@ -635,7 +745,9 @@
       "imagen-1658702835931-114755843.jpg",
       "imagen-1658702835935-44903835.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 11000,
+    "porciento": 0
   },
   {
     "id": 25,
@@ -664,7 +776,9 @@
       "imagen-1658702962787-297041884.jpg",
       "imagen-1658702962790-566683894.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 10000,
+    "porciento": 0
   },
   {
     "id": 27,
@@ -686,14 +800,16 @@
       ""
     ],
     "stock": 17,
-    "precio": 7200,
+    "precio": 7800,
     "imagen": [
       "imagen-1658703240101-776950700.jpg",
       "imagen-1658703240111-722946826.jpg",
       "imagen-1658703240116-853957611.jpg",
       "imagen-1658703240120-440059432.jpg"
     ],
-    "descuento": 400
+    "descuento": 400,
+    "precioFinal": 7400,
+    "porciento": 5
   },
   {
     "id": 28,
@@ -722,7 +838,9 @@
       "imagen-1658703450684-681638677.jpg",
       "imagen-1658703450690-971316070.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 7000,
+    "porciento": 0
   },
   {
     "id": 29,
@@ -751,7 +869,9 @@
       "imagen-1658703577076-489079456.jpg",
       "imagen-1658703577079-207966050.jpg"
     ],
-    "descuento": 200
+    "descuento": 200,
+    "precioFinal": 8600,
+    "porciento": 2
   },
   {
     "id": 30,
@@ -780,7 +900,9 @@
       "imagen-1658703701125-92479956.jpg",
       "imagen-1658703701131-924820818.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 13000,
+    "porciento": 0
   },
   {
     "id": 31,
@@ -809,7 +931,9 @@
       "imagen-1658703814016-387317464.jpg",
       "imagen-1658703814020-686652873.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 15999,
+    "porciento": 0
   },
   {
     "id": 32,
@@ -838,7 +962,9 @@
       "imagen-1658703919409-219483356.jpg",
       "imagen-1658703919414-857473540.jpg"
     ],
-    "descuento": 400
+    "descuento": 400,
+    "precioFinal": 9200,
+    "porciento": 4
   },
   {
     "id": 33,
@@ -867,7 +993,9 @@
       "imagen-1658793359935-882446704.jpg",
       "imagen-1658793359937-130293105.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 7000,
+    "porciento": 0
   },
   {
     "id": 34,
@@ -896,7 +1024,9 @@
       "imagen-1658793537652-257996495.jpg",
       "imagen-1658793537659-914396255.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 15000,
+    "porciento": 0
   },
   {
     "id": 35,
@@ -925,7 +1055,9 @@
       "imagen-1658793661050-672783123.jpg",
       "imagen-1658793661054-463948387.jpg"
     ],
-    "descuento": 0
+    "descuento": 0,
+    "precioFinal": 11500,
+    "porciento": 0
   },
   {
     "id": 36,
@@ -954,7 +1086,9 @@
       "imagen-1658793776418-336811701.jpg",
       "imagen-1658793776426-343235291.jpg"
     ],
-    "descuento": 300
+    "descuento": 300,
+    "precioFinal": 8400,
+    "porciento": 3
   },
   {
     "id": 37,
@@ -983,7 +1117,9 @@
       "imagen-1658793935260-645074015.jpg",
       "imagen-1658793935266-69567085.jpg"
     ],
-    "descuento": 2000
+    "descuento": 2000,
+    "precioFinal": 18000,
+    "porciento": 10
   },
   {
     "id": 38,
@@ -1012,6 +1148,39 @@
       "imagen-1658794413274-157949109.jpg",
       "imagen-1658794413275-664238666.jpg"
     ],
-    "descuento": 2000
+    "descuento": 2000,
+    "precioFinal": 21000,
+    "porciento": 8
+  },
+  {
+    "id": 39,
+    "nombre": "Remera Diney Malefica K.",
+    "descripcion": "Remeron de jersey 24/1 con proceso de lavado Vintage. Cuello redondo aplicado. Estampa en delantero con personaje de Disney villanas. Largo por debajo de la cadera. Importante: el lavado de esta prenda puede variar al de la foto ya que son prendas teñidas de forma artesanal.",
+    "categoria": "Remeras",
+    "colores": [
+      "Negro",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XXL",
+      "XL",
+      "L",
+      "",
+      ""
+    ],
+    "stock": 20,
+    "precio": 7000,
+    "imagen": [
+      "imagen-1658837467294-120187220.jpg",
+      "imagen-1658837467303-491406633.jpg",
+      "imagen-1658837467307-621806977.jpg",
+      "imagen-1658837467310-110393166.jpg"
+    ],
+    "descuento": 300,
+    "precioFinal": 6700,
+    "porciento": 4
   }
 ]
