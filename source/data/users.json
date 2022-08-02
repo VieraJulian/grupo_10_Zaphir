@@ -5,6 +5,7 @@
     "email": "benjaminguerra6440@gmail.com",
     "password": "$2a$10$5N/nOpuK/l8uIk.kB94ac.aG6VQf8HIN30bB5eCq6eMWgngik8jq2",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -13,6 +14,7 @@
     "email": "julianviera2019@zaphir.com",
     "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
     "telefono": "0344215551775",
+    "imagen": null,
     "isAdmin": true
   },
   {
@@ -21,6 +23,7 @@
     "email": "mauricioviera@gmail.com",
     "password": "$2a$10$ulGQXfqR.ETt4fDiw6Pb0uXt5IBnzXlvfSRSgLFDYHztlxZlQG4W6",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -29,6 +32,7 @@
     "email": "juanperez2020@gmail.com",
     "password": "$2a$10$lExtBgXRKqVmpfGb3Y3Yjedh.kojMQOrpCL8xba8ZR.u2uJifxccG",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -37,6 +41,7 @@
     "email": "mariamartinez123@gmail.com",
     "password": "$2a$10$nmZRDKsAvxWva/pzqQm3q.qYQX.e/W3AuLHXI60EG5xAitlNcg1gy",
     "telefono": "0985423196872",
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -45,6 +50,7 @@
     "email": "cargarcia1983@gmail.com",
     "password": "$2a$10$6pZZPhKyRehS96yTG8Q17OiQkUWLaUwyWmtwCckjbwjeuk6h6yDMW",
     "telefono": "4655519836514",
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -53,6 +59,7 @@
     "email": "noiranalarioja@gmail.com",
     "password": "$2a$10$ybaJyLfAdAaOVvmTLPRA1OyrmpGMmltvhhiSnN2IC0i4Rn5TJJIz.",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -61,6 +68,7 @@
     "email": "mariaceleste2022@zaphir.com",
     "password": "$2a$10$OxP4IsVuD0tBAJYF7CTiV.YqP3RcAEgjhFpZUfQgkgAMW3d9hRGT2",
     "telefono": null,
+    "imagen": null,
     "isAdmin": true
   },
   {
@@ -69,6 +77,7 @@
     "email": "ramirezrocioandre1989@zaphir.com",
     "password": "$2a$10$7Vw57Xny1lfmCt2sXy/o5eO4ThaZmy50/5dM9e0I9onC6aj4QOWoa",
     "telefono": "3555618892543",
+    "imagen": null,
     "isAdmin": true
   },
   {
@@ -77,6 +86,7 @@
     "email": "ericadiaz20152022@gmail.com",
     "password": "$2a$10$kx7Cddq2tv7nIy8wp.I2CuZvKcI3bkb3m9RiObl862ww33KoOlAUe",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -85,6 +95,7 @@
     "email": "camposivan898@homtail.com",
     "password": "$2a$10$iOc/etyWeHYS33P.Dzdh/.9FrqTsg5JNJJK96nhF7YXFUpV4M5si.",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -93,6 +104,7 @@
     "email": "acosta424875622@gmail.com",
     "password": "$2a$10$UA02ITuTI6wdcNucimjSTO4Iz8R4vJki7/8xclwT4Z35bVrAsflAa",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   },
   {
@@ -101,6 +113,7 @@
     "email": "melinanunez0205@gmail.com",
     "password": "$2a$10$vorOtrxRoDXRp9kJxnvRW.vXPmykDGl23A9fo/wYtOFIvGu.ITOUm",
     "telefono": null,
+    "imagen": null,
     "isAdmin": false
   }
 ]

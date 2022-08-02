@@ -47,3 +47,18 @@ main {
 .button:hover {
     background-color: #515151;
 }
+
+.email{
+    border: solid 1px #909090;
+    padding: 10px 12px;
+    margin-bottom: 3rem;
+    border-radius: 2px;
+}
+@media screen and (min-width: 36.25em){
+    main{
+        margin: auto;
+        max-width: 580px;
+        margin-bottom: 80px;
+        margin-top: 150px;
+    }
+}
