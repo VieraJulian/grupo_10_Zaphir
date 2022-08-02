@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 
-const { login, register, process, access, profile } = require("../controllers/users.controllers");
+const { login, register, process, access, profile, editProfile } = require("../controllers/users.controllers");
 
 const middlewareRegister = require('../middlewares/register.middlewares');
 const middlewareLogin = require('../middlewares/login.middlewares');
@@ -12,5 +12,6 @@ router.get("/ingresar", login);
 router.post("/ingresar", middlewareLogin, access)
 
 router.get("/perfil", profile);
+router.get("/perfil/editar", editProfile)
 
 module.exports = router;

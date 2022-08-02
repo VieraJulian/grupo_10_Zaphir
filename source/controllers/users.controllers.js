@@ -41,9 +41,15 @@ const usersControllers = {
         return res.redirect('/')
     },
     profile: (req, res) => {
-        res.render("users/profile", {
+        return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
             title: "Mi Perfil"
+        })
+    },
+    editProfile: (req, res) => {
+        return res.render("users/edit-profile", {
+            title: "Editar Perfil",
+            styles: ["users/edit-profile-mobile","users/edit-profile-tablets", "users/edit-profile-desktop"]
         })
     }
 }
