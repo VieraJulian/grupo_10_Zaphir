@@ -14,7 +14,7 @@
     "email": "julianviera2019@zaphir.com",
     "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
     "telefono": 344215551775,
-    "imagen": "/default/default.png",
+    "imagen": null,
     "isAdmin": true
   },
   {
@@ -22,7 +22,7 @@
     "nombre": "Mauricio",
     "email": "mauricioviera@gmail.com",
     "password": "$2a$10$ulGQXfqR.ETt4fDiw6Pb0uXt5IBnzXlvfSRSgLFDYHztlxZlQG4W6",
-    "telefono": null,
+    "telefono": 344215551779,
     "imagen": null,
     "isAdmin": false
   },

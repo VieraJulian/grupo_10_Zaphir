@@ -5,7 +5,7 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <h2 class="titulo">Editar Perfil</h2>
-                <form class="form" action="/usuario/perfil/editar?m=PUT" method="post" enctype="multipart/form">
+                <form class="form" action="/usuario/perfil/editar?m=PUT" method="post" enctype="multipart/form-data"">
                     <label class="title">Nombre y Apellido:</label>
                     <input class="input" type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
                     <label class="title">Teléfono:</label>
