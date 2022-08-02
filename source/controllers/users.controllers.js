@@ -45,6 +45,10 @@ const usersControllers = {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
             title: "Mi Perfil"
         })
+    },
+    logout: (req, res) => {
+        delete req.session.users
+        return res.redirect('/')
     }
 }
 

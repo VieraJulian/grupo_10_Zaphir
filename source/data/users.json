@@ -94,5 +94,13 @@
     "password": "$2a$10$UA02ITuTI6wdcNucimjSTO4Iz8R4vJki7/8xclwT4Z35bVrAsflAa",
     "telefono": null,
     "isAdmin": false
+  },
+  {
+    "id": 13,
+    "nombre": "Melina Nuñez",
+    "email": "melinanunez0205@gmail.com",
+    "password": "$2a$10$vorOtrxRoDXRp9kJxnvRW.vXPmykDGl23A9fo/wYtOFIvGu.ITOUm",
+    "telefono": null,
+    "isAdmin": false
   }
 ]
