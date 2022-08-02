@@ -6,6 +6,8 @@ const { login, register, process, access, profile, logout, editProfile } = requi
 const middlewareRegister = require('../middlewares/register.middlewares');
 const middlewareLogin = require('../middlewares/login.middlewares');
 
+const isLogged = require("../middlewares/isLogged"); /* Meli, te falto esto, por eso te tiraba error*/
+
 router.get("/registro", register);
 router.post("/registro", middlewareRegister, process)
 
