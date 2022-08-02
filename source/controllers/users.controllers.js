@@ -40,6 +40,7 @@ const usersControllers = {
         }
             let users = index()
             let user = users.find(u => u.email === req.body.email)
+            delete req.session.password
             req.session.user = user
             return res.redirect("/usuario/perfil")
     },

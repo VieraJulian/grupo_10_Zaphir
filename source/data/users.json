@@ -115,5 +115,14 @@
     "telefono": null,
     "imagen": null,
     "isAdmin": false
+  },
+  {
+    "id": 14,
+    "nombre": "Maximiliano Gabriel Peralta",
+    "email": "maxygabrielperalta@gmail.com",
+    "password": "$2a$10$Ea6kXkwbwP7obR5DRx3K9Ooj6VWsDuX8c0X3D67iN.YECMnEIOO6S",
+    "telefono": null,
+    "imagen": null,
+    "isAdmin": false
   }
 ]
