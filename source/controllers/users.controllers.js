@@ -41,7 +41,7 @@ const usersControllers = {
             let users = index()
             let user = users.find(u => u.email === req.body.email)
             req.session.user = user
-            return res.redirect("users/profile")
+            return res.redirect("/usuario/perfil")
     },
     profile: (req, res) => {
         return res.render("users/profile", {
