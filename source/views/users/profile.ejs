@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("..//partials/header.ejs") %>
+            <main>
+                <h2 class="titulo">Mi Perfil</h2>
+                <picture class="img-contenedor">
+                    <img class="img" src="/default/default.png" alt="">
+                </picture>
+                <section class="datosPersonales">
+                    <p class="title">Nombre y apellido:</p>
+                    <p class="userData">Julián Viera</p>
+                    <p class="title">E-mail:</p>
+                    <p class="userData">julianviera2019@123.com</p>
+                    <p class="title">Teléfono:</p>
+                    <p class="userData">12343242243</p>
+                    <a href="" class="editarPerfil">Editar Perfil</a>
+                </section>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
+</html>

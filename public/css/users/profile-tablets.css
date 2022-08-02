@@ -1,0 +1,7 @@
+@media screen and (min-width: 48em) {
+    main {
+        margin-bottom: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,14 @@
+@media (min-width: 64em) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .datosPersonales{
+        padding: 2rem;
+    }
+
+    .editarPerfil{
+        text-align: start;
+    }
+}

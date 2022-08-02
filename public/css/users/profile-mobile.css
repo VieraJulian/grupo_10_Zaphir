@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+}
+
+.img-contenedor {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+}
+
+.img {
+    width: 100%;
+}
+
+.datosPersonales {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.userData {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.editarPerfil {
+    margin-top: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.editarPerfil:hover {
+    transition: all 200ms;
+    color: #909090;
+}
+
+@media screen and (min-width: 31.25em) {
+    .img-contenedor {
+        max-width: 31.25em;
+    }
+
+    .datosPersonales {
+        max-width: 31.25em;
+    }
+}

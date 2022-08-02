@@ -27,20 +27,24 @@ const usersControllers = {
         write(users)
         return res.redirect('/usuario/ingresar')
     },
-    access:(req, res) => {
+    access: (req, res) => {
         let validaciones = validationResult(req)
-        let {errors} = validaciones
-        if(errors && errors.length > 0){
-        return res.render('users/login',{
-        title: "ingresar",
-        styles:["users/login-mobile", "users/login-tablets", "users/login-desktop"],
-        oldData: req.body,
-        errors: validaciones.mapped()
-        });
+        let { errors } = validaciones
+        if (errors && errors.length > 0) {
+            return res.render('users/login', {
+                title: "ingresar",
+                styles: ["users/login-mobile", "users/login-tablets", "users/login-desktop"],
+                oldData: req.body,
+                errors: validaciones.mapped()
+            });
         }
-
         return res.redirect('/')
-
+    },
+    profile: (req, res) => {
+        res.render("users/profile", {
+            styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
+            title: "Mi Perfil"
+        })
     }
 }
 
