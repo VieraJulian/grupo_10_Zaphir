@@ -12,7 +12,13 @@ const register = [
         return true
     }),    
     body("password").notEmpty().withMessage("La contraseña no puede quedar vacío").bail().isLength({min : 4}).withMessage("La contraseña debe contener mínimo cuatro caracteres").bail(),
-    body("passwordConfirm").notEmpty().withMessage("La contraseña no puede quedar vacío").bail().isLength({min : 4}).withMessage("La contraseña debe contener mínimo cuatro caracteres").bail(),
+    body("passwordConfirm").notEmpty().withMessage("La contraseña no puede quedar vacío").bail().isLength({min : 4}).withMessage("La contraseña debe contener mínimo cuatro caracteres").bail().custom((value, { req } )=> {
+        let { password } = req.body
+        if(password !== value){
+            throw new Error("La contraseña no coincide")
+        }
+        return true
+    })
 ]
 
 module.exports = register

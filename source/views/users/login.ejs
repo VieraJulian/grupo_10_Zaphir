@@ -9,10 +9,10 @@
         </section>
         <form action = "/usuario/ingresar" method = "POST" >
             <fieldset class="NombreUsuario">
-                <label>Nombre de usuario</label>
-                <input type="text" name="nombre" id="nombre" placeholder="ej: JuanPerez10" value="<%= locals.oldData ? oldData.nombre : null %>">
-                <% if (locals.errors && errors.nombre) { %>
-                    <p><%= errors.nombre.msg %></p>
+                <label>E-mail</label>
+                <input type="email" name="email" id="nombre" placeholder="ej: JuanPerez10" value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p><%= errors.email.msg %></p>
                     <% } %>
             </fieldset>
             <fieldset class="Contraseña">

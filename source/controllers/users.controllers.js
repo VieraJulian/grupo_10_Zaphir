@@ -31,9 +31,9 @@ const usersControllers = {
         let validaciones = validationResult(req)
         let {errors} = validaciones
         if(errors && errors.length > 0){
-        return res.render('users/register',{
+        return res.render('users/login',{
         title: "ingresar",
-        styles:["users/login-mobile","users/login-tablets","users/login-desktop"],
+        styles:["users/login-mobile", "users/login-tablets", "users/login-desktop"],
         oldData: req.body,
         errors: validaciones.mapped()
         });

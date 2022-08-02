@@ -1,107 +1,97 @@
 [
   {
     "id": 1,
-    "nombre": "Juan",
-    "apellido": "Perez",
-    "email": "juanperez2020@gmail.com",
-    "password": "23467287",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "benjamin guerra",
+    "email": "benjaminguerra6440@gmail.com",
+    "password": "$2a$10$5N/nOpuK/l8uIk.kB94ac.aG6VQf8HIN30bB5eCq6eMWgngik8jq2",
+    "telefono": null,
+    "isAdmin": false
   },
   {
     "id": 2,
-    "nombre": "María",
-    "apellido": "Martinez",
-    "email": "mariamartinez123@gmail.com",
-    "password": "0968705",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "Julián Eduardo Viera",
+    "email": "julianviera2019@zaphir.com",
+    "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
+    "telefono": "0344215551775",
+    "isAdmin": true
   },
   {
     "id": 3,
-    "nombre": "Carlos",
-    "apellido": "Garcia",
-    "email": "cargarcia1983@gmail.com",
-    "password": "42138790",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "Mauricio",
+    "email": "mauricioviera@gmail.com",
+    "password": "$2a$10$ulGQXfqR.ETt4fDiw6Pb0uXt5IBnzXlvfSRSgLFDYHztlxZlQG4W6",
+    "telefono": null,
+    "isAdmin": false
   },
   {
     "id": 4,
-    "nombre": "Ana",
-    "apellido": "Noir",
-    "email": "noirAnalarioja@gmail.com",
-    "password": "5768456",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "Juan Perez",
+    "email": "juanperez2020@gmail.com",
+    "password": "$2a$10$lExtBgXRKqVmpfGb3Y3Yjedh.kojMQOrpCL8xba8ZR.u2uJifxccG",
+    "telefono": null,
+    "isAdmin": false
   },
   {
     "id": 5,
-    "nombre": "Pilar",
-    "apellido": "Blanc",
-    "email": "pilarbsas@hotmail.com",
-    "password": "29853948",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "María Martinez",
+    "email": "mariamartinez123@gmail.com",
+    "password": "$2a$10$nmZRDKsAvxWva/pzqQm3q.qYQX.e/W3AuLHXI60EG5xAitlNcg1gy",
+    "telefono": "0985423196872",
+    "isAdmin": false
   },
   {
     "id": 6,
-    "nombre": "Celeste",
-    "apellido": "Fernandez",
-    "email": "mariaceleste2022@zaphir.com",
-    "password": "celeste42487386",
-    "isAdmin": true,
-    "imagen": ""
+    "nombre": "Carlos Garcia",
+    "email": "cargarcia1983@gmail.com",
+    "password": "$2a$10$6pZZPhKyRehS96yTG8Q17OiQkUWLaUwyWmtwCckjbwjeuk6h6yDMW",
+    "telefono": "4655519836514",
+    "isAdmin": false
   },
   {
     "id": 7,
-    "nombre": "Andrea",
-    "apellido": "Ramirez",
-    "email": "ramirezrocioandre1989@zaphir.com",
-    "password": "20983472893",
-    "isAdmin": true,
-    "imagen": ""
+    "nombre": "Ana Noir",
+    "email": "noiranalarioja@gmail.com",
+    "password": "$2a$10$ybaJyLfAdAaOVvmTLPRA1OyrmpGMmltvhhiSnN2IC0i4Rn5TJJIz.",
+    "telefono": null,
+    "isAdmin": false
   },
   {
     "id": 8,
-    "nombre": "Valentina",
-    "apellido": "Acosta",
-    "email": "acosta424875622@gmail.com",
-    "password": "Valentina321",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "Celeste Fernandez",
+    "email": "mariaceleste2022@zaphir.com",
+    "password": "$2a$10$OxP4IsVuD0tBAJYF7CTiV.YqP3RcAEgjhFpZUfQgkgAMW3d9hRGT2",
+    "telefono": null,
+    "isAdmin": true
   },
   {
     "id": 9,
-    "nombre": "Ivan",
-    "apellido": "Campos",
-    "email": "camposivan898@homtail.com",
-    "password": "42387878casa321",
-    "isAdmin": false,
-    "imagen": ""
+    "nombre": "Andrea Ramirez",
+    "email": "ramirezrocioandre1989@zaphir.com",
+    "password": "$2a$10$7Vw57Xny1lfmCt2sXy/o5eO4ThaZmy50/5dM9e0I9onC6aj4QOWoa",
+    "telefono": "3555618892543",
+    "isAdmin": true
   },
   {
     "id": 10,
-    "nombre": "Erica",
-    "apellido": "Diaz",
+    "nombre": "Erica Diaz",
     "email": "ericadiaz20152022@gmail.com",
-    "password": "3287472637",
-    "isAdmin": false,
-    "imagen": ""
+    "password": "$2a$10$kx7Cddq2tv7nIy8wp.I2CuZvKcI3bkb3m9RiObl862ww33KoOlAUe",
+    "telefono": null,
+    "isAdmin": false
   },
   {
     "id": 11,
-    "nombre": "Julián Viera",
-    "email": "julianviera2019@hotmail.com",
-    "password": "$2a$10$MfX7vvAvruTUJVpG/pdz6O3giwLuIZQoPfzx2SDVGcD0wHCg0H6O2",
+    "nombre": "Ivan Campos",
+    "email": "camposivan898@homtail.com",
+    "password": "$2a$10$iOc/etyWeHYS33P.Dzdh/.9FrqTsg5JNJJK96nhF7YXFUpV4M5si.",
     "telefono": null,
     "isAdmin": false
   },
   {
     "id": 12,
-    "nombre": "benjamin guerra",
-    "email": "benjaminguerra6440@gmail.com",
-    "password": "$2a$10$5N/nOpuK/l8uIk.kB94ac.aG6VQf8HIN30bB5eCq6eMWgngik8jq2",
+    "nombre": "Valentina Acosta",
+    "email": "acosta424875622@gmail.com",
+    "password": "$2a$10$UA02ITuTI6wdcNucimjSTO4Iz8R4vJki7/8xclwT4Z35bVrAsflAa",
     "telefono": null,
     "isAdmin": false
   }

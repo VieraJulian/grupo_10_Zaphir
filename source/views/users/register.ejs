@@ -46,10 +46,10 @@
                     <fieldset class="form-confirm">
                         <label for="contraseña">Confirmar contraseña</label>
                         <input type="password" name="passwordConfirm" id="confirm-password"
-                            value="<%= locals.errors ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>
+                            value="<%= locals.errors ? oldData.passwordConfirm : null %>">
+                        <% if (locals.errors && errors.passwordConfirm) { %>
                             <p class="msg-error">
-                                <%= errors.password.msg %>
+                                <%= errors.passwordConfirm.msg %>
                             </p>
                             <% } %>
                     </fieldset>
