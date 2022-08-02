@@ -5,6 +5,7 @@ const { login, register, process, access, profile, logout, editProfile, updatePr
 
 const middlewareRegister = require('../middlewares/register.middlewares');
 const middlewareLogin = require('../middlewares/login.middlewares');
+
 const middlewaresEditProfile = require('../middlewares/edit-profile.middlewares');
 
 const isLogged = require("../middlewares/isLogged"); /* Meli, te falto esto, por eso te tiraba error*/
