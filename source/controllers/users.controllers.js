@@ -57,35 +57,17 @@ const usersControllers = {
         })
     },
     updateProfile: (req, res) => {
-        
-
-        /* modify: (req, res) => {
-            let imagenes = req.files.map(file => file.filename)
-            let products = index();
-            let product = one(parseInt(req.params.id))
-            function porciento(precio, descuento){
-                let resultadoDivision = precio / descuento
-                return (100 / resultadoDivision).toFixed(1)
+        let users = index();
+        let usersModifieds = users.map(user => {
+            if (user.email === req.body.email) {
+                user.nombre = req.body.nombre;
+                user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : null;
+                user.imagen = req.files && req.files.length > 0 ? req.file[0].filename : "../../uploads/default/default.png";
             }
-            let productsModifieds = products.map(p => {
-                if (p.id === product.id) {
-                    p.nombre = req.body.nombre;
-                    p.descripcion = req.body.descripcion;
-                    p.categoria = req.body.categoria;
-                    p.colores = req.body.colores;
-                    p.talle = req.body.talle;
-                    p.stock = parseInt(req.body.stock);
-                    p.precio = parseInt(req.body.precio);
-                    p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
-                    p.descuento = parseInt(req.body.descuento);
-                    p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
-                }
-                return p
-            })
-            write(productsModifieds)
-            return res.redirect("/productos")
-        }, */
+            return user;
+        })
+        write(usersModifieds)
+        return res.redirect("/usuario/perfil")
     }
 }
 
