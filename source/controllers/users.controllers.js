@@ -38,11 +38,11 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-            let users = index()
-            let user = users.find(u => u.email === req.body.email)
-            delete user.password
-            req.session.user = user
-            return res.redirect("/usuario/perfil")
+        let users = index()
+        let user = users.find(u => u.email === req.body.email)
+        delete user.password
+        req.session.user = user
+        return res.redirect("/usuario/perfil")
     },
     profile: (req, res) => {
         return res.render("users/profile", {
@@ -61,6 +61,16 @@ const usersControllers = {
         })
     },
     updateProfile: (req, res) => {
+        let validaciones = validationResult(req)
+        let { errors } = validaciones
+        if (errors && errors.length > 0) {
+            return res.render('users/edit-profile', {
+                title: "Editar Perfil",
+                styles: ["users/edit-profile-mobile", "users/edit-profile-tablets", "users/edit-profile-desktop"],
+                oldData: req.body,
+                errors: validaciones.mapped()
+            });
+        }
         let users = index();
         let usersModifieds = users.map(user => {
             if (user.email === req.session.user.email) {

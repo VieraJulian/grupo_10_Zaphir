@@ -12,6 +12,9 @@
                     <input class="input" type="number" name="telefono" id="teléfono" value="<%= user.telefono %>">
                     <label class="title">Imagen de perfil</label>
                     <input class="input" type="file" name="imagen" id="imagen">
+                    <% if (locals.errors && errors.imagen) { %>
+                        <p><%= errors.imagen.msg %></p>
+                    <% } %>
                     <label class="title">E-mail:</label>
                     <p class="email"><%= user.email %></p>
                     <button class="button" type="submit">
