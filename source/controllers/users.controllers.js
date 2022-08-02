@@ -7,7 +7,7 @@ const usersControllers = {
         styles: ["users/register-mobile"],
     }),
     login: (req, res) => res.render("users/login", {
-        title: "Inicial sesión",
+        title: "Iniciar sesión",
         styles: ["users/login-mobile", "users/login-tablets", "users/login-desktop"],
     }),
     process: (req, res) => {
@@ -38,7 +38,10 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        return res.redirect('/')
+            let users = index()
+            let user = users.find(u => u.email === req.body.email)
+            req.session.user = user
+            return res.redirect("users/profile")
     },
     profile: (req, res) => {
         return res.render("users/profile", {
