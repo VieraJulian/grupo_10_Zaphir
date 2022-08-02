@@ -40,7 +40,7 @@ const usersControllers = {
         }
             let users = index()
             let user = users.find(u => u.email === req.body.email)
-            delete req.session.password
+            delete user.password
             req.session.user = user
             return res.redirect("/usuario/perfil")
     },
@@ -63,10 +63,10 @@ const usersControllers = {
     updateProfile: (req, res) => {
         let users = index();
         let usersModifieds = users.map(user => {
-            if (user.email === req.body.email) {
+            if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
                 user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : null;
-                user.imagen = req.files && req.files.length > 0 ? req.file[0].filename : "../../uploads/default/default.png";
+                user.imagen = req.files && req.files.length > 0 ? req.file[0].filename : "/default/default.png";
             }
             return user;
         })

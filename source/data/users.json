@@ -13,8 +13,8 @@
     "nombre": "Julián Eduardo Viera",
     "email": "julianviera2019@zaphir.com",
     "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
-    "telefono": "0344215551775",
-    "imagen": null,
+    "telefono": 344215551775,
+    "imagen": "/default/default.png",
     "isAdmin": true
   },
   {
