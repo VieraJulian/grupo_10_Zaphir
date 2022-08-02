@@ -20,6 +20,6 @@ router.get('/logout', isLogged, logout)
 
 router.get("/perfil", profile);
 router.get("/perfil/editar", editProfile);
-router.put("/perfil/editar",middlewaresEditProfile, updateProfile)
+router.put("/perfil/editar", middlewaresEditProfile, updateProfile)
 
 module.exports = router;
