@@ -41,14 +41,22 @@ const usersControllers = {
         return res.redirect('/')
     },
     profile: (req, res) => {
-        res.render("users/profile", {
+        return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
             title: "Mi Perfil"
         })
     },
+<<<<<<< HEAD
     logout: (req, res) => {
         delete req.session.users
         return res.redirect('/')
+=======
+    editProfile: (req, res) => {
+        return res.render("users/edit-profile", {
+            title: "Editar Perfil",
+            styles: ["users/edit-profile-mobile","users/edit-profile-tablets", "users/edit-profile-desktop"]
+        })
+>>>>>>> e744a431c5d2d7061944649088dd897f588d92cc
     }
 }
 

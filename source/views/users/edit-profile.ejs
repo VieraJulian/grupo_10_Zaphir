@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h2 class="titulo">Editar Perfil</h2>
+                <form class="form" action="/usuarios/perfil/editar?m=PUT" method="post" enctype="multipart/form">
+                    <label class="title">Nombre y Apellido:</label>
+                    <input class="input" type="text" name="nombre" id="nombre">
+                    <label class="title">Teléfono:</label>
+                    <input class="input" type="number" name="telefono" id="teléfono">
+                    <label class="title">Imagen de Perfil</label>
+                    <input class="input" type="file" name="imagen" id="imagen">
+                    <label class="title">E-mail:</label>
+                    <p>ejemplo123@gmail.com</p>
+                    <button class="button" type="submit">
+                        Actualizar cambios
+                    </button>
+                </form>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+</html>
