@@ -5,6 +5,9 @@ const { unlinkSync } = require("fs");
 const profile = [
     body("imagen").custom((value, {req}) => {
         let imagen = req.files[0];
+        if(imagen == undefined){
+            return true
+        }
         let extensiones = [".svg", ".jpg", ".png", ".jpeg"]
         let extension = extname(imagen.filename)
         if(!extensiones.includes(extension)){
