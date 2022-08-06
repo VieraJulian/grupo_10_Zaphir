@@ -7,6 +7,7 @@ const middlewareRegister = require('../middlewares/register.middlewares');
 const middlewareLogin = require('../middlewares/login.middlewares');
 const middlewaresEditProfile = require('../middlewares/edit-profile.middlewares');
 const middlewaresLogout = require("../middlewares/logout.middlewares");
+const middlewaresProfile = require("../middlewares/profile.middlewares");
 
 router.get("/registro", register);
 router.post("/registro", middlewareRegister, process)
@@ -16,8 +17,8 @@ router.post("/ingresar", middlewareLogin, access)
 
 router.get('/logout', middlewaresLogout, logout)
 
-router.get("/perfil", profile);
-router.get("/perfil/editar", editProfile);
+router.get("/perfil", middlewaresProfile, profile);
+router.get("/perfil/editar", middlewaresProfile, editProfile);
 router.put("/perfil/editar", middlewaresEditProfile, updateProfile)
 
 module.exports = router;
