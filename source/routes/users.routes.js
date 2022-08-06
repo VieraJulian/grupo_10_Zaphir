@@ -9,10 +9,12 @@ const middlewaresEditProfile = require('../middlewares/edit-profile.middlewares'
 const middlewaresLogout = require("../middlewares/logout.middlewares");
 const middlewaresProfile = require("../middlewares/profile.middlewares");
 
-router.get("/registro", register);
+const isLoggedButNot = require("../middlewares/isLoggedButNot")
+
+router.get("/registro", isLoggedButNot, register);
 router.post("/registro", middlewareRegister, process)
 
-router.get("/ingresar", login);
+router.get("/ingresar", isLoggedButNot, login);
 router.post("/ingresar", middlewareLogin, access)
 
 router.get('/logout', middlewaresLogout, logout)
