@@ -7,4 +7,4 @@ const isLogged = (req, res, next) => {
     return res.redirect('/usuario/ingresar')
 }
 
-module.exports = [isLogged]
+module.exports = isLogged

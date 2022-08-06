@@ -1,10 +1,10 @@
 const isAdmin = (req, res, next) => {
 
-    if(req.session.user && req.session.user.isAdmin) {
-        next();
+    if (!req.session.user.isAdmin) {
+        return res.redirect("/");
     }
 
-    return res.redirect("/");
+    next();
 }
 
-module = [isAdmin]
+module.exports = isAdmin

@@ -6,13 +6,16 @@ const multer = require("multer");
 const storage = require("../modules/storage")
 const upload = multer({ storage: storage("public/assets/productos") });
 
-router.get("/crear", create);
+const isAdmin = require("../middlewares/isAdmin");
+const isLogged = require("../middlewares/isLogged");
+
+router.get("/crear", [isLogged, isAdmin], create);
 router.post("/crear", [upload.any()], save)
 
-router.get("/editar/:id", edit);
+router.get("/editar/:id", [isLogged, isAdmin], edit);
 router.put("/editar/:id", [upload.any()], modify);
 
-router.get("/carrito", carrito);
+router.get("/carrito", isLogged, carrito);
 
 router.get("/detalle/:id", detalle);
 

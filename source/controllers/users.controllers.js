@@ -52,7 +52,7 @@ const usersControllers = {
     },
     logout: (req, res) => {
         delete req.session.user
-        return res.redirect('/')
+        return res.redirect('/usuario/ingresar')
     },
     editProfile: (req, res) => {
         return res.render("users/edit-profile", {
