@@ -10,10 +10,10 @@
   },
   {
     "id": 2,
-    "nombre": "Julián Eduardo Viera...",
+    "nombre": "Julián Eduardo Viera",
     "email": "julianviera2019@zaphir.com",
     "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
-    "telefono": 344215551778,
+    "telefono": 344215551775,
     "imagen": "imagen-1659811874598-848218462.jpg",
     "isAdmin": true
   },

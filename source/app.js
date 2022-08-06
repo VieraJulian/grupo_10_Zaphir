@@ -1,10 +1,12 @@
 const express = require('express');
-const {resolve} = require('path');
+const { resolve } = require('path');
 const app = express();
-const {port, start} = require("./modules/port");
+const { port, start } = require("./modules/port");
 const public = require("./modules/public");
 const method = require("method-override");
-const session = require('express-session')
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const recordameMiddleware = require("./middlewares/recordame.middlewares"); 
 
 app.listen(port, start);
 app.use(public);
@@ -19,10 +21,14 @@ app.use(express.json());
 app.use(method("m"))
 
 app.use(session({
-    secret:'nodejs',
+    secret: 'nodejs',
     saveUninitialized: true,
-    resave: true 
+    resave: true
 }))
+
+app.use(cookieParser());
+
+app.use(recordameMiddleware);
 
 app.use(require('./middlewares/user'))
 

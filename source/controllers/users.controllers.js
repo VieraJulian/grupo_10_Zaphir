@@ -42,6 +42,11 @@ const usersControllers = {
         let user = users.find(u => u.email === req.body.email)
         delete user.password
         req.session.user = user
+
+        if(req.body.recordame != undefined) {
+            res.cookie("recordame", user.email, {maxAge :  60000})
+        }
+
         return res.redirect("/usuario/perfil")
     },
     profile: (req, res) => {
