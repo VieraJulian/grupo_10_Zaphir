@@ -18,7 +18,7 @@
                     <p class="userData">
                         <%= user.email %>
                     </p>
-                    <% if (user.telefono != null) { %>
+                    <% if (user.telefono !=null) { %>
                         <p class="title">Teléfono:</p>
                         <p class="userData">
                             <%= user.telefono %>
@@ -26,7 +26,7 @@
                         <% } %>
                             <a href="/usuario/perfil/editar" class="editarPerfil">Editar Perfil</a>
                 </section>
-                <%- include("../partials/logo-wts.ejs") %> 
+                <%- include("../partials/logo-wts.ejs") %>
             </main>
             <%- include("../partials/footer.ejs") %>
     </body>

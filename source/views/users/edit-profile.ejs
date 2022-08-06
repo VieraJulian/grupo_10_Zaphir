@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
+
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
                 <h2 class="titulo">Editar Perfil</h2>
                 <form class="form" action="/usuario/perfil/editar?m=PUT" method="post" enctype="multipart/form-data"">
-                    <label class="title">Nombre y Apellido:</label>
+                    <label class=" title">Nombre y Apellido:</label>
                     <input class="input" type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
                     <label class="title">Teléfono:</label>
                     <input class="input" type="number" name="telefono" id="teléfono" value="<%= user.telefono %>">
                     <label class="title">Imagen de perfil</label>
                     <input class="input" type="file" name="imagen" id="imagen">
                     <% if (locals.errors && errors.imagen) { %>
-                        <p><%= errors.imagen.msg %></p>
-                    <% } %>
-                    <label class="title">E-mail:</label>
-                    <p class="email"><%= user.email %></p>
-                    <button class="button" type="submit">
-                        Actualizar cambios
-                    </button>
+                        <p>
+                            <%= errors.imagen.msg %>
+                        </p>
+                        <% } %>
+                            <label class="title">E-mail:</label>
+                            <p class="email">
+                                <%= user.email %>
+                            </p>
+                            <button class="button" type="submit">
+                                Actualizar cambios
+                            </button>
                 </form>
-                <%- include("../partials/logo-wts.ejs") %> 
+                <%- include("../partials/logo-wts.ejs") %>
             </main>
-            <%- include("../partials/footer.ejs") %> 
+            <%- include("../partials/footer.ejs") %>
     </body>
+
 </html>
