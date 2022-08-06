@@ -1,52 +1,63 @@
-    *{
+    * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif; 
+        font-family: 'Montserrat', sans-serif;
     }
+
     .login {
 
         text-align: center;
     }
-    main{
+
+    main {
         max-width: 580px;
         margin-top: 100px;
         margin-bottom: 60px;
         padding: 10px;
         font-family: 'Montserrat', sans-serif;
     }
+
     form {
         max-width: 580px;
     }
+
     form fieldset {
         display: flex;
         flex-direction: column;
-        border : none
+        border: none
     }
+
     section.login {
         text-align: center;
         margin-top: 40px;
         margin-bottom: 20px;
     }
-    input{
+
+    input {
         height: 40px;
         padding: 10px 12px;
     }
+
     fieldset.NombreUsuario {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
     }
+
     fieldset.Contraseña {
         display: flex;
         flex-direction: column;
     }
+
     fieldset {
         margin-top: 30px;
     }
-    label {
+
+    .label {
         margin-bottom: 10px;
     }
+
     .button button {
         height: 40px;
         background-color: #909090;
@@ -55,48 +66,68 @@
         font-weight: 600;
         cursor: pointer;
     }
-    .button button:hover{
+
+    .button button:hover {
         background-color: #515151;
     }
+
     .registro a {
         text-decoration: none;
         color: #000;
         text-align: center;
     }
+
     .registro span {
         margin-left: 5px;
         font-weight: 600;
     }
+
     .form-password a {
         text-decoration: none;
         color: #000;
         text-align: center;
         margin-top: 15px;
     }
+
     .form-password {
         font-weight: 500;
         display: flex;
         justify-content: center;
     }
-    .a-wts{
+
+    .a-wts {
         position: fixed;
         right: 30px;
         bottom: 30px;
         border-radius: 100%;
     }
-    .a-wts img{
+
+    .a-wts img {
         width: 45px;
         height: 45px;
         border-radius: 50%;
         padding: 5px;
         background-color: #1bd741
     }
-    @media screen and (min-width: 580px){
-        main{
+
+    div {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    div input {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px
+    }
+
+    @media screen and (min-width: 580px) {
+        main {
             margin: auto;
             max-width: 580px;
             margin-bottom: 80px;
             margin-top: 110px;
         }
     }
-    
