@@ -70,16 +70,18 @@
                 </fieldset>
             </form>
         </section>
-        <form class="form-editar" action="/productos/editar/<%= product.id %>" method="get">
-            <button>
-                EDITAR
-            </button>
-        </form>
-        <form class="form-eliminar" action="/productos/delete/<%= product.id %>?m=DELETE" method="POST">
-            <button type="submit">
-                <i class = "fa fa-trash"></i>
-            </button>
-        </form>
+        <% if (user && user.isAdmin) { %>
+            <form class="form-editar" action="/productos/editar/<%= product.id %>" method="get">
+                <button>
+                    EDITAR
+                </button>
+            </form>
+            <form class="form-eliminar" action="/productos/delete/<%= product.id %>?m=DELETE" method="POST">
+                <button type="submit">
+                    <i class = "fa fa-trash"></i>
+                </button>
+            </form>
+        <% } %>
         <%- include("../partials/logo-wts.ejs") %> 
     </main>
     <%- include('../partials/footer.ejs') %>

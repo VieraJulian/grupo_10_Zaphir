@@ -14,34 +14,43 @@
         </form>
     </section>
     <section class="header-icon">
-        <nav>
-            <a href="/productos/crear"><i class="fa-solid fa-circle-plus"></i></a>
-            <a href="/usuario/ingresar"><i class="fa-regular fa-user user"></i></a>
-            <a href="/productos/carrito"><i class="fa-regular fa-heart heart"></i></a>
-            <a href="/productos/carrito"><i class="fa-solid fa-bag-shopping"></i></a>
-            <a href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
-        </nav>
+        <% if (!user) { %>
+            <nav>
+                <a href="/usuario/ingresar"><i class="fa-regular fa-user user"></i></a>
+            </nav>
+            <% } else if (user && user.isAdmin) { %>
+                <nav>
+                    <a href="/productos/crear"><i class="fa-solid fa-circle-plus"></i></a>
+                    <a href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </nav>
+                <% } else { %>
+                    <nav>
+                        <a href="/productos/carrito"><i class="fa-regular fa-heart heart"></i></a>
+                        <a href="/productos/carrito"><i class="fa-solid fa-bag-shopping"></i></a>
+                        <a href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </nav>
+                    <% } %>
     </section>
     <section class="header-bottom">
-            <nav class="navbar-main">
-                <a href="/">INICIO</a>
-                <a href="#menu-1">PRENDAS</a>
-                <a href="/productos/ofertas">SALE</a>
-                <a href="/">AYUDA</a>
-            </nav>
-            <nav id="menu-1">
-                    <a  class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
-                    <a href="/">INICIO</a>
-                    <a href="/productos/remeras">REMERAS</a>
-                    <a href="/productos/buzos">BUZOS</a>
-                    <a href="/productos/camperas">CAMPERAS</a>
-                    <a href="/productos/vestidos">VESTIDOS</a>
-                    <a href="/productos/pantalones">PANTALONES</a>
-                    <a href="/productos/jeans">JEANS</a>
-                <section class="menu-bottom">
-                    <a href="/usuario/registro"><i class="fa-regular fa-user user"></i>Crear cuenta</a>
-                    <a href="/usuario/ingresar">Iniciar sesión</a>
-                </section>
-                </nav>
+        <nav class="navbar-main">
+            <a href="/">INICIO</a>
+            <a href="#menu-1">PRENDAS</a>
+            <a href="/productos/ofertas">SALE</a>
+            <a href="/">AYUDA</a>
+        </nav>
+        <nav id="menu-1">
+            <a class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
+            <a href="/">INICIO</a>
+            <a href="/productos/remeras">REMERAS</a>
+            <a href="/productos/buzos">BUZOS</a>
+            <a href="/productos/camperas">CAMPERAS</a>
+            <a href="/productos/vestidos">VESTIDOS</a>
+            <a href="/productos/pantalones">PANTALONES</a>
+            <a href="/productos/jeans">JEANS</a>
+            <section class="menu-bottom">
+                <a href="/usuario/registro"><i class="fa-regular fa-user user"></i>Crear cuenta</a>
+                <a href="/usuario/ingresar">Iniciar sesión</a>
+            </section>
+        </nav>
     </section>
 </header>
