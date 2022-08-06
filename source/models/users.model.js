@@ -25,7 +25,7 @@ const model = {
         email: data.email,
         password: hashSync(data.password, 10),
         telefono: data.telefono == 0 ? null : data.telefono,
-        imagen: null,
+        imagen: "default.png",
         isAdmin: data.email.includes("@zaphir.com")
     })
   },
