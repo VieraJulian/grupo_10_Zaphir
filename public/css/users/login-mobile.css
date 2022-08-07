@@ -123,6 +123,12 @@
         margin-left: 10px;
     }
 
+    .msg-error{
+        margin-top: 10px;
+        color: red;
+        text-align: center;
+    }
+
     @media screen and (min-width: 580px) {
         main {
             margin: auto;

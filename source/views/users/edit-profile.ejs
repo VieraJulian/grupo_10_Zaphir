@@ -12,9 +12,9 @@
                     <label class="title">Teléfono:</label>
                     <input class="input" type="number" name="telefono" id="teléfono" value="<%= user.telefono %>">
                     <label class="title">Imagen de perfil</label>
-                    <input class="input" type="file" name="imagen" id="imagen">
+                    <input class="inputFile" type="file" name="imagen" id="imagen">
                     <% if (locals.errors && errors.imagen) { %>
-                        <p>
+                        <p class="msg-error">
                             <%= errors.imagen.msg %>
                         </p>
                         <% } %>

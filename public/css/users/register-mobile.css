@@ -1,87 +1,106 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-main{
+
+main {
     margin: auto;
     padding: 10px;
     margin-top: 100px;
     margin-bottom: 60px;
 }
-.section-register{
+
+.section-register {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.section-register h1{
+
+.section-register h1 {
     margin-bottom: 15px;
 }
-.section-register p{
+
+.section-register p {
     text-align: center;
 }
-form fieldset{
+
+form fieldset {
     border: none;
 }
-.form-name{
+
+.form-name {
     display: flex;
     flex-direction: column;
 }
-.form-name input{
+
+.form-name input {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
 }
-.form-email{
+
+.form-email {
     display: flex;
     flex-direction: column;
 }
-.form-email input{
+
+.form-email input {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
 }
-.form-tel{
+
+.form-tel {
     display: flex;
     flex-direction: column;
 }
-.form-tel input{
+
+.form-tel input {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
 }
-.form-password{
+
+.form-password {
     display: flex;
     flex-direction: column;
 }
-.form-password input{
+
+.form-password input {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
 }
-.form-confirm{
+
+.form-confirm {
     display: flex;
     flex-direction: column;
 }
-.form-confirm input{
+
+.form-confirm input {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
 }
-.form-button{
+
+.form-button {
     display: flex;
     flex-direction: column;
 }
-label{
+
+label {
     margin-bottom: 10px;
 }
-fieldset{
+
+fieldset {
     margin-top: 30px;
 }
-.form-button button{
+
+.form-button button {
     height: 40px;
     background-color: #909090;
     border: none;
@@ -89,37 +108,51 @@ fieldset{
     font-weight: 600;
     cursor: pointer;
 }
-.form-button button:hover{
-    background-color: #515151;;
+
+.form-button button:hover {
+    background-color: #515151;
+    ;
 }
-.form-linklogin{
+
+.form-linklogin {
     display: flex;
     justify-content: center;
 }
-.form-linklogin a{
+
+.form-linklogin a {
     text-decoration: none;
     color: #000;
     text-align: center;
 }
-.form-linklogin span{
+
+.form-linklogin span {
     margin-left: 5px;
     font-weight: 600;
 }
-.a-wts{
+
+.a-wts {
     position: fixed;
     right: 30px;
     bottom: 30px;
     border-radius: 100%;
 }
-.a-wts img{
+
+.a-wts img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     padding: 5px;
     background-color: #1bd741
 }
-@media screen and (min-width: 580px){
-    main{
+
+.msg-error {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}
+
+@media screen and (min-width: 580px) {
+    main {
         margin: auto;
         max-width: 580px;
         margin-bottom: 80px;

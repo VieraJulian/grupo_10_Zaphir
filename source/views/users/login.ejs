@@ -14,7 +14,7 @@
                         <input type="email" name="email" id="nombre"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
-                            <p>
+                            <p class="msg-error">
                                 <%= errors.email.msg %>
                             </p>
                             <% } %>
@@ -24,7 +24,7 @@
                         <input type="password" name="password" id="password"
                             value="<%= locals.oldData ? oldData.password : null %>">
                         <% if (locals.errors && errors.password) { %>
-                            <p>
+                            <p class="msg-error">
                                 <%= errors.password.msg %>
                             </p>
                             <% } %>
