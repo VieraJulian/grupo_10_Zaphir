@@ -1,0 +1,12 @@
+@media (min-width: 64em) {
+    .section-principal {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 2fr;
+    }
+
+    main {
+        margin: auto;
+        max-width: 64em;
+        margin-top: 150px;
+    }
+}

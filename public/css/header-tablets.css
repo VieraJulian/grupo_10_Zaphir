@@ -36,6 +36,10 @@
         border-top: 1px solid #909090;
     }
 
+    .header-bottom{
+
+    }
+
     .navbar-main {
         display: flex;
     }

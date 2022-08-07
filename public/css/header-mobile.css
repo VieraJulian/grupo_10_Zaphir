@@ -67,7 +67,7 @@ header {
     background-color: #F4F6F8;
     border: 1px solid #909090;
     width: 95%;
-    height: 100%;
+    height: 100vh
 }
 
 .menu-bottom {
@@ -80,8 +80,12 @@ header {
 .menu-bottom a {
     border: 1px solid #909090;
     background-color: #909090;
+    height: 3em;
     margin: 5px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-x {

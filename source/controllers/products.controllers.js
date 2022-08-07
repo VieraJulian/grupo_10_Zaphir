@@ -1,4 +1,5 @@
 const { index, create, write, one } = require("../models/products.models")
+const { validationResult } = require('express-validator');
 
 module.exports = {
     create: (req, res) => {
@@ -9,6 +10,16 @@ module.exports = {
     },
 
     save: (req, res) => {
+        let validaciones = validationResult(req)
+        let { errors } = validaciones
+        if (errors && errors.length > 0) {
+            return res.render("products/create", {
+                title: "Nuevo producto",
+                styles: ["products/create-mobile"],
+                oldData: req.body,
+                errors: validaciones.mapped()
+            });
+        }
         req.body.imagen = req.files.map(file => file.filename)
         let products = index();
         let newProduct = create(req.body);
@@ -88,7 +99,6 @@ module.exports = {
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
 
-        /* ----------------------------------------------------------------- */
 
         res.render("products/productos", {
             title: "Zaphir",
@@ -101,25 +111,10 @@ module.exports = {
 
         let product = one(parseInt(req.params.id))
 
-        /* let precio = product.precio
-        let descuento = product.descuento
-        
-        function resta(precio, descuento){
-            return precio - descuento
-        }
-        
-        function porciento(precio, descuento){
-            let resultadoDivision = precio / descuento
-            return (100 / resultadoDivision).toFixed(1)
-        } */
-
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
             product: product,
-            /* resta: resta(precio, descuento),
-            porciento: porciento(precio, descuento),
-            stock: product.stock */
         })
     },
     destroid: (req, res) => {
@@ -169,6 +164,15 @@ module.exports = {
             products: products
         })
 
+    },
+
+    favoritos: (req, res) => {
+        let products = index();
+        res.render("products/favorites", {
+            title: "Favoritos",
+            styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
+            products: products
+        })
     },
 
     carrito: (req, res) => res.render("products/carrito", {

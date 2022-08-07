@@ -131,7 +131,7 @@
     "email": "a@a.com",
     "password": "$2a$10$.cs8iZPph89WSCASbM1KEe9DReet0qjvWf56jY4nJFdWqaWbY3kcG",
     "telefono": 11111122222,
-    "imagen": "imagen-1659892237824-182507802.jpg",
+    "imagen": "default.png",
     "isAdmin": false
   }
 ]

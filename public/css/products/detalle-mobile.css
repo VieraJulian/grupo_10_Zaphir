@@ -161,6 +161,8 @@ form fieldset {
 }
 
 .detalle {
+    width: 100%;
+    height: auto;
     text-align: justify;
     padding: 10px
 }

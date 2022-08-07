@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { create, edit, carrito, detalle, productos, save, modify, destroid, ofertas } = require("../controllers/products.controllers");
+const { create, edit, carrito, detalle, productos, save, modify, destroid, ofertas, favoritos } = require("../controllers/products.controllers");
 
 const multer = require("multer");
 const storage = require("../modules/storage")
@@ -9,11 +9,15 @@ const upload = multer({ storage: storage("public/assets/productos") });
 const isAdmin = require("../middlewares/isAdmin");
 const isLogged = require("../middlewares/isLogged");
 
+const createValidations = require("../validations/create.validation")
+
 router.get("/crear", [isLogged, isAdmin], create);
-router.post("/crear", [upload.any()], save)
+router.post("/crear", [upload.any(), createValidations], save)
 
 router.get("/editar/:id", [isLogged, isAdmin], edit);
 router.put("/editar/:id", [upload.any()], modify);
+
+router.get("/favoritos", [isLogged], favoritos)
 
 router.get("/carrito", isLogged, carrito);
 

@@ -9,47 +9,92 @@
                 <form action="/productos/crear" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <label>Nombre del producto</label>
-                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" required>
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.errors ? oldData.nombre : null %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p class="msg-error">
+                                <%= errors.nombre.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
-                        <textarea name="descripcion" placeholder="Descripción" required></textarea>
+                        <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : null %></textarea>
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <p class="msg-error">
+                                <%= errors.descripcion.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                        <% if (locals.errors && errors.imagen) { %>
+                            <p class="msg-error">
+                                <%= errors.imagen.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
-                        <input class="input" type="text" name="categoria" placeholder="Categoría" required>
+                        <input class="input" type="text" name="categoria" placeholder="Categoría" value="<%= locals.oldData ? oldData.categoria : null %>">
+                        <% if (locals.errors && errors.categoria) { %>
+                            <p class="msg-error">
+                                <%= errors.categoria.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
-                        <input class="input" type="text" name="colores" placeholder="Color 1" required>
+                        <input class="input" type="text" name="colores" placeholder="Color 1" value="<%= locals.oldData ? oldData.colores : null %>">
                         <input class="input" type="text" name="colores" placeholder="Color 2">
                         <input class="input" type="text" name="colores" placeholder="Color 3">
                         <input class="input" type="text" name="colores" placeholder="Color 4">
                         <input class="input" type="text" name="colores" placeholder="Color 5">
+                        <% if (locals.errors && errors.colores) { %>
+                            <p class="msg-error">
+                                <%= errors.colores.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
-                        <input class="input" type="text" name="talle" placeholder="Talle 1" required>
+                        <input class="input" type="text" name="talle" placeholder="Talle 1" value="<%= locals.oldData ? oldData.talle : null %>">
                         <input class="input" type="text" name="talle" placeholder="Talle 2">
                         <input class="input" type="text" name="talle" placeholder="Talle 3">
                         <input class="input" type="text" name="talle" placeholder="Talle 4">
                         <input class="input" type="text" name="talle" placeholder="Talle 5">
+                        <% if (locals.errors && errors.talle) { %>
+                            <p class="msg-error">
+                                <%= errors.talle.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
-                        <input class="input" type="number" name="stock" placeholder="Stock" required>
+                        <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : null %>">
+                        <% if (locals.errors && errors.stock) { %>
+                            <p class="msg-error">
+                                <%= errors.stock.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
-                        <input class="input" type="number" name="precio" placeholder="Precio" required>
+                        <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : null %>">
+                        <% if (locals.errors && errors.precio) { %>
+                            <p class="msg-error">
+                                <%= errors.precio.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
-                        <input class="input" type="number" name="descuento" placeholder="Descuento" required>
+                        <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : null %>">
+                        <% if (locals.errors && errors.descuento) { %>
+                            <p class="msg-error">
+                                <%= errors.descuento.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <button class="button-crear">
                         Crear
