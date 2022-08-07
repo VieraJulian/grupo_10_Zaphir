@@ -127,11 +127,11 @@
   },
   {
     "id": 15,
-    "nombre": "Felipe Diaz",
+    "nombre": "Felipe Diaz ....",
     "email": "a@a.com",
     "password": "$2a$10$.cs8iZPph89WSCASbM1KEe9DReet0qjvWf56jY4nJFdWqaWbY3kcG",
-    "telefono": 111111111111,
-    "imagen": "imagen-1659891652437-238370087.jpg",
+    "telefono": 11111122222,
+    "imagen": "imagen-1659892104869-179604704.jpg",
     "isAdmin": false
   }
 ]

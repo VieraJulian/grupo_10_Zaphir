@@ -50,9 +50,12 @@ const usersControllers = {
         return res.redirect("/usuario/perfil")
     },
     profile: (req, res) => {
+        let users = index()
+        let user = users.find(u => u.email === req.session.user.email)
         return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
-            title: "Mi Perfil"
+            title: "Mi Perfil",
+            user: user
         })
     },
     logout: (req, res) => {
