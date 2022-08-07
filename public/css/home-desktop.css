@@ -1,27 +1,51 @@
-@media (min-width: 1024px){
-    .titulo{
+@media (min-width: 1024px) {
+    .titulo {
         margin-top: 4rem
     }
-    .section-categorias{
+
+    .section-categorias {
         margin-top: 10rem
     }
-    .secciones{
+
+    .secciones {
         justify-content: space-between;
     }
-    .jeans{
+
+    .jeans {
         height: 100%;
     }
-    .contenedor-jeans{
+
+    .contenedor-jeans {
         background-color: aqua;
     }
-    .productosdestacados{
+
+    .productosdestacados {
         justify-content: space-between;
     }
-    .productosdestacados article{
+
+    .productosdestacados article {
         width: 23%;
         margin: 5px;
     }
-    .productos{
+
+    .productos {
         width: 23%;
     }
+
+    main {
+        margin-top: 126px;
+    }
+
+    .banner {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .Imagen-Zaphir{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
