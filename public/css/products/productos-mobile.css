@@ -173,6 +173,10 @@ div {
     padding: 5px 10px;
 }
 
+.titleSale{
+    display: none;
+}
+
 @media screen and (min-width: 520px) {
     .section-secundaria article {
         width: 48%;

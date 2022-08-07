@@ -199,8 +199,6 @@ header {
     color: #000;
 }
 
-@media screen and (min-width: 31.25em){
-
-
-    
+.titleSale {
+    width: 100%;
 }

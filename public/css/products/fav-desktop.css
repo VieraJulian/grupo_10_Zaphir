@@ -9,4 +9,9 @@
         max-width: 64em;
         margin-top: 150px;
     }
+
+    .tituloFav{
+        margin-bottom: 20px;
+        text-align: start
+    }
 }

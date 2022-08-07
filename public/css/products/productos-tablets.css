@@ -66,4 +66,8 @@
     .range {
         width: 80%;
     }
+
+    .titleSale{
+        display: block
+    }
 }
