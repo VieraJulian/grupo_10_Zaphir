@@ -16,20 +16,20 @@
     <section class="header-icon">
         <% if (!user) { %>
             <nav>
-                <a class="aIcons" href="/usuario/ingresar"><i class="fa-regular fa-user user"></i></a>
+                <a href="/usuario/ingresar"><i class="fa-regular fa-user user"></i></a>
             </nav>
             <% } else if (user && user.isAdmin) { %>
                 <nav>
                     <a class="aPerfil" href="/usuario/perfil"><img class="imgUser" src="/avatars/<%= user.imagen %>" alt=""></a>
-                    <a class="aIcons" href="/productos/crear"><i class="fa-solid fa-circle-plus"></i></a>
-                    <a class="aIcons" href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    <a href="/productos/crear"><i class="fa-solid fa-circle-plus"></i></a>
+                    <a class="salirIcon" href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </nav>
                 <% } else { %>
                     <nav>
                         <a class="aPerfil" href="/usuario/perfil"><img class="imgUser" src="/avatars/<%= user.imagen %>" alt=""></a>
-                        <a class="aIcons" href="/productos/carrito"><i class="fa-regular fa-heart heart"></i></a>
-                        <a class="aIcons" href="/productos/carrito"><i class="fa-solid fa-bag-shopping"></i></a>
-                        <!-- <a class="aIcons" href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a> -->
+                        <a href="/productos/carrito"><i class="fa-regular fa-heart heart"></i></a>
+                        <a href="/productos/carrito"><i class="fa-solid fa-bag-shopping"></i></a>
+                        <a class="salirIcon" href="/usuario/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                     </nav>
                     <% } %>
     </section>
@@ -50,8 +50,13 @@
             <a href="/productos/pantalones">PANTALONES</a>
             <a href="/productos/jeans">JEANS</a>
             <section class="menu-bottom">
-                <a href="/usuario/registro"><i class="fa-regular fa-user user"></i>Crear cuenta</a>
-                <a href="/usuario/ingresar">Iniciar sesión</a>
+                <% if (!user) { %>
+                    <a href="/usuario/registro"><i class="fa-regular fa-user user"></i>Crear cuenta</a>
+                    <a href="/usuario/ingresar">Iniciar sesión</a>
+                <% } else if (user) { %>
+                    <a href="/usuario/logout">Salir <i class="fa-solid fa-right-from-bracket"></i></a>
+                <% } %> 
+                 
             </section>
         </nav>
     </section>

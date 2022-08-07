@@ -167,43 +167,30 @@ header {
    align-items: center;
     justify-content: flex-end;
     gap: .50rem;
-    margin-right: 10px; /* ver el porque */
+    margin-right: 10px;
 }
 
-.aIcons { /* es a i = icons*/
-    /* color: #000;
-    font-size: 20px; */
-}
-
-.aPerfil { /* es a de imagen*/
+.aPerfil {
     width: 2rem;
     height: 2rem;
-    /* font-size: 0px;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    font-size: 0px;
-    margin-right: 5px; */
 }
 
-.imgUser { /* es la imagen */
+.imgUser {
     width: 100%;
     border-radius: 50%;
-    /*
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center; */
-
 }
 
-.fa-circle-plus, /* son los i = iconos */
+.salirIcon{
+    display: none;
+}
+
+
+.fa-circle-plus,
 .fa-right-from-bracket, .user,
 .heart,
 .fa-bag-shopping {
     font-size: 1.25rem;
     color: #000;
-    /* margin-right: 5px; */
 }
 
 @media screen and (min-width: 31.25em){
