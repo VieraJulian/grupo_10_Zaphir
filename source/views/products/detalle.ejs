@@ -1,89 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head.ejs") %>
-<body>
-    <%- include("../partials/header.ejs") %>
-    <main>
-       <section class="imagenes-pequeñas">
-            <figure>
-                <img src="/assets/productos/<%= product.imagen[1] %>" alt="<%= product.nombre %>">
-            </figure>
-            <figure>
-                <img src="/assets/productos/<%= product.imagen[2] %>" alt="<%= product.nombre %>">
-            </figure>
-            <figure>
-                <img src="/assets/productos/<%= product.imagen[3] %>" alt="<%= product.nombre %>">
-            </figure>
-            <section class="section-descripcion1">
-                <section class="descripcion1">
-                    <p class="detalle-titulo">Descripción</p>
-                    <p class="detalle"><%= product.descripcion %></p>
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <section class="imagenes-pequeñas">
+                    <figure>
+                        <img src="/assets/productos/<%= product.imagen[1] %>" alt="<%= product.nombre %>">
+                    </figure>
+                    <figure>
+                        <img src="/assets/productos/<%= product.imagen[2] %>" alt="<%= product.nombre %>">
+                    </figure>
+                    <figure>
+                        <img src="/assets/productos/<%= product.imagen[3] %>" alt="<%= product.nombre %>">
+                    </figure>
+                    <section class="section-descripcion1">
+                        <section class="descripcion1">
+                            <p class="detalle-titulo">Descripción</p>
+                            <p class="detalle">
+                                <%= product.descripcion %>
+                            </p>
+                        </section>
+                    </section>
                 </section>
-            </section>
-        </section>
-       <section class="descripcion">
-            <p class="detalle-titulo">Descripción</p>
-            <p class="detalle"><%= product.descripcion %></p>
-       </section>
-       <section class="img-principal">
-            <figure>
-                <img src="/assets/productos/<%= product.imagen[0] %>" alt="Campera Malibu">
-            </figure>
-       </section>
-       <section class="section-right">
-            <section class="info">
-                    <h2><%= product.nombre %></h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
-                    <% if (product.descuento == 0) { %>
-                        <span class="precio">$ <%= product.precio %></span>
-                    <% } else { %>
-                        <span class="precio">$ <%= product.precioFinal %></span>
-                        <span class="precio1">$ <%= product.precio %></span><span class="descuento"><%= product.porciento %>% OFF</span>
+                <section class="descripcion">
+                    <p class="detalle-titulo">Descripción</p>
+                    <p class="detalle">
+                        <%= product.descripcion %>
+                    </p>
+                </section>
+                <section class="img-principal">
+                    <figure>
+                        <img src="/assets/productos/<%= product.imagen[0] %>" alt="Campera Malibu">
+                    </figure>
+                </section>
+                <section class="section-right">
+                    <section class="info">
+                        <h2>
+                            <%= product.nombre %>
+                        </h2><span class="corazon"><a href="#"><i class="fa-solid fa-heart heart2"></i></a></span>
+                        <% if (product.descuento==0) { %>
+                            <span class="precio">$ <%= product.precio %></span>
+                            <% } else { %>
+                                <span class="precio">$ <%= product.precioFinal %></span>
+                                <span class="precio1">$ <%= product.precio %></span><span class="descuento">
+                                    <%= product.porciento %>% OFF
+                                </span>
+                                <% } %>
+                    </section>
+                    <form action="/productos/carrito" method="get" id="agregar-compra">
+                        <fieldset class="colores">
+                            <p>Color</p>
+                            <% for( let index=0; index < product.colores.length; index++ ) { %>
+                                <label for="<%= product.colores[index] %>"><img
+                                        src="/assets/colores/<%= product.colores[index] %>.jpg"
+                                        alt="<%= product.colores[index] %>"></label>
+                                <input type="radio" name="color" id="<%= product.colores[index] %>"
+                                    value="<%= product.colores[index] %>">
+                                <% } %>
+                        </fieldset>
+                        <fieldset class="talles">
+                            <p>Talles</p>
+                            <% for( let index=0; index < product.talle.length; index++ ) { %>
+                                <label for="<%= product.talle[index] %>" class="label-talle">
+                                    <%= product.talle[index] %>
+                                </label>
+                                <input type="radio" name="talle" id="<%= product.talle[index] %>"
+                                    value="<%= product.talle[index] %>">
+                                <% } %>
+                        </fieldset>
+                        <fieldset class="quantity">
+                            <p>Cantidad</p>
+                            <select name="cantidad" id="cantidad">
+                                <% for( let index=1; index <=product.stock; index++ ) { %>
+                                    <option value="<%= index %>">
+                                        <%= index %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </fieldset>
+                        <fieldset class="form-boton">
+                            <button>
+                                AGREGAR AL CARRITO
+                            </button>
+                        </fieldset>
+                    </form>
+                </section>
+                <% if (user && user.isAdmin) { %>
+                    <form class="form-editar" action="/productos/editar/<%= product.id %>" method="get">
+                        <button>
+                            EDITAR
+                        </button>
+                    </form>
+                    <form class="form-eliminar" action="/productos/delete/<%= product.id %>?m=DELETE" method="POST">
+                        <button type="submit">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </form>
                     <% } %>
-            </section>
-            <form action="/productos/carrito" method="get" id="agregar-compra">
-                <fieldset class="colores">
-                    <p>Color</p>
-                    <% for( let index = 0; index < product.colores.length; index++ ) { %>
-                        <label for="<%= product.colores[index] %>"><img src="/assets/colores/<%= product.colores[index] %>.jpg" alt="<%= product.colores[index] %>"></label>
-                        <input type="radio" name="color" id="<%= product.colores[index] %>" value="<%= product.colores[index] %>">
-                    <% } %>
-                </fieldset>
-                <fieldset class="talles">
-                    <p>Talles</p>
-                    <% for( let index = 0; index < product.talle.length; index++ ) { %>
-                        <label for="<%= product.talle[index] %>" class="label-talle"><%= product.talle[index] %></label>
-                        <input type="radio" name="talle" id="<%= product.talle[index] %>" value="<%= product.talle[index] %>">
-                    <% } %>
-                </fieldset>
-                <fieldset class="quantity">
-                        <p>Cantidad</p>
-                        <select name="cantidad" id="cantidad">
-                            <% for( let index = 1; index <= product.stock; index++ ) { %>
-                                <option value="<%= index %>"><%= index %></option>
-                            <% } %>
-                         </select>
-                </fieldset>
-                <fieldset class="form-boton">
-                    <button>
-                        AGREGAR AL CARRITO
-                    </button>
-                </fieldset>
-            </form>
-        </section>
-        <% if (user && user.isAdmin) { %>
-            <form class="form-editar" action="/productos/editar/<%= product.id %>" method="get">
-                <button>
-                    EDITAR
-                </button>
-            </form>
-            <form class="form-eliminar" action="/productos/delete/<%= product.id %>?m=DELETE" method="POST">
-                <button type="submit">
-                    <i class = "fa fa-trash"></i>
-                </button>
-            </form>
-        <% } %>
-        <%- include("../partials/logo-wts.ejs") %> 
-    </main>
-    <%- include('../partials/footer.ejs') %>
-</body>
+                        <%- include("../partials/logo-wts.ejs") %>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
 </html>

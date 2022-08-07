@@ -47,6 +47,7 @@ main{
     flex-wrap: wrap;
     padding: 10px;
     width: 100%;
+    position: relative;
 }
 .info h2{
     text-align: start;
@@ -208,10 +209,8 @@ form fieldset{
     border-radius: 100%;
 }
 .corazon{
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 25px;
+    position: absolute;
 }
 .heart2{
     color: red;

@@ -1,66 +1,81 @@
 @media (min-width: 1024px) {
-    main{
+    main {
         justify-content: space-evenly;
     }
-    .img-principal figure{
+
+    .img-principal figure {
         padding: 0;
         height: 100%;
     }
-    .imagenes-pequeñas{
+
+    .imagenes-pequeñas {
         display: flex;
         flex-wrap: wrap;
         order: -2;
         width: 30%;
         margin: 10px;
         justify-content: space-between;
-        
+
     }
-    .imagenes-pequeñas figure{
+
+    .imagenes-pequeñas figure {
         width: 30%;
         height: 40%;
         margin: 5px;
     }
-    .imagenes-pequeñas figure img{
+
+    .imagenes-pequeñas figure img {
         width: 100%;
     }
-    .descripcion{
+
+    .descripcion {
         display: none;
     }
-    .img-principal{
+
+    .img-principal {
         width: 30%;
     }
-    .section-right{
+
+    .section-right {
         width: 30%;
     }
-    .detalle-titulo{
+
+    .detalle-titulo {
         margin-top: 0;
     }
-    .section-descripcion1{
+
+    .section-descripcion1 {
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
         height: 40%;
     }
-    .descripcion1{
+
+    .descripcion1 {
         display: block;
     }
-    main{
+
+    main {
         max-width: 1024px;
     }
-    body{
+
+    body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    footer{
+
+    footer {
         width: 100%;
     }
+
     .form-eliminar,
-    .form-editar{
+    .form-editar {
         width: 50%;
     }
+
     .form-eliminar button,
-    .form-editar button{
+    .form-editar button {
         width: 80%;
     }
 }
