@@ -30,7 +30,7 @@ app.use(cookieParser());
 
 app.use(recordameMiddleware);
 
-app.use(require('./middlewares/user'))
+app.use(require("./middlewares/user"))
 
 app.use(require("./routes/main.routes"))
 app.use("/productos", require("./routes/products.routes"))

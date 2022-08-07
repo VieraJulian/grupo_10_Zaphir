@@ -1,10 +1,6 @@
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     .header-logo a {
         margin-left: 25px;
-    }
-
-    .header-icon {
-        margin-right: 25px;
     }
 
     #menu-1:target {
@@ -13,12 +9,22 @@
     }
 }
 
-@media (min-width: 1280px) {
-    .header-logo a img {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        top: 4px;
-        z-index: 8;
+@media (min-width: 80em) {
+
+    .header-icon {
+        margin-right: 20px;
     }
+
+    .header-form form {
+        width: 387.3px;
+    }
+
+    .header-form form fieldset{
+        width: 387.3px
+    }
+
+    .header-form form input{
+        max-width: 387.3px;
+    }
+
 }

@@ -162,27 +162,52 @@ header {
 }
 
 .header-icon nav {
-    margin-right: 10px;
+    width: 100%;
+    display: flex;
+   align-items: center;
+    justify-content: flex-end;
+    gap: .50rem;
+    margin-right: 10px; /* ver el porque */
 }
 
-.header-icon a {
+.aIcons { /* es a i = icons*/
+    /* color: #000;
+    font-size: 20px; */
+}
+
+.aPerfil { /* es a de imagen*/
+    width: 2rem;
+    height: 2rem;
+    /* font-size: 0px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 0px;
+    margin-right: 5px; */
+}
+
+.imgUser { /* es la imagen */
+    width: 100%;
+    border-radius: 50%;
+    /*
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; */
+
+}
+
+.fa-circle-plus, /* son los i = iconos */
+.fa-right-from-bracket, .user,
+.heart,
+.fa-bag-shopping {
+    font-size: 1.25rem;
     color: #000;
-    font-size: 20px;
+    /* margin-right: 5px; */
 }
 
-.fa-circle-plus {
-    margin-right: 4px;
-}
+@media screen and (min-width: 31.25em){
 
-.user {
-    margin-right: 4px;
-}
 
-.heart {
-    margin-right: 4px;
-}
-
-::placeholder {
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+    
 }
