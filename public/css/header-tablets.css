@@ -115,22 +115,22 @@
 
     }
 
-    .salirIcon{
+    .salirIcon {
         display: block
     }
 }
 
 @media screen and (min-width: 58.125em) {
-    .header-logo{
+    .header-logo {
         position: relative;
         width: 50%;
     }
 
-    .header-form{
+    .header-form {
         width: 30%;
     }
 
-    .header-icon{
+    .header-icon {
         width: 15%;
     }
 
