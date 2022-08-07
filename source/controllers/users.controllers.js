@@ -47,7 +47,7 @@ const usersControllers = {
             res.cookie("recordame", user.email, { maxAge: 60000 * 60 })
         }
 
-        return res.redirect("/usuario/perfil")
+        return res.redirect("/")
     },
     profile: (req, res) => {
         let users = index()

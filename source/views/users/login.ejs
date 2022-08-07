@@ -11,7 +11,7 @@
                 <form action="/usuario/ingresar" method="POST">
                     <fieldset class="NombreUsuario">
                         <label class="label">E-mail</label>
-                        <input type="email" name="email" id="nombre"
+                        <input type="text" name="email" id="nombre"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
                             <p class="msg-error">

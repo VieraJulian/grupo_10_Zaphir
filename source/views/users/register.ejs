@@ -22,7 +22,7 @@
                     </fieldset>
                     <fieldset class="form-email">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="ej: tunombre@email.com"
+                        <input type="text" name="email" id="email" placeholder="ej: tunombre@email.com"
                             value="<%= locals.errors ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
                             <p class="msg-error">
