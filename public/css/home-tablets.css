@@ -1,32 +1,37 @@
-
-@media screen and (min-width: 768px){
-    .banner-bottom{
+@media screen and (min-width: 768px) {
+    .banner-bottom {
         flex-direction: row;
     }
-    .banner-bottom section{
+
+    .banner-bottom section {
         width: 33.3%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        
+
     }
-    .productosdestacados{
+
+    .productosdestacados {
         flex-direction: row;
         padding: 5px;
     }
-    .productosdestacados article{
+
+    .productosdestacados article {
         width: 25%;
         margin: 0;
         height: 100%;
     }
-    .titulo{
+
+    .titulo {
         margin: 20px 0 20px;
     }
-    .secciones{
+
+    .secciones {
         justify-content: space-evenly;
     }
-    .productos{
+
+    .productos {
         width: 25%;
     }
-  
+
 }

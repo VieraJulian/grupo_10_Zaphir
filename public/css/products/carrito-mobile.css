@@ -1,22 +1,26 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-main{
+
+main {
     padding: 10px;
     margin-top: 140px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 80px;
 }
-.form-fieldset{
+
+.form-fieldset {
     display: flex;
     flex-direction: column;
 }
-fieldset{
+
+fieldset {
     border: none;
 }
-.my-cart{
+
+.my-cart {
     border: none;
     font-size: 22px;
     font-weight: 600;
@@ -24,82 +28,103 @@ fieldset{
     padding-bottom: 15px;
     border-bottom: 1px solid #909090;
 }
-.carrito{
+
+.carrito {
     margin-right: 5px;
 }
-.imagen{
+
+.imagen {
     height: 100%;
     width: 25%;
     display: flex;
     align-items: stretch;
 }
-.imagen img{
+
+.imagen img {
     width: 100%;
     height: 100%;
 }
-.section1{
+
+.section1 {
     width: 75%;
 }
-.fieldset1{
-   display: flex;
-   padding-top: 10px;
+
+.fieldset1 {
+    display: flex;
+    padding-top: 10px;
 }
-.section1{
+
+.section1 {
     padding: 5px;
     padding-bottom: 10px;
 }
-.stock{
+
+.stock {
     margin-bottom: 10px;
     margin-top: 5px;
 }
-.color, .size{
+
+.color,
+.size {
     margin-top: 3px;
     margin-bottom: 3px;
 }
-.section1 label{
+
+.section1 label {
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.section1 input{
+
+.section1 input {
     cursor: pointer;
 }
-.title{
+
+.title {
     font-weight: 600;
     margin-bottom: 10px;
 }
-.fieldset2{
+
+.fieldset2 {
     display: flex;
     padding-top: 10px;
     margin-bottom: 10px;
 }
-.fieldset2{
+
+.fieldset2 {
     display: flex;
     justify-content: space-between;
 }
-.fieldset-precio{
+
+.fieldset-precio {
     width: 33.3%;
 }
-.precio-titulo{
+
+.precio-titulo {
     font-weight: 600;
     margin-bottom: 5px;
 }
-.precio1{
+
+.precio1 {
     color: red;
 }
-.precio2{
+
+.precio2 {
     text-decoration: line-through;
 }
-.cantidad{
+
+.cantidad {
     font-weight: 600;
     margin-bottom: 5px;
     display: block;
 }
-.quantity{
+
+.quantity {
     width: 33.3%;
 }
-.quantity select{
+
+.quantity select {
     font-family: 'Montserrat', sans-serif;
     border: 1px solid #909090;
     width: 100%;
@@ -108,33 +133,40 @@ fieldset{
     background-color: #ffffff;
     cursor: pointer;
 }
-.total{
+
+.total {
     font-weight: 600;
     margin-bottom: 5px;
 }
-.precio3{
+
+.precio3 {
     text-decoration: line-through;
 }
-.fieldset3{
+
+.fieldset3 {
     width: 33.3%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.fieldset-item{
+
+.fieldset-item {
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #909090;
     margin-bottom: 50px;
 }
-.fieldset-item p{
+
+.fieldset-item p {
     font-weight: 700;
 }
-.fieldset4 label{
+
+.fieldset4 label {
     font-weight: 500;
 }
-.fieldset4 input{
+
+.fieldset4 input {
     margin-top: 10px;
     border: 1px solid #909090;
     border-radius: 2px 0 0 2px;
@@ -144,7 +176,8 @@ fieldset{
     width: 70%;
     padding: 5px 10px;
 }
-.boton1{
+
+.boton1 {
     font-family: 'Montserrat', sans-serif;
     border-radius: 0 2px 2px 0;
     height: 40px;
@@ -155,14 +188,16 @@ fieldset{
     width: 30%;
     cursor: pointer;
 }
-.fieldset-promo{
+
+.fieldset-promo {
     margin-top: 5px;
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     color: red;
 }
-.boton2{
+
+.boton2 {
     margin-top: 40px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 0 2px 2px 0;
@@ -174,19 +209,23 @@ fieldset{
     width: 100%;
     cursor: pointer;
 }
-.boton1:hover{
+
+.boton1:hover {
     background-color: #242424;
 }
-.boton2:hover{
+
+.boton2:hover {
     background-color: #242424;
 }
-.a-wts{
+
+.a-wts {
     position: fixed;
     right: 30px;
     bottom: 30px;
     border-radius: 100%;
 }
-.a-wts img{
+
+.a-wts img {
     width: 45px;
     height: 45px;
     border-radius: 50%;

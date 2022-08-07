@@ -43,8 +43,8 @@ const usersControllers = {
         delete user.password
         req.session.user = user
 
-        if(req.body.recordame != undefined) {
-            res.cookie("recordame", user.email, {maxAge :  60000 * 60})
+        if (req.body.recordame != undefined) {
+            res.cookie("recordame", user.email, { maxAge: 60000 * 60 })
         }
 
         return res.redirect("/usuario/perfil")
@@ -82,7 +82,7 @@ const usersControllers = {
             if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
                 user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : user.telefono;
-                user.imagen =  req.files.length > 0 ? req.files[0].filename : user.imagen;
+                user.imagen = req.files.length > 0 ? req.files[0].filename : user.imagen;
             }
             return user;
         })

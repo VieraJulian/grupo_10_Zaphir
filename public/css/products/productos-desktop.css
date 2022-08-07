@@ -1,25 +1,31 @@
 @media (min-width: 1024px) {
-    .section-secundaria article{
+    .section-secundaria article {
         width: 24%;
     }
-    .section-secundaria{
+
+    .section-secundaria {
         width: 80%;
     }
-    .section-left{
+
+    .section-left {
         width: 20%;
     }
-    .precio{
+
+    .precio {
         width: 60%;
     }
-    main{
+
+    main {
         max-width: 1024px;
     }
-    body{
+
+    body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    footer{
+
+    footer {
         width: 100%;
     }
 }

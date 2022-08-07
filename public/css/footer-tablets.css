@@ -1,43 +1,46 @@
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     footer {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between
     }
-    footer a{
+
+    footer a {
         width: 100%;
     }
-    .contenedor2 a{
+
+    .contenedor2 a {
         display: flex;
         align-items: center;
     }
-    .contenedor2 i{
+
+    .contenedor2 i {
         display: flex;
         font-size: 25px;
         margin-right: 6px;
         width: 21.85px;
     }
-    .contenedor1{
+
+    .contenedor1 {
         text-align: start;
         margin: 0 20px;
         width: 25%;
     }
-    .contenedor1 h4{
+
+    .contenedor1 h4 {
         align-self: flex-start;
     }
-    .contenedor3{
+
+    .contenedor3 {
         text-align: start;
         margin: 0 20px;
         width: 25%;
     }
-    .contenedor2{
+
+    .contenedor2 {
         text-align: start;
         margin: 0 20px;
         width: 25%;
     }
 }
-
-
- 
-       

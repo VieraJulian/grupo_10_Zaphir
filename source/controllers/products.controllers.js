@@ -35,7 +35,7 @@ module.exports = {
         let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
-        function porciento(precio, descuento){
+        function porciento(precio, descuento) {
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
         }
@@ -51,7 +51,7 @@ module.exports = {
                 p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
                 p.descuento = parseInt(req.body.descuento);
                 p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
+                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
@@ -60,36 +60,36 @@ module.exports = {
     },
 
     productos: (req, res) => {
-        
+
         let products = index();
-        
+
         if (req.query && req.query.name) {
-            
+
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
-        
-        if(req.query && req.query.talle){
+
+        if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
 
-        if(req.query && req.query.color){
+        if (req.query && req.query.color) {
 
             products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
         }
 
-        if(req.query && req.query.range){
+        if (req.query && req.query.range) {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
 
-        if(req.params && req.params.categorias){
-            
+        if (req.params && req.params.categorias) {
+
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
 
         /* ----------------------------------------------------------------- */
-        
+
         res.render("products/productos", {
             title: "Zaphir",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
@@ -97,10 +97,10 @@ module.exports = {
         })
     },
 
-    detalle: (req, res) =>{
-        
+    detalle: (req, res) => {
+
         let product = one(parseInt(req.params.id))
-        
+
         /* let precio = product.precio
         let descuento = product.descuento
         
@@ -112,7 +112,7 @@ module.exports = {
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
         } */
-        
+
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
@@ -128,7 +128,7 @@ module.exports = {
             return res.redirect('/productos/')
         }
         let products = index()
-        let productsDeleted = products.filter( p => p.id !== product.id)
+        let productsDeleted = products.filter(p => p.id !== product.id)
         write(productsDeleted)
         return res.redirect('/productos/')
     },
@@ -139,27 +139,27 @@ module.exports = {
         products = products.filter(products => products.descuento > 0)
 
         if (req.query && req.query.name) {
-            
+
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
-        
-        if(req.query && req.query.talle){
+
+        if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
 
-        if(req.query && req.query.color){
+        if (req.query && req.query.color) {
 
             products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
         }
 
-        if(req.query && req.query.range){
+        if (req.query && req.query.range) {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
 
-        if(req.params && req.params.categorias){
-            
+        if (req.params && req.params.categorias) {
+
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
 

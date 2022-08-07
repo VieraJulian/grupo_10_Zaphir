@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
-<body>
-    <%- include("./partials/header.ejs") %>
-    <main>
-    <figure class="banner">
-        <img class = "Imagen-Zaphir" src = "/assets/logos/banner-nuevo.jpg" alt = "imagen">
-    </figure>
-    <section class="banner-bottom">
-        <section>
-            <p class="p-title"><i class="fa-solid fa-truck"></i>Envíos gratis</p>
-            <p>A partir de compras superiores a $ 2.500</p>
-        </section>
-        <section>
-            <p class="p-title"><i class="fa-solid fa-credit-card"></i>3 y 6 cuotas sin interés</p>
-            <p>Pagando con tarjetas de débito y crédito bancarias</p>
-        </section>
-        <section>
-            <p class="p-title"><i class="fa-solid fa-box"></i>Envios a toda a todo el país</p>
-            <p>Hacé tu pedido desde cualquier parte de Argentina</p>
-        </section>
-    </section>
-        <main>
-            <h2 class = "titulo">EN OFERTA</h2>
-            <section class = "productosdestacados">
-                <% products.forEach(element => { %>
-                    <article>
-                        <a href="/productos/detalle/<%= element.id %>"><img src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>" class = "imagenDest"></a>
-                        <p class = "nombreProducto"><%= element.nombre %></p>
-                        <p class = "precio">$ <%= element.precioFinal %></p>
-                    </article>
-                <% }) %>
-            </section>
-            <h2 class="section-categorias">Categorías</h2>
-            <section class = "secciones">
-                <article class = "productos">
-                    <section class="contenedor">
-                        <a href="/productos/jeans"><img src="/assets/productos/JEANS.jpg" alt="Jeans" class = "jeans"></a>
-                        <p class = "JeansPalabra">JEANS</p>
+<%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/header.ejs") %>
+            <main>
+                <figure class="banner">
+                    <img class="Imagen-Zaphir" src="/assets/logos/banner-nuevo.jpg" alt="imagen">
+                </figure>
+                <section class="banner-bottom">
+                    <section>
+                        <p class="p-title"><i class="fa-solid fa-truck"></i>Envíos gratis</p>
+                        <p>A partir de compras superiores a $ 2.500</p>
                     </section>
-                </article>
-                <article class = "productos">
-                    <section class="contenedor">
-                        <a href="/productos/remeras"><img src="/assets/productos/Remeras.jpg" alt="Remeras" class = "remeras"></a>
-                        <p class = "remeraspalabra">REMERAS</p>
+                    <section>
+                        <p class="p-title"><i class="fa-solid fa-credit-card"></i>3 y 6 cuotas sin interés</p>
+                        <p>Pagando con tarjetas de débito y crédito bancarias</p>
                     </section>
-                </article>
-                <article class = "productos">
-                    <section class="contenedor">
-                        <a href="/productos/buzos"><img src="/assets/productos/buzo2.png" alt="Buzos" class = "buzos"></a>
-                        <p class = "buzosPalabra">BUZOS</p>
+                    <section>
+                        <p class="p-title"><i class="fa-solid fa-box"></i>Envios a toda a todo el país</p>
+                        <p>Hacé tu pedido desde cualquier parte de Argentina</p>
                     </section>
-                </article>
-                <article class = "productos">
-                    <section class="contenedor">
-                        <a href="/productos/camperas"><img src="/assets/productos/Camperas.jpg" alt="Camperas" class = "camperas"></a>
-                        <p class = "camperasPalabra">CAMPERAS</p>
+                </section>
+                <main>
+                    <h2 class="titulo">EN OFERTA</h2>
+                    <section class="productosdestacados">
+                        <% products.forEach(element=> { %>
+                            <article>
+                                <a href="/productos/detalle/<%= element.id %>"><img
+                                        src="/assets/productos/<%= element.imagen[0] %>" alt="<%= element.nombre %>"
+                                        class="imagenDest"></a>
+                                <p class="nombreProducto">
+                                    <%= element.nombre %>
+                                </p>
+                                <p class="precio">$ <%= element.precioFinal %>
+                                </p>
+                            </article>
+                            <% }) %>
                     </section>
-                </article>    
-                <article class = "productos"> 
-                    <section class="contenedor">
-                        <a href="/productos/pantalones"><img src="/assets/productos/imagen-1658793935260-645074015.jpg" alt="Pantalones" class = "pantalones"></a>
-                        <p class = "pantalonesPalabra">PANTALONES</p>
-                     </section>
-                </article>
-            </section>
-            <%- include("./partials/logo-wts.ejs") %> 
-    </main>
-    <%- include('./partials/footer.ejs') %>
-</body>
+                    <h2 class="section-categorias">Categorías</h2>
+                    <section class="secciones">
+                        <article class="productos">
+                            <section class="contenedor">
+                                <a href="/productos/jeans"><img src="/assets/productos/JEANS.jpg" alt="Jeans"
+                                        class="jeans"></a>
+                                <p class="JeansPalabra">JEANS</p>
+                            </section>
+                        </article>
+                        <article class="productos">
+                            <section class="contenedor">
+                                <a href="/productos/remeras"><img src="/assets/productos/Remeras.jpg" alt="Remeras"
+                                        class="remeras"></a>
+                                <p class="remeraspalabra">REMERAS</p>
+                            </section>
+                        </article>
+                        <article class="productos">
+                            <section class="contenedor">
+                                <a href="/productos/buzos"><img src="/assets/productos/buzo2.png" alt="Buzos"
+                                        class="buzos"></a>
+                                <p class="buzosPalabra">BUZOS</p>
+                            </section>
+                        </article>
+                        <article class="productos">
+                            <section class="contenedor">
+                                <a href="/productos/camperas"><img src="/assets/productos/Camperas.jpg" alt="Camperas"
+                                        class="camperas"></a>
+                                <p class="camperasPalabra">CAMPERAS</p>
+                            </section>
+                        </article>
+                        <article class="productos">
+                            <section class="contenedor">
+                                <a href="/productos/pantalones"><img
+                                        src="/assets/productos/imagen-1658793935260-645074015.jpg" alt="Pantalones"
+                                        class="pantalones"></a>
+                                <p class="pantalonesPalabra">PANTALONES</p>
+                            </section>
+                        </article>
+                    </section>
+                    <%- include("./partials/logo-wts.ejs") %>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
 </html>

@@ -1,11 +1,13 @@
 @media (min-width: 1024px) {
-    .contenedor1{
+    .contenedor1 {
         width: 29%;
     }
-    .contenedor3{
+
+    .contenedor3 {
         width: 29%;
     }
-    .contenedor2{
+
+    .contenedor2 {
         width: 29%;
     }
 }

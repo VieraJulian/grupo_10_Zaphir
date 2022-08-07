@@ -8,7 +8,7 @@ let filename = (req, file, cb) => {
     cb(null, file.fieldname + "-" + uniqueSuffix + extname(file.originalname));
 }
 
-const storage = function(folder){
+const storage = function (folder) {
     return diskStorage({
         destination: destination(folder),
         filename: filename

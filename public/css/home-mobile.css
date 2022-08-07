@@ -1,71 +1,88 @@
-*{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 main {
     font-family: 'Montserrat', sans-serif;
     margin-top: 105px;
 }
-.banner{
+
+.banner {
     display: flex;
     align-items: flex-end;
 }
-.Imagen-Zaphir{
+
+.Imagen-Zaphir {
     width: 100%;
 }
-.banner-bottom{
+
+.banner-bottom {
     display: flex;
     flex-direction: column;
 }
-.banner-bottom i{
+
+.banner-bottom i {
     color: #909090;
     margin-right: 10px;
 }
-.banner-bottom p{
+
+.banner-bottom p {
     color: #fff;
 }
-.p-title{
+
+.p-title {
     font-weight: 700;
 }
-.banner-bottom{
+
+.banner-bottom {
     background-color: #171717;
 }
-.banner-bottom section{
+
+.banner-bottom section {
     padding: 20px;
 }
+
 .titulo {
     padding: 10px;
     text-align: center;
 }
+
 .imagenDest {
     width: 100%;
     padding: 10px;
 }
-.productosdestacados{
+
+.productosdestacados {
     display: flex;
     flex-wrap: wrap;
 }
-.productosdestacados article{
+
+.productosdestacados article {
     border-bottom: 1px solid #909090;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.productos{
+
+.productos {
     margin: 10px;
 }
-article{
+
+article {
     display: inline-block;
     text-align: center;
     height: 100%;
 }
-.precio{
+
+.precio {
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.JeansPalabra{
+
+.JeansPalabra {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -77,6 +94,7 @@ article{
     width: 100px;
     height: 25px;
 }
+
 .remeraspalabra {
     position: absolute;
     bottom: 0;
@@ -89,6 +107,7 @@ article{
     width: 110px;
     height: 25px;
 }
+
 .buzosPalabra {
     position: absolute;
     bottom: 0;
@@ -101,6 +120,7 @@ article{
     width: 100px;
     height: 25px;
 }
+
 .camperasPalabra {
     position: absolute;
     bottom: 0;
@@ -113,7 +133,8 @@ article{
     width: 120px;
     height: 25px;
 }
-.pantalonesPalabra{
+
+.pantalonesPalabra {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -125,92 +146,94 @@ article{
     width: 145px;
     height: 25px;
 }
-.contenedor{
+
+.contenedor {
     position: relative;
     width: 100%;
 }
-.secciones{
+
+.secciones {
     display: flex;
     flex-direction: column;
-    
+
 }
-.jeans{
-    /* object-fit: cover;
-    position: relative;
-    text-align: center; */
+
+.jeans {
     width: 100%;
     padding: 10px;
     border: 1px solid #909090
 }
+
 .remeras {
-    /* width: 300px;
-    height: 250px; */
     width: 100%;
     padding: 10px;
     border: 1px solid #909090
 }
-.buzos{
-    /* width: 300px;
-    height: 250px;
-    object-fit: cover; */
+
+.buzos {
     width: 100%;
     padding: 10px;
     border: 1px solid #909090
 }
+
 .camperas {
-    /* width: 300px;
-    height: 250px;
-    object-fit: cover; */
     width: 100%;
     padding: 10px;
     border: 1px solid #909090
 }
-.pantalones{
-    /* width: 300px;
-    height: 250px;
-    object-fit: cover; */
+
+.pantalones {
     width: 100%;
     padding: 10px;
     border: 1px solid #909090
 }
-.section-categorias{
+
+.section-categorias {
     text-align: center;
     margin: 40px 10px 30px;
 }
-.a-wts{
+
+.a-wts {
     position: fixed;
     right: 30px;
     bottom: 30px;
     border-radius: 100%;
 }
-.a-wts img{
+
+.a-wts img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     padding: 5px;
     background-color: #1bd741
 }
-@media screen and (min-width: 425px){
-    .productos{
+
+@media screen and (min-width: 425px) {
+    .productos {
         width: 50%;
     }
-    .productosdestacados article{
+
+    .productosdestacados article {
         max-width: 425px;
         margin: auto;
     }
-    .secciones{
+
+    .secciones {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .section-categorias{
+
+    .section-categorias {
         width: 100%;
         margin-top: 40px;
     }
-    .productos{
+
+    .productos {
         width: 45%;
     }
-    .secciones{
+
+    .secciones {
         justify-content: space-between;
     }
-    
+
 }

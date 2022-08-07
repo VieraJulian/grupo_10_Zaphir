@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-main{
+
+main {
     display: flex;
     flex-wrap: wrap;
     font-family: 'Montserrat', sans-serif;
@@ -14,34 +15,42 @@ main{
     padding: 10px;
     margin-bottom: 80px;
 }
-.imagenes-pequeñas{
+
+.imagenes-pequeñas {
     display: flex;
     flex-wrap: wrap;
     order: 1;
     width: 100%;
 }
-.descripcion1{
+
+.descripcion1 {
     display: none;
 }
-.imagenes-pequeñas figure{
+
+.imagenes-pequeñas figure {
     width: 33.3%;
     padding: 5px;
 }
-.imagenes-pequeñas img{
+
+.imagenes-pequeñas img {
     width: 100%;
 }
-.img-principal{
+
+.img-principal {
     order: -2;
     width: 100%;
 }
-.img-principal figure{
+
+.img-principal figure {
     padding: 12px 12px 0;
 }
-.img-principal img{
+
+.img-principal img {
     width: 100%;
     height: 100%;
 }
-.info{
+
+.info {
     order: -1;
     display: flex;
     flex-wrap: wrap;
@@ -49,52 +58,63 @@ main{
     width: 100%;
     position: relative;
 }
-.info h2{
+
+.info h2 {
     text-align: start;
     margin: 0px 5px;
     font-size: 22px;
     width: 80%;
     align-self: center;
 }
-.precio{
+
+.precio {
     width: 100%;
     color: red;
     font-size: 20px;
     margin-top: 20px;
 }
-.descuento{
+
+.descuento {
     margin-left: 5px;
     color: #00a721;
 }
-.precio1{
+
+.precio1 {
     text-decoration: line-through;
 }
-.descripcion{
+
+.descripcion {
     order: 1;
     padding-bottom: 15px;
 }
-.boton-carrito{
+
+.boton-carrito {
     order: 2;
 }
-form fieldset{
+
+form fieldset {
     border: none;
 }
-.colores{
+
+.colores {
     padding: 10px;
     border-top: 1px solid #909090;
     display: flex;
     flex-wrap: wrap;
 }
-.colores p{
+
+.colores p {
     background-color: #ffffff;
     padding: 2px 2px 0px;
     width: 100%;
     margin-bottom: 10px;
 }
-.colores input{
+
+.colores input {
     display: none;
 }
-.colores label{
+
+.colores label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,42 +123,50 @@ form fieldset{
     height: 40px;
     width: 35px;
 }
-.colores img{
+
+.colores img {
     border: 1px solid #909090;
     width: 30px;
     height: 30px;
 }
-.colores img:hover{
+
+.colores img:hover {
     border: 2px solid #909090;
 }
-.quantity{
+
+.quantity {
     width: 100%;
     padding: 10px;
     border-top: 1px solid #909090;
-    
+
 }
-.quantity p{
+
+.quantity p {
     width: 100%;
     margin-bottom: 5px;
     font-weight: 600;
 }
-.quantity select{
+
+.quantity select {
     width: 100px;
     height: 35px;
     border-radius: 2px;
     background-color: #ffffff;
     cursor: pointer;
 }
-.detalle-titulo{
+
+.detalle-titulo {
     padding: 10px 10px 0;
     font-weight: 600;
 }
-.detalle{
+
+.detalle {
     text-align: justify;
     padding: 10px
 }
+
 .form-eliminar,
-.form-editar{
+.form-editar {
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -147,15 +175,17 @@ form fieldset{
     width: 100%;
     align-items: center;
 }
-.form-boton{
+
+.form-boton {
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     padding: 10px;
 }
+
 .form-eliminar button,
-.form-editar button{
+.form-editar button {
     background-color: #d9d9d9;
     height: 50px;
     padding: 10px;
@@ -165,7 +195,8 @@ form fieldset{
     cursor: pointer;
     transition: all 300ms;
 }
-.form-boton button{
+
+.form-boton button {
     background-color: #d9d9d9;
     height: 50px;
     padding: 10px;
@@ -175,27 +206,33 @@ form fieldset{
     cursor: pointer;
     transition: all 300ms;
 }
+
 .form-eliminar button:hover,
-.form-editar button:hover{
+.form-editar button:hover {
     background-color: #b8b8b8;
 }
-.form-boton button:hover{
+
+.form-boton button:hover {
     background-color: #b8b8b8;
 }
-.talles{
+
+.talles {
     padding: 10px;
     border-top: 1px solid #909090;
     display: flex;
     flex-wrap: wrap;
 }
-.talles p{
+
+.talles p {
     width: 100%;
     font-weight: 600;
 }
-.talles input{
+
+.talles input {
     display: none;
 }
-.talles label{
+
+.talles label {
     width: 40px;
     height: 40px;
     display: flex;
@@ -204,42 +241,50 @@ form fieldset{
     margin-right: 6px;
     cursor: pointer;
 }
-.talles label:hover{
+
+.talles label:hover {
     border: 1px solid #909090;
     border-radius: 100%;
 }
-.corazon{
+
+.corazon {
     right: 25px;
     position: absolute;
 }
-.heart2{
+
+.heart2 {
     color: red;
     font-size: 20px;
 }
-.section-right{
+
+.section-right {
     width: 100%;
 }
-.a-wts{
+
+.a-wts {
     position: fixed;
     right: 30px;
     bottom: 30px;
     border-radius: 100%;
 }
-.a-wts img{
+
+.a-wts img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     padding: 5px;
     background-color: #1bd741
 }
+
 @media screen and (min-width: 450px) {
-    .boton-carrito{
+    .boton-carrito {
         display: flex;
         justify-content: center;
         width: 100%;
         padding: 10px 5px;
     }
-    .boton-carrito button{
+
+    .boton-carrito button {
         width: 90%;
         height: 40px;
         background-color: #d9d9d9;
@@ -247,12 +292,14 @@ form fieldset{
         font-weight: 600;
     }
 }
+
 @media screen and (min-width: 600px) {
-    .heart2{
+    .heart2 {
         font-size: 25px;
         transition: all 250ms;
     }
-    .heart2:hover{
+
+    .heart2:hover {
         font-size: 28px;
     }
 }

@@ -6,7 +6,7 @@ const public = require("./modules/public");
 const method = require("method-override");
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const recordameMiddleware = require("./middlewares/recordame.middlewares"); 
+const recordameMiddleware = require("./middlewares/recordame.middlewares");
 
 app.listen(port, start);
 app.use(public);
