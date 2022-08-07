@@ -67,7 +67,8 @@ header {
     background-color: #F4F6F8;
     border: 1px solid #909090;
     width: 95%;
-    height: 100vh
+    height: 100vh;
+    z-index: 11;
 }
 
 .menu-bottom {
@@ -201,4 +202,8 @@ header {
 
 .titleSale {
     width: 100%;
+}
+
+#iconBottom{
+    margin-left: 8px;
 }
