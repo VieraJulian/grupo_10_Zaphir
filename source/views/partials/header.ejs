@@ -36,79 +36,41 @@
                     <% } %>
     </section>
     <section class="header-bottom">
-        <% if (!user) { %>
+        <% if (user && user.isAdmin) { %>
             <nav class="navbar-main">
+                <a href="/productos/vista">PRODUCTOS</a>
                 <a href="/">INICIO</a>
                 <a href="#menu-1">PRENDAS</a>
                 <a href="/productos/ofertas">SALE</a>
                 <a href="/">AYUDA</a>
             </nav>
-            <% } else if (user && user.isAdmin) { %>
+            <% } else { %>
                 <nav class="navbar-main">
-                    <a href="/productos/vista">PRODUCTOS</a>
                     <a href="/">INICIO</a>
                     <a href="#menu-1">PRENDAS</a>
                     <a href="/productos/ofertas">SALE</a>
                     <a href="/">AYUDA</a>
                 </nav>
-                <% } else { %>
-                    <nav class="navbar-main">
+                <% } %>
+                    <nav id="menu-1">
+                        <a class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
                         <a href="/">INICIO</a>
-                        <a href="#menu-1">PRENDAS</a>
-                        <a href="/productos/ofertas">SALE</a>
-                        <a href="/productos/favoritos">FAVORITOS</a>
-                        <a href="/">AYUDA</a>
-                    </nav>
-                    <% } %>
-                        <nav id="menu-1">
+                        <a href="/productos/remeras">REMERAS</a>
+                        <a href="/productos/buzos">BUZOS</a>
+                        <a href="/productos/camperas">CAMPERAS</a>
+                        <a href="/productos/vestidos">VESTIDOS</a>
+                        <a href="/productos/pantalones">PANTALONES</a>
+                        <a href="/productos/jeans">JEANS</a>
+                        <section class="menu-bottom">
                             <% if (!user) { %>
-                                <a class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
-                                <a href="/">INICIO</a>
-                                <a href="/productos/remeras">REMERAS</a>
-                                <a href="/productos/buzos">BUZOS</a>
-                                <a href="/productos/camperas">CAMPERAS</a>
-                                <a href="/productos/vestidos">VESTIDOS</a>
-                                <a href="/productos/pantalones">PANTALONES</a>
-                                <a href="/productos/jeans">JEANS</a>
-                                <a href="/productos/ofertas">SALE</a>
-                                <% } else if (user && user.isAdmin) { %>
-                                    <a class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
-                                    <a href="/">INICIO</a>
-                                    <a href="/productos/remeras">REMERAS</a>
-                                    <a href="/productos/buzos">BUZOS</a>
-                                    <a href="/productos/camperas">CAMPERAS</a>
-                                    <a href="/productos/vestidos">VESTIDOS</a>
-                                    <a href="/productos/pantalones">PANTALONES</a>
-                                    <a href="/productos/jeans">JEANS</a>
-                                    <a href="/productos/ofertas">SALE</a>
-                                    <a href="/productos/favoritos">FAVORITOS</a>
-                                    <a href="/productos/carrito">CARRITO</a>
-                                    <a href="/productos/crear">CREAR PRODUCTO</a>
-                                    <% } else { %>
-                                        <a class="x-menu" href="#"><i class="fa-solid fa-x"></i></a>
-                                        <a href="/">INICIO</a>
-                                        <a href="/productos/remeras">REMERAS</a>
-                                        <a href="/productos/buzos">BUZOS</a>
-                                        <a href="/productos/camperas">CAMPERAS</a>
-                                        <a href="/productos/vestidos">VESTIDOS</a>
-                                        <a href="/productos/pantalones">PANTALONES</a>
-                                        <a href="/productos/jeans">JEANS</a>
-                                        <a href="/productos/ofertas">SALE</a>
-                                        <a href="/productos/favoritos">FAVORITOS</a>
-                                        <a href="/productos/carrito">CARRITO</a>
-                                        <% } %>
-                                            <section class="menu-bottom">
-                                                <% if (!user) { %>
-                                                    <a href="/usuario/registro"><i
-                                                            class="fa-regular fa-user user"></i>Crear
-                                                        cuenta</a>
-                                                    <a href="/usuario/ingresar">Iniciar sesión</a>
-                                                    <% } else if (user) { %>
-                                                        <a href="/usuario/logout">Salir <i
-                                                                class="fa-solid fa-right-from-bracket"></i></a>
-                                                        <% } %>
+                                <a href="/usuario/registro"><i class="fa-regular fa-user user"></i>Crear
+                                    cuenta</a>
+                                <a href="/usuario/ingresar">Iniciar sesión</a>
+                                <% } else if (user) { %>
+                                    <a href="/usuario/logout">Salir <i class="fa-solid fa-right-from-bracket"></i></a>
+                                    <% } %>
 
-                                            </section>
-                        </nav>
+                        </section>
+                    </nav>
     </section>
 </header>
