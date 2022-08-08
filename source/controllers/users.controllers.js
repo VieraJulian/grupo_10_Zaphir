@@ -1,5 +1,7 @@
 const { validationResult } = require('express-validator');
 const { index, create, write } = require('../models/users.model');
+const { unlinkSync } = require("fs");
+const { resolve } = require("path");
 
 const usersControllers = {
     register: (req, res) => res.render("users/register", {
@@ -85,7 +87,13 @@ const usersControllers = {
             if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
                 user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : user.telefono;
-                user.imagen = req.files.length > 0 ? req.files[0].filename : user.imagen;
+                /* user.imagen = req.files.length > 0 ? req.files[0].filename : user.imagen; */
+                if(req.files.length > 0){
+                    unlinkSync(resolve(__dirname, "../../uploads/avatars/" + user.imagen))
+                    user.imagen = req.files[0].filename
+                } else {
+                    user.imagen
+                }
             }
             return user;
         })
