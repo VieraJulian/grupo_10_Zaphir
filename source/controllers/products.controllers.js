@@ -179,4 +179,13 @@ module.exports = {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
     }),
+
+    allProducts: (req, res) => {
+        let products = index();
+        res.render("products/allProducts", {
+            title: "Todos los productos",
+            styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
+            products: products
+        })
+    }
 }
