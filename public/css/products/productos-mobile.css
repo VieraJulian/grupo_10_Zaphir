@@ -177,6 +177,10 @@ div {
     display: none;
 }
 
+.notProduct {
+    text-align: center;
+}
+
 @media screen and (min-width: 520px) {
     .section-secundaria article {
         width: 48%;
