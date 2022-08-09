@@ -1,5 +1,7 @@
 const { index, create, write, one } = require("../models/products.models")
 const { validationResult } = require('express-validator');
+const { unlinkSync } = require("fs");
+const { resolve } = require("path");
 
 module.exports = {
     create: (req, res) => {
@@ -59,10 +61,17 @@ module.exports = {
                 p.talle = req.body.talle;
                 p.stock = parseInt(req.body.stock);
                 p.precio = parseInt(req.body.precio);
-                p.imagen = req.files && req.files.length > 0 ? imagenes : p.imagen;
+                if(req.files && req.files.length > 0){
+                    for (let index = 0; index < req.files.length; index++) {
+                        unlinkSync(resolve(__dirname, "../../public/assets/productos/" + p.imagen[index]))   
+                    }
+                    p.imagen = imagenes
+                } else {
+                    user.imagen
+                }
                 p.descuento = parseInt(req.body.descuento);
                 p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
+                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
