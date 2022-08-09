@@ -87,18 +87,21 @@ const usersControllers = {
             if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
                 user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : user.telefono;
-                if(req.files && req.files.length > 0){
+                if (req.files && req.files.length > 0 && user.imagen == "default.png") {
+                    user.imagen = req.files[0].filename
+                } else if (req.files && req.files.length > 0 && user.imagen != "default.png") {
                     unlinkSync(resolve(__dirname, "../../uploads/avatars/" + user.imagen))
                     user.imagen = req.files[0].filename
-                } else {
-                    user.imagen
-                }
+            } else {
+                user.imagen
+
             }
+        }
             return user;
-        })
-        write(usersModifieds)
+    })
+    write(usersModifieds)
         return res.redirect("/usuario/perfil")
-    }
+}
 }
 
 module.exports = usersControllers

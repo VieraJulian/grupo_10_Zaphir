@@ -14,7 +14,7 @@
     "email": "julianviera2019@zaphir.com",
     "password": "$2a$10$/vdWcEPwMOsYeYhsUBdCxuIVeSjnB1qCb67Zkpx9JXedwtI4C8UpC",
     "telefono": 344215551775,
-    "imagen": "imagen-1660001747846-627168652.jpeg",
+    "imagen": "imagen-1660082643717-511001379.jpeg",
     "isAdmin": true
   },
   {
@@ -107,22 +107,12 @@
     "imagen": "default.png",
     "isAdmin": false
   },
-
   {
     "id": 14,
     "nombre": "Maximiliano Gabriel Peralta",
     "email": "maxygabrielperalta@gmail.com",
     "password": "$2a$10$uTLUMcli88IJ9xJ1oCgHd.WQWWlVjWH9d.9Io0NMBq6dVBbFeuHqS",
     "telefono": 344215556753,
-    "imagen": "default.png",
-    "isAdmin": false
-  },
-  {
-    "id": 15,
-    "nombre": "Felipe Diaz ....",
-    "email": "a@a.com",
-    "password": "$2a$10$.cs8iZPph89WSCASbM1KEe9DReet0qjvWf56jY4nJFdWqaWbY3kcG",
-    "telefono": 11111122222,
     "imagen": "default.png",
     "isAdmin": false
   },
