@@ -16,3 +16,7 @@ Para el proximo sprint esperamos poder seguir creciendo con la confianza entre n
 Sprint 4: 
 Mejoramos la comunicación entre nosotros que es lo que nos habiamos propuesto en el sprint anterior, seguimos teniendo cosas para mejorar igualmente como grupo para poder estar en un mismo balance todos. 
 Para el próximo sprint queremos lo mismo que el sprint anterior, seguir con el compromiso de las tareas que nos toca, pedir ayuda al grupo en caso de trabarnos con algún problema, entre otras cosas. 
+
+Sprint 5:
+En este sprint creemos que mejoramos bastante la comunicación entre los integrantes del grupo, nos ayudamos cuando fue necesario, nos organizamos muy bien con las tareas de este sprint, y también hubo mucho mayor compromiso por parte de cada uno con lo que nos tocaba. 
+Para el próximo sprint esperamos seguir con estas fortalezas ya que sentimos que funcionamos mucho mejor como grupo.

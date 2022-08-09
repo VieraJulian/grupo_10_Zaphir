@@ -1,36 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Buzo Aria",
-    "descripcion": "Buzo oversize en calidad corderito con capucha y cordon para ajustar. Puños en manga y tanca en bajo para ajustar y regular la altura. Bolsillos en frente. Modelo canchero y super abrigado para toda ocasion de uso.",
-    "categoria": "Buzos",
-    "colores": [
-      "Violeta",
-      "Marrón",
-      "Negro",
-      "Rojo",
-      ""
-    ],
-    "talle": [
-      "XS",
-      "L",
-      "S",
-      "",
-      ""
-    ],
-    "stock": 14,
-    "precio": 10999,
-    "imagen": [
-      "imagen-1658078617461-611762927.jpg",
-      "imagen-1658078617469-585662589.jpg",
-      "imagen-1658078617474-31409026.jpg",
-      "imagen-1658078617484-493068682.jpg"
-    ],
-    "descuento": 0,
-    "precioFinal": 10999,
-    "porciento": 0
-  },
-  {
     "id": 2,
     "nombre": "Campera Malibu",
     "descripcion": "Campera basica de rustico esmerilado. Bolsillo canguro. Cierre metalico al tono de la base. Cordon al tono de la base. Largo por debajo de la cadera. Estampa en delantero ubicación logo y centrada en espalda.",
@@ -432,37 +401,6 @@
     "descuento": 0,
     "precioFinal": 32999,
     "porciento": 0
-  },
-  {
-    "id": 15,
-    "nombre": "Campera Juana K.",
-    "descripcion": "Campera oversize de frisa liviana. Capucha. Detalle de puños con ruedo. Tiracierre personalizado de linea Mich. Cordones al tono de la base. Grifa institucional en ruedo izquierdo.",
-    "categoria": "Camperas",
-    "colores": [
-      "Negro",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "talle": [
-      "XS",
-      "L",
-      "",
-      "",
-      ""
-    ],
-    "stock": 5,
-    "precio": 10000,
-    "imagen": [
-      "imagen-1658701270618-600922628.png",
-      "imagen-1658701270622-633216846.png",
-      "imagen-1658701270625-725317062.png",
-      "imagen-1658701270626-727931336.png"
-    ],
-    "descuento": 300,
-    "precioFinal": 9700,
-    "porciento": 3
   },
   {
     "id": 16,
