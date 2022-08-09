@@ -1,37 +1,46 @@
-@media (min-width: 1024px){
-    .form-fieldset{
+@media (min-width: 1024px) {
+    .form-fieldset {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .form-fieldset{
+
+    .form-fieldset {
         width: 70%;
         padding: 15px 8px;
     }
-    .fieldset4{
+
+    .fieldset4 {
         width: 30%;
         padding: 15px 8px;
     }
-    .fieldset-item{
+
+    .fieldset-item {
         width: 100%;
     }
-    .fieldset1{
+
+    .fieldset1 {
         width: 50%;
     }
-    .fieldset2{
+
+    .fieldset2 {
         width: 50%;
     }
-    main{
+
+    main {
         max-width: 1024px;
     }
-    body{
+
+    body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    footer{
+
+    footer {
         width: 100%;
     }
-    main{
+
+    main {
         margin-bottom: 300px;
     }
 }

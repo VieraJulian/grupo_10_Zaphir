@@ -1,5 +1,7 @@
 const { validationResult } = require('express-validator');
 const { index, create, write } = require('../models/users.model');
+const { unlinkSync } = require("fs");
+const { resolve } = require("path");
 
 const usersControllers = {
     register: (req, res) => res.render("users/register", {
@@ -42,17 +44,26 @@ const usersControllers = {
         let user = users.find(u => u.email === req.body.email)
         delete user.password
         req.session.user = user
-        return res.redirect("/usuario/perfil")
+
+        if (req.body.recordame != undefined) {
+            res.cookie("recordame", user.email, { maxAge: 60000 * 60 })
+        }
+
+        return res.redirect("/")
     },
     profile: (req, res) => {
+        let users = index()
+        let user = users.find(u => u.email === req.session.user.email)
         return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
-            title: "Mi Perfil"
+            title: "Mi Perfil",
+            user: user
         })
     },
     logout: (req, res) => {
+        res.clearCookie("recordame")
         delete req.session.user
-        return res.redirect('/')
+        return res.redirect('/usuario/ingresar')
     },
     editProfile: (req, res) => {
         return res.render("users/edit-profile", {
@@ -75,8 +86,13 @@ const usersControllers = {
         let usersModifieds = users.map(user => {
             if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
-                user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : null;
-                user.imagen = req.files && req.files.length > 0 ? req.files[0].filename : user.imagen;
+                user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : user.telefono;
+                if(req.files && req.files.length > 0){
+                    unlinkSync(resolve(__dirname, "../../uploads/avatars/" + user.imagen))
+                    user.imagen = req.files[0].filename
+                } else {
+                    user.imagen
+                }
             }
             return user;
         })

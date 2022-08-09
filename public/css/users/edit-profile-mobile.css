@@ -34,6 +34,13 @@ main {
     width: 100%;
 }
 
+.inputFile {
+    border: 1px solid #909090;
+    padding: 10px 12px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
 .button {
     color: #FFFFFF;
     font-weight: 600;
@@ -48,14 +55,36 @@ main {
     background-color: #515151;
 }
 
-.email{
+.email {
     border: solid 1px #909090;
     padding: 10px 12px;
     margin-bottom: 3rem;
     border-radius: 2px;
 }
-@media screen and (min-width: 36.25em){
-    main{
+
+.a-wts {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+}
+
+.a-wts img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #1bd741
+}
+
+.msg-error {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}
+
+@media screen and (min-width: 36.25em) {
+    main {
         margin: auto;
         max-width: 580px;
         margin-bottom: 80px;

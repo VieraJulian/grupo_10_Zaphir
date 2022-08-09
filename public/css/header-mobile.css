@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-header{
+
+header {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     display: flex;
@@ -17,39 +18,47 @@ header{
     top: 0px;
     padding-bottom: 22px;
 }
-.header-logo{
+
+.header-logo {
     display: flex;
     align-items: center;
     width: 33.3%;
     justify-content: center;
 }
-.header-logo a{
+
+.header-logo a {
     width: 64px;
     height: 64px;
 }
-.header-logo img{
+
+.header-logo img {
     width: 64px;
     height: 64px;
     max-width: 100%;
     border-radius: 50%;
     box-shadow: 0px 0px 5px rgb(100, 100, 100);
 }
-.header-bottom{
+
+.header-bottom {
     order: 2;
 }
-.navbar-main{
+
+.navbar-main {
     display: none;
 }
-#menu-1{
+
+#menu-1 {
     display: none;
 }
-#menu-1 a{
+
+#menu-1 a {
     color: #000;
     text-decoration: none;
     padding: 10px;
     border-top: 1px solid #909090;
 }
-#menu-1:target{
+
+#menu-1:target {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -58,37 +67,48 @@ header{
     background-color: #F4F6F8;
     border: 1px solid #909090;
     width: 95%;
-    height: 100%;
+    height: 100vh;
+    z-index: 11;
 }
-.menu-bottom{
+
+.menu-bottom {
     display: flex;
     flex-grow: 1;
     align-items: flex-end;
     justify-content: end;
 }
-.menu-bottom a{
+
+.menu-bottom a {
     border: 1px solid #909090;
     background-color: #909090;
+    height: 3em;
     margin: 5px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.fa-x{
+
+.fa-x {
     padding: 10px 0;
     width: 100%;
 }
-.header-form{
+
+.header-form {
     order: 1;
     display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 6px;
 }
-.header-form form{
+
+.header-form form {
     width: 90%;
     position: absolute;
     bottom: -13px;
 }
-.header-form fieldset input{
+
+.header-form fieldset input {
     width: 100%;
     height: 27px;
     border: none;
@@ -102,12 +122,14 @@ header{
     font-family: 'Montserrat', sans-serif;
 
 }
-.header-form fieldset{
+
+.header-form fieldset {
     display: flex;
     border: none;
     position: relative;
 }
-.header-form button{
+
+.header-form button {
     background-color: #fff;
     border: none;
     cursor: pointer;
@@ -115,47 +137,73 @@ header{
     top: 2px;
     right: 1px;
     border-left: none;
-    
+
 }
-.lupa{
+
+.lupa {
     padding: 5px;
     background-color: #fff;
     height: 100%;
 }
-.header-bars{
+
+.header-bars {
     display: flex;
     align-items: center;
     width: 33.3%;
     justify-content: start;
 }
-.header-bars a{
+
+.header-bars a {
     color: #000;
     font-size: 25px;
     margin: 10px 10px 10px 18px;
 }
-.header-icon{
+
+.header-icon {
     display: flex;
     align-items: center;
     width: 33.3%;
     justify-content: end;
 }
-.header-icon nav{
+
+.header-icon nav {
+    width: 100%;
+    display: flex;
+   align-items: center;
+    justify-content: flex-end;
+    gap: .50rem;
     margin-right: 10px;
 }
-.header-icon a{
+
+.aPerfil {
+    width: 2rem;
+    height: 2rem;
+}
+
+.imgUser {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.salirIcon{
+    display: none;
+}
+
+
+.fa-circle-plus,
+.fa-right-from-bracket, .user,
+.heart,
+.fa-bag-shopping {
+    font-size: 1.25rem;
     color: #000;
-    font-size: 20px;
 }
-.fa-circle-plus{
-    margin-right: 4px;
+
+.titleSale {
+    width: 100%;
 }
-.user{
-    margin-right: 4px;
-}
-.heart{
-    margin-right: 4px;
-}
-::placeholder{
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+
+#iconBottom{
+    margin-left: 8px;
 }

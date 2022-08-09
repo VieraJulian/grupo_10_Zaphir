@@ -4,11 +4,11 @@
         align-items: flex-start;
     }
 
-    .datosPersonales{
+    .datosPersonales {
         padding: 2rem;
     }
 
-    .editarPerfil{
+    .editarPerfil {
         text-align: start;
     }
 }

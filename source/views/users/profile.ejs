@@ -6,32 +6,27 @@
         <%- include("..//partials/header.ejs") %>
             <main>
                 <h2 class="titulo">Mi Perfil</h2>
-                <% if (user.imagen != null) { %>
-                    <picture class="img-contenedor">
-                        <img class="img" src="/avatars/<%= user.imagen %>" alt="">
-                    </picture>
-                    <% } else { %>
-                        <picture class="img-contenedor">
-                            <img class="img" src="/default/default.png" alt="">
-                        </picture>
+                <picture class="img-contenedor">
+                    <img class="img" src="/avatars/<%= user.imagen %>" alt="">
+                </picture>
+                <section class="datosPersonales">
+                    <p class="title">Nombre y apellido:</p>
+                    <p class="userData">
+                        <%= user.nombre %>
+                    </p>
+                    <p class="title">E-mail:</p>
+                    <p class="userData">
+                        <%= user.email %>
+                    </p>
+                    <% if (user.telefono !=null) { %>
+                        <p class="title">Teléfono:</p>
+                        <p class="userData">
+                            <%= user.telefono %>
+                        </p>
                         <% } %>
-                            <section class="datosPersonales">
-                                <p class="title">Nombre y apellido:</p>
-                                <p class="userData">
-                                    <%= user.nombre %>
-                                </p>
-                                <p class="title">E-mail:</p>
-                                <p class="userData">
-                                    <%= user.email %>
-                                </p>
-                                <% if (user.telefono != null) { %>
-                                    <p class="title">Teléfono:</p>
-                                    <p class="userData">
-                                        <%= user.telefono %>
-                                    </p>
-                                    <% } %>
-                                        <a href="/usuario/perfil/editar" class="editarPerfil">Editar Perfil</a>
-                            </section>
+                            <a href="/usuario/perfil/editar" class="editarPerfil">Editar Perfil</a>
+                </section>
+                <%- include("../partials/logo-wts.ejs") %>
             </main>
             <%- include("../partials/footer.ejs") %>
     </body>

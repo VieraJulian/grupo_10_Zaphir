@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %> 
-<body>
-    <%- include("../partials/header.ejs") %> 
-    <main>
-        <h1>Editar producto</h1>
-        <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <label>Nombre del producto</label>
-                <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= product.nombre %>">
-            </fieldset>
-            <fieldset>
-                <label>Descripción</label>
-                <textarea name="descripcion" placeholder="Descripción"><%= product.descripcion %></textarea>
-            </fieldset>
-            <fieldset>
-                <label>Imagen</label>
-                <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
-            </fieldset>
-            <fieldset>
-                <label>Categoría</label>
-                <input class="input" type="text" name="categoria" placeholder="Categoría" value="<%= product.categoria %>">
-            </fieldset>
-            <fieldset>
-                <label>Colores</label>
-                <input class="input" type="text" name="colores" placeholder="Color 1" value="<%= product.colores[0] %>">
-                <input class="input" type="text" name="colores" placeholder="Color 2" value="<%= product.colores[1] %>">
-                <input class="input" type="text" name="colores" placeholder="Color 3" value="<%= product.colores[2] %>">
-                <input class="input" type="text" name="colores" placeholder="Color 4" value="<%= product.colores[3] %>">
-                <input class="input" type="text" name="colores" placeholder="Color 5" value="<%= product.colores[4] %>">
-            </fieldset>
-            <fieldset>
-                <label>Talle</label>
-                <input class="input" type="text" name="talle" placeholder="Talle 1" value="<%= product.talle[0] %>">
-                <input class="input" type="text" name="talle" placeholder="Talle 2" value="<%= product.talle[1] %>">
-                <input class="input" type="text" name="talle" placeholder="Talle 3" value="<%= product.talle[2] %>">
-                <input class="input" type="text" name="talle" placeholder="Talle 4" value="<%= product.talle[3] %>">
-                <input class="input" type="text" name="talle" placeholder="Talle 5" value="<%= product.talle[4] %>">
-            </fieldset>
-            <fieldset>
-                <label>Stock</label>
-                <input class="input" type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
-            </fieldset>
-            <fieldset>
-                <label>Precio</label>
-                <input class="input" type="number" name="precio" placeholder="Precio" value="<%= product.precio %>">
-            </fieldset>
-            <fieldset>
-                <label>Descuento</label>
-                <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= product.descuento %>">
-            </fieldset>
-        <button class="button-editar">
-            Editar
-        </button>
-        <button type="reset" class="button-editar">
-            Borrar
-        </button>
-        </form>
-    </main>
-    <%- include("../partials/footer.ejs") %> 
-</body>
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h1>Editar producto</h1>
+                <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <label>Nombre del producto</label>
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto"
+                            value="<%= product.nombre %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Descripción</label>
+                        <textarea name="descripcion" placeholder="Descripción"><%= product.descripcion %></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Imagen</label>
+                        <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                    </fieldset>
+                    <fieldset>
+                        <label>Categoría</label>
+                        <input class="input" type="text" name="categoria" placeholder="Categoría"
+                            value="<%= product.categoria %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Colores</label>
+                        <input class="input" type="text" name="colores" placeholder="Color 1"
+                            value="<%= product.colores[0] %>">
+                        <input class="input" type="text" name="colores" placeholder="Color 2"
+                            value="<%= product.colores[1] %>">
+                        <input class="input" type="text" name="colores" placeholder="Color 3"
+                            value="<%= product.colores[2] %>">
+                        <input class="input" type="text" name="colores" placeholder="Color 4"
+                            value="<%= product.colores[3] %>">
+                        <input class="input" type="text" name="colores" placeholder="Color 5"
+                            value="<%= product.colores[4] %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Talle</label>
+                        <input class="input" type="text" name="talle" placeholder="Talle 1"
+                            value="<%= product.talle[0] %>">
+                        <input class="input" type="text" name="talle" placeholder="Talle 2"
+                            value="<%= product.talle[1] %>">
+                        <input class="input" type="text" name="talle" placeholder="Talle 3"
+                            value="<%= product.talle[2] %>">
+                        <input class="input" type="text" name="talle" placeholder="Talle 4"
+                            value="<%= product.talle[3] %>">
+                        <input class="input" type="text" name="talle" placeholder="Talle 5"
+                            value="<%= product.talle[4] %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Stock</label>
+                        <input class="input" type="number" name="stock" placeholder="Stock"
+                            value="<%= product.stock %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Precio</label>
+                        <input class="input" type="number" name="precio" placeholder="Precio"
+                            value="<%= product.precio %>">
+                    </fieldset>
+                    <fieldset>
+                        <label>Descuento</label>
+                        <input class="input" type="number" name="descuento" placeholder="Descuento"
+                            value="<%= product.descuento %>">
+                    </fieldset>
+                    <button class="button-editar">
+                        Editar
+                    </button>
+                    <button type="reset" class="button-editar">
+                        Borrar
+                    </button>
+                </form>
+                <%- include("../partials/logo-wts.ejs") %>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

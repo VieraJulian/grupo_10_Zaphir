@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %> 
-<body>
-    <%- include("../partials/header.ejs") %> 
-    <main>
-        <section class = "login">
-            <h1> Inicia sesión </h1>
-        </section>
-        <form action = "/usuario/ingresar" method = "POST" >
-            <fieldset class="NombreUsuario">
-                <label>E-mail</label>
-                <input type="email" name="email" id="nombre" value="<%= locals.oldData ? oldData.email : null %>">
-                <% if (locals.errors && errors.email) { %>
-                    <p><%= errors.email.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="Contraseña">
-                <label>Contraseña</label>
-                <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
-                <% if (locals.errors && errors.password) { %>
-                    <p><%= errors.password.msg %></p>
-                    <% } %>
-            </fieldset>
-            <fieldset class="button">
-                <button>Iniciar sesión</button>
-            </fieldset>
-            <fielset class = "form-password">
-                <a href = "/">¿Olvidaste tu contraseña?</a>
-            </fielset>
-            <fieldset class="registro">
-                <a href="/usuario/registro">¿Todavía no tenés una cuenta?<span>Crear cuenta</span></a>
-            </fieldset>
-        </form>
-        <%- include("../partials/logo-wts.ejs") %> 
-    </main>
-    <%- include("../partials/footer.ejs") %> 
-</body>
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <section class="login">
+                    <h1> Inicia sesión </h1>
+                </section>
+                <form action="/usuario/ingresar" method="POST">
+                    <fieldset class="NombreUsuario">
+                        <label class="label">E-mail</label>
+                        <input type="text" name="email" id="nombre"
+                            value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="msg-error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="Contraseña">
+                        <label class="label">Contraseña</label>
+                        <input type="password" name="password" id="password"
+                            value="<%= locals.oldData ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <div>
+                        <label for="recordame">Recordarme</label>
+                        <input type="checkbox" name="recordame" id="recordame">
+                    </div>
+                    <fieldset class="button">
+                        <button>Iniciar sesión</button>
+                    </fieldset>
+                    <fielset class="form-password">
+                        <a href="/">¿Olvidaste tu contraseña?</a>
+                    </fielset>
+                    <fieldset class="registro">
+                        <a href="/usuario/registro">¿Todavía no tenés una cuenta?<span>Crear cuenta</span></a>
+                    </fieldset>
+                </form>
+                <%- include("../partials/logo-wts.ejs") %>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

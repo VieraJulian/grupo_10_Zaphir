@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h2 class="tituloFav">Mis Favoritos</h2>
+                <% if (products.length> 0) { %>
+                    <section class="section-principal">
+                        <% products.forEach(element=> { %>
+                            <% if (element.descuento==0) { %>
+                                <article>
+                                    <Figure>
+                                        <a href="/productos/detalle/<%= element.id %>"><img
+                                                src="/assets/productos/<%= element.imagen[0] %>"
+                                                alt="<%= element.nombre %>"></a>
+                                    </Figure>
+                                    <section>
+                                        <p class="article-p">
+                                            <%= element.nombre %>
+                                        </p>
+                                        <p class="article-precio">$ <%= element.precio %>
+                                        </p>
+                                    </section>
+                                </article>
+                                <% } else { %>
+                                    <article>
+                                        <Figure>
+                                            <a href="/productos/detalle/<%= element.id %>"><img
+                                                    src="/assets/productos/<%= element.imagen[0] %>"
+                                                    alt="<%= element.nombre %>"></a>
+                                        </Figure>
+                                        <section>
+                                            <p class="article-p">
+                                                <%= element.nombre %>
+                                            </p>
+                                            <p class="article-precio">$ <%= element.precioFinal %>
+                                            </p>
+                                        </section>
+                                    </article>
+                                    <% } %>
+                                        <% }) %>
+                    </section>
+                    <%- include("../partials/logo-wts.ejs") %>
+                        <% } else { %>
+                            <h2>No hay productos</h2>
+                            <% } %>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>

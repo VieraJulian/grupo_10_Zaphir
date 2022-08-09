@@ -1,56 +1,73 @@
-@media screen and (min-width: 768px){
-    .section-nav{
+@media screen and (min-width: 768px) {
+    .section-nav {
         display: none;
     }
-    .section-left{
+
+    .section-left {
         padding-top: 30px;
         padding-left: 10px;
         display: flex;
         flex-direction: column;
         width: 20%;
     }
-    .section-top{
+
+    .section-top {
         justify-content: end;
     }
-    .section-secundaria article{
+
+    .section-secundaria article {
         width: 31%;
     }
-    .section-secundaria{
+
+    .section-secundaria {
         width: 80%;
         display: flex;
-        align-items: flex-start; /* solucionado  */
+        align-items: flex-start;
     }
-    .section-principal{
+
+    .section-principal {
         display: flex;
         flex-wrap: wrap;
     }
-    .section-left p{
+
+    .section-left p {
         font-weight: 600;
         margin-bottom: 10px;
     }
-    .section-left div{
+
+    .section-left div {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
     }
-    .section-left div input{
+
+    .section-left div input {
         margin-right: 8px;
         width: 20px;
         height: 20px;
     }
-    .color p{
+
+    .color p {
         margin-top: 20px;
     }
-    .precio p{
+
+    .precio p {
         margin-top: 20px;
     }
-    .precio{
+
+    .precio {
         width: 70%;
     }
-    .precio input{
+
+    .precio input {
         width: 100%;
     }
-    .range{
+
+    .range {
         width: 80%;
+    }
+
+    .titleSale{
+        display: block
     }
 }

@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %> 
-<body>
-    <%- include("../partials/header.ejs") %> 
-    <main>
-        <h1>Nuevo producto</h1>
-        <form action="/productos/crear" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <label>Nombre del producto</label>
-                <input class="input" type="text" name="nombre" placeholder="Nombre del producto" required>
-            </fieldset>
-            <fieldset>
-                <label>Descripción</label>
-                <textarea name="descripcion" placeholder="Descripción" required></textarea>
-            </fieldset>
-            <fieldset>
-                <label>Imagen</label>
-                <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
-            </fieldset>
-            <fieldset>
-                <label>Categoría</label>
-                <input class="input" type="text" name="categoria" placeholder="Categoría" required>
-            </fieldset>
-            <fieldset>
-                <label>Colores</label>
-                <input class="input" type="text" name="colores" placeholder="Color 1" required>
-                <input class="input" type="text" name="colores" placeholder="Color 2">
-                <input class="input" type="text" name="colores" placeholder="Color 3">
-                <input class="input" type="text" name="colores" placeholder="Color 4">
-                <input class="input" type="text" name="colores" placeholder="Color 5">
-            </fieldset>
-            <fieldset>
-                <label>Talle</label>
-                <input class="input" type="text" name="talle" placeholder="Talle 1" required>
-                <input class="input" type="text" name="talle" placeholder="Talle 2">
-                <input class="input" type="text" name="talle" placeholder="Talle 3">
-                <input class="input" type="text" name="talle" placeholder="Talle 4">
-                <input class="input" type="text" name="talle" placeholder="Talle 5">
-            </fieldset>
-            <fieldset>
-                <label>Stock</label>
-                <input class="input" type="number" name="stock" placeholder="Stock" required>
-            </fieldset>
-            <fieldset>
-                <label>Precio</label>
-                <input class="input" type="number" name="precio" placeholder="Precio" required>
-            </fieldset>
-            <fieldset>
-                <label>Descuento</label>
-                <input class="input" type="number" name="descuento" placeholder="Descuento" required>
-            </fieldset>
-        <button class="button-crear">
-            Crear
-        </button>
-        <button type="reset" class="button-crear">
-            Borrar
-        </button>
-        </form>
-    </main>
-    <%- include("../partials/footer.ejs") %>  
-</body>
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h1>Nuevo producto</h1>
+                <form action="/productos/crear" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <label>Nombre del producto</label>
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Descripción</label>
+                        <textarea name="descripcion" placeholder="Descripción" required></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Imagen</label>
+                        <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                    </fieldset>
+                    <fieldset>
+                        <label>Categoría</label>
+                        <input class="input" type="text" name="categoria" placeholder="Categoría" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Colores</label>
+                        <input class="input" type="text" name="colores" placeholder="Color 1" required>
+                        <input class="input" type="text" name="colores" placeholder="Color 2">
+                        <input class="input" type="text" name="colores" placeholder="Color 3">
+                        <input class="input" type="text" name="colores" placeholder="Color 4">
+                        <input class="input" type="text" name="colores" placeholder="Color 5">
+                    </fieldset>
+                    <fieldset>
+                        <label>Talle</label>
+                        <input class="input" type="text" name="talle" placeholder="Talle 1" required>
+                        <input class="input" type="text" name="talle" placeholder="Talle 2">
+                        <input class="input" type="text" name="talle" placeholder="Talle 3">
+                        <input class="input" type="text" name="talle" placeholder="Talle 4">
+                        <input class="input" type="text" name="talle" placeholder="Talle 5">
+                    </fieldset>
+                    <fieldset>
+                        <label>Stock</label>
+                        <input class="input" type="number" name="stock" placeholder="Stock" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Precio</label>
+                        <input class="input" type="number" name="precio" placeholder="Precio" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Descuento</label>
+                        <input class="input" type="number" name="descuento" placeholder="Descuento" required>
+                    </fieldset>
+                    <button class="button-crear">
+                        Crear
+                    </button>
+                    <button type="reset" class="button-crear">
+                        Borrar
+                    </button>
+                </form>
+                <%- include("../partials/logo-wts.ejs") %>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

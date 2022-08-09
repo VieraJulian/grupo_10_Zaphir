@@ -1,24 +1,24 @@
-const {readFileSync, writeFileSync} = require("fs");
-const {resolve} = require("path");
+const { readFileSync, writeFileSync } = require("fs");
+const { resolve } = require("path");
 
 module.exports = {
 
-    index: function(){
+    index: function () {
         let file = resolve(__dirname, "../data/products.json");
         let data = readFileSync(file);
         return JSON.parse(data);
     },
-    one: function(id){
+    one: function (id) {
         let file = resolve(__dirname, "../data/products.json");
         let data = readFileSync(file);
         let products = JSON.parse(data);
         return products.find(product => product.id === id)
     },
-    create: function(data){
+    create: function (data) {
         let file = resolve(__dirname, "../data/products.json");
         let info = readFileSync(file);
         let products = JSON.parse(info);
-        function porciento(precio, descuento){
+        function porciento(precio, descuento) {
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
         }
@@ -38,7 +38,7 @@ module.exports = {
             porciento: parseInt(porciento(data.precio, data.descuento)),
         })
     },
-    write: function(data){
+    write: function (data) {
         let file = resolve(__dirname, "../data/products.json");
         let info = JSON.stringify(data, null, 2);
         return writeFileSync(file, info);

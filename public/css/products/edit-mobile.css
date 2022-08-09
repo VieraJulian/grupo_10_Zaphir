@@ -1,48 +1,58 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body{
+
+body {
     margin-top: 140px;
 }
-main{
+
+main {
     padding: 10px;
 }
-h1{
+
+h1 {
     text-align: center;
     margin-bottom: 20px;
 }
-fieldset{
+
+fieldset {
     border: none;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-label{
+
+label {
     margin: 10px 0 10px;
     font-weight: 600;
 }
-.input{
+
+.input {
     margin-bottom: 10px;
     padding: 10px 12px;
     border-color: 1px solid #909090;
 }
-.imput-imagen{
+
+.imput-imagen {
     width: 100%;
 }
-.file-upload-button{
+
+.file-upload-button {
     cursor: pointer;
 }
-textarea{
+
+textarea {
     resize: none;
     min-height: 80px;
     max-height: 80px;
     width: 100%;
     padding: 10px 12px;
 }
-.button-editar{
+
+.button-editar {
     cursor: pointer;
     height: 40px;
     background-color: #909090;
@@ -54,11 +64,29 @@ textarea{
     margin-top: 10px;
     cursor: pointer;
 }
-.button-editar:hover{
+
+.button-editar:hover {
     background-color: #515151;
 }
-@media screen and (min-width: 580px){
-    main{
+
+.a-wts {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+.a-wts img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #1bd741
+}
+
+@media screen and (min-width: 580px) {
+    main {
         margin: auto;
         max-width: 580px;
         margin-bottom: 50px;
