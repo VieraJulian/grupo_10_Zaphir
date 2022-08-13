@@ -17,8 +17,8 @@ main {
 
 .Imagen-Zaphir {
     width: 100%;
-    height:100vh;
-    object-fit:cover
+    height: 100vh;
+    object-fit: cover
 }
 
 .banner-bottom {
@@ -69,6 +69,7 @@ main {
 }
 
 .productos {
+    position: relative;
     margin: 10px;
 }
 
@@ -84,73 +85,27 @@ article {
     margin-bottom: 10px;
 }
 
-.JeansPalabra {
+.palabra {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #ebebeb;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    color: #000;
     font-size: 20px;
-    width: 100px;
-    height: 25px;
+    font-weight: 500;
+    border: 0;
+    transform: translate(-50%, -50%);
 }
 
-.remeraspalabra {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.palabra p {
+    width: auto;
+    padding: 5px;
     background-color: #ebebeb;
-    font-size: 20px;
-    width: 110px;
-    height: 25px;
-}
-
-.buzosPalabra {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #ebebeb;
-    font-size: 20px;
-    width: 100px;
-    height: 25px;
-}
-
-.camperasPalabra {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #ebebeb;
-    font-size: 20px;
-    width: 120px;
-    height: 25px;
-}
-
-.pantalonesPalabra {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #ebebeb;
-    font-size: 20px;
-    width: 145px;
-    height: 25px;
 }
 
 .contenedor {
-    position: relative;
     width: 100%;
 }
 

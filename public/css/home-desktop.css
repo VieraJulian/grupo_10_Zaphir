@@ -55,12 +55,13 @@
 
     .productos img {
         height: 100%;
-        transition: 450ms;
+        transition: all 450ms ease;
         object-fit: cover;
     }
     
     .productos img:hover {
         transform: scale(1.2);
+        opacity: 0.7;
     }
 
     .jeans, .remeras, .buzos, .camperas, .pantalones {
