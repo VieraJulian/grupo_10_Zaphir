@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
     .banner-bottom {
         flex-direction: row;
     }
@@ -12,26 +12,15 @@
     }
 
     .productosdestacados {
-        flex-direction: row;
-        padding: 5px;
-    }
-
-    .productosdestacados article {
-        width: 25%;
-        margin: 0;
-        height: 100%;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        column-gap: .50em;
     }
 
     .titulo {
         margin: 20px 0 20px;
-    }
-
-    .secciones {
-        justify-content: space-evenly;
-    }
-
-    .productos {
-        width: 25%;
     }
 
 }

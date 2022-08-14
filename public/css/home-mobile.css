@@ -68,15 +68,13 @@ main {
     margin-bottom: 20px;
 }
 
-.productos {
-    position: relative;
-    margin: 10px;
-}
 
 article {
     display: inline-block;
     text-align: center;
     height: 100%;
+    position: relative;
+    margin: 10px;
 }
 
 .precio {
@@ -103,16 +101,6 @@ article {
     width: auto;
     padding: 5px;
     background-color: #ebebeb;
-}
-
-.contenedor {
-    width: 100%;
-}
-
-.secciones {
-    display: flex;
-    flex-direction: column;
-
 }
 
 .jeans {
@@ -147,7 +135,7 @@ article {
 
 .section-categorias {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 4rem 0 2rem;
 }
 
 .a-wts {
@@ -165,32 +153,43 @@ article {
     background-color: #1bd741
 }
 
-@media screen and (min-width: 425px) {
-    .productos {
-        width: 50%;
-    }
+@media screen and (min-width: 36em) {
 
     .productosdestacados article {
         max-width: 425px;
         margin: auto;
     }
 
-    .secciones {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .secciones{
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "element1 element1 element2 element2 element3 element3"
+        "element1 element1 element2 element2 element3 element3"
+        ". element4 element4 element5 element5 ."
+        ". element4 element4 element5 element5 ."
     }
 
-    .section-categorias {
-        width: 100%;
-        margin-top: 40px;
+    .article_item1 {
+        grid-area: element1;
     }
 
-    .productos {
-        width: 45%;
+    .article_item2 {
+        grid-area: element2;
     }
 
-    .secciones {
-        justify-content: space-between;
+    .article_item3 {
+        grid-area: element3;
     }
 
+    .article_item4 {
+        grid-area: element4;
+    }
+
+
+    .article_item5 {
+        grid-area: element5;
+    }
 }
