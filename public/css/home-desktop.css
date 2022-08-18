@@ -27,7 +27,6 @@
     }
 
     .secciones img {
-        height: 100%;
         transition: all 450ms ease;
         object-fit: cover;
     }
@@ -47,6 +46,7 @@
     }
 
     .secciones {
+        height: 100vh;
         display: grid;
         grid-template-columns: repeat(9, auto);
         grid-template-rows: repeat(4, auto);

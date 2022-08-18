@@ -53,11 +53,13 @@
                         <fieldset class="colores">
                             <p>Color</p>
                             <% for( let index=0; index < product.colores.length; index++ ) { %>
-                                <label for="<%= product.colores[index] %>"><img
-                                        src="/assets/colores/<%= product.colores[index] %>.jpg"
-                                        alt="<%= product.colores[index] %>"></label>
-                                <input type="radio" name="color" id="<%= product.colores[index] %>"
-                                    value="<%= product.colores[index] %>">
+                                <% if (product.colores[index] != "") { %>
+                                    <label for="<%= product.colores[index] %>"><img
+                                            src="/assets/colores/<%= product.colores[index] %>.jpg"
+                                            alt="<%= product.colores[index] %>"></label>
+                                    <input type="radio" name="color" id="<%= product.colores[index] %>"
+                                        value="<%= product.colores[index] %>">
+                                    <% } %> 
                                 <% } %>
                         </fieldset>
                         <fieldset class="talles">

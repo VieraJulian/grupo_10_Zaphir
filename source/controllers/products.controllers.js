@@ -61,9 +61,9 @@ module.exports = {
                 p.talle = req.body.talle;
                 p.stock = parseInt(req.body.stock);
                 p.precio = parseInt(req.body.precio);
-                if(req.files && req.files.length > 0){
+                if (req.files && req.files.length > 0) {
                     for (let index = 0; index < req.files.length; index++) {
-                        unlinkSync(resolve(__dirname, "../../public/assets/productos/" + p.imagen[index]))   
+                        unlinkSync(resolve(__dirname, "../../public/assets/productos/" + p.imagen[index]))
                     }
                     p.imagen = imagenes
                 } else {
@@ -71,7 +71,7 @@ module.exports = {
                 }
                 p.descuento = parseInt(req.body.descuento);
                 p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
+                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
@@ -92,6 +92,7 @@ module.exports = {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
+
 
         if (req.query && req.query.color) {
 
@@ -123,7 +124,7 @@ module.exports = {
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
-            product: product,
+            product: product
         })
     },
     destroid: (req, res) => {
