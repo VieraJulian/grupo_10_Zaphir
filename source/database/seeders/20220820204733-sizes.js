@@ -1,0 +1,33 @@
+'use strict';
+
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('sizes', [
+      {
+        size: "XXL"
+      },
+      {
+        size: "XL"
+      },
+      {
+        size: "L"
+      },
+      {
+        size: "M"
+      },
+      {
+        size: "L"
+      },
+      {
+        size: "S"
+      },
+      {
+        size: "XS"
+      }
+    ], {});
+  },
+
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('sizes', null, {});
+  }
+};
