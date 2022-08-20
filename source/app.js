@@ -27,9 +27,7 @@ app.use(session({
 }))
 
 app.use(cookieParser());
-
 app.use(recordameMiddleware);
-
 app.use(require("./middlewares/user"))
 
 app.use(require("./routes/main.routes"))
