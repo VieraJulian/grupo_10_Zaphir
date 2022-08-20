@@ -6,7 +6,9 @@
   "scripts": {
     "test": "nodemon source/app.js -e json,js,mjs,ejs",
     "start": "node source/app.js",
-    "sq-i": "sequelize init"
+    "sq-i": "sequelize init",
+    "sq-mg": "sequelize migration:generate --name sizes",
+    "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
