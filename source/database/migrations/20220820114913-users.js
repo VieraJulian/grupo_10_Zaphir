@@ -10,7 +10,7 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER
         },
-        name: {
+        nombre: {
           type: Sequelize.STRING
         },
         email: {
@@ -19,11 +19,11 @@ module.exports = {
         password: {
           type: Sequelize.TEXT
         },
-        phone: {
+        telefono: {
           type: Sequelize.BIGINT,
           allowNull: true
         },
-        imagen_id: {
+        imagen: {
           type: Sequelize.INTEGER
         },
         isAdmin: {

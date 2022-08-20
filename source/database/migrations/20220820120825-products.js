@@ -10,28 +10,28 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER
         },
-        name: {
+        nombre: {
           type: Sequelize.STRING
         },
-        description: {
+        descripcion: {
           type: Sequelize.TEXT
+        },
+        categoria: {
+          type: Sequelize.STRING
         },
         stock: {
           type: Sequelize.MEDIUMINT
         },
-        price: {
+        precio: {
           type: Sequelize.MEDIUMINT
         },
-        category: {
-          type: Sequelize.STRING
-        },
-        discount: {
+        descuento: {
           type: Sequelize.SMALLINT
         },
-        finalPrice: {
+        precioFinal: {
           type: Sequelize.MEDIUMINT
         },
-        percent: {
+        porciento: {
           type: Sequelize.TINYINT
         }
       });
