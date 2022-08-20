@@ -10,7 +10,7 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER
         },
-        path: {
+        imagen: {
           type: Sequelize.TEXT
         }
       });
