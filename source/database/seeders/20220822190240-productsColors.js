@@ -58,7 +58,6 @@ module.exports = {
       }
       return p
     })
-    console.log(acumulador)
     await queryInterface.bulkInsert('productsColors', acumulador, {});
   },
 

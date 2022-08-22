@@ -16,9 +16,6 @@ module.exports = {
         size: "M"
       },
       {
-        size: "L"
-      },
-      {
         size: "S"
       },
       {
