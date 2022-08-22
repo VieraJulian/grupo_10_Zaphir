@@ -8,7 +8,7 @@
     "start": "node source/app.js",
     "sq-i": "sequelize init",
     "sq-mg": "sequelize migration:generate --name sizes",
-    "sq-sg": "sequelize seed:generate --name sizes",
+    "sq-sg": "sequelize seed:generate --name imagesProducts",
     "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
