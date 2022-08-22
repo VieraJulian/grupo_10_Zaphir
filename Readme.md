@@ -7,3 +7,4 @@
 5. [***TRELLO***](./Documentos/Trello.md "link trello")
 6. [***RETRO***](./Documentos/Retro.md "Retro")
 7. [***HEROKU***](./Documentos/Heroku.md "Heroku")
+8. [***DER***](./Documentos/DER.md "Diagrama de base de datos")
