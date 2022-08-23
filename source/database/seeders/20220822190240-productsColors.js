@@ -8,7 +8,7 @@ module.exports = {
     let colors = ["Negro", "Beige", "Blanco", "Azul", "Marrón", "Naranja", "Verde", "Gris", "Morado", "Violeta"]
 
 
-    let products = index().map(p => {
+    let products = index().forEach(p => {
       for (let i = 0; i < p.colores.length; i++) {
         if (p.colores[i] != "") {
           let product = {

@@ -8,7 +8,7 @@ module.exports = {
     let sizes = ["XXL", "XL", "L", "M", "S", "XS"]
 
 
-    let products = index().map(p => {
+    let products = index().forEach(p => {
       for (let i = 0; i < p.talle.length; i++) {
         if (p.talle[i] != "") {
           let product = {
