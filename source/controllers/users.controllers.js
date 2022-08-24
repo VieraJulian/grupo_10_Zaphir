@@ -1,18 +1,19 @@
 const { validationResult } = require('express-validator');
-const { index, create, write } = require('../models/users.model');
-const { unlinkSync } = require("fs");
-const { resolve } = require("path");
+const { user } = require('../database/models/index');
+//const { unlinkSync } = require("fs");
+//const { resolve } = require("path");
+const {hashSync} = require('bcryptjs')
 
 const usersControllers = {
-    register: (req, res) => res.render("users/register", {
+    register: async (req, res) => res.render("users/register", {
         title: "Crear cuenta",
         styles: ["users/register-mobile"],
     }),
-    login: (req, res) => res.render("users/login", {
+    login: async (req, res) => res.render("users/login", {
         title: "Iniciar sesión",
         styles: ["users/login-mobile", "users/login-tablets", "users/login-desktop"],
     }),
-    process: (req, res) => {
+    process: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -23,13 +24,19 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
+        req.body.password = hashSync(req.body.password, 10)
+        req.body.isAdmin = String(req.body.username).toLocaleLowerCase().include('@zaphir')
+
+        await user.create(req.body)
+        
         let newUser = create(req.body)
         let users = index()
         users.push(newUser)
         write(users)
         return res.redirect('/usuario/ingresar')
     },
-    access: (req, res) => {
+
+    access: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -40,7 +47,7 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let users = index()
+        let users = await user.findAll()
         let user = users.find(u => u.email === req.body.email)
         delete user.password
         req.session.user = user
@@ -51,8 +58,8 @@ const usersControllers = {
 
         return res.redirect("/")
     },
-    profile: (req, res) => {
-        let users = index()
+    profile: async (req, res) => {
+        let users = await user.findAll()
         let user = users.find(u => u.email === req.session.user.email)
         return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
@@ -71,7 +78,7 @@ const usersControllers = {
             styles: ["users/edit-profile-mobile", "users/edit-profile-tablets", "users/edit-profile-desktop"]
         })
     },
-    updateProfile: (req, res) => {
+    updateProfile: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -82,7 +89,7 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let users = index();
+        let users = await user.findAll()
         let usersModifieds = users.map(user => {
             if (user.email === req.session.user.email) {
                 user.nombre = req.body.nombre;
