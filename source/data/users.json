@@ -124,5 +124,14 @@
     "telefono": null,
     "imagen": "default.png",
     "isAdmin": true
+  },
+  {
+    "id": 15,
+    "nombre": "Ignacio Galindo",
+    "email": "hola@zaphir.com",
+    "password": "$2a$10$LCr1fcmbR6uCqdNGOO1j2eSMHdwi89xVxsmNymP/ZVZ2fJCuA7Be6",
+    "telefono": null,
+    "imagen": "default.png",
+    "isAdmin": true
   }
 ]

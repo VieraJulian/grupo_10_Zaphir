@@ -34,7 +34,15 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: false
   }
 
-  const user = sequelize.define(alias, cols, config);
-  return user
+  const User = sequelize.define(alias, cols, config);
+
+  user.associate = function(models) {
+    user.belongsTo(models.image, {
+      as : 'imagen',
+      foreignKey : 'imagen'
+    })
+  }
+
+  return User
 
 }

@@ -24,7 +24,12 @@ module.exports = {
           allowNull: true
         },
         imagen: {
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
+          allowNull : true,
+          reference:{
+            model : 'images',
+            key : 'id'
+          }
         },
         isAdmin: {
           type: Sequelize.BOOLEAN,
