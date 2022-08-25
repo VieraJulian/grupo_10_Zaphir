@@ -67,11 +67,11 @@ module.exports = {
                     }
                     p.imagen = imagenes
                 } else {
-                    user.imagen
+                    p.imagen
                 }
                 p.descuento = parseInt(req.body.descuento);
                 p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
+                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })

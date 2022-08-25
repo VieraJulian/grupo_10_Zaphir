@@ -1114,5 +1114,36 @@
     "descuento": 300,
     "precioFinal": 8400,
     "porciento": 3
+  },
+  {
+    "id": 37,
+    "nombre": "Buzo Hume",
+    "descripcion": "Buzo basico de rustico liviano vigore con proceso de teñido batik. Puños en ruedo, cuello y mangas de tela base. Largo por debajo de la cadera. Grifa institucional en ruedo izquierdo. Estampa en delantero tipo logo y centrado en la espalda. Importante: esta prenda posee un lavado artesanal, puede cambiar al de la foto. Atencion al lavar, puede desteñir.",
+    "categoria": "Buzos",
+    "colores": [
+      "Gris",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "talle": [
+      "XS",
+      "M",
+      "",
+      "",
+      ""
+    ],
+    "stock": 12,
+    "precio": 18900,
+    "imagen": [
+      "imagen-1661389024075-634573743.jpg",
+      "imagen-1661389024084-158721366.jpg",
+      "imagen-1661389024093-637709756.jpg",
+      "imagen-1661389024096-956389844.jpg"
+    ],
+    "descuento": 0,
+    "precioFinal": 18900,
+    "porciento": 0
   }
 ]
