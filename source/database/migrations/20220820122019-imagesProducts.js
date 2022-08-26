@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     try {
       await queryInterface.createTable('imagesProducts', {
         id: {
@@ -12,15 +12,17 @@ module.exports = {
         },
         product_id: {
           type: Sequelize.INTEGER,
-          references : {
-            model : 'products',
-            key : 'id'
+          references: {
+            model: 'products',
+            key: 'id'
           }
         },
         image_id: {
           type: Sequelize.INTEGER,
-          model : 'images',
-          key : 'id'
+          references: {
+            model: 'images',
+            key: 'id'
+          }
         }
       });
     } catch (error) {
@@ -28,7 +30,7 @@ module.exports = {
     }
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     try {
       await queryInterface.dropTable('imagesProducts');
     } catch (error) {

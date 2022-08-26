@@ -14,7 +14,7 @@ module.exports = {
 
     let imagesProducts = []
     for (let index = 0; index < acumulador.length; index++) {
-      imagesProducts.push(Object({...acumulador[index], image_id: index + 15}));
+      imagesProducts.push(Object({...acumulador[index], image_id: index + 16}));
     }
 
 

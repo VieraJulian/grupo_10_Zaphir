@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     }
     const product = sequelize.define(alias,cols,config)
 
-    size.associate = function(models) {
+    size.associate = function(models) { //revisar
       size.hasMany(models.product, {
         through: 'productsSizes',
-        foreignKey : 'sizes'
+        foreignKey : 'size_id'
       })
     return product
 }

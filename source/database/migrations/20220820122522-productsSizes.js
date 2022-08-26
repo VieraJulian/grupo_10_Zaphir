@@ -11,10 +11,18 @@ module.exports = {
           type: Sequelize.INTEGER
         },
         product_id: {
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'products',
+            key: 'id'
+          }
         },
         size_id: {
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'sizes',
+            key: 'id'
+          }
         }
       });
     } catch (error) {

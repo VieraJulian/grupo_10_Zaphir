@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     }
     const color = sequelize.define(alias,cols,config)
 
-    color.associate = function(models) {
+    color.associate = function(models) { //revisar
       color.hasMany(models.product, {
         through: 'productsColors',
-        foreignKey : 'color'
+        foreignKey : 'color_id'
       })
     return color
 }
