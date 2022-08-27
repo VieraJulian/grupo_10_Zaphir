@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "imagen"
     }),
 
-      image.belongsTo(models.product, { //revisar asociación
+      image.belongsTo(models.product, {
         as: "product",
         through: "imagesproducts",
         foreignKey: "image_id",

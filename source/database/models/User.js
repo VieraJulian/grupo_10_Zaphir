@@ -43,6 +43,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "imagen"
     })
   }
-
   return user
 }
