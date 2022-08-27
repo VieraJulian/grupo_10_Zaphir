@@ -1,4 +1,5 @@
 const { index } = require("../models/products.models");
+const { product } = require("../database/models/index")
 
 module.exports = {
     home: (req, res) => {
