@@ -25,15 +25,15 @@ module.exports = {
         },
         imagen: {
           type: Sequelize.INTEGER,
-          allowNull : true,
-          reference:{
-            model : 'images',
-            key : 'id'
-          }
+          allowNull: true/* ,
+          references: {
+            model: "images",
+            key: "id"
+          } */
         },
         isAdmin: {
           type: Sequelize.BOOLEAN,
-          defaultValue:false
+          defaultValue: false
         }
       });
     } catch (error) {

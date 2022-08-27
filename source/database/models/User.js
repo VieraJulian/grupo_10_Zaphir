@@ -25,24 +25,24 @@ module.exports = (sequelize, DataTypes) => {
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
-      defaultValue:false
+      defaultValue: false
     }
   };
 
   let config = {
+    tableName: "users",
     timestamps: false,
     deletedAt: false
   }
 
-  const User = sequelize.define(alias, cols, config);
+  const user = sequelize.define(alias, cols, config);
 
-  user.associate = function(models) {
+  user.associate = function (models) {
     user.belongsTo(models.image, {
-      as : 'imagen',
-      foreignKey : 'imagen'
+      as: "image",
+      foreignKey: "imagen"
     })
   }
 
-  return User
-
+  return user
 }
