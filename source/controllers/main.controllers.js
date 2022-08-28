@@ -1,9 +1,10 @@
 const { index } = require("../models/products.models");
+const { product } = require("../database/models/index")
 
 module.exports = {
-    home: (req, res) => {
+    home: async (req, res) => {
 
-        let products = index().filter(product => product.descuento);
+        let products = await product.findAll()
 
         return res.render("home", {
             title: "Zaphir",
