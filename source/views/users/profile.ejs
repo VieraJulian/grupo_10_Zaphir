@@ -3,11 +3,11 @@
 <%- include("../partials/head.ejs") %>
 
     <body>
-        <%- include("..//partials/header.ejs") %>
+        <%- include("../partials/header.ejs") %>
             <main>
                 <h2 class="titulo">Mi Perfil</h2>
                 <picture class="img-contenedor">
-                    <img class="img" src="/avatars/<%= user.imagen %>" alt="">
+                    <img class="img" src="/avatars/<%= user.image.imagen %>" alt="">
                 </picture>
                 <section class="datosPersonales">
                     <p class="title">Nombre y apellido:</p>

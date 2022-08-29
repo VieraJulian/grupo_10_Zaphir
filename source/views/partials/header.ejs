@@ -20,7 +20,7 @@
             </nav>
             <% } else if (user && user.isAdmin) { %>
                 <nav>
-                    <a class="aPerfil" href="/usuario/perfil"><img class="imgUser" src="/avatars/<%= user.imagen %>"
+                    <a class="aPerfil" href="/usuario/perfil"><img class="imgUser" src="/avatars/<%= user.image.imagen %>"
                             alt=""></a>
                     <a href="/productos/crear"><i class="fa-solid fa-circle-plus"></i></a>
                     <a href="/productos/favoritos"><i class="fa-regular fa-heart heart"></i></a>

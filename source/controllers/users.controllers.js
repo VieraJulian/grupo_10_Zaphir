@@ -1,19 +1,19 @@
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
-const { user, image }  = require("../database/models/index");
+const { user, image } = require("../database/models/index");
 const { hashSync } = require('bcryptjs');
 
 const usersControllers = {
-    register: async(req, res) => res.render("users/register", {
+    register: async (req, res) => res.render("users/register", {
         title: "Crear cuenta",
         styles: ["users/register-mobile"],
     }),
-    login: async(req, res) => res.render("users/login", {
+    login: async (req, res) => res.render("users/login", {
         title: "Iniciar sesión",
         styles: ["users/login-mobile", "users/login-tablets", "users/login-desktop"],
     }),
-    process: async(req, res) => {
+    process: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -33,12 +33,12 @@ const usersControllers = {
         if (req.body.telefono) {
             req.body.telefono
         } else {
-            req.body. telefono = null
+            req.body.telefono = null
         }
         await user.create(req.body)
         return res.redirect('/usuario/ingresar')
     },
-    access: async(req, res) => {
+    access: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -49,19 +49,26 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let users = await user.findAll()
+        let users = await user.findAll({
+            include: [
+                { association: "image" }
+            ]
+        })
         let userDB = users.find(u => u.email === req.body.email)
-        delete userDB.password
+        delete userDB.password; // esto no funciona
         req.session.user = userDB
 
         if (req.body.recordame != undefined) {
             res.cookie("recordame", userDB.email, { maxAge: 60000 * 60 })
         }
-
         return res.redirect("/")
     },
-    profile: async(req, res) => {
-        let users = await user.findAll()
+    profile: async (req, res) => {
+        let users = await user.findAll({
+            include: [
+                { association: "image" }
+            ]
+        })
         let userDB = users.find(u => u.email === req.session.user.email)
         return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
@@ -69,18 +76,18 @@ const usersControllers = {
             user: userDB
         })
     },
-    logout: async(req, res) => {
+    logout: async (req, res) => {
         res.clearCookie("recordame")
         delete req.session.user
         return res.redirect('/usuario/ingresar')
     },
-    editProfile: async(req, res) => {
+    editProfile: async (req, res) => {
         return res.render("users/edit-profile", {
             title: "Editar Perfil",
             styles: ["users/edit-profile-mobile", "users/edit-profile-tablets", "users/edit-profile-desktop"]
         })
     },
-    updateProfile: async(req, res) => {
+    updateProfile: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
