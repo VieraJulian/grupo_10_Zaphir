@@ -1,10 +1,8 @@
 const { validationResult } = require('express-validator');
-const { index, create, write } = require('../models/users.model');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
-const {user}  = require("../database/models/index");
+const { user, image }  = require("../database/models/index");
 const { hashSync } = require('bcryptjs');
-const { STRING } = require('sequelize');
 
 const usersControllers = {
     register: async(req, res) => res.render("users/register", {
@@ -27,11 +25,16 @@ const usersControllers = {
             });
         }
         req.body.password = hashSync(req.body.password, 10);
-        req.bady.isAdmin = String(req.body.email).includes("@zaphir.com");
-        /* let newUser = create(req.body)
-        let users = index()
-        users.push(newUser)
-        write(users) */
+        req.body.isAdmin = String(req.body.email).includes("@zaphir.com");
+        let avatar = await image.create({
+            imagen: "default.png"
+        })
+        req.body.imagen = avatar.id;
+        if (req.body.telefono) {
+            req.body.telefono
+        } else {
+            req.body. telefono = null
+        }
         await user.create(req.body)
         return res.redirect('/usuario/ingresar')
     },

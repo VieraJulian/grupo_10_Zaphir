@@ -14,7 +14,7 @@ module.exports = {
                 }
             },
             limit: 4
-        })
+        });
         return res.render("home", {
             title: "Zaphir",
             styles: ["home-mobile", "home-tablets", "home-desktop"],
