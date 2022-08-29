@@ -1,10 +1,10 @@
 const { body } = require('express-validator')
-const { index } = require('../models/users.model')
+const {user}  = require("../database/models/index");
 
 const register = [
     body("nombre").notEmpty().withMessage("El nombre no puede quedar vacío").bail().isLength({ min: 2 }).withMessage("El nombre debe contener mínimo dos caracteres").bail(),
-    body("email").notEmpty().withMessage("El email no puede quedar vacío").bail().isEmail().withMessage('El formato de email no es válido').bail().custom(value => {
-        let users = index()
+    body("email").notEmpty().withMessage("El email no puede quedar vacío").bail().isEmail().withMessage('El formato de email no es válido').bail().custom(async(value) => {
+        let users = await user.findAll()
         users = users.map(u => u.email)
         if (users.includes(value)) {
             throw new Error('El email ya está registrado')

@@ -2,17 +2,20 @@ const { validationResult } = require('express-validator');
 const { index, create, write } = require('../models/users.model');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
+const {user}  = require("../database/models/index");
+const { hashSync } = require('bcryptjs');
+const { STRING } = require('sequelize');
 
 const usersControllers = {
-    register: (req, res) => res.render("users/register", {
+    register: async(req, res) => res.render("users/register", {
         title: "Crear cuenta",
         styles: ["users/register-mobile"],
     }),
-    login: (req, res) => res.render("users/login", {
+    login: async(req, res) => res.render("users/login", {
         title: "Iniciar sesión",
         styles: ["users/login-mobile", "users/login-tablets", "users/login-desktop"],
     }),
-    process: (req, res) => {
+    process: async(req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -23,13 +26,16 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let newUser = create(req.body)
+        req.body.password = hashSync(req.body.password, 10);
+        req.bady.isAdmin = String(req.body.email).includes("@zaphir.com");
+        /* let newUser = create(req.body)
         let users = index()
         users.push(newUser)
-        write(users)
+        write(users) */
+        await user.create(req.body)
         return res.redirect('/usuario/ingresar')
     },
-    access: (req, res) => {
+    access: async(req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -40,38 +46,38 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let users = index()
-        let user = users.find(u => u.email === req.body.email)
-        delete user.password
-        req.session.user = user
+        let users = await user.findAll()
+        let userDB = users.find(u => u.email === req.body.email)
+        delete userDB.password
+        req.session.user = userDB
 
         if (req.body.recordame != undefined) {
-            res.cookie("recordame", user.email, { maxAge: 60000 * 60 })
+            res.cookie("recordame", userDB.email, { maxAge: 60000 * 60 })
         }
 
         return res.redirect("/")
     },
-    profile: (req, res) => {
-        let users = index()
-        let user = users.find(u => u.email === req.session.user.email)
+    profile: async(req, res) => {
+        let users = await user.findAll()
+        let userDB = users.find(u => u.email === req.session.user.email)
         return res.render("users/profile", {
             styles: ["users/profile-mobile", "users/profile-tablets", "users/profile-desktop"],
             title: "Mi Perfil",
-            user: user
+            user: userDB
         })
     },
-    logout: (req, res) => {
+    logout: async(req, res) => {
         res.clearCookie("recordame")
         delete req.session.user
         return res.redirect('/usuario/ingresar')
     },
-    editProfile: (req, res) => {
+    editProfile: async(req, res) => {
         return res.render("users/edit-profile", {
             title: "Editar Perfil",
             styles: ["users/edit-profile-mobile", "users/edit-profile-tablets", "users/edit-profile-desktop"]
         })
     },
-    updateProfile: (req, res) => {
+    updateProfile: async(req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {

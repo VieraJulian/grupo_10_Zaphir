@@ -1,12 +1,12 @@
-const { index } = require("../models/users.model")
+const {user}  = require("../database/models/index");
 
-const recordame = (req, res, next) => {
+const recordame = async(req, res, next) => {
 
     if (req.cookies.recordame != undefined && req.session.user == undefined) {
-        let users = index()
-        let user = users.find(u => u.email === req.cookies.recordame)
-        delete user.password
-        req.session.user = user
+        let users = await user.findAll()
+        let userDB = users.find(u => u.email === req.cookies.recordame)
+        delete userDB.password
+        req.session.user = userDB
     }
 
     next();
