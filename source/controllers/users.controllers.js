@@ -1,6 +1,4 @@
 const { validationResult } = require('express-validator');
-const { unlinkSync } = require("fs");
-const { resolve } = require("path");
 const { user, image } = require("../database/models/index");
 const { hashSync } = require('bcryptjs');
 
@@ -98,24 +96,32 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let users = index();
-        let usersModifieds = users.map(user => {
-            if (user.email === req.session.user.email) {
-                user.nombre = req.body.nombre;
-                user.telefono = req.body.telefono != null ? parseInt(req.body.telefono) : user.telefono;
-                if (req.files && req.files.length > 0 && user.imagen == "default.png") {
-                    user.imagen = req.files[0].filename
-                } else if (req.files && req.files.length > 0 && user.imagen != "default.png") {
-                    unlinkSync(resolve(__dirname, "../../uploads/avatars/" + user.imagen))
-                    user.imagen = req.files[0].filename
-                } else {
-                    user.imagen
-
-                }
+        let userDB = await user.findOne({
+            where: {
+                email: req.session.user.email
             }
-            return user;
+        }, {
+            include: [
+                { association: "image" }
+            ]
+        });
+
+        if (req.files && req.files.length > 0) {
+            let avatar = await image.create({
+                imagen: req.files[0].filename
+            })
+            req.body.imagen = avatar.id
+        }
+
+        if (req.body.telefono != null) {
+            parseInt(req.body.telefono)
+        }
+
+        await userDB.update({
+            nombre: req.body.nombre,
+            telefono: req.body.telefono,
+            imagen: req.body.imagen
         })
-        write(usersModifieds)
         return res.redirect("/usuario/perfil")
     }
 }

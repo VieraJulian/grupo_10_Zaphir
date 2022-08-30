@@ -18,7 +18,7 @@
                     <p class="userData">
                         <%= user.email %>
                     </p>
-                    <% if (user.telefono !=null) { %>
+                    <% if (user.telefono !=null && user.telefono != 0) { %>
                         <p class="title">Teléfono:</p>
                         <p class="userData">
                             <%= user.telefono %>

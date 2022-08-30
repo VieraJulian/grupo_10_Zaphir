@@ -21,7 +21,8 @@ module.exports = {
         },
         telefono: {
           type: Sequelize.BIGINT,
-          allowNull: true
+          allowNull: true,
+          defaultValue: null
         },
         imagen: {
           type: Sequelize.INTEGER,

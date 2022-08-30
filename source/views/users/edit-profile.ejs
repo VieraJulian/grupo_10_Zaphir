@@ -10,7 +10,11 @@
                     <label class=" title">Nombre y Apellido:</label>
                     <input class="input" type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
                     <label class="title">Teléfono:</label>
-                    <input class="input" type="number" name="telefono" id="teléfono" value="<%= user.telefono %>">
+                    <% if (user.telefono == 0) { %>
+                        <input class="input" type="number" name="telefono" id="teléfono">
+                    <% } else { %>
+                        <input class="input" type="number" name="telefono" id="teléfono" value="<%= user.telefono %>">
+                    <% } %> 
                     <label class="title">Imagen de perfil</label>
                     <input class="inputFile" type="file" name="imagen" id="imagen">
                     <% if (locals.errors && errors.imagen) { %>
