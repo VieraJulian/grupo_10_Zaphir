@@ -1,18 +1,18 @@
-const {product} = require("../database/models/index")
+const { product } = require("../database/models/index")
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
 
 module.exports = {
-    create: async(req, res) => {
+    create: async (req, res) => {
         res.render("products/create", {
             title: "Nuevo producto",
             styles: ["products/create-mobile"],
         })
     },
 
-    save: async(req, res) => {
+    save: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -23,16 +23,16 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         }
-/*         //req.body.imagen = req.files.map(file => file.filename)
-        let products = index();
-        let newProduct = create(req.body);
-        products.push(newProduct);
-        write(products) */
+        /*         //req.body.imagen = req.files.map(file => file.filename)
+                let products = index();
+                let newProduct = create(req.body);
+                products.push(newProduct);
+                write(products) */
         await product.create(req.body);
         res.redirect("/productos")
     },
 
-    edit: async(req, res) => {
+    edit: async (req, res) => {
         let productDB = await product.findByPk(req.params.id);
 
         if (!productDB) {
@@ -46,7 +46,7 @@ module.exports = {
         })
     },
 
-    modify: async(req, res) => {
+    modify: async (req, res) => {
         let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
@@ -73,7 +73,7 @@ module.exports = {
                 }
                 p.descuento = parseInt(req.body.descuento);
                 p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
+                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
         })
@@ -81,7 +81,7 @@ module.exports = {
         return res.redirect("/productos")
     },
 
-    productos: async(req, res) => {
+    productos: async (req, res) => {
 
         let products = await product.findAll()
 
@@ -119,7 +119,7 @@ module.exports = {
         })
     },
 
-    detalle: async(req, res) => {
+    detalle: async (req, res) => {
 
         let productDB = await product.findAll();
 
@@ -129,19 +129,19 @@ module.exports = {
             product: productDB
         })
     },
-    destroid: async(req, res) => {
+    destroid: async (req, res) => {
         let productDB = await product.findByPk(req.params.id);
         if (!productDB) {
             return res.redirect('/productos/')
         }
-       /*  let products = index()
-        let productsDeleted = products.filter(p => p.id !== product.id)
-        write(productsDeleted) */
-        await product.destroy({where:{id:productDB.id}})
+        /*  let products = index()
+         let productsDeleted = products.filter(p => p.id !== product.id)
+         write(productsDeleted) */
+        await product.destroy({ where: { id: productDB.id } })
         return res.redirect('/productos/')
     },
 
-    ofertas: async(req, res) => {
+    ofertas: async (req, res) => {
         let products = await product.findAll();
 
         products = products.filter(products => products.descuento > 0)
@@ -179,7 +179,7 @@ module.exports = {
 
     },
 
-    favoritos: async(req, res) => {
+    favoritos: async (req, res) => {
         let productDB = await product.findAll();
         res.render("products/favorites", {
             title: "Favoritos",
@@ -188,12 +188,12 @@ module.exports = {
         })
     },
 
-    carrito: async(req, res) => res.render("products/carrito", {
+    carrito: async (req, res) => res.render("products/carrito", {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
     }),
 
-    allProducts: async(req, res) => {
+    allProducts: async (req, res) => {
         let productDB = await product.findAll();
         res.render("products/allProducts", {
             title: "Todos los productos",

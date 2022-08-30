@@ -127,7 +127,6 @@ const usersControllers = {
         }
         
         await userDB.update(req.body)
-        return res.send(userDB)
         return res.redirect("/usuario/perfil")
     }
 }
