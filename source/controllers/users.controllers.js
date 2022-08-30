@@ -113,15 +113,7 @@ const usersControllers = {
             req.body.imagen = avatar.id
         }
 
-        if (req.body.telefono != null) {
-            parseInt(req.body.telefono)
-        }
-
-        await userDB.update({
-            nombre: req.body.nombre,
-            telefono: req.body.telefono,
-            imagen: req.body.imagen
-        })
+        await userDB.update(req.body)
         return res.redirect("/usuario/perfil")
     }
 }
