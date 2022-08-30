@@ -1,6 +1,8 @@
 const { validationResult } = require('express-validator');
 const { user, image } = require("../database/models/index");
 const { hashSync } = require('bcryptjs');
+const { unlinkSync } = require("fs");
+const { resolve } = require("path");
 
 const usersControllers = {
     register: async (req, res) => res.render("users/register", {
@@ -96,24 +98,36 @@ const usersControllers = {
                 errors: validaciones.mapped()
             });
         }
-        let userDB = await user.findOne({
-            where: {
-                email: req.session.user.email
-            }
-        }, {
+        let users = await user.findAll({
             include: [
                 { association: "image" }
             ]
-        });
-
-        if (req.files && req.files.length > 0) {
-            let avatar = await image.create({
+        })
+        let userDB = users.find(u => u.email === req.session.user.email)
+        if (req.files && req.files.length > 0 && userDB.image.imagen == "default.png") {
+            let avatar = await image.update({
                 imagen: req.files[0].filename
+            },{
+                where: {
+                    id: userDB.imagen
+                }
             })
             req.body.imagen = avatar.id
+        } else if (req.files && req.files.length > 0 && userDB.image.imagen != "default.png") {
+            let avatar = await image.update({
+                imagen: req.files[0].filename
+            },{
+                where: {
+                    id: userDB.imagen
+                }
+            })
+            unlinkSync(resolve(__dirname, "../../uploads/avatars/" + userDB.image.imagen))
+            req.body.imagen = avatar.id
+            
         }
-
+        
         await userDB.update(req.body)
+        return res.send(userDB)
         return res.redirect("/usuario/perfil")
     }
 }
