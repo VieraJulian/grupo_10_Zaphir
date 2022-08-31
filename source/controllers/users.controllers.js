@@ -126,7 +126,8 @@ const usersControllers = {
             
         }
         
-        await userDB.update(req.body)
+        let userUpdate = await userDB.update(req.body)
+        req.session.user = userUpdate
         return res.redirect("/usuario/perfil")
     }
 }
