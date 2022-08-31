@@ -7,13 +7,13 @@
             <main>
                 <section class="imagenes-pequeñas">
                     <figure>
-                        <img src="/assets/productos/<%= product.imagen[1] %>" alt="<%= product.nombre %>">
+                        <img src="/assets/productos/<%= product.images[1].imagen %>" alt="<%= product.nombre %>">
                     </figure>
                     <figure>
-                        <img src="/assets/productos/<%= product.imagen[2] %>" alt="<%= product.nombre %>">
+                        <img src="/assets/productos/<%= product.images[2].imagen %>" alt="<%= product.nombre %>">
                     </figure>
                     <figure>
-                        <img src="/assets/productos/<%= product.imagen[3] %>" alt="<%= product.nombre %>">
+                        <img src="/assets/productos/<%= product.images[3].imagen %>" alt="<%= product.nombre %>">
                     </figure>
                     <section class="section-descripcion1">
                         <section class="descripcion1">
@@ -32,14 +32,15 @@
                 </section>
                 <section class="img-principal">
                     <figure>
-                        <img src="/assets/productos/<%= product.imagen[0] %>" alt="Campera Malibu">
+                        <img src="/assets/productos/<%= product.images[0].imagen %>" alt="Campera Malibu">
                     </figure>
                 </section>
                 <section class="section-right">
                     <section class="info">
                         <h2>
                             <%= product.nombre %>
-                        </h2><span class="corazon"><a href="/productos/favoritos"><i class="fa-solid fa-heart heart2"></i></a></span>
+                        </h2><span class="corazon"><a href="/productos/favoritos"><i
+                                    class="fa-solid fa-heart heart2"></i></a></span>
                         <% if (product.descuento==0) { %>
                             <span class="precio">$ <%= product.precio %></span>
                             <% } else { %>
@@ -52,24 +53,22 @@
                     <form action="/productos/carrito" method="get" id="agregar-compra">
                         <fieldset class="colores">
                             <p>Color</p>
-                            <% for( let index=0; index < product.colores.length; index++ ) { %>
-                                <% if (product.colores[index] != "") { %>
-                                    <label for="<%= product.colores[index] %>"><img
-                                            src="/assets/colores/<%= product.colores[index] %>.jpg"
-                                            alt="<%= product.colores[index] %>"></label>
-                                    <input type="radio" name="color" id="<%= product.colores[index] %>"
-                                        value="<%= product.colores[index] %>">
-                                    <% } %> 
+                            <% for( let index=0; index < product.colors.length; index++ ) { %>
+                                <label for="<%= product.colors[index].color %>"><img
+                                        src="/assets/colores/<%= product.colors[index].color %>.jpg"
+                                        alt="<%= product.colors[index].color %>"></label>
+                                <input type="radio" name="color" id="<%= product.colors[index].color %>"
+                                    value="<%= product.colors[index].color %>">
                                 <% } %>
                         </fieldset>
                         <fieldset class="talles">
                             <p>Talles</p>
-                            <% for( let index=0; index < product.talle.length; index++ ) { %>
-                                <label for="<%= product.talle[index] %>" class="label-talle">
-                                    <%= product.talle[index] %>
+                            <% for( let index=0; index < product.sizes.length; index++ ) { %>
+                                <label for="<%= product.sizes[index].size %>" class="label-talle">
+                                    <%= product.sizes[index].size %> %>
                                 </label>
-                                <input type="radio" name="talle" id="<%= product.talle[index] %>"
-                                    value="<%= product.talle[index] %>">
+                                <input type="radio" name="talle" id="<%= product.sizes[index].size %> %>"
+                                    value="<%= product.sizes[index].size %> %>">
                                 <% } %>
                         </fieldset>
                         <fieldset class="quantity">
@@ -101,8 +100,8 @@
                         </button>
                     </form>
                     <% } %>
-                    <%- include("../partials/logo-wts.ejs") %>
-                </main>
+                        <%- include("../partials/logo-wts.ejs") %>
+            </main>
             <%- include('../partials/footer.ejs') %>
     </body>
 

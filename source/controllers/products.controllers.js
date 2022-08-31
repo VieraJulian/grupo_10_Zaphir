@@ -1,4 +1,4 @@
-const { product } = require("../database/models/index")
+const { product, image, size, color } = require("../database/models/index")
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
@@ -23,12 +23,20 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         }
-        /*         //req.body.imagen = req.files.map(file => file.filename)
-                let products = index();
-                let newProduct = create(req.body);
-                products.push(newProduct);
-                write(products) */
-        await product.create(req.body);
+        let newProduct = await product.create(req.body)
+
+        if (req.files && req.files.length > 0) {
+            let images = await Promise.all(req.files.map(file => {
+                return image.create({
+                    imagen: file.filename
+                })
+            }));
+
+            let addProductImages = await Promise.all(images.map(image => {
+                return newProduct.addImage(image)
+            }))
+        }
+
         res.redirect("/productos")
     },
 
@@ -121,8 +129,13 @@ module.exports = {
 
     detalle: async (req, res) => {
 
-        let productDB = await product.findAll();
-
+        let productDB = await product.findByPk(req.params.id,{
+            include: [
+                { association: "images" },
+                { association: "colors" },
+                { association: "sizes" },
+            ]
+        });
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
