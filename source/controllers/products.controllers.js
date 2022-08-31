@@ -1,4 +1,4 @@
-const { product, image, size, color } = require("../database/models/index")
+const { product, image, color, size } = require("../database/models/index")
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
@@ -23,6 +23,14 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         }
+        function porciento(precio, descuento) {
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
+
+        req.body.precioFinal = parseInt(req.body.precio - req.body.descuento);
+        req.body.porciento = parseInt(porciento(req.body.precio, req.body.descuento));
+
         let newProduct = await product.create(req.body)
 
         if (req.files && req.files.length > 0) {
@@ -36,6 +44,30 @@ module.exports = {
                 return newProduct.addImage(image)
             }))
         }
+
+        let colors = await Promise.all(req.body.colores.map(c => {
+            if (c != "") {
+                return color.create({
+                    color: c
+                })
+            }
+        }));
+
+        let addProductColors = await Promise.all(colors.map(color => {
+            return newProduct.addColor(color)
+        }));
+
+        let talles = await Promise.all(req.body.talle.map(s => {
+            if (s != "") {
+                return size.create({
+                    size: s
+                })
+            }
+        }));
+
+        let addProductSizes = await Promise.all(talles.map(talle => {
+            return newProduct.addSize(talle)
+        }))
 
         res.redirect("/productos")
     },
@@ -60,7 +92,35 @@ module.exports = {
     },
 
     modify: async (req, res) => {
-        let imagenes = req.files.map(file => file.filename)
+        let productDB = await product.findByPk(req.params.id, {
+            include: [
+                { association: "images" },
+                { association: "colors" },
+                { association: "sizes" },
+            ]
+        });
+
+
+        let colors = await Promise.all(req.body.colores.map(file => {
+            return image.create({
+                imagen: file.filename
+            })
+        }));
+
+        let addProductImages = await Promise.all(images.map(image => {
+            return newProduct.addImage(image)
+        }))
+
+        await productDB.update({
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            categoria: req.body.categoria,
+            colores: req.body.colores,
+            talle: req.body.talle,
+            stock: parseInt(req.body.stock),
+            precio: parseInt(req.body.precio),
+        })
+        /* let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
         function porciento(precio, descuento) {
@@ -90,8 +150,8 @@ module.exports = {
             }
             return p
         })
-        write(productsModifieds)
-        return res.redirect("/productos")
+        write(productsModifieds) */
+        return res.redirect("/productos/detalle/" + productDB.id)
     },
 
     productos: async (req, res) => {
