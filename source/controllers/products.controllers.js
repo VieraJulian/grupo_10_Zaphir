@@ -3,7 +3,6 @@ const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
-
 module.exports = {
     create: async (req, res) => {
         res.render("products/create", {
@@ -99,27 +98,28 @@ module.exports = {
                 { association: "sizes" },
             ]
         });
+        function porciento(precio, descuento) {
+            let resultadoDivision = precio / descuento
+            return (100 / resultadoDivision).toFixed(1)
+        }
 
+        req.body.precioFinal = parseInt(req.body.precio - req.body.descuento);
+        req.body.porciento = parseInt(porciento(req.body.precio, req.body.descuento));
 
-        let colors = await Promise.all(req.body.colores.map(file => {
-            return image.create({
-                imagen: file.filename
-            })
-        }));
+        if (req.files && req.files.length > 0) {
+            for (let index = 0; index < productDB.images.length; index++) {
+                await image.update({
+                    imagen: req.files[index].filename
+                },{
+                    where: {
+                        id: productDB.images[index].id
+                    }
+                })
+                unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
+            }
+        }
 
-        let addProductImages = await Promise.all(images.map(image => {
-            return newProduct.addImage(image)
-        }))
-
-        await productDB.update({
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            categoria: req.body.categoria,
-            colores: req.body.colores,
-            talle: req.body.talle,
-            stock: parseInt(req.body.stock),
-            precio: parseInt(req.body.precio),
-        })
+        await productDB.update(req.body)
         /* let imagenes = req.files.map(file => file.filename)
         let products = index();
         let product = one(parseInt(req.params.id))
@@ -149,8 +149,8 @@ module.exports = {
                     p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
             }
             return p
-        })
-        write(productsModifieds) */
+        }) */
+        return res.send(productDB)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
 

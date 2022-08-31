@@ -121,7 +121,7 @@ const usersControllers = {
                     id: userDB.imagen
                 }
             })
-            unlinkSync(resolve(__dirname, "../../uploads/avatars/" + userDB.image.imagen))
+            unlinkSync(resolve(__dirname, "../../uploads/avatars/" + userDB.images[index].imagen))
             req.body.imagen = avatar.id
             
         }
