@@ -41,12 +41,17 @@ module.exports = {
     },
 
     edit: async (req, res) => {
-        let productDB = await product.findByPk(req.params.id);
+        let productDB = await product.findByPk(req.params.id, {
+            include: [
+                { association: "images" },
+                { association: "colors" },
+                { association: "sizes" },
+            ]
+        });
 
         if (!productDB) {
             return res.redirect("/productos")
         }
-
         return res.render("products/edit", {
             title: "Editar producto",
             styles: ["products/edit-mobile"],
@@ -129,7 +134,7 @@ module.exports = {
 
     detalle: async (req, res) => {
 
-        let productDB = await product.findByPk(req.params.id,{
+        let productDB = await product.findByPk(req.params.id, {
             include: [
                 { association: "images" },
                 { association: "colors" },

@@ -27,29 +27,27 @@
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
-                        <input class="input" type="text" name="colores" placeholder="Color 1"
-                            value="<%= product.colores[0] %>">
-                        <input class="input" type="text" name="colores" placeholder="Color 2"
-                            value="<%= product.colores[1] %>">
-                        <input class="input" type="text" name="colores" placeholder="Color 3"
-                            value="<%= product.colores[2] %>">
-                        <input class="input" type="text" name="colores" placeholder="Color 4"
-                            value="<%= product.colores[3] %>">
-                        <input class="input" type="text" name="colores" placeholder="Color 5"
-                            value="<%= product.colores[4] %>">
+                        <% for( let index = 0; index < 5; index++ ) { %>
+                            <% if (product.colors[index] != null) { %>
+                                <input class="input" type="text" name="colores" placeholder="Color <%= index %>"
+                                    value="<%= product.colors[index].color %>">
+                            <% } else { %>
+                                <input class="input" type="text" name="colores" placeholder="Color <%= index %>"
+                                    value="<%= product.colors[index] %>">
+                            <% } %> 
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
-                        <input class="input" type="text" name="talle" placeholder="Talle 1"
-                            value="<%= product.talle[0] %>">
-                        <input class="input" type="text" name="talle" placeholder="Talle 2"
-                            value="<%= product.talle[1] %>">
-                        <input class="input" type="text" name="talle" placeholder="Talle 3"
-                            value="<%= product.talle[2] %>">
-                        <input class="input" type="text" name="talle" placeholder="Talle 4"
-                            value="<%= product.talle[3] %>">
-                        <input class="input" type="text" name="talle" placeholder="Talle 5"
-                            value="<%= product.talle[4] %>">
+                        <% for( let index = 0; index < 5; index++ ) { %>
+                            <% if (product.sizes[index] != null) { %>
+                                <input class="input" type="text" name="talle" placeholder="Talle <%= index %>"
+                                    value="<%= product.sizes[index].size %>">
+                            <% } else { %>
+                                <input class="input" type="text" name="talle" placeholder="talle <%= index %>"
+                                    value="<%= product.sizes[index] %>">
+                            <% } %> 
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
