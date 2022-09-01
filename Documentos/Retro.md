@@ -20,3 +20,6 @@ Para el próximo sprint queremos lo mismo que el sprint anterior, seguir con el 
 Sprint 5:
 En este sprint creemos que mejoramos bastante la comunicación entre los integrantes del grupo, nos ayudamos cuando fue necesario, nos organizamos muy bien con las tareas de este sprint, y también hubo mucho mayor compromiso por parte de cada uno con lo que nos tocaba. 
 Para el próximo sprint esperamos seguir con estas fortalezas ya que sentimos que funcionamos mucho mejor como grupo.
+
+Sprint 6:
+El equipo sigue con esa buena comunicación que mejoramos en el sprint anterior, supimos organizarnos bien con las tares y poder llegar con la entrega.
