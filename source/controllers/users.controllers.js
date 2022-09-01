@@ -123,8 +123,15 @@ const usersControllers = {
             })
             unlinkSync(resolve(__dirname, "../../uploads/avatars/" + userDB.image.imagen))
             req.body.imagen = avatar.id
-            req.session.user.image.imagen = req.files[0].filename
         }
+        let userUpdate = await userDB.update(req.body)
+        if (req.files && req.files.length > 0) {
+            req.session.user = userUpdate;
+            req.session.user.image.imagen = req.files[0].filename
+        } else {
+            req.session.user = userUpdate;
+        }
+
         return res.redirect("/usuario/perfil")
     }
 }
