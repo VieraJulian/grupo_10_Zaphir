@@ -1,4 +1,4 @@
-const { product, image, color, size } = require("../database/models/index")
+const { product, image, color, size, productcolor, productsizes } = require("../database/models/index")
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
@@ -133,7 +133,8 @@ module.exports = {
                 })
                 await productDB.addColor(colorNew)
             } else if (req.body.colores[index] == "" && productDB.colors[index] != undefined) {
-                await color.destroy({where: {id: productDB.colors[index].id}})
+                await color.destroy({where: {id: productDB.colors[index].id}});
+                await productcolor.destroy({where: {color_id: productDB.colors[index].id}});
             }
         }
         for (let index = 0; index < req.body.talle.length; index++) {
@@ -152,6 +153,7 @@ module.exports = {
                 await productDB.addSize(talleNew)
             } else if (req.body.talle[index] == "" && productDB.sizes[index] != undefined) {
                 await size.destroy({where: {id: productDB.sizes[index].id}})
+                await productsizes.destroy({where: {size_id: productDB.sizes[index].id}})
             }
         }
 
