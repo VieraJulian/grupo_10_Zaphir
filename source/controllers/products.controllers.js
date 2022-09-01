@@ -263,7 +263,11 @@ module.exports = {
     },
 
     favoritos: async (req, res) => {
-        let productDB = await product.findAll();
+        let productDB = await product.findAll({
+            include: [
+            { association: "images" }
+            ],
+            limit: 8});
         res.render("products/favorites", {
             title: "Favoritos",
             styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
