@@ -10,7 +10,6 @@ module.exports = {
             styles: ["products/create-mobile"],
         })
     },
-
     save: async (req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
@@ -21,11 +20,11 @@ module.exports = {
                 oldData: req.body,
                 errors: validaciones.mapped()
             });
-        }
+        };
         function porciento(precio, descuento) {
             let resultadoDivision = precio / descuento
             return (100 / resultadoDivision).toFixed(1)
-        }
+        };
 
         req.body.precioFinal = parseInt(req.body.precio - req.body.descuento);
         req.body.porciento = parseInt(porciento(req.body.precio, req.body.descuento));
@@ -70,7 +69,6 @@ module.exports = {
 
         res.redirect("/productos")
     },
-
     edit: async (req, res) => {
         let productDB = await product.findByPk(req.params.id, {
             include: [
@@ -89,7 +87,6 @@ module.exports = {
             product: productDB
         })
     },
-
     modify: async (req, res) => {
         let productDB = await product.findByPk(req.params.id, {
             include: [
@@ -156,7 +153,6 @@ module.exports = {
                 await productsize.destroy({ where: { size_id: productDB.sizes[index].id } })
             }
         }
-
         await productDB.update(req.body)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
@@ -173,28 +169,22 @@ module.exports = {
 
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
-
         if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
-
-
         if (req.query && req.query.color) {
 
             products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
         }
-
         if (req.query && req.query.range) {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
-
         if (req.params && req.params.categorias) {
 
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
-
 
         res.render("products/productos", {
             title: "Zaphir",
@@ -202,7 +192,6 @@ module.exports = {
             products: products
         })
     },
-
     detalle: async (req, res) => {
 
         let productDB = await product.findByPk(req.params.id, {
@@ -218,7 +207,6 @@ module.exports = {
             product: productDB
         })
     },
-
     ofertas: async (req, res) => {
         let products = await product.findAll({
             include: [
@@ -232,27 +220,22 @@ module.exports = {
 
             products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
-
         if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
-
         if (req.query && req.query.color) {
 
             products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
         }
-
         if (req.query && req.query.range) {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
-
         if (req.params && req.params.categorias) {
 
             products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
         }
-
         return res.render("products/ofertas", {
             title: "Ofertas",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
@@ -260,7 +243,6 @@ module.exports = {
         })
 
     },
-
     favoritos: async (req, res) => {
         let productDB = await product.findAll({
             include: [
@@ -274,7 +256,6 @@ module.exports = {
             products: productDB
         })
     },
-
     carrito: async (req, res) => res.render("products/carrito", {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
@@ -292,7 +273,6 @@ module.exports = {
             products: productDB
         })
     },
-
     destroid: async (req, res) => {
         let productDB = await product.findByPk(req.params.id, {
             include: {
