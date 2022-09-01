@@ -1,4 +1,4 @@
-const { product, image, color, size, productcolor, productsizes } = require("../database/models/index")
+const { product, image, color, size, productcolor, productsize, imageproduct } = require("../database/models/index")
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
@@ -133,8 +133,8 @@ module.exports = {
                 })
                 await productDB.addColor(colorNew)
             } else if (req.body.colores[index] == "" && productDB.colors[index] != undefined) {
-                await color.destroy({where: {id: productDB.colors[index].id}});
-                await productcolor.destroy({where: {color_id: productDB.colors[index].id}});
+                await color.destroy({ where: { id: productDB.colors[index].id } });
+                await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
             }
         }
         for (let index = 0; index < req.body.talle.length; index++) {
@@ -152,8 +152,8 @@ module.exports = {
                 })
                 await productDB.addSize(talleNew)
             } else if (req.body.talle[index] == "" && productDB.sizes[index] != undefined) {
-                await size.destroy({where: {id: productDB.sizes[index].id}})
-                await productsizes.destroy({where: {size_id: productDB.sizes[index].id}})
+                await size.destroy({ where: { id: productDB.sizes[index].id } })
+                await productsize.destroy({ where: { size_id: productDB.sizes[index].id } })
             }
         }
 
@@ -218,23 +218,13 @@ module.exports = {
             product: productDB
         })
     },
-    destroid: async (req, res) => {
-        let productDB = await product.findByPk(req.params.id);
-        if (!productDB) {
-            return res.redirect('/productos/')
-        }
-        /*  let products = index()
-         let productsDeleted = products.filter(p => p.id !== product.id)
-         write(productsDeleted) */
-        await product.destroy({ where: { id: productDB.id } })
-        return res.redirect('/productos/')
-    },
 
     ofertas: async (req, res) => {
         let products = await product.findAll({
             include: [
-            { association: "images" }
-            ]})
+                { association: "images" }
+            ]
+        })
 
         products = products.filter(products => products.descuento > 0)
 
@@ -274,9 +264,10 @@ module.exports = {
     favoritos: async (req, res) => {
         let productDB = await product.findAll({
             include: [
-            { association: "images" }
+                { association: "images" }
             ],
-            limit: 8});
+            limit: 8
+        });
         res.render("products/favorites", {
             title: "Favoritos",
             styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
@@ -292,12 +283,39 @@ module.exports = {
     allProducts: async (req, res) => {
         let productDB = await product.findAll({
             include: [
-            { association: "images" }
-            ]});
+                { association: "images" }
+            ]
+        });
         res.render("products/allProducts", {
             title: "Todos los productos",
             styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
             products: productDB
         })
-    }
+    },
+
+    destroid: async (req, res) => {
+        let productDB = await product.findByPk(req.params.id, {
+            include: {
+                all: true
+            }
+        });
+        if (!productDB) {
+            return res.redirect('/productos/')
+        }
+        await productDB.destroy()
+        for (let index = 0; index < productDB.images.length; index++) {
+            await image.destroy({ where: { id: productDB.images[index].id } })
+            await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id}})
+            unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
+        }
+        for (let index = 0; index < productDB.colors.length; index++) {
+            await color.destroy({ where: { id: productDB.colors[index].id } })
+            await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id}})
+        }
+        for (let index = 0; index < productDB.sizes.length; index++) {
+            await size.destroy({ where: { id: productDB.sizes[index].id } })
+            await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id}})
+        }
+        return res.redirect('/productos/')
+    },
 }

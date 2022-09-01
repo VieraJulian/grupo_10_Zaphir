@@ -11,11 +11,11 @@ module.exports = {
           type: Sequelize.INTEGER
         },
         product_id: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.INTEGER,/* 
           references: {
             model: "products",
             key: "id"
-          }
+          } */
         },
         color_id: {
           type: Sequelize.INTEGER, // error de FK
