@@ -174,7 +174,7 @@ module.exports = {
                 ],
                 where: {
                     categoria: {
-                        [Op.like]: req.query.name
+                        [Op.like]: "%" + req.query.name + "%"
                     }
                 },
                 limit: 9
