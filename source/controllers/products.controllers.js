@@ -161,7 +161,11 @@ module.exports = {
 
     productos: async (req, res) => {
 
-        let products = await product.findAll()
+        let products = await product.findAll({
+            include: [
+                { association: "images" },
+            ]
+        });
 
         if (req.query && req.query.name) {
 
