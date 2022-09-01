@@ -277,7 +277,10 @@ module.exports = {
     }),
 
     allProducts: async (req, res) => {
-        let productDB = await product.findAll();
+        let productDB = await product.findAll({
+            include: [
+            { association: "images" }
+            ]});
         res.render("products/allProducts", {
             title: "Todos los productos",
             styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
