@@ -225,7 +225,10 @@ module.exports = {
     },
 
     ofertas: async (req, res) => {
-        let products = await product.findAll();
+        let products = await product.findAll({
+            include: [
+            { association: "images" }
+            ]})
 
         products = products.filter(products => products.descuento > 0)
 
@@ -257,7 +260,7 @@ module.exports = {
         return res.render("products/ofertas", {
             title: "Ofertas",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
-            products: productDB
+            products: products
         })
 
     },
