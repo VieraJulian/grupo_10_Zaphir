@@ -20,6 +20,9 @@ module.exports = {
       },
       {
         size: "XS"
+      },
+      {
+        size: "X"
       }
     ], {});
   },

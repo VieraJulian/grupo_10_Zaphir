@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     try {
-      await queryInterface.createTable("imagesProducts", {
+      await queryInterface.createTable('productsSizes', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -11,18 +11,20 @@ module.exports = {
           type: Sequelize.INTEGER
         },
         product_id: {
-          type: Sequelize.INTEGER,/* 
+          type: Sequelize.INTEGER,
+          allowNull: true,
           references: {
             model: "products",
             key: "id"
-          } */
+          }
         },
-        image_id: {
-          type: Sequelize.INTEGER,/* 
+        size_id: {
+          type: Sequelize.INTEGER,
+          allowNull: true,
           references: {
-            model: "images",
+            model: "sizes",
             key: "id"
-          } */
+          }
         }
       });
     } catch (error) {
@@ -32,7 +34,7 @@ module.exports = {
 
   async down(queryInterface, Sequelize) {
     try {
-      await queryInterface.dropTable("imagesProducts");
+      await queryInterface.dropTable('productsSizes');
     } catch (error) {
       console.log(error);
     }

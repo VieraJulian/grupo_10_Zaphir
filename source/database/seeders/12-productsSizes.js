@@ -5,7 +5,7 @@ const { index } = require("../../models/products.models")
 module.exports = {
   async up(queryInterface, Sequelize) {
     let acumulador = []
-    let sizes = ["XXL", "XL", "L", "M", "S", "XS"]
+    let sizes = ["XXL", "XL", "L", "M", "S", "XS", "X"]
 
 
     let products = index().forEach(p => {
