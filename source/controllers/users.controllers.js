@@ -107,7 +107,7 @@ const usersControllers = {
         if (req.files && req.files.length > 0 && userDB.image.imagen == "default.png") {
             let avatar = await image.update({
                 imagen: req.files[0].filename
-            },{
+            }, {
                 where: {
                     id: userDB.imagen
                 }
@@ -116,16 +116,16 @@ const usersControllers = {
         } else if (req.files && req.files.length > 0 && userDB.image.imagen != "default.png") {
             let avatar = await image.update({
                 imagen: req.files[0].filename
-            },{
+            }, {
                 where: {
                     id: userDB.imagen
                 }
             })
             unlinkSync(resolve(__dirname, "../../uploads/avatars/" + userDB.images[index].imagen))
             req.body.imagen = avatar.id
-            
+
         }
-        
+
         let userUpdate = await userDB.update(req.body)
         req.session.user = userUpdate
         return res.redirect("/usuario/perfil")

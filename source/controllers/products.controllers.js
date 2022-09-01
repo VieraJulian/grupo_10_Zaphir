@@ -110,7 +110,7 @@ module.exports = {
             for (let index = 0; index < productDB.images.length; index++) {
                 await image.update({
                     imagen: req.files[index].filename
-                },{
+                }, {
                     where: {
                         id: productDB.images[index].id
                     }
@@ -118,38 +118,26 @@ module.exports = {
                 unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
             }
         }
+        for (let index = 0; index < req.body.colores.length; index++) {
+            if (req.body.colores[index] != "" && productDB.colors[index] != undefined) {
+                await color.update({
+                    color: req.body.colores[index]
+                }, {
+                    where: {
+                        id: productDB.colors[index].id
+                    }
+                })
+            } else if (req.body.colores[index] != "" && productDB.colors[index] == undefined) {
+                let colorNew = await color.create({
+                    color: req.body.colores[index]
+                })
+                await productDB.addColor(colorNew)
+            } else if (req.body.colores[index] == "" && productDB.colors[index] != undefined) {
+                await color.destroy({where: {id: productDB.colors[index].id}})
+            }
+        }
 
         await productDB.update(req.body)
-        /* let imagenes = req.files.map(file => file.filename)
-        let products = index();
-        let product = one(parseInt(req.params.id))
-        function porciento(precio, descuento) {
-            let resultadoDivision = precio / descuento
-            return (100 / resultadoDivision).toFixed(1)
-        }
-        let productsModifieds = products.map(p => {
-            if (p.id === product.id) {
-                p.nombre = req.body.nombre;
-                p.descripcion = req.body.descripcion;
-                p.categoria = req.body.categoria;
-                p.colores = req.body.colores;
-                p.talle = req.body.talle;
-                p.stock = parseInt(req.body.stock);
-                p.precio = parseInt(req.body.precio);
-                if (req.files && req.files.length > 0) {
-                    for (let index = 0; index < req.files.length; index++) {
-                        unlinkSync(resolve(__dirname, "../../public/assets/productos/" + p.imagen[index]))
-                    }
-                    p.imagen = imagenes
-                } else {
-                    p.imagen
-                }
-                p.descuento = parseInt(req.body.descuento);
-                p.precioFinal = parseInt(req.body.precio - req.body.descuento),
-                    p.porciento = parseInt(porciento(req.body.precio, req.body.descuento))
-            }
-            return p
-        }) */
         return res.send(productDB)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
