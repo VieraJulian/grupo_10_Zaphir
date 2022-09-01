@@ -2,6 +2,8 @@ const { product, image, color, size, productcolor, productsize, imageproduct } =
 const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
+const { Op } = require("sequelize");
+const { query } = require("express");
 
 module.exports = {
     create: async (req, res) => {
@@ -161,31 +163,48 @@ module.exports = {
 
         let products = await product.findAll({
             include: [
-                { association: "images" },
+                { association: "images" }
             ]
-        });
+        })
 
         if (req.query && req.query.name) {
-
-            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
+            products = await product.findAll({
+                include: [
+                    { association: "images" }
+                ],
+                where: {
+                    categoria: {
+                        [Op.like]: req.query.name
+                    }
+                },
+                limit: 9
+            });
         }
-        if (req.query && req.query.talle) {
+        /* if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
         if (req.query && req.query.color) {
 
             products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
-        }
+        } */
         if (req.query && req.query.range) {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
+        
         if (req.params && req.params.categorias) {
-
-            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
+            products = await product.findAll({
+                include: [
+                    { association: "images" }
+                ],
+                where: {
+                    categoria: {
+                        [Op.like]: req.params.categorias
+                    }
+                },
+            });
         }
-
         res.render("products/productos", {
             title: "Zaphir",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
@@ -285,16 +304,16 @@ module.exports = {
         await productDB.destroy()
         for (let index = 0; index < productDB.images.length; index++) {
             await image.destroy({ where: { id: productDB.images[index].id } })
-            await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id}})
+            await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
             unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
         }
         for (let index = 0; index < productDB.colors.length; index++) {
             await color.destroy({ where: { id: productDB.colors[index].id } })
-            await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id}})
+            await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
         }
         for (let index = 0; index < productDB.sizes.length; index++) {
             await size.destroy({ where: { id: productDB.sizes[index].id } })
-            await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id}})
+            await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
         }
         return res.redirect('/productos/')
     },
