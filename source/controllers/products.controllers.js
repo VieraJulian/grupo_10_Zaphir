@@ -136,9 +136,26 @@ module.exports = {
                 await color.destroy({where: {id: productDB.colors[index].id}})
             }
         }
+        for (let index = 0; index < req.body.talle.length; index++) {
+            if (req.body.talle[index] != "" && productDB.sizes[index] != undefined) {
+                await size.update({
+                    size: req.body.talle[index]
+                }, {
+                    where: {
+                        id: productDB.sizes[index].id
+                    }
+                })
+            } else if (req.body.talle[index] != "" && productDB.sizes[index] == undefined) {
+                let talleNew = await size.create({
+                    size: req.body.talle[index]
+                })
+                await productDB.addSize(talleNew)
+            } else if (req.body.talle[index] == "" && productDB.sizes[index] != undefined) {
+                await size.destroy({where: {id: productDB.sizes[index].id}})
+            }
+        }
 
         await productDB.update(req.body)
-        return res.send(productDB)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
 
