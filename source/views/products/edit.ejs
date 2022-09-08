@@ -22,8 +22,7 @@
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
-                        <label>Categoría</label>
-                        <select name="categoria" placeholder="Categoría">
+                        <select class="select" name="categoria" placeholder="Categoría">
                             <% let categorias=["Remeras", "Buzos" , "Camperas" , "Vestidos" , "Pantalones" , "Jeans" ]%>
                                 <% for( let index=0; index < categorias.length; index++ ) { %>
                                     <% if (categorias[index] == product.categoria) { %>
@@ -31,7 +30,7 @@
                                     <% } else { %>
                                         <option value="<%= categorias[index] %>"><%= categorias[index] %></option>
                                     <% } %>
-                                    <% } %>
+                                <% } %>
                         </select>
                     </fieldset>
                     <fieldset>

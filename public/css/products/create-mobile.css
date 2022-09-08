@@ -36,6 +36,12 @@ label {
     border-color: 1px solid #909090;
 }
 
+.select {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-color: 1px solid #909090;
+}
+
 .imput-imagen {
     width: 100%;
 }
