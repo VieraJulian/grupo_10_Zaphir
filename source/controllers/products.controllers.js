@@ -115,8 +115,8 @@ module.exports = {
                 })
                 await productDB.addColor(colorNew)
             } else if (req.body.color[index] == "" && productDB.colors[index] != undefined) {
-                await color.destroy({ where: { id: productDB.colors[index].id } });
                 await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
+                await color.destroy({ where: { id: productDB.colors[index].id } });
             }
         }
         for (let index = 0; index < req.body.talle.length; index++) {
@@ -134,8 +134,8 @@ module.exports = {
                 })
                 await productDB.addSize(talleNew)
             } else if (req.body.talle[index] == "" && productDB.sizes[index] != undefined) {
-                await size.destroy({ where: { id: productDB.sizes[index].id } })
                 await productsize.destroy({ where: { size_id: productDB.sizes[index].id } })
+                await size.destroy({ where: { id: productDB.sizes[index].id } })
             }
         }
         await productDB.update(req.body)
