@@ -110,7 +110,7 @@ module.exports = {
                     color: req.body.color[index]
                 })
                 await productDB.addColor(colorNew)
-            }else if (c == "" && productDB.colors[index] != undefined) {
+            } else if (c == "" && productDB.colors[index] != undefined) {
                 await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
                 await color.destroy({ where: { id: productDB.colors[index].id } });
             }
@@ -262,20 +262,20 @@ module.exports = {
         if (!productDB) {
             return res.redirect('/productos/')
         }
-        for (let index = 0; index < productDB.images.length; index++) {
+        productDB.images.forEach(async (i, index) => {
             await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
             await image.destroy({ where: { id: productDB.images[index].id } })
             unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
-        }
-        for (let index = 0; index < productDB.colors.length; index++) {
+        })
+        productDB.colors.forEach(async (c, index) => {
             await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
             await color.destroy({ where: { id: productDB.colors[index].id } })
-        }
-        for (let index = 0; index < productDB.sizes.length; index++) {
+        })
+        productDB.sizes.forEach(async (s, index) => {
             await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
             await size.destroy({ where: { id: productDB.sizes[index].id } })
-        }
-        await productDB.destroy()
+        });
+        productDB.destroy()
         return res.redirect('/productos/')
     },
 }
