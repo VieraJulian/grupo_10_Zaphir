@@ -63,11 +63,9 @@ module.exports = {
     },
     edit: async (req, res) => {
         let productDB = await product.findByPk(req.params.id, {
-            include: [
-                { association: "images" },
-                { association: "colors" },
-                { association: "sizes" },
-            ]
+            include: {
+                all: true
+            }
         });
 
         if (!productDB) {
@@ -81,11 +79,9 @@ module.exports = {
     },
     modify: async (req, res) => {
         let productDB = await product.findByPk(req.params.id, {
-            include: [
-                { association: "images" },
-                { association: "colors" },
-                { association: "sizes" },
-            ]
+            include: {
+                all: true
+            }
         });
 
         if (req.files && req.files.length > 0) {
@@ -100,8 +96,8 @@ module.exports = {
                 unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
             }
         }
-        for (let index = 0; index < req.body.color.length; index++) {
-            if (req.body.color[index] != "" && productDB.colors[index] != undefined) {
+        req.body.color.forEach(async (c, index) => {
+            if (c != "" && productDB.colors[index] != undefined) {
                 await color.update({
                     color: req.body.color[index]
                 }, {
@@ -109,18 +105,18 @@ module.exports = {
                         id: productDB.colors[index].id
                     }
                 })
-            } else if (req.body.color[index] != "" && productDB.colors[index] == undefined) {
+            } else if (c != "" && productDB.colors[index] == undefined) {
                 let colorNew = await color.create({
                     color: req.body.color[index]
                 })
                 await productDB.addColor(colorNew)
-            } else if (req.body.color[index] == "" && productDB.colors[index] != undefined) {
+            }else if (c == "" && productDB.colors[index] != undefined) {
                 await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
                 await color.destroy({ where: { id: productDB.colors[index].id } });
             }
-        }
-        for (let index = 0; index < req.body.talle.length; index++) {
-            if (req.body.talle[index] != "" && productDB.sizes[index] != undefined) {
+        });
+        req.body.talle.forEach(async (t, index) => {
+            if (t != "" && productDB.sizes[index] != undefined) {
                 await size.update({
                     size: req.body.talle[index]
                 }, {
@@ -128,16 +124,16 @@ module.exports = {
                         id: productDB.sizes[index].id
                     }
                 })
-            } else if (req.body.talle[index] != "" && productDB.sizes[index] == undefined) {
+            } else if (t != "" && productDB.sizes[index] == undefined) {
                 let talleNew = await size.create({
                     size: req.body.talle[index]
                 })
                 await productDB.addSize(talleNew)
-            } else if (req.body.talle[index] == "" && productDB.sizes[index] != undefined) {
+            } else if (t == "" && productDB.sizes[index] != undefined) {
                 await productsize.destroy({ where: { size_id: productDB.sizes[index].id } })
                 await size.destroy({ where: { id: productDB.sizes[index].id } })
             }
-        }
+        })
         await productDB.update(req.body)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
@@ -197,11 +193,9 @@ module.exports = {
     detalle: async (req, res) => {
 
         let productDB = await product.findByPk(req.params.id, {
-            include: [
-                { association: "images" },
-                { association: "colors" },
-                { association: "sizes" },
-            ]
+            include: {
+                all: true
+            }
         });
         res.render("products/detalle", {
             title: "Detalle de producto",
