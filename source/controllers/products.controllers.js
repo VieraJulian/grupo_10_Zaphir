@@ -214,7 +214,7 @@ module.exports = {
         let products = await product.findAll({
             include: [
                 { association: "images" }
-            ], 
+            ],
             where: {
                 descuento: {
                     [Op.gt]: 0
@@ -222,12 +222,12 @@ module.exports = {
             }
         })
         return res.render("products/ofertas", {
-        title: "Ofertas",
-        styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
-        products: products
-    })
+            title: "Ofertas",
+            styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
+            products: products
+        })
 
-},
+    },
     favoritos: async (req, res) => {
         let productDB = await product.findAll({
             include: [
@@ -241,47 +241,47 @@ module.exports = {
             products: productDB
         })
     },
-        carrito: async (req, res) =>
-            res.render("products/carrito", {
-                title: "Carrito de compras",
-                styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
-            }),
+    carrito: async (req, res) =>
+        res.render("products/carrito", {
+            title: "Carrito de compras",
+            styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
+        }),
 
-            allProducts: async (req, res) => {
-                let productDB = await product.findAll({
-                    include: [
-                        { association: "images" }
-                    ]
-                });
-                res.render("products/allProducts", {
-                    title: "Todos los productos",
-                    styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
-                    products: productDB
-                })
-            },
-                destroid: async (req, res) => {
-                    let productDB = await product.findByPk(req.params.id, {
-                        include: {
-                            all: true
-                        }
-                    });
-                    if (!productDB) {
-                        return res.redirect('/productos/')
-                    }
-                    for (let index = 0; index < productDB.images.length; index++) {
-                        await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
-                        await image.destroy({ where: { id: productDB.images[index].id } })
-                        unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
-                    }
-                    for (let index = 0; index < productDB.colors.length; index++) {
-                        await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
-                        await color.destroy({ where: { id: productDB.colors[index].id } })
-                    }
-                    for (let index = 0; index < productDB.sizes.length; index++) {
-                        await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
-                        await size.destroy({ where: { id: productDB.sizes[index].id } })
-                    }
-                    await productDB.destroy()
-                    return res.redirect('/productos/')
-                },
+    allProducts: async (req, res) => {
+        let productDB = await product.findAll({
+            include: [
+                { association: "images" }
+            ]
+        });
+        res.render("products/allProducts", {
+            title: "Todos los productos",
+            styles: ["products/fav-mobile", "products/fav-tablets", "products/fav-desktop"],
+            products: productDB
+        })
+    },
+    destroid: async (req, res) => {
+        let productDB = await product.findByPk(req.params.id, {
+            include: {
+                all: true
+            }
+        });
+        if (!productDB) {
+            return res.redirect('/productos/')
+        }
+        for (let index = 0; index < productDB.images.length; index++) {
+            await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
+            await image.destroy({ where: { id: productDB.images[index].id } })
+            unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
+        }
+        for (let index = 0; index < productDB.colors.length; index++) {
+            await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
+            await color.destroy({ where: { id: productDB.colors[index].id } })
+        }
+        for (let index = 0; index < productDB.sizes.length; index++) {
+            await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
+            await size.destroy({ where: { id: productDB.sizes[index].id } })
+        }
+        await productDB.destroy()
+        return res.redirect('/productos/')
+    },
 }
