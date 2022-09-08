@@ -152,7 +152,6 @@
                         </section>
                         <section class="section-secundaria">
                             <% products.forEach(element=> { %>
-                                <% if (element.descuento==0) { %>
                                     <article>
                                         <Figure>
                                             <a href="/productos/detalle/<%= element.id %>"><img
@@ -167,23 +166,7 @@
                                             </p>
                                         </section>
                                     </article>
-                                    <% } else { %>
-                                        <article>
-                                            <Figure>
-                                                <a href="/productos/detalle/<%= element.id %>"><img
-                                                        src="/assets/productos/<%= element.images[0].imagen %>"
-                                                        alt="<%= element.nombre %>"></a>
-                                            </Figure>
-                                            <section>
-                                                <p class="article-p">
-                                                    <%= element.nombre %>
-                                                </p>
-                                                <p class="article-precio">$ <%= element.precioFinal %>
-                                                </p>
-                                            </section>
-                                        </article>
-                                        <% } %>
-                                            <% }) %>
+                            <% }) %> 
                         </section>
                     </section>
                     <%- include("../partials/logo-wts.ejs") %>

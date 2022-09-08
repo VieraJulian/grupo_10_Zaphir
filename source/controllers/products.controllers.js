@@ -3,7 +3,6 @@ const { validationResult } = require('express-validator');
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 const { Op } = require("sequelize");
-const { query } = require("express");
 
 module.exports = {
     create: async (req, res) => {
@@ -216,30 +215,13 @@ module.exports = {
             include: [
                 { association: "images" }
             ]
+        }, {
+            where: {
+                descuento: {
+                    [Op.gt]: 0
+                }
+            }
         })
-
-        products = products.filter(products => products.descuento > 0)
-
-        if (req.query && req.query.name) {
-
-            products = products.filter(products => products.nombre.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 || products.categoria.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
-        }
-        if (req.query && req.query.talle) {
-
-            products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
-        }
-        if (req.query && req.query.color) {
-
-            products = products.filter(products => products.colores.indexOf(req.query.color) > -1);
-        }
-        if (req.query && req.query.range) {
-
-            products = products.filter(products => products.precioFinal >= req.query.range);
-        }
-        if (req.params && req.params.categorias) {
-
-            products = products.filter(products => products.categoria.toLowerCase().indexOf(req.params.categorias.toLowerCase()) > -1);
-        }
         return res.render("products/ofertas", {
             title: "Ofertas",
             styles: ["products/productos-mobile", "products/productos-tablets", "products/productos-desktop"],
@@ -260,11 +242,11 @@ module.exports = {
             products: productDB
         })
     },
-    carrito: async (req, res) => 
-    res.render("products/carrito", {
-        title: "Carrito de compras",
-        styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
-    }),
+    carrito: async (req, res) =>
+        res.render("products/carrito", {
+            title: "Carrito de compras",
+            styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
+        }),
 
     allProducts: async (req, res) => {
         let productDB = await product.findAll({

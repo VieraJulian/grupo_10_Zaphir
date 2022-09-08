@@ -9,7 +9,7 @@
                 <% if (products.length> 0) { %>
                     <section class="section-principal">
                         <% products.forEach(element=> { %>
-                            <% if (element.descuento==0) { %>
+                            <% if (element.descuento == null || element.descuento == 0) { %>
                                 <article>
                                     <Figure>
                                         <a href="/productos/detalle/<%= element.id %>"><img
@@ -35,12 +35,12 @@
                                             <p class="article-p">
                                                 <%= element.nombre %>
                                             </p>
-                                            <p class="article-precio">$ <%= element.precioFinal %>
+                                            <p class="article-precio">$ <%= element.precio - element.descuento %>
                                             </p>
                                         </section>
                                     </article>
-                                    <% } %>
-                                        <% }) %>
+                                <% } %>
+                        <% }) %>
                     </section>
                     <%- include("../partials/logo-wts.ejs") %>
                         <% } else { %>
