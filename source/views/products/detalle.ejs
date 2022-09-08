@@ -41,13 +41,12 @@
                             <%= product.nombre %>
                         </h2><span class="corazon"><a href="/productos/favoritos"><i
                                     class="fa-solid fa-heart heart2"></i></a></span>
-                        <% if (product.descuento==0) { %>
+                        <% if (product.descuento == null || product.descuento == 0) { %>
                             <span class="precio">$ <%= product.precio %></span>
                             <% } else { %>
-                                <span class="precio">$ <%= product.precioFinal %></span>
+                                <span class="precio">$ <%= product.precio - product.descuento %></span>
                                 <span class="precio1">$ <%= product.precio %></span><span class="descuento">
-                                    <%= product.porciento %>% OFF
-                                </span>
+                                    <%= (100 / (product.precio / product.descuento)).toFixed(0)%> %OFF</span>
                                 <% } %>
                     </section>
                     <form action="/productos/carrito" method="get" id="agregar-compra">

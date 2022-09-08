@@ -24,14 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     descuento: {
       type: DataTypes.SMALLINT
-    },
-    precioFinal: {
-      type: DataTypes.MEDIUMINT
-    },
-    porciento: {
-      type: DataTypes.TINYINT
     }
-
   }
   let config = {
     tableName: "products",

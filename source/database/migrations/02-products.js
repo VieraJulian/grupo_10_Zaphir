@@ -27,12 +27,6 @@ module.exports = {
         },
         descuento: {
           type: Sequelize.SMALLINT
-        },
-        precioFinal: {
-          type: Sequelize.MEDIUMINT
-        },
-        porciento: {
-          type: Sequelize.TINYINT
         }
       });
     } catch (error) {

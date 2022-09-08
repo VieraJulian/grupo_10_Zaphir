@@ -17,7 +17,6 @@ module.exports = {
       imagesProducts.push(Object({...acumulador[index], image_id: index + 16}));
     }
 
-
     await queryInterface.bulkInsert('imagesProducts', imagesProducts, {});
   },
 

@@ -10,13 +10,11 @@ module.exports = {
 
     let products = index().forEach(p => {
       for (let i = 0; i < p.colores.length; i++) {
-        if (p.colores[i] != "") {
-          let product = {
-            product_id: p.id,
-            color_id: colors.indexOf(p.colores[i]) + 1
-          }
-          acumulador.push(product)
+        let product = {
+          product_id: p.id,
+          color_id: colors.indexOf(p.colores[i]) + 1
         }
+        acumulador.push(product)
       }
     })
     await queryInterface.bulkInsert('productsColors', acumulador, {});

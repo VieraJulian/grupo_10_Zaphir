@@ -23,13 +23,9 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         };
-        function porciento(precio, descuento) {
-            let resultadoDivision = precio / descuento
-            return (100 / resultadoDivision).toFixed(1)
-        };
-
-        req.body.precioFinal = parseInt(req.body.precio - req.body.descuento);
-        req.body.porciento = parseInt(porciento(req.body.precio, req.body.descuento));
+        req.body.color = req.body.color.filter(c => c != "")
+        req.body.talle = req.body.talle.filter(t => t != "")
+        req.body.descuento = req.body.descuento != "" ? req.body.descuento : null
 
         let newProduct = await product.create(req.body)
 
@@ -45,12 +41,10 @@ module.exports = {
             }))
         }
 
-        let colors = await Promise.all(req.body.colores.map(c => {
-            if (c != "") {
-                return color.create({
-                    color: c
-                })
-            }
+        let colors = await Promise.all(req.body.color.map(c => {
+            return color.create({
+                color: c
+            })
         }));
 
         let addProductColors = await Promise.all(colors.map(color => {
@@ -58,17 +52,14 @@ module.exports = {
         }));
 
         let talles = await Promise.all(req.body.talle.map(s => {
-            if (s != "") {
-                return size.create({
-                    size: s
-                })
-            }
+            return size.create({
+                size: s
+            })
         }));
 
         let addProductSizes = await Promise.all(talles.map(talle => {
             return newProduct.addSize(talle)
         }))
-
         res.redirect("/productos")
     },
     edit: async (req, res) => {
@@ -97,13 +88,6 @@ module.exports = {
                 { association: "sizes" },
             ]
         });
-        function porciento(precio, descuento) {
-            let resultadoDivision = precio / descuento
-            return (100 / resultadoDivision).toFixed(1)
-        }
-
-        req.body.precioFinal = parseInt(req.body.precio - req.body.descuento);
-        req.body.porciento = parseInt(porciento(req.body.precio, req.body.descuento));
 
         if (req.files && req.files.length > 0) {
             for (let index = 0; index < productDB.images.length; index++) {
@@ -117,21 +101,21 @@ module.exports = {
                 unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
             }
         }
-        for (let index = 0; index < req.body.colores.length; index++) {
-            if (req.body.colores[index] != "" && productDB.colors[index] != undefined) {
+        for (let index = 0; index < req.body.color.length; index++) {
+            if (req.body.color[index] != "" && productDB.colors[index] != undefined) {
                 await color.update({
-                    color: req.body.colores[index]
+                    color: req.body.color[index]
                 }, {
                     where: {
                         id: productDB.colors[index].id
                     }
                 })
-            } else if (req.body.colores[index] != "" && productDB.colors[index] == undefined) {
+            } else if (req.body.color[index] != "" && productDB.colors[index] == undefined) {
                 let colorNew = await color.create({
-                    color: req.body.colores[index]
+                    color: req.body.color[index]
                 })
                 await productDB.addColor(colorNew)
-            } else if (req.body.colores[index] == "" && productDB.colors[index] != undefined) {
+            } else if (req.body.color[index] == "" && productDB.colors[index] != undefined) {
                 await color.destroy({ where: { id: productDB.colors[index].id } });
                 await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
             }
@@ -192,7 +176,7 @@ module.exports = {
 
             products = products.filter(products => products.precioFinal >= req.query.range);
         }
-        
+
         if (req.params && req.params.categorias) {
             products = await product.findAll({
                 include: [
@@ -223,7 +207,8 @@ module.exports = {
         res.render("products/detalle", {
             title: "Detalle de producto",
             styles: ["products/detalle-mobile", "products/detalle-tablets", "products/detalle-desktop"],
-            product: productDB
+            product: productDB,
+
         })
     },
     ofertas: async (req, res) => {
@@ -275,7 +260,8 @@ module.exports = {
             products: productDB
         })
     },
-    carrito: async (req, res) => res.render("products/carrito", {
+    carrito: async (req, res) => 
+    res.render("products/carrito", {
         title: "Carrito de compras",
         styles: ["products/carrito-mobile", "products/carrito-tablets", "products/carrito-desktop"]
     }),
@@ -301,20 +287,20 @@ module.exports = {
         if (!productDB) {
             return res.redirect('/productos/')
         }
-        await productDB.destroy()
         for (let index = 0; index < productDB.images.length; index++) {
-            await image.destroy({ where: { id: productDB.images[index].id } })
             await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
+            await image.destroy({ where: { id: productDB.images[index].id } })
             unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
         }
         for (let index = 0; index < productDB.colors.length; index++) {
-            await color.destroy({ where: { id: productDB.colors[index].id } })
             await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
+            await color.destroy({ where: { id: productDB.colors[index].id } })
         }
         for (let index = 0; index < productDB.sizes.length; index++) {
-            await size.destroy({ where: { id: productDB.sizes[index].id } })
             await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
+            await size.destroy({ where: { id: productDB.sizes[index].id } })
         }
+        await productDB.destroy()
         return res.redirect('/productos/')
     },
 }
