@@ -5,7 +5,7 @@
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
-                <% if (products.length> 0) { %>
+                <% if (products.length > 0) { %>
                     <section class="section-principal">
                         <section class="section-top">
                             <section class="section-nav">
@@ -144,7 +144,8 @@
                                 </div>
                                 <div>
                                     <input type="checkbox" name="color" id="beige" value="Beige">Beige
-                                </div <p>Precio</p>
+                                </div>
+                                <p>Precio</p>
                                 <input class="range" type="range" name="range" id="range" min="1000" max="50000"
                                     value="1000">
                                 <button class="boton-filtrar">Filtrar</button>
@@ -162,7 +163,7 @@
                                             <p class="article-p">
                                                 <%= element.nombre %>
                                             </p>
-                                            <p class="article-precio">$ <%= element.precio %>
+                                            <p class="article-precio">$ <%= element.precio - element.descuento %>
                                             </p>
                                         </section>
                                     </article>
@@ -176,5 +177,4 @@
             </main>
             <%- include('../partials/footer.ejs') %>
     </body>
-
 </html>

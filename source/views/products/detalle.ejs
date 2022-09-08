@@ -6,15 +6,11 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <section class="imagenes-pequeñas">
-                    <figure>
-                        <img src="/assets/productos/<%= product.images[1].imagen %>" alt="<%= product.nombre %>">
-                    </figure>
-                    <figure>
-                        <img src="/assets/productos/<%= product.images[2].imagen %>" alt="<%= product.nombre %>">
-                    </figure>
-                    <figure>
-                        <img src="/assets/productos/<%= product.images[3].imagen %>" alt="<%= product.nombre %>">
-                    </figure>
+                    <% for( let index = 1; index < product.images.length ; index++ ) { %>
+                        <figure>
+                            <img src="/assets/productos/<%= product.images[index].imagen %>" alt="<%= product.nombre %>">
+                        </figure>
+                    <% } %>
                     <section class="section-descripcion1">
                         <section class="descripcion1">
                             <p class="detalle-titulo">Descripción</p>
