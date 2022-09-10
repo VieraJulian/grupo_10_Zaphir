@@ -35,27 +35,17 @@
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
-                        <% for( let index=0; index < 5; index++ ) { %>
-                            <% if (product.colors[index] !=null) { %>
-                                <input class="input" type="text" name="color" placeholder="Color <%= index %>"
-                                    value="<%= product.colors[index].color %>">
-                                <% } else { %>
-                                    <input class="input" type="text" name="color" placeholder="Color <%= index %>"
-                                        value="<%= product.colors[index] %>">
-                                    <% } %>
-                                        <% } %>
+                            <% let colores = product.colors.map(element => { %>
+                                <% return element.color %>
+                            <% }) %>
+                            <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= colores %>">
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
-                        <% for( let index=0; index < 5; index++ ) { %>
-                            <% if (product.sizes[index] !=null) { %>
-                                <input class="input" type="text" name="talle" placeholder="Talle <%= index %>"
-                                    value="<%= product.sizes[index].size %>">
-                                <% } else { %>
-                                    <input class="input" type="text" name="talle" placeholder="talle <%= index %>"
-                                        value="<%= product.sizes[index] %>">
-                                    <% } %>
-                                        <% } %>
+                            <% let talles = product.sizes.map(element => { %>
+                                <% return element.size %>
+                            <% }) %>
+                            <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= talles %>">
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>

@@ -9,19 +9,29 @@
                 <form action="/productos/crear" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <label>Nombre del producto</label>
-                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" required>
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.nombre : null %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p><%= errors.nombre.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
-                        <textarea name="descripcion" placeholder="Descripción" required></textarea>
+                        <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : null %></textarea>
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <p><%= errors.descripcion.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                        <% if (locals.errors && errors.imagen) { %>
+                            <p><%= errors.imagen.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
                         <select class="select" name="categoria" placeholder="Categoría">
+                            <option value="">Elige una opción</option>
                             <option value="Remeras">Remeras</option>
                             <option value="Buzos">Buzos</option>
                             <option value="Camperas">Camperas</option>
@@ -29,34 +39,44 @@
                             <option value="Pantalones">Pantalones</option>
                             <option value="Jeans">Jeans</option>
                         </select>
+                        <% if (locals.errors && errors.categoria) { %>
+                            <p><%= errors.categoria.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
-                        <input class="input" type="text" name="color" placeholder="Color 1" required>
-                        <input class="input" type="text" name="color" placeholder="Color 2">
-                        <input class="input" type="text" name="color" placeholder="Color 3">
-                        <input class="input" type="text" name="color" placeholder="Color 4">
-                        <input class="input" type="text" name="color" placeholder="Color 5">
+                        <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.color : null %>">
+                        <% if (locals.errors && errors.color) { %>
+                            <p><%= errors.color.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
-                        <input class="input" type="text" name="talle" placeholder="Talle 1" required>
-                        <input class="input" type="text" name="talle" placeholder="Talle 2">
-                        <input class="input" type="text" name="talle" placeholder="Talle 3">
-                        <input class="input" type="text" name="talle" placeholder="Talle 4">
-                        <input class="input" type="text" name="talle" placeholder="Talle 5">
+                        <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.talle : null %>">
+                        <% if (locals.errors && errors.talle) { %>
+                            <p><%= errors.talle.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
-                        <input class="input" type="number" name="stock" placeholder="Stock" required>
+                        <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : null %>">
+                        <% if (locals.errors && errors.stock) { %>
+                            <p><%= errors.stock.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
-                        <input class="input" type="number" name="precio" placeholder="Precio" required>
+                        <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : null %>">
+                        <% if (locals.errors && errors.precio) { %>
+                            <p><%= errors.precio.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
-                        <input class="input" type="number" name="descuento" placeholder="Descuento">
+                        <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : null %>">
+                        <% if (locals.errors && errors.descuento) { %>
+                            <p><%= errors.descuento.msg %></p>
+                        <% } %>
                     </fieldset>
                     <button class="button-crear">
                         Crear

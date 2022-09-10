@@ -15,6 +15,9 @@ module.exports = {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
+            if (req.files && req.files.length > 0) {
+                req.files.forEach(file => { unlinkSync(resolve(__dirname, "../../public/assets/productos/" + file.filename)) })
+            }
             return res.render("products/create", {
                 title: "Nuevo producto",
                 styles: ["products/create-mobile"],
@@ -22,8 +25,8 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         };
-        req.body.color = req.body.color.filter(c => c != "")
-        req.body.talle = req.body.talle.filter(t => t != "")
+        req.body.color = req.body.color.split(",")
+        req.body.talle = req.body.talle.split(",")
         req.body.descuento = req.body.descuento != "" ? req.body.descuento : null
 
         let newProduct = await product.create(req.body)
@@ -83,7 +86,6 @@ module.exports = {
                 all: true
             }
         });
-
         if (req.files && req.files.length > 0) {
             for (let index = 0; index < productDB.images.length; index++) {
                 await image.update({
@@ -96,8 +98,11 @@ module.exports = {
                 unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
             }
         }
-        req.body.color.forEach(async (c, index) => {
-            if (c != "" && productDB.colors[index] != undefined) {
+        req.body.color = req.body.color.split(",").filter(c => c != "")
+        req.body.talle = req.body.talle.split(",").filter(t => t != "")
+
+        for (let index = 0; index < 12; index++) {
+            if (productDB.colors[index] != undefined && req.body.color[index] != undefined) {
                 await color.update({
                     color: req.body.color[index]
                 }, {
@@ -105,18 +110,19 @@ module.exports = {
                         id: productDB.colors[index].id
                     }
                 })
-            } else if (c != "" && productDB.colors[index] == undefined) {
+            } else if (productDB.colors[index] == undefined && req.body.color[index] != undefined) {
                 let colorNew = await color.create({
                     color: req.body.color[index]
                 })
                 await productDB.addColor(colorNew)
-            } else if (c == "" && productDB.colors[index] != undefined) {
+            } else if (productDB.colors[index] != undefined && req.body.color[index] == undefined) {
                 await productcolor.destroy({ where: { color_id: productDB.colors[index].id } });
                 await color.destroy({ where: { id: productDB.colors[index].id } });
             }
-        });
-        req.body.talle.forEach(async (t, index) => {
-            if (t != "" && productDB.sizes[index] != undefined) {
+        }
+
+        for (let index = 0; index < 6; index++) {
+            if (productDB.sizes[index] != undefined && req.body.talle[index] != undefined) {
                 await size.update({
                     size: req.body.talle[index]
                 }, {
@@ -124,16 +130,17 @@ module.exports = {
                         id: productDB.sizes[index].id
                     }
                 })
-            } else if (t != "" && productDB.sizes[index] == undefined) {
+            } else if (productDB.sizes[index] == undefined && req.body.talle[index] != undefined) {
                 let talleNew = await size.create({
                     size: req.body.talle[index]
                 })
                 await productDB.addSize(talleNew)
-            } else if (t == "" && productDB.sizes[index] != undefined) {
+            } else if (productDB.sizes[index] != undefined && req.body.talle[index] == undefined) {
                 await productsize.destroy({ where: { size_id: productDB.sizes[index].id } })
                 await size.destroy({ where: { id: productDB.sizes[index].id } })
             }
-        })
+        }
+
         await productDB.update(req.body)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
@@ -159,7 +166,7 @@ module.exports = {
                 limit: 9
             });
         }
-        /* if (req.query && req.query.talle) {.
+        /* if (req.query && req.query.talle) {
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }

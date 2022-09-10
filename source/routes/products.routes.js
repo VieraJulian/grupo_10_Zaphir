@@ -6,9 +6,10 @@ const storage = require("../modules/storage")
 const upload = multer({ storage: storage("public/assets/productos") });
 const isAdmin = require("../middlewares/isAdmin");
 const isLogged = require("../middlewares/isLogged");
+const createMiddleware = require("../middlewares/create.middlewares")
 
 router.get("/crear", [isLogged, isAdmin], create);
-router.post("/crear", [upload.any()], save)
+router.post("/crear", createMiddleware, save)
 router.get("/editar/:id", [isLogged, isAdmin], edit);
 router.put("/editar/:id", [upload.any()], modify);
 router.get("/vistas", [isLogged, isAdmin], allProducts)
