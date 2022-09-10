@@ -159,7 +159,7 @@ module.exports = {
                 limit: 9
             });
         }
-        /* if (req.query && req.query.talle) {
+        /* if (req.query && req.query.talle) {.
 
             products = products.filter(products => products.talle.indexOf(req.query.talle) > -1);
         }
