@@ -9,16 +9,24 @@
                 <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <label>Nombre del producto</label>
-                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto"
-                            value="<%= product.nombre %>">
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.nombre : product.nombre %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p><%= errors.nombre.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
-                        <textarea name="descripcion" placeholder="Descripción"><%= product.descripcion %></textarea>
+                        <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <p><%= errors.descripcion.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                        <% if (locals.errors && errors.imagen) { %>
+                            <p><%= errors.imagen.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
@@ -32,35 +40,50 @@
                                     <% } %>
                                 <% } %>
                         </select>
+                        <% if (locals.errors && errors.categoria) { %>
+                            <p><%= errors.categoria.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
                             <% let colores = product.colors.map(element => { %>
                                 <% return element.color %>
                             <% }) %>
-                            <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= colores %>">
+                            <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.color : colores %>">
+                            <% if (locals.errors && errors.color) { %>
+                                <p><%= errors.color.msg %></p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
                             <% let talles = product.sizes.map(element => { %>
                                 <% return element.size %>
                             <% }) %>
-                            <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= talles %>">
+                            <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.talle : talles %>">
+                            <% if (locals.errors && errors.talle) { %>
+                                <p><%= errors.talle.msg %></p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
-                        <input class="input" type="number" name="stock" placeholder="Stock"
-                            value="<%= product.stock %>">
+                        <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : product.stock %>">
+                            <% if (locals.errors && errors.stock) { %>
+                                <p><%= errors.stock.msg %></p>
+                            <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
-                        <input class="input" type="number" name="precio" placeholder="Precio"
-                            value="<%= product.precio %>">
+                        <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : product.precio %>">
+                        <% if (locals.errors && errors.precio) { %>
+                            <p><%= errors.precio.msg %></p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
-                        <input class="input" type="number" name="descuento" placeholder="Descuento"
-                            value="<%= product.descuento %>">
+                        <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : product.descuento %>">
+                        <% if (locals.errors && errors.descuento) { %>
+                            <p><%= errors.descuento.msg %></p>
+                        <% } %>
                     </fieldset>
                     <button class="button-editar">
                         Editar

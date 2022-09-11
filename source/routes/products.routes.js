@@ -6,12 +6,13 @@ const storage = require("../modules/storage")
 const upload = multer({ storage: storage("public/assets/productos") });
 const isAdmin = require("../middlewares/isAdmin");
 const isLogged = require("../middlewares/isLogged");
-const createMiddleware = require("../middlewares/create.middlewares")
+const createMiddleware = require("../middlewares/create.middlewares");
+const modifyMiddleware = require("../middlewares/modify.middlewares")
 
 router.get("/crear", [isLogged, isAdmin], create);
 router.post("/crear", createMiddleware, save)
 router.get("/editar/:id", [isLogged, isAdmin], edit);
-router.put("/editar/:id", [upload.any()], modify);
+router.put("/editar/:id", modifyMiddleware, modify);
 router.get("/vistas", [isLogged, isAdmin], allProducts)
 router.get("/favoritos", [isLogged], favoritos)
 router.get("/carrito", isLogged, carrito);

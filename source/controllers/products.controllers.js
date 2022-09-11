@@ -15,9 +15,9 @@ module.exports = {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
-            if (req.files && req.files.length > 0) {
+            /* if (req.files && req.files.length > 0) {
                 req.files.forEach(file => { unlinkSync(resolve(__dirname, "../../public/assets/productos/" + file.filename)) })
-            }
+            } */
             return res.render("products/create", {
                 title: "Nuevo producto",
                 styles: ["products/create-mobile"],
@@ -86,6 +86,21 @@ module.exports = {
                 all: true
             }
         });
+        let validaciones = validationResult(req)
+        let { errors } = validaciones
+        if (errors && errors.length > 0) {
+            /* if (req.files && req.files.length > 0) {
+                req.files.forEach(file => { unlinkSync(resolve(__dirname, "../../public/assets/productos/" + file.filename)) })
+            } */
+            return res.render("products/edit", {
+                title: "Editar producto",
+                styles: ["products/edit-mobile"],
+                oldData: req.body,
+                errors: validaciones.mapped(),
+                product: productDB
+            });
+        };
+
         if (req.files && req.files.length > 0) {
             for (let index = 0; index < productDB.images.length; index++) {
                 await image.update({
