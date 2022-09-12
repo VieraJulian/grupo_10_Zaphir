@@ -41,6 +41,7 @@ form fieldset {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
+    outline: none;
 }
 
 .form-email {
@@ -52,6 +53,7 @@ form fieldset {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
+    outline: none;
 }
 
 .form-tel {
@@ -63,6 +65,7 @@ form fieldset {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
+    outline: none;
 }
 
 .form-password {
@@ -74,6 +77,7 @@ form fieldset {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
+    outline: none;
 }
 
 .form-confirm {
@@ -85,6 +89,7 @@ form fieldset {
     border-color: 1px solid #909090;
     height: 40px;
     padding: 10px 12px;
+    outline: none;
 }
 
 .form-button {
@@ -145,10 +150,42 @@ fieldset {
     background-color: #1bd741
 }
 
-.msg-error {
+/* .msg-error {
     margin-top: 10px;
     color: red;
     text-align: center;
+} */
+
+.feed {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feed.invalid {
+    display: block;
+    color: red;
+}
+
+.feed.valid {
+    display: block;
+    color: #0d9829
+}
+
+.feedTel {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feedTel.invalid {
+    display: block;
+    color: red;
+}
+
+.feedTel.valid {
+    display: block;
+    color: #0d9829
 }
 
 @media screen and (min-width: 580px) {

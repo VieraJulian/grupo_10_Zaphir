@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script defer src="/scripts/register.js"></script>
 
     <body>
         <%- include("../partials/header.ejs") %>
@@ -9,50 +11,35 @@
                     <h1>Crear cuenta</h1>
                     <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
                 </section>
-                <form action="/usuario/registro" method="post">
+                <form action="/usuario/registro" method="post" id="form">
                     <fieldset class="form-name">
                         <label for="nombre">Nombre y apellido</label>
                         <input type="text" name="nombre" id="nombre" placeholder="ej: Juan Perez"
                             value="<%= locals.errors ? oldData.nombre : null %>">
-                        <% if (locals.errors && errors.nombre) { %>
-                            <p class="msg-error">
-                                <%= errors.nombre.msg %>
-                            </p>
-                            <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset class="form-email">
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" placeholder="ej: tunombre@email.com"
                             value="<%= locals.errors ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <p class="msg-error">
-                                <%= errors.email.msg %>
-                            </p>
-                            <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset class="form-tel">
                         <label>Teléfono (opcional)</label>
                         <input type="tel" name="telefono" id="tel" placeholder="ej: 1123445567">
+                        <p class="feedTel"></p>
                     </fieldset>
                     <fieldset class="form-password">
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password"
                             value="<%= locals.errors ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>
-                            <p class="msg-error">
-                                <%= errors.password.msg %>
-                            </p>
-                            <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset class="form-confirm">
                         <label for="contraseña">Confirmar contraseña</label>
                         <input type="password" name="passwordConfirm" id="confirm-password"
                             value="<%= locals.errors ? oldData.passwordConfirm : null %>">
-                        <% if (locals.errors && errors.passwordConfirm) { %>
-                            <p class="msg-error">
-                                <%= errors.passwordConfirm.msg %>
-                            </p>
-                            <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset class="form-button">
                         <button>Crear cuenta</button>
