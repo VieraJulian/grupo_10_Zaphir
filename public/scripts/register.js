@@ -1,5 +1,6 @@
 let forms = document.forms.form;
 let inputs = forms.elements
+console.log(forms)
 
 inputs.nombre.addEventListener('input', function (e) {
     let field = e.target.parentElement;
@@ -67,16 +68,16 @@ inputs.password.addEventListener("input", function (e) {
     let feed = field.querySelector(".feed")
     let msg = null
     let config = {
-        minLength: 7,
+        minLength: 8,
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1,
         minSymbols: 1
     }
-    if (!validator.isLength(value, { min: 7 })) {
-        msg = "No tienes suficientes caracteres"
+    if (!validator.isLength(value, { min: 8 })) {
+        msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "Debe contener 1 número, 1 mayúscula y 1 caracter especial"
+        msg = "Debe contener un número, una mayúscula y un caracter especial"
     }
 
     const callbackChange = () => {
@@ -102,16 +103,16 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
     let feed = field.querySelector(".feed")
     let msg = null
     let config = {
-        minLength: 7,
+        minLength: 8,
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1,
         minSymbols: 1
     }
-    if (!validator.isLength(value, { min: 7 })) {
-        msg = "No tienes suficientes caracteres"
+    if (!validator.isLength(value, { min: 8 })) {
+        msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "Debe contener 1 número, 1 mayúscula y 1 caracter especial"
+        msg = "Debe contener un número, una mayúscula y un caracter especial"
     }
 
     const callbackChange = () => {
