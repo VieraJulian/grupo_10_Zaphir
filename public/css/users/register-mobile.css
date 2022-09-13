@@ -188,6 +188,22 @@ fieldset {
     color: #0d9829
 }
 
+.feedForm {
+    text-align: center;
+    color: red;
+    margin-top: 1rem;
+    border: 1px solid red;
+    width: 100%;
+    border-color: 1px solid red;
+    height: 40px;
+    padding: 10px 12px;
+    display: none;
+}
+
+.feedForm.invalid {
+    display: block;
+}
+
 @media screen and (min-width: 580px) {
     main {
         margin: auto;

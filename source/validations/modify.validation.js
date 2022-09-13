@@ -8,7 +8,7 @@ const modify = [
     body("imagen").custom((value, { req }) => {
         let imagen = req.files;
         if (!imagen || imagen.length == 0) {
-            throw new Error("La imagen no puede quedar vacía")
+            return true
         }
         if (imagen.length < 4) {
             imagen.forEach(i => {

@@ -1,13 +1,15 @@
 let forms = document.forms.form;
 let inputs = forms.elements
-console.log(forms)
 
 inputs.nombre.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value;
     let feed = field.querySelector(".feed")
     let msg = null;
-    if (!validator.isLength(value, { min: 2 })) {
+
+    if (value.length === 0) {
+        msg = "El nombre no puede quedar vació"
+    } else if (!validator.isLength(value, { min: 2 })) {
         msg = "El nombre debe contener mínimo dos caracteres"
     }
     if (msg) {
@@ -26,7 +28,10 @@ inputs.email.addEventListener("input", function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null
-    if (!validator.isLength(value, { min: 7 })) {
+
+    if (value.length === 0) {
+        msg = "El email no puede quedar vació"
+    } else if (!validator.isLength(value, { min: 7 })) {
         msg = "No tienes suficientes caracteres"
     } else if (!validator.isEmail(value)) {
         msg = "No es un email valido"
@@ -47,10 +52,19 @@ inputs.telefono.addEventListener("input", function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feedTel")
     let msg = null
+    let vacio = false
+
+    if (value.length === 0) {
+        vacio = true
+    }
     if (!validator.isNumeric(value)) {
         msg = "Ingrese un número"
     }
-    if (msg) {
+
+    if (vacio) {
+        feed.classList.remove("valid")
+        feed.classList.remove("invalid")
+    } else if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
         feed.innerText = msg;
@@ -74,7 +88,9 @@ inputs.password.addEventListener("input", function (e) {
         minNumbers: 1,
         minSymbols: 1
     }
-    if (!validator.isLength(value, { min: 8 })) {
+    if (value.length === 0) {
+        msg = "La contraseña no puede quedar vacía"
+    } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
         msg = "Debe contener un número, una mayúscula y un caracter especial"
@@ -109,7 +125,9 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
         minNumbers: 1,
         minSymbols: 1
     }
-    if (!validator.isLength(value, { min: 8 })) {
+    if (value.length === 0) {
+        msg = "La contraseña no puede quedar vacía"
+    } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
         msg = "Debe contener un número, una mayúscula y un caracter especial"
