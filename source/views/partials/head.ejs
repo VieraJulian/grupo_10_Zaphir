@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/css/footer-mobile.css">
     <link rel="stylesheet" href="/css/footer-tablets.css">
     <link rel="stylesheet" href="/css/footer-desktop.css">
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script defer src = "/scripts/login.validation.js"></script>
     <% if(styles && styles.length> 0) { %>
         <% styles.forEach(styles=> { %>
             <link rel="stylesheet" href="/css/<%= styles %>.css">

@@ -30,7 +30,7 @@ inputs.email.addEventListener("input", function (e) {
     let msg = null
 
     if (value.length === 0) {
-        msg = "El email no puede quedar vació"
+        msg = "El email no puede quedar vacío"
     } else if (!validator.isLength(value, { min: 7 })) {
         msg = "No tienes suficientes caracteres"
     } else if (!validator.isEmail(value)) {
@@ -82,7 +82,7 @@ inputs.password.addEventListener("input", function (e) {
     let feed = field.querySelector(".feed")
     let msg = null
     let config = {
-        minLength: 8,
+        minLength: 4,
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1,
@@ -93,7 +93,7 @@ inputs.password.addEventListener("input", function (e) {
     } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "Debe contener un número, una mayúscula y un caracter especial"
+        msg = "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
     }
 
     const callbackChange = () => {
@@ -130,7 +130,7 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
     } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "Debe contener un número, una mayúscula y un caracter especial"
+        msg = "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
     }
 
     const callbackChange = () => {

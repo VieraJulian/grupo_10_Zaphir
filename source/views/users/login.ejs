@@ -8,7 +8,7 @@
                 <section class="login">
                     <h1> Inicia sesión </h1>
                 </section>
-                <form action="/usuario/ingresar" method="POST">
+                <form action="/usuario/ingresar" method="POST" id = "login">
                     <fieldset class="NombreUsuario">
                         <label class="label">E-mail</label>
                         <input type="text" name="email" id="nombre"
@@ -18,6 +18,7 @@
                                 <%= errors.email.msg %>
                             </p>
                             <% } %>
+                            <p class = "emailLogin"></p>
                     </fieldset>
                     <fieldset class="Contraseña">
                         <label class="label">Contraseña</label>
@@ -28,6 +29,7 @@
                                 <%= errors.password.msg %>
                             </p>
                             <% } %>
+                            <p class = "passwordLogin"></p>
                     </fieldset>
                     <div>
                         <label for="recordame">Recordarme</label>

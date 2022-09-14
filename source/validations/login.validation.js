@@ -10,7 +10,7 @@ const login = [
         }
         return true
     }),
-    body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({ min: 4 }).withMessage("la contraseña debe contener mínimo cuatro caracteres").bail().custom(async (value, { req }) => {
+    body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({ min: 8 }).withMessage("la contraseña debe contener mínimo ocho caracteres").bail().custom(async (value, { req }) => {
         let { email } = req.body
         let users = await user.findAll()
         let userDB = users.find(u => u.email === email)
