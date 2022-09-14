@@ -1,4 +1,4 @@
-let form = document.forms.form 
+/* let form = document.forms.form 
 let inputs = form.elements;
 
 inputs.email.addEventListener("input", (e) => {
@@ -79,3 +79,4 @@ form.addEventListener("submit", (e) => {
 
 
 
+ */

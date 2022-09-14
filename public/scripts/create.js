@@ -1,5 +1,6 @@
 let forms = document.forms.form;
 let inputs = forms.elements
+console.log(forms)
 
 inputs.nombre.addEventListener('input', function (e) {
     let field = e.target.parentElement;
@@ -47,7 +48,7 @@ inputs.descripcion.addEventListener('input', function (e) {
 inputs.imagen.addEventListener("change", function (e) {
     let field = e.target.parentElement
     let files = e.target.files
-    let feed = field.querySelector(".feedImage")
+    let feed = field.querySelector(".feed")
     let msg = null
 
     if (files.length < 4) {
@@ -76,7 +77,7 @@ inputs.imagen.addEventListener("change", function (e) {
 inputs.categoria.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value;
-    let feed = field.querySelector(".feedCat")
+    let feed = field.querySelector(".feed")
     let msg = null;
     if (value.length === 0) {
         msg = "La categoría no puede quedar vacía"
@@ -221,7 +222,7 @@ forms.addEventListener("submit", function (e) {
     e.preventDefault()
     let isCorrect = false
     
-    if (e.target.querySelectorAll(".feed.valid").length == 6 && e.target.querySelectorAll(".feedSale.invalid").length != 1) {
+    if (e.target.querySelectorAll(".feed.valid").length >= 8 && e.target.querySelectorAll(".feedSale.invalid").length != 1) {
         isCorrect = true
     }
     if (isCorrect) {

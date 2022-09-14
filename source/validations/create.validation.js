@@ -23,7 +23,7 @@ const create = [
             throw new Error("Subiste demasiadas imagenes")
         }
 
-        let extensiones = [".svg", ".jpg", ".png", ".jpeg", ".gif"]
+        let extensiones = [".jpg", ".png", ".jpeg", ".gif"]
         let extension = imagen.map(i => {
             return extname(i.filename)
         });
@@ -33,7 +33,7 @@ const create = [
                 imagen.forEach(i => {
                     unlinkSync(resolve(__dirname, "../../public/assets/productos/" + i.filename))
                 });
-                throw new Error("La extension debería ser '.svg', '.jpg', '.png', '.jpeg', '.gif'")
+                throw new Error("La extension debería ser '.jpg', '.png', '.jpeg', '.gif'")
             }
         })
 

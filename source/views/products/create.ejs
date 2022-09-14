@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script defer src="/scripts/create.js"></script>
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
                 <h1>Nuevo producto</h1>
-                <form action="/productos/crear" method="post" enctype="multipart/form-data">
+                <form action="/productos/crear" method="post" enctype="multipart/form-data" id="form">
                     <fieldset>
                         <label>Nombre del producto</label>
                         <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.nombre : null %>">
-                        <% if (locals.errors && errors.nombre) { %>
-                            <p><%= errors.nombre.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
                         <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : null %></textarea>
-                        <% if (locals.errors && errors.descripcion) { %>
-                            <p><%= errors.descripcion.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
-                        <% if (locals.errors && errors.imagen) { %>
-                            <p><%= errors.imagen.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
@@ -39,44 +34,32 @@
                             <option value="Pantalones">Pantalones</option>
                             <option value="Jeans">Jeans</option>
                         </select>
-                        <% if (locals.errors && errors.categoria) { %>
-                            <p><%= errors.categoria.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
                         <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.color : null %>">
-                        <% if (locals.errors && errors.color) { %>
-                            <p><%= errors.color.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
                         <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.talle : null %>">
-                        <% if (locals.errors && errors.talle) { %>
-                            <p><%= errors.talle.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
                         <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : null %>">
-                        <% if (locals.errors && errors.stock) { %>
-                            <p><%= errors.stock.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
                         <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : null %>">
-                        <% if (locals.errors && errors.precio) { %>
-                            <p><%= errors.precio.msg %></p>
-                        <% } %>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
                         <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : null %>">
-                        <% if (locals.errors && errors.descuento) { %>
-                            <p><%= errors.descuento.msg %></p>
-                        <% } %>
+                        <p class="feedSale"></p>
                     </fieldset>
                     <button class="button-crear">
                         Crear
