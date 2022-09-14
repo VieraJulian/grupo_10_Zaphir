@@ -11,17 +11,17 @@
                     <fieldset>
                         <label>Nombre del producto</label>
                         <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.nombre : product.nombre %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
                         <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
@@ -35,7 +35,7 @@
                                     <% } %>
                                 <% } %>
                         </select>
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
@@ -43,7 +43,7 @@
                                 <% return element.color %>
                             <% }) %>
                             <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.color : colores %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
@@ -51,22 +51,22 @@
                                 <% return element.size %>
                             <% }) %>
                             <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.talle : talles %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
                         <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : product.stock %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
                         <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : product.precio %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
                         <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : product.descuento %>">
-                        <p class="feed">Holaa</p>
+                        <p class="feedSale"></p>
                     </fieldset>
                     <button class="button-editar">
                         Editar

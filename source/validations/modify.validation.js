@@ -57,8 +57,8 @@ const modify = [
         }
         
         colores.forEach(c => {
-            if (c.length < 2) {
-                throw new Error("Los colores deben tener más de dos caracteres");
+            if (c.length < 3) {
+                throw new Error("Los colores deben tener más de tres caracteres");
             }
         })
 
@@ -76,13 +76,13 @@ const modify = [
     }),
     body("stock").notEmpty().withMessage("El stock no debe quedar vació").bail().isNumeric().withMessage("El stock debe ser un numero").bail().custom(value => {
         if (value <= 0) {
-            throw new Error("El stock debe ser mayor a 0");
+            throw new Error("El stock debe ser mayor a cero");
         }
         return true
     }),
     body("precio").notEmpty().withMessage("El precio no debe quedar vació").bail().isNumeric().withMessage("El precio debe ser un numero").bail().custom(value => {
         if (value <= 0) {
-            throw new Error("El precio debe ser mayor a 0");
+            throw new Error("El precio debe ser mayor a cero");
         }
         return true
     })

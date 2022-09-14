@@ -6,6 +6,7 @@ inputs.nombre.addEventListener('input', function (e) {
     let value = e.target.value;
     let feed = field.querySelector(".feed")
     let msg = null;
+    console.log(feed);
 
     if (value.length === 0) {
         msg = "El nombre no puede quedar vació"
@@ -82,7 +83,7 @@ inputs.password.addEventListener("input", function (e) {
     let feed = field.querySelector(".feed")
     let msg = null
     let config = {
-        minLength: 4,
+        minLength: 8,
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1,
@@ -93,7 +94,7 @@ inputs.password.addEventListener("input", function (e) {
     } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+        msg = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial"
     }
 
     const callbackChange = () => {
@@ -130,7 +131,7 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
     } else if (!validator.isLength(value, { min: 8 })) {
         msg = "La contraseña debe contener mínimo ocho caracteres"
     } else if (!validator.isStrongPassword(value, config)) {
-        msg = "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial"
+        msg = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial"
     }
 
     const callbackChange = () => {
@@ -149,10 +150,10 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
     }
 })
 
-form.addEventListener("submit", function (e) {
+forms.addEventListener("submit", function (e) {
     e.preventDefault()
     let isCorrect = false
-
+    
     if (e.target.querySelectorAll(".feed.valid").length == 4 && e.target.querySelectorAll(".feedTel.invalid").length != 1) {
         isCorrect = true
     }

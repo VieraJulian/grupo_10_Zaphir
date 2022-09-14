@@ -52,12 +52,16 @@ inputs.imagen.addEventListener("change", function (e) {
 
     if (files.length < 4) {
         msg = "Debes subir cuatro imágenes"
-    } else if (!validator.isMimeType(files[0].type)) {
-        msg = "No es un formato valido"
-    } else if (!["jpg", "gif", "png", "jpeg"].includes(files[0].type.split("/")[1])) {
-        msg = "No es un formato valido"
-
+    } else if (files.length > 4){
+        msg = "Subiste demasiadas imagenes"
     }
+
+    for (let index = 0; index < files.length; index++) {
+        if (!["jpg", "gif", "png", "jpeg"].includes(files[index].type.split("/")[1])) {
+            msg = "No es un formato valido"
+        }
+    }
+
     if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
@@ -69,13 +73,68 @@ inputs.imagen.addEventListener("change", function (e) {
     }
 })
 
-inputs.categoria.addEventListener('input', function (e) {
+inputs.color.addEventListener('input', function (e) {
     let field = e.target.parentElement;
-    let value = e.target.value;
+    let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null;
-    if (value === undefined) {
-        msg = "Debes seleccionar una categoría"
+    
+    if (value.length === 0) {
+        msg = "Los colores no pueden quedar vacíos"
+    } else if (value.split(",").length > 12) {
+        msg = "Los colores no pueden ser más de doce";
+    }
+
+    value.split(",").forEach(c => {
+        if (c.length > 0 && c.length < 3) {
+            msg = "Los colores deben tener más de tres caracteres";
+        }
+    })
+
+    if (msg) {
+        feed.classList.remove("valid")
+        feed.classList.add("invalid")
+        feed.innerText = msg;
+    } else {
+        feed.classList.remove("invalid")
+        feed.classList.add("valid")
+        feed.innerText = "El campo es correcto"
+    }
+});
+
+inputs.talle.addEventListener('input', function (e) {
+    let field = e.target.parentElement;
+    let value = e.target.value
+    let feed = field.querySelector(".feed")
+    let msg = null;
+    
+    if (value.length === 0) {
+        msg = "Los talles no pueden quedar vacíos"
+    } else if (value.split(",").length > 6) {
+        msg = "Los talles no pueden ser más de seis";
+    }
+
+    if (msg) {
+        feed.classList.remove("valid")
+        feed.classList.add("invalid")
+        feed.innerText = msg;
+    } else {
+        feed.classList.remove("invalid")
+        feed.classList.add("valid")
+        feed.innerText = "El campo es correcto"
+    }
+});
+
+inputs.stock.addEventListener('input', function (e) {
+    let field = e.target.parentElement;
+    let value = e.target.value
+    let feed = field.querySelector(".feed")
+    let msg = null;
+    
+    if (value.length === 0) {
+        msg = "El stock no puede quedar vació"
+    } else if (value <= 0) {
+        msg = "El stock debe ser mayor a cero"
     }
     if (msg) {
         feed.classList.remove("valid")
@@ -85,5 +144,67 @@ inputs.categoria.addEventListener('input', function (e) {
         feed.classList.remove("invalid")
         feed.classList.add("valid")
         feed.innerText = "El campo es correcto"
+    }
+});
+
+inputs.precio.addEventListener('input', function (e) {
+    let field = e.target.parentElement;
+    let value = e.target.value
+    let feed = field.querySelector(".feed")
+    let msg = null;
+    
+    if (value.length === 0) {
+        msg = "El precio no puede quedar vació"
+    } else if (value <= 0) {
+        msg = "El precio debe ser mayor a cero"
+    }
+    if (msg) {
+        feed.classList.remove("valid")
+        feed.classList.add("invalid")
+        feed.innerText = msg;
+    } else {
+        feed.classList.remove("invalid")
+        feed.classList.add("valid")
+        feed.innerText = "El campo es correcto"
+    }
+});
+
+inputs.descuento.addEventListener("input", function (e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".feedSale")
+    let msg = null
+    let vacio = false
+
+    if (value.length === 0) {
+        vacio = true
+    }
+    if (!validator.isNumeric(value)) {
+        msg = "Ingrese un número"
+    }
+
+    if (vacio) {
+        feed.classList.remove("valid")
+        feed.classList.remove("invalid")
+    } else if (msg) {
+        feed.classList.remove("valid")
+        feed.classList.add("invalid")
+        feed.innerText = msg;
+    } else {
+        feed.classList.remove("invalid")
+        feed.classList.add("valid")
+        feed.innerText = "El campo es correcto"
+    }
+})
+
+forms.addEventListener("submit", function (e) {
+    e.preventDefault()
+    let isCorrect = false
+    
+    if (e.target.querySelectorAll(".feed.valid").length == 4 && e.target.querySelectorAll(".feedSale.invalid").length != 1) {
+        isCorrect = true
+    }
+    if (isCorrect) {
+        e.target.submit()
     }
 });

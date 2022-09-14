@@ -109,6 +109,22 @@ textarea {
     color: #0d9829
 }
 
+.feedSale {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feedSale.invalid {
+    display: block;
+    color: red;
+}
+
+.feedSale.valid {
+    display: block;
+    color: #0d9829
+}
+
 @media screen and (min-width: 580px) {
     main {
         margin: auto;
