@@ -1,4 +1,4 @@
-/* let form = document.forms.form 
+let form = document.forms.form
 let inputs = form.elements;
 
 inputs.email.addEventListener("input", (e) => {
@@ -10,18 +10,20 @@ inputs.email.addEventListener("input", (e) => {
 
   if (value.length === 0) {
     msg = "El email no puede quedar vacío";
+  } else if (!validator.isLength(value, { min: 7 })) {
+    msg = "No tienes suficientes caracteres"
   } else if (!validator.isEmail(value)) {
-    msg = "El email debe tener formato de email";
+    msg = "No es un email valido"
   }
 
   if (msg) {
-    box.classList.remove("valid");
-    box.classList.add("invalid");
+    feed.classList.remove("valid");
+    feed.classList.add("invalid");
     feed.innerText = msg;
   } else {
-    box.classList.remove("invalid");
-    box.classList.add("valid");
-    feed.innerText = "";
+    feed.classList.remove("invalid");
+    feed.classList.add("valid");
+    feed.innerText = "El campo es correcto"
   }
 });
 
@@ -32,11 +34,14 @@ inputs.password.addEventListener("input", (e) => {
   let feed = fieldset.querySelector(".passwordLogin");
   let msg = null;
 
-  if (!validator.isLength(value, { min: 8 })) {
+
+  if (value.length === 0) {
+    msg = "La contraseña no puede quedar vacía"
+  } else if (!validator.isLength(value, { min: 8 })) {
     msg = "La contraseña debe tener como mínimo 8 caracteres";
   } else if (
     !validator.isStrongPassword(value, {
-      minLength: 4,
+      minLength: 8,
       minLowercase: 1,
       minUppercase: 1,
       minNumbers: 1,
@@ -44,18 +49,17 @@ inputs.password.addEventListener("input", (e) => {
       returnScore: false,
     })
   ) {
-    msg =
-      "La contraseña debe contener al menos una letra mayuscula, una letra minuscula, un numero y un caracter especial";
+    msg = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial";
   }
 
   if (msg) {
-    box.classList.remove("valid");
-    box.classList.add("invalid");
+    feed.classList.remove("valid");
+    feed.classList.add("invalid");
     feed.innerText = msg;
   } else {
-    box.classList.remove("invalid");
-    box.classList.add("valid");
-    feed.innerText = "";
+    feed.classList.remove("invalid");
+    feed.classList.add("valid");
+    feed.innerText = "El campo es correcto"
   }
 });
 
@@ -79,4 +83,3 @@ form.addEventListener("submit", (e) => {
 
 
 
- */

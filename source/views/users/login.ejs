@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script defer src="/scripts/login.js"></script>
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
                 <section class="login">
                     <h1> Inicia sesión </h1>
                 </section>
-                <form action="/usuario/ingresar" method="POST" id = "login">
+                <form action="/usuario/ingresar" method="POST" id ="form">
                     <fieldset class="NombreUsuario">
                         <label class="label">E-mail</label>
                         <input type="text" name="email" id="nombre"
                             value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <p class="msg-error">
-                                <%= errors.email.msg %>
-                            </p>
-                            <% } %>
-                            <p class = "emailLogin"></p>
+                        <p class ="emailLogin"></p>
                     </fieldset>
                     <fieldset class="Contraseña">
                         <label class="label">Contraseña</label>
                         <input type="password" name="password" id="password"
                             value="<%= locals.oldData ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>
-                            <p class="msg-error">
-                                <%= errors.password.msg %>
-                            </p>
-                            <% } %>
-                            <p class = "passwordLogin"></p>
+                        <p class ="passwordLogin"></p>
                     </fieldset>
                     <div>
                         <label for="recordame">Recordarme</label>

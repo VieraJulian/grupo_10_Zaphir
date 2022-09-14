@@ -129,6 +129,38 @@
         text-align: center;
     }
 
+    .emailLogin {
+        margin-top: .7rem;
+        text-align: center;
+        display: none;
+    }
+    
+    .emailLogin.invalid {
+        display: block;
+        color: red;
+    }
+    
+    .emailLogin.valid {
+        display: block;
+        color: #0d9829
+    }
+
+    .passwordLogin {
+        margin-top: .7rem;
+        text-align: center;
+        display: none;
+    }
+    
+    .passwordLogin.invalid {
+        display: block;
+        color: red;
+    }
+    
+    .passwordLogin.valid {
+        display: block;
+        color: #0d9829
+    }
+
     @media screen and (min-width: 580px) {
         main {
             margin: auto;
