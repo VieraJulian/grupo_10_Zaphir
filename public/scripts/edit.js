@@ -201,6 +201,8 @@ inputs.descuento.addEventListener("input", function (e) {
     }
     if (!validator.isNumeric(value)) {
         msg = "Ingrese un número"
+    } else if (value <= 0) {
+        msg = "El descuento debe ser mayor a cero"
     }
 
     if (vacio) {
