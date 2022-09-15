@@ -17,11 +17,6 @@
         flex-grow: 1;
     }
 
-    .detalle{
-        width: 100%;
-        height: 100%;
-    }
-
     .imagenes-pequeñas figure {
         width: 30%;
         height: 29%;

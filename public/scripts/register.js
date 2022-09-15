@@ -6,7 +6,6 @@ inputs.nombre.addEventListener('input', function (e) {
     let value = e.target.value;
     let feed = field.querySelector(".feed")
     let msg = null;
-    console.log(feed);
 
     if (value.length === 0) {
         msg = "El nombre no puede quedar vació"
@@ -153,14 +152,18 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
 forms.addEventListener("submit", function (e) {
     e.preventDefault()
     let isCorrect = false
-    
+
     if (e.target.querySelectorAll(".feed.valid").length === 4 && e.target.querySelectorAll(".feedTel.invalid").length !== 1) {
         isCorrect = true
+    }
+
+    if (isCorrect) {
+        e.target.submit();
     } else {
         Swal.fire({
-          title: 'Error!',
-          text: 'Algunos datos no son correctos',
-          icon: 'error',
+            title: 'Error!',
+            text: 'Algunos datos no son correctos',
+            icon: 'error',
         })
-      }
+    }
 });

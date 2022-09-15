@@ -50,7 +50,7 @@
         flex-direction: column;
     }
 
-    fieldset {
+    .field {
         margin-top: 30px;
     }
 

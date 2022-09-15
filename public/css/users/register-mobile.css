@@ -28,7 +28,7 @@ main {
     text-align: center;
 }
 
-form fieldset {
+.field {
     border: none;
 }
 
@@ -101,7 +101,7 @@ label {
     margin-bottom: 10px;
 }
 
-fieldset {
+.field {
     margin-top: 30px;
 }
 

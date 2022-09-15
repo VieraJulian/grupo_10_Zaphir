@@ -12,39 +12,39 @@
                     <p>¡Comprá en Zaphir y llevá el control de tus pedidos en un solo lugar!</p>
                 </section>
                 <form action="/usuario/registro" method="post" id="form">
-                    <fieldset class="form-name">
+                    <fieldset class="form-name field">
                         <label for="nombre">Nombre y apellido</label>
                         <input type="text" name="nombre" id="nombre" placeholder="ej: Juan Perez"
                             value="<%= locals.errors ? oldData.nombre : null %>">
                         <p class="feed"></p>
                     </fieldset>
-                    <fieldset class="form-email">
+                    <fieldset class="form-email field">
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" placeholder="ej: tunombre@email.com"
                             value="<%= locals.errors ? oldData.email : null %>">
                         <p class="feed"></p>
                     </fieldset>
-                    <fieldset class="form-tel">
+                    <fieldset class="form-tel field">
                         <label>Teléfono (opcional)</label>
                         <input type="tel" name="telefono" id="tel" placeholder="ej: 1123445567">
                         <p class="feedTel"></p>
                     </fieldset>
-                    <fieldset class="form-password">
+                    <fieldset class="form-password field">
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password"
                             value="<%= locals.errors ? oldData.password : null %>">
                         <p class="feed"></p>
                     </fieldset>
-                    <fieldset class="form-confirm">
+                    <fieldset class="form-confirm field">
                         <label for="contraseña">Confirmar contraseña</label>
                         <input type="password" name="passwordConfirm" id="confirm-password"
                             value="<%= locals.errors ? oldData.passwordConfirm : null %>">
                         <p class="feed"></p>
                     </fieldset>
-                    <fieldset class="form-button">
+                    <fieldset class="form-button field">
                         <button>Crear cuenta</button>
                     </fieldset>
-                    <fieldset class="form-linklogin">
+                    <fieldset class="form-linklogin field">
                         <a href="/usuario/ingresar">¿Ya tenés una cuenta?<span>Iniciá sesión</span></a>
                     </fieldset>
                 </form>

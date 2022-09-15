@@ -11,13 +11,13 @@
                     <h1> Inicia sesión </h1>
                 </section>
                 <form action="/usuario/ingresar" method="POST" id ="form">
-                    <fieldset class="NombreUsuario">
+                    <fieldset class="NombreUsuario field">
                         <label class="label">E-mail</label>
                         <input type="text" name="email" id="nombre"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <p class ="emailLogin"></p>
                     </fieldset>
-                    <fieldset class="Contraseña">
+                    <fieldset class="Contraseña field">
                         <label class="label">Contraseña</label>
                         <input type="password" name="password" id="password"
                             value="<%= locals.oldData ? oldData.password : null %>">
@@ -27,12 +27,12 @@
                         <label for="recordame">Recordarme</label>
                         <input type="checkbox" name="recordame" id="recordame">
                     </div>
-                    <fieldset class="button">
+                    <fieldset class="button field">
                         <button>Iniciar sesión</button>
                     </fieldset>
-                    <fielset class="form-password">
+                    <fieldset class="form-password field">
                         <a href="/">¿Olvidaste tu contraseña?</a>
-                    </fielset>
+                    </fieldset>
                     <fieldset class="registro">
                         <a href="/usuario/registro">¿Todavía no tenés una cuenta?<span>Crear cuenta</span></a>
                     </fieldset>
