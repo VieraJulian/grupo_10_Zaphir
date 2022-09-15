@@ -53,7 +53,7 @@ inputs.imagen.addEventListener("change", function (e) {
 
     if (files.length < 4) {
         msg = "Debes subir cuatro imágenes"
-    } else if (files.length > 4){
+    } else if (files.length > 4) {
         msg = "Subiste demasiadas imagenes"
     }
 
@@ -99,7 +99,7 @@ inputs.color.addEventListener('input', function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null;
-    
+
     if (value.length === 0) {
         msg = "Los colores no pueden quedar vacíos"
     } else if (value.split(",").length > 12) {
@@ -128,7 +128,7 @@ inputs.talle.addEventListener('input', function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null;
-    
+
     if (value.length === 0) {
         msg = "Los talles no pueden quedar vacíos"
     } else if (value.split(",").length > 6) {
@@ -151,7 +151,7 @@ inputs.stock.addEventListener('input', function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null;
-    
+
     if (value.length === 0) {
         msg = "El stock no puede quedar vació"
     } else if (value <= 0) {
@@ -173,7 +173,7 @@ inputs.precio.addEventListener('input', function (e) {
     let value = e.target.value
     let feed = field.querySelector(".feed")
     let msg = null;
-    
+
     if (value.length === 0) {
         msg = "El precio no puede quedar vació"
     } else if (value <= 0) {
@@ -221,11 +221,17 @@ inputs.descuento.addEventListener("input", function (e) {
 forms.addEventListener("submit", function (e) {
     e.preventDefault()
     let isCorrect = false
-    
+
     if (e.target.querySelectorAll(".feed.valid").length >= 8 && e.target.querySelectorAll(".feedSale.invalid").length != 1) {
         isCorrect = true
     }
     if (isCorrect) {
         e.target.submit()
+    } else {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Algunos datos no son correctos',
+            icon: 'error',
+        })
     }
 });
