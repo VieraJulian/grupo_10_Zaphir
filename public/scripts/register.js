@@ -156,8 +156,11 @@ forms.addEventListener("submit", function (e) {
     
     if (e.target.querySelectorAll(".feed.valid").length === 4 && e.target.querySelectorAll(".feedTel.invalid").length !== 1) {
         isCorrect = true
-    }
-    if (isCorrect) {
-        e.target.submit()
-    }
+    } else {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Algunos datos no son correctos',
+          icon: 'error',
+        })
+      }
 });
