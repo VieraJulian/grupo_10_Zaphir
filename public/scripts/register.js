@@ -154,7 +154,7 @@ forms.addEventListener("submit", function (e) {
     e.preventDefault()
     let isCorrect = false
     
-    if (e.target.querySelectorAll(".feed.valid").length == 4 && e.target.querySelectorAll(".feedTel.invalid").length != 1) {
+    if (e.target.querySelectorAll(".feed.valid").length === 4 && e.target.querySelectorAll(".feedTel.invalid").length !== 1) {
         isCorrect = true
     }
     if (isCorrect) {

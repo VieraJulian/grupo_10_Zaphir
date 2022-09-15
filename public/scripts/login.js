@@ -2,11 +2,11 @@ let form = document.forms.form
 let inputs = form.elements;
 
 inputs.email.addEventListener("input", (e) => {
-  let fieldset = e.target.parentElement.parentElement;
-  let box = e.target.parentElement;
+  let field = e.target.parentElement;
   let value = e.target.value;
-  let feed = fieldset.querySelector(".emailLogin");
+  let feed = field.querySelector(".emailLogin");
   let msg = null;
+  console.log(feed)
 
   if (value.length === 0) {
     msg = "El email no puede quedar vacío";
@@ -26,10 +26,9 @@ inputs.email.addEventListener("input", (e) => {
 });
 
 inputs.password.addEventListener("input", (e) => {
-  let fieldset = e.target.parentElement.parentElement;
-  let box = e.target.parentElement;
+  let field = e.target.parentElement;
   let value = e.target.value;
-  let feed = fieldset.querySelector(".passwordLogin");
+  let feed = field.querySelector(".passwordLogin");
   let msg = null;
 
 
