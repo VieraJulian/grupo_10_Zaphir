@@ -6,7 +6,6 @@
     }
 
     .login {
-
         text-align: center;
     }
 
@@ -110,14 +109,14 @@
         background-color: #1bd741
     }
 
-    div {
+    .div {
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
     }
 
-    div input {
+    .div input {
         height: 20px;
         width: 20px;
         margin-left: 10px;
