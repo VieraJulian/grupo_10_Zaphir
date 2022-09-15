@@ -10,8 +10,6 @@ inputs.email.addEventListener("input", (e) => {
 
   if (value.length === 0) {
     msg = "El email no puede quedar vacío";
-  } else if (!validator.isLength(value, { min: 7 })) {
-    msg = "No tienes suficientes caracteres"
   } else if (!validator.isEmail(value)) {
     msg = "No es un email valido"
   }
@@ -37,19 +35,6 @@ inputs.password.addEventListener("input", (e) => {
 
   if (value.length === 0) {
     msg = "La contraseña no puede quedar vacía"
-  } else if (!validator.isLength(value, { min: 8 })) {
-    msg = "La contraseña debe tener como mínimo 8 caracteres";
-  } else if (
-    !validator.isStrongPassword(value, {
-      minLength: 8,
-      minLowercase: 1,
-      minUppercase: 1,
-      minNumbers: 1,
-      minSymbols: 1,
-      returnScore: false,
-    })
-  ) {
-    msg = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial";
   }
 
   if (msg) {
@@ -67,19 +52,17 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let isCorrect = false;
 
-  if (e.target.querySelectorAll(".emailLogin.valid").length === 4) {
+  if (e.target.querySelectorAll(".emailLogin.valid").length === 1 && e.target.querySelectorAll(".passwordLogin").length === 1) {
     isCorrect = true;
   }
 
   if (isCorrect) {
     e.target.submit();
   } else {
-    window.alert(
-      "Algunos datos no son correctos, por favor verificar los errores en los campos"
-    );
+    Swal.fire({
+      title: 'Error!',
+      text: 'Algunos datos no son correctos',
+      icon: 'error',
+    })
   }
 });
-
-
-
-
