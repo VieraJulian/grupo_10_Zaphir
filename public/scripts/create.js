@@ -60,6 +60,8 @@ inputs.imagen.addEventListener("change", function (e) {
     for (let index = 0; index < files.length; index++) {
         if (!["jpg", "gif", "png", "jpeg"].includes(files[index].type.split("/")[1])) {
             msg = "No es un formato valido"
+        } else if (files[index].size > 2097152) {
+            msg = "La imagen supera el peso de 2MB";
         }
     }
 
