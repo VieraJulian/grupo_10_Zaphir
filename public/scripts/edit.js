@@ -145,8 +145,8 @@ inputs.talle.addEventListener('input', function (e) {
         msg = "Los talles no pueden ser más de seis";
     }
 
-    value.split(",").forEach(c => {
-        if (!validator.isAlpha(c)) {
+    value.split(",").forEach(t => {
+        if (!validator.isAlpha(t)) {
             msg = "Los talles no deben contener números ni espacios"
         }
     })
