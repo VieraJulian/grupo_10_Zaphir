@@ -11,7 +11,10 @@ inputs.nombre.addEventListener('input', function (e) {
         msg = "El nombre no puede quedar vació"
     } else if (!validator.isLength(value, { min: 5 })) {
         msg = "El nombre debe contener mínimo cinco caracteres"
+    } else if (!validator.isAlpha(value)) {
+        msg = "El nombre no debe contener números"
     }
+
     if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
@@ -113,6 +116,12 @@ inputs.color.addEventListener('input', function (e) {
         }
     })
 
+    value.split(",").forEach(c => {
+        if (!validator.isAlpha(c)) {
+            msg = "Los colores no deben contener números ni espacios"
+        }
+    })
+
     if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
@@ -136,6 +145,12 @@ inputs.talle.addEventListener('input', function (e) {
         msg = "Los talles no pueden ser más de seis";
     }
 
+    value.split(",").forEach(c => {
+        if (!validator.isAlpha(c)) {
+            msg = "Los talles no deben contener números ni espacios"
+        }
+    })
+
     if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
@@ -158,6 +173,7 @@ inputs.stock.addEventListener('input', function (e) {
     } else if (value <= 0) {
         msg = "El stock debe ser mayor a cero"
     }
+
     if (msg) {
         feed.classList.remove("valid")
         feed.classList.add("invalid")
