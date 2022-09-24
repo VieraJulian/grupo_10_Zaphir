@@ -12,9 +12,8 @@
         display: flex;
         flex-wrap: wrap;
         order: -2;
-        width: 35%;
+        width: 30%;
         align-self: flex-start;
-        flex-grow: 1;
     }
 
     .imagenes-pequeñas figure {

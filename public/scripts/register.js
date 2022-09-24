@@ -11,8 +11,6 @@ inputs.nombre.addEventListener('input', function (e) {
         msg = "El nombre no puede quedar vació"
     } else if (!validator.isLength(value, { min: 2 })) {
         msg = "El nombre debe contener mínimo dos caracteres"
-    } else if (!validator.isAlpha(value)) {
-        msg = "El nombre no debe contener números"
     }
 
     if (msg) {

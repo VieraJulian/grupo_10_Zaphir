@@ -25,8 +25,8 @@ module.exports = {
                 errors: validaciones.mapped()
             });
         };
-        req.body.color = req.body.color.split(",")
-        req.body.talle = req.body.talle.split(",")
+        req.body.color = req.body.color.toLowerCase().split(",")
+        req.body.talle = req.body.talle.toUpperCase().split(",")
         req.body.descuento = req.body.descuento != "" ? req.body.descuento : null
 
         let newProduct = await product.create(req.body)
@@ -113,8 +113,8 @@ module.exports = {
                 unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
             }
         }
-        req.body.color = req.body.color.split(",").filter(c => c != "")
-        req.body.talle = req.body.talle.split(",").filter(t => t != "")
+        req.body.color = req.body.color.toLowerCase().split(",").filter(c => c != "")
+        req.body.talle = req.body.talle.toUpperCase().split(",").filter(t => t != "")
 
         for (let index = 0; index < 12; index++) {
             if (productDB.colors[index] != undefined && req.body.color[index] != undefined) {
