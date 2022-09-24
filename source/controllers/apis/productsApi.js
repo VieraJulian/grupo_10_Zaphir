@@ -1,5 +1,4 @@
-const { product, image } = require("../../database/models");
-const { Op } = require("sequelize");
+const { product } = require("../../database/models");
 
 const productsApi = {
     count: async (req, res) => {
@@ -35,6 +34,28 @@ const productsApi = {
                 })
             })
             data.products = products
+            return res.status(200).json(data);
+        } catch (error) {
+            return res.status(500).json(error);
+        }
+    },
+    one: async (req, res) => {
+        try {
+            let productDB = await product.findByPk(req.params.id, {include: {all:true}});
+            let data = {}
+            let colores = productDB.colors.map(c => c.color);
+            let talles = productDB.sizes.map(t => t.size);
+            let imagenes = productDB.images.map(i => "http://localhost:3000/assets/productos/" + i.imagen);
+            data.id = productDB.id
+            data.nombre = productDB.nombre
+            data.descripcion = productDB.descripcion
+            data.categoria = productDB.categoria
+            data.stock = productDB.stock
+            data.precio = productDB.precio
+            data.descuento = productDB.descuento
+            data.colores = colores
+            data.talles = talles
+            data.imagenes = imagenes
             return res.status(200).json(data);
         } catch (error) {
             return res.status(500).json(error);

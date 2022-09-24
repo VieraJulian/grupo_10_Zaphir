@@ -1,7 +1,8 @@
 const { Router } = require("express");
 const router = Router();
-const { count } = require("../../controllers/apis/productsApi");
+const { count, one } = require("../../controllers/apis/productsApi");
 
 router.get("/", count);
+router.get("/:id", one);
 
 module.exports = router
