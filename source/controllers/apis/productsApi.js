@@ -25,14 +25,12 @@ const productsApi = {
                     id: p.id,
                     nombre: p.nombre,
                     descripcion: p.descripcion,
-                    info: {
-                        categoria: p.categoria,
-                        colores,
-                        talles,
-                        imagenes,
-                    }
+                    categoria: p.categoria,
+                    colores,
+                    talles,
+                    imagenes,
                 })
-            })
+        })
             data.products = products
             return res.status(200).json(data);
         } catch (error) {
@@ -41,7 +39,7 @@ const productsApi = {
     },
     one: async (req, res) => {
         try {
-            let productDB = await product.findByPk(req.params.id, {include: {all:true}});
+            let productDB = await product.findByPk(req.params.id, { include: { all: true } });
             let data = {}
             let colores = productDB.colors.map(c => c.color);
             let talles = productDB.sizes.map(t => t.size);
