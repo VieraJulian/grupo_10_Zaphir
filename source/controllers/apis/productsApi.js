@@ -21,7 +21,7 @@ const productsApi = {
             products = products.map(p => {
                 let colores = p.colors.map(c => c.color);
                 let talles = p.sizes.map(t => t.size);
-                let imagenes = p.images.map(i => i.imagen);
+                let imagenes = p.images.map(i => "http://localhost:3000/assets/productos/" + i.imagen);
                 return Object({
                     id: p.id,
                     nombre: p.nombre,
