@@ -33,6 +33,41 @@ main {
     width: 90%;
 }
 
+.x {
+    color: #000;
+    padding-left: 0.50rem;
+}
+
+.sizeFilter {
+    font-weight: 600;
+    margin: 1rem 0 0.60rem 0;
+}
+
+.colorFilter {
+    font-weight: 600;
+    margin: 2rem 0 0.60rem 0;
+}
+
+.formFilter {
+    padding-left: 1rem;
+}
+
+.formFilter input {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.filterSubmit {
+    margin-top: 10px;
+    width: 60px;
+    border: 1px solid #909090;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 2px;
+    padding: 5px 10px;
+}
+
 .section-left {
     display: none;
 }
@@ -173,7 +208,7 @@ div {
     padding: 5px 10px;
 }
 
-.titleSale{
+.titleSale {
     display: none;
 }
 
