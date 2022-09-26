@@ -42,7 +42,7 @@
                     <fieldset>
                         <label>Categoría</label>
                         <select class="select" name="categoria" placeholder="Categoría">
-                            <% if (locals.oldData ? oldData.categoria : null) { %>
+                            <% if (locals.oldData && oldData.categoria) { %>
                                 <option selected value="<%= oldData.categoria %>"><%= oldData.categoria %></option>
                             <% } %>
                             <option value="">Elige una opción</option>

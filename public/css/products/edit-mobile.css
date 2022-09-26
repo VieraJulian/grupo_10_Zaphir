@@ -156,6 +156,17 @@ textarea {
     display: block;
     color: #0d9829
 }
+
+.msg-error {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}
+
+.msg-error.click {
+    display: none;
+}
+
 @media screen and (min-width: 580px) {
     main {
         margin: auto;
