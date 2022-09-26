@@ -16,12 +16,22 @@
                         <input type="text" name="email" id="nombre"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <p class ="emailLogin"></p>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="msg-error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset class="Contraseña field">
                         <label class="label">Contraseña</label>
                         <input type="password" name="password" id="password"
                             value="<%= locals.oldData ? oldData.password : null %>">
                         <p class ="passwordLogin"></p>
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <div class="div">
                         <label for="recordame">Recordarme</label>
