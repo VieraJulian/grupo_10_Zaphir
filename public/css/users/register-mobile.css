@@ -150,11 +150,15 @@ label {
     background-color: #1bd741
 }
 
-/* .msg-error {
+.msg-error {
     margin-top: 10px;
     color: red;
     text-align: center;
-} */
+}
+
+.msg-error.click {
+    display: none;
+}
 
 .feed {
     margin-top: .7rem;
