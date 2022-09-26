@@ -62,8 +62,6 @@ inputs.imagen.addEventListener("change", function (e) {
     let files = e.target.files
     let feed = field.querySelector(".feed")
     let msg = null
-    let feedBack = field.querySelector(".msg-error")
-    feedBack.classList.add("click")
 
     if (files.length < 4) {
         msg = "Debes subir cuatro imágenes"
@@ -89,6 +87,12 @@ inputs.imagen.addEventListener("change", function (e) {
         feed.innerText = "El campo es correcto"
     }
 });
+
+inputs.imagen.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
 
 inputs.categoria.addEventListener('input', function (e) {
     let field = e.target.parentElement;
