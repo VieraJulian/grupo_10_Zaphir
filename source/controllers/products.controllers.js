@@ -294,7 +294,7 @@ module.exports = {
             await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
             await size.destroy({ where: { id: productDB.sizes[index].id } })
         });
-        productDB.destroy()
+        await productDB.destroy()
         return res.redirect('/productos/')
     },
 }
