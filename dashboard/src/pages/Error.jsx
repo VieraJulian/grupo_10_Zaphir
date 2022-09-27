@@ -1,6 +1,7 @@
-function Error(){
-    return (<div>
-        <h1>error 404 not fount</h1>
-    </div>)
+function Error() {
+    return (
+        <>
+            <h1>Error 404 not fount</h1>
+        </>)
 }
-export default  Error;
+export default Error;

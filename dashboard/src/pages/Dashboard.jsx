@@ -1,10 +1,9 @@
-import {productsApi} from "../service/product";
+function Dashboard() {
 
-function Dashboard(){
-    
-    return (<div> 
-        <h1>dashboard.</h1>
-    </div>)
+    return (
+        <>
+            <h1>Dasboard</h1>
+        </>)
 }
 
-export default  Dashboard;
+export default Dashboard;
