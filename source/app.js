@@ -37,3 +37,4 @@ app.use("/productos", require("./routes/products.routes"))
 app.use("/usuario", require("./routes/users.routes"))
 
 app.use("/api/products", require("./routes/apis/productsApi.routes"))
+app.use("/api/users", require("./routes/apis/usersApi.routes"))
