@@ -25,6 +25,12 @@ inputs.email.addEventListener("input", (e) => {
   }
 });
 
+inputs.email.addEventListener("click", function(e) {
+  let field = e.target.parentElement;
+  let feedBack = field.querySelector(".msg-error")
+  feedBack.classList.add("click")
+})
+
 inputs.password.addEventListener("input", (e) => {
   let field = e.target.parentElement;
   let value = e.target.value;
@@ -47,21 +53,8 @@ inputs.password.addEventListener("input", (e) => {
   }
 });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let isCorrect = false;
-
-  if (e.target.querySelectorAll(".emailLogin.valid").length === 1 && e.target.querySelectorAll(".passwordLogin").length === 1) {
-    isCorrect = true;
-  }
-
-  if (isCorrect) {
-    e.target.submit();
-  } else {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Algunos datos no son correctos',
-      icon: 'error',
-    })
-  }
-});
+inputs.password.addEventListener("click", function(e) {
+  let field = e.target.parentElement;
+  let feedBack = field.querySelector(".msg-error")
+  feedBack.classList.add("click")
+})

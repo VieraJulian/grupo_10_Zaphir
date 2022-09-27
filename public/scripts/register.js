@@ -24,6 +24,12 @@ inputs.nombre.addEventListener('input', function (e) {
     }
 });
 
+inputs.nombre.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.email.addEventListener("input", function (e) {
     let field = e.target.parentElement
     let value = e.target.value
@@ -46,6 +52,12 @@ inputs.email.addEventListener("input", function (e) {
         feed.classList.add("valid")
         feed.innerText = "El campo es correcto"
     }
+})
+
+inputs.email.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
 })
 
 inputs.telefono.addEventListener("input", function (e) {
@@ -113,6 +125,12 @@ inputs.password.addEventListener("input", function (e) {
     }
 })
 
+inputs.password.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.passwordConfirm.addEventListener("input", function (e) {
     e.target.setAttribute("type", "text")
     let field = e.target.parentElement
@@ -150,21 +168,8 @@ inputs.passwordConfirm.addEventListener("input", function (e) {
     }
 })
 
-forms.addEventListener("submit", function (e) {
-    e.preventDefault()
-    let isCorrect = false
-
-    if (e.target.querySelectorAll(".feed.valid").length === 4 && e.target.querySelectorAll(".feedTel.invalid").length !== 1) {
-        isCorrect = true
-    }
-
-    if (isCorrect) {
-        e.target.submit();
-    } else {
-        Swal.fire({
-            title: 'Error!',
-            text: 'Algunos datos no son correctos',
-            icon: 'error',
-        })
-    }
-});
+inputs.passwordConfirm.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})

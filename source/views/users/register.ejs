@@ -4,6 +4,7 @@
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="/scripts/register.js"></script>
+
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
@@ -17,12 +18,22 @@
                         <input type="text" name="nombre" id="nombre" placeholder="ej: Juan Perez"
                             value="<%= locals.errors ? oldData.nombre : null %>">
                         <p class="feed"></p>
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p class="msg-error">
+                                <%= errors.nombre.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset class="form-email field">
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" placeholder="ej: tunombre@email.com"
                             value="<%= locals.errors ? oldData.email : null %>">
                         <p class="feed"></p>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="msg-error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset class="form-tel field">
                         <label>Teléfono (opcional)</label>
@@ -34,12 +45,22 @@
                         <input type="password" name="password" id="password"
                             value="<%= locals.errors ? oldData.password : null %>">
                         <p class="feed"></p>
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset class="form-confirm field">
                         <label for="contraseña">Confirmar contraseña</label>
                         <input type="password" name="passwordConfirm" id="confirm-password"
                             value="<%= locals.errors ? oldData.passwordConfirm : null %>">
                         <p class="feed"></p>
+                        <% if (locals.errors && errors.passwordConfirm) { %>
+                            <p class="msg-error">
+                                <%= errors.passwordConfirm.msg %>
+                            </p>
+                            <% } %>
                     </fieldset>
                     <fieldset class="form-button field">
                         <button>Crear cuenta</button>

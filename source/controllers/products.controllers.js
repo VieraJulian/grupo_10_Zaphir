@@ -15,9 +15,6 @@ module.exports = {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
-            /* if (req.files && req.files.length > 0) {
-                req.files.forEach(file => { unlinkSync(resolve(__dirname, "../../public/assets/productos/" + file.filename)) })
-            } */
             return res.render("products/create", {
                 title: "Nuevo producto",
                 styles: ["products/create-mobile"],
@@ -297,7 +294,7 @@ module.exports = {
             await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
             await size.destroy({ where: { id: productDB.sizes[index].id } })
         });
-        productDB.destroy()
+        await productDB.destroy()
         return res.redirect('/productos/')
     },
 }

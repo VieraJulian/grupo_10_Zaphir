@@ -24,6 +24,12 @@ inputs.nombre.addEventListener('input', function (e) {
     }
 });
 
+inputs.nombre.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.descripcion.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value;
@@ -44,6 +50,12 @@ inputs.descripcion.addEventListener('input', function (e) {
         feed.innerText = "El campo es correcto"
     }
 });
+
+inputs.descripcion.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
 
 inputs.imagen.addEventListener("change", function (e) {
     let field = e.target.parentElement
@@ -76,6 +88,12 @@ inputs.imagen.addEventListener("change", function (e) {
     }
 });
 
+inputs.imagen.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.categoria.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value;
@@ -95,6 +113,12 @@ inputs.categoria.addEventListener('input', function (e) {
         feed.innerText = "El campo es correcto"
     }
 });
+
+inputs.categoria.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
 
 inputs.color.addEventListener('input', function (e) {
     let field = e.target.parentElement;
@@ -131,6 +155,12 @@ inputs.color.addEventListener('input', function (e) {
     }
 });
 
+inputs.color.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.talle.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value
@@ -160,6 +190,12 @@ inputs.talle.addEventListener('input', function (e) {
     }
 });
 
+inputs.talle.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.stock.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value
@@ -182,6 +218,12 @@ inputs.stock.addEventListener('input', function (e) {
     }
 });
 
+inputs.stock.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
+
 inputs.precio.addEventListener('input', function (e) {
     let field = e.target.parentElement;
     let value = e.target.value
@@ -203,6 +245,12 @@ inputs.precio.addEventListener('input', function (e) {
         feed.innerText = "El campo es correcto"
     }
 });
+
+inputs.precio.addEventListener("click", function(e) {
+    let field = e.target.parentElement;
+    let feedBack = field.querySelector(".msg-error")
+    feedBack.classList.add("click")
+})
 
 inputs.descuento.addEventListener("input", function (e) {
     let field = e.target.parentElement
@@ -233,21 +281,3 @@ inputs.descuento.addEventListener("input", function (e) {
         feed.innerText = "El campo es correcto"
     }
 })
-
-forms.addEventListener("submit", function (e) {
-    e.preventDefault()
-    let isCorrect = false
-
-    if (e.target.querySelectorAll(".feed.valid").length >= 8 && e.target.querySelectorAll(".feedSale.invalid").length != 1) {
-        isCorrect = true
-    }
-    if (isCorrect) {
-        e.target.submit()
-    } else {
-        Swal.fire({
-            title: 'Error!',
-            text: 'Algunos datos no son correctos',
-            icon: 'error',
-        })
-    }
-});
