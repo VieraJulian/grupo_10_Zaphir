@@ -16,7 +16,7 @@ const productsApi = {
             categorias.forEach(el => (resultado[el] = resultado[el] + 1 || 1));
             data.count = products.length
             data.countByCategory = resultado
-
+            data.categories = Object.keys(resultado);
             products = products.map(p => {
                 let colores = p.colors.map(c => c.color);
                 let talles = p.sizes.map(t => t.size);
@@ -30,7 +30,7 @@ const productsApi = {
                     talles,
                     imagenes,
                 })
-        })
+            })
             data.products = products
             return res.status(200).json(data);
         } catch (error) {
