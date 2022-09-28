@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Error() {
     return (
         <>
-            <h1>Error 404 not fount</h1>
+            <Link to="/">Dashboard</Link>
+            <p>404</p>
+            <p>Not Found</p>
         </>)
 }
 export default Error;

@@ -1,32 +1,48 @@
 let endpoint = await fetch("http://localhost:3000/api/products/");
+let data = await endpoint.json();
 
 function Dashboard() {
+    let lastProduct = data.products[data.products.length - 1]
     return (
         <>
             <h1>Dashboard</h1>
             <div>
-                <h2>Cantidad de productos: {data.count}</h2>
+                <p>Cantidad de productos:</p>
+                <p> {data.count}</p>
             </div>
             <div>
-                <h2>Cantidad de categorias:</h2>
-                {
-                    data.categories.length
-                }
+                <p>Cantidad de categorias:</p>
+                <p>{data.categories.length}</p>
             </div>
             <div>
-                <h2>Productos por categorias:</h2>
-                {
-                    data.categories.map((c, i) => <li key={i}>{c}: {data.countByCategory[c]}</li>)
-                }
+                <p>Productos por categorias:</p>
+                <ul>
+                    {data.categories.map((c, i) => <li key={i}>{c}: {data.countByCategory[c]}</li>)}
+                </ul>
             </div>
             <div>
-                <h2>Productos:</h2>
-                {
-                    data.products.map((product, index) => <li key={index}>{product.nombre}</li>)
-                }
+                <p>Productos:</p>
+                <ul>
+                    {data.products.map((product, index) => <li key={index}>{product.nombre}</li>)}
+                </ul>
             </div>
             <div>
-                <h2>Último producto</h2>
+                <p>Último producto</p>
+                <p>Id: {lastProduct.id}</p>
+                <p>Categoria: {lastProduct.categoria}</p>
+                <p>Nombre: {lastProduct.nombre}</p>
+                <p>Descripción: {lastProduct.descripcion}</p>
+                <p>Colores:</p>
+                <ul>
+                    {lastProduct.colores.map((c, i) => <li key={i}>{c}</li>)}
+                </ul>
+                <p>Talles:</p>
+                <ul>
+                    {lastProduct.talles.map((t, i) => <li key={i}>{t}</li>)}
+                </ul>
+                <picture>
+                    <img src={lastProduct.imagenes[0]} alt={lastProduct.nombre} />
+                </picture>
             </div>
         </>)
 }
