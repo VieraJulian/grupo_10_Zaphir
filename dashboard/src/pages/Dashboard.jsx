@@ -1,8 +1,9 @@
-let endpoint = await fetch("http://localhost:3000/api/products/");
-let data = await endpoint.json();
+import { Link } from 'react-router-dom'
+import { getAll } from '../services/products';
+let data = await getAll();
 
 function Dashboard() {
-    let lastProduct = data.products[data.products.length - 1]
+    const lastProduct = data.products[data.products.length - 1]
     return (
         <>
             <h1>Dashboard</h1>
@@ -23,7 +24,7 @@ function Dashboard() {
             <div>
                 <p>Productos:</p>
                 <ul>
-                    {data.products.map((product, index) => <li key={index}>{product.nombre}</li>)}
+                    {data.products.map((product, index) => <li key={index}><Link to={`/detail/${product.id}`}>{product.nombre}</Link></li>)}
                 </ul>
             </div>
             <div>
