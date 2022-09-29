@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import { getAll } from '../services/products';
+import { allUsers } from '../services/users'
 let data = await getAll();
+let users = await allUsers();
+const lastProduct = data.products[data.products.length - 1]
+const lastUser = users.users[users.users.length - 1]
 
 function Dashboard() {
-    const lastProduct = data.products[data.products.length - 1]
     return (
         <>
             <h1>Dashboard</h1>
@@ -44,6 +47,22 @@ function Dashboard() {
                 <picture>
                     <img src={lastProduct.imagenes[0]} alt={lastProduct.nombre} />
                 </picture>
+            </div>
+            <div>
+                <p>Cantidad de usuarios:</p>
+                <p>{users.count}</p>
+            </div>
+            <div>
+                <p>Usuarios:</p>
+                <ul>
+                    {users.users.map((u, i) => <li key={i}><Link to={`/user/detail/${u.id}`}>{u.nombre}</Link></li>)}
+                </ul>
+            </div>
+            <div>
+                <p>Último usuario:</p>
+                <p>Id: {lastUser.id}</p>
+                <p>Nombre: {lastUser.nombre}</p>
+                <p>Email: {lastUser.email}</p>
             </div>
         </>)
 }
