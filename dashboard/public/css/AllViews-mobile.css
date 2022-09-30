@@ -1,0 +1,29 @@
+.contenedor {
+    background-color: #a0a0a0;
+    display: flex;
+}
+
+.cont-img {
+    padding: 1rem;
+    width: 30%;
+    border-right: 1px solid #000;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 4rem;
+}
+
+.nav-icon {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icon {
+    color: #000;
+    font-size: 1.7rem;
+}

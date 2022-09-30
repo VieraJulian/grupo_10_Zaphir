@@ -1,0 +1,30 @@
+@media (min-width: 64em) {
+    .contenedor {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .cont-img {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    .logo {
+        width: 5.5rem;
+    }
+
+    .nav-icon {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: start;
+        padding-top: 2rem;
+    }
+
+    .icon {
+        margin-bottom: 3.7rem;
+    }
+}

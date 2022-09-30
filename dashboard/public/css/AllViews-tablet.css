@@ -1,0 +1,9 @@
+@media screen and (min-width: 48em) {
+    .logo {
+        width: 5rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+}
