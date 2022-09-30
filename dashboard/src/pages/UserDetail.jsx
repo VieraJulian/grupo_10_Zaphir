@@ -11,7 +11,6 @@ function UserDetail() {
 
     return (
         <>
-            <Link to="/">Dashboard</Link>
             <p>{user.nombre}</p>
             <p>Id: {user.id}</p>
             <p>Email: {user.email}</p>
