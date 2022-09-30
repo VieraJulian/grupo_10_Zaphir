@@ -30,4 +30,8 @@
     .span-cat {
         font-size: 1.5rem;
     }
+
+    .main {
+        margin-left: 120px;
+    }
 }
