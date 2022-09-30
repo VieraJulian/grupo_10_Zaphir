@@ -1,0 +1,19 @@
+@media screen and (min-width: 48em) {
+    .home-cont {
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        max-width: 840px;
+    }
+
+    .div-cont {
+        width: 40%;
+        margin: .5rem;
+    }
+    
+    .bottom-p {
+        font-size: 2rem;
+    }
+}

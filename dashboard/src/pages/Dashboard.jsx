@@ -1,30 +1,33 @@
 import { getAll } from '../services/products';
 import { allUsers } from '../services/users'
+import '../../public/css/Home-mobile.css'
+import '../../public/css/Home-tablet.css'
+import '../../public/css/Home-desktop.css'
 let data = await getAll();
 let users = await allUsers();
 
 function Dashboard() {
     return (
-        <>
-            <div>
-                <p>Cantidad de productos:</p>
-                <p> {data.count}</p>
+        <div className="home-cont">
+            <div className="div-cont">
+                <p className='top-p'>Total de productos:</p>
+                <p className="bottom-p"> {data.count}</p>
             </div>
-            <div>
-                <p>Cantidad de categorias:</p>
-                <p>{data.categories.length}</p>
+            <div className="div-cont">
+                <p className='top-p'>Total de categorias:</p>
+                <p className="bottom-p">{data.categories.length}</p>
             </div>
-            <div>
-                <p>Productos por categorias:</p>
-                <ul>
-                    {data.categories.map((c, i) => <li key={i}>{c}: {data.countByCategory[c]}</li>)}
+            <div className="div-cont">
+                <p className='top-p'>Productos por categorias:</p>
+                <ul className='prod-ul'>
+                    {data.categories.map((c, i) => <li className="prod-li"key={i}>{c}: <span className='span-cat'>{data.countByCategory[c]}</span></li>)}
                 </ul>
             </div>
-            <div>
-                <p>Cantidad de usuarios:</p>
-                <p>{users.count}</p>
+            <div className="div-cont">
+                <p className='top-p'>Total de usuarios:</p>
+                <p className="bottom-p">{users.count}</p>
             </div>
-        </>)
+        </div>)
 }
 
 export default Dashboard;

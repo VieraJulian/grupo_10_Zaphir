@@ -1,0 +1,36 @@
+.home-cont {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-cont {
+    width: 80%;
+    border: 2px solid #787777;
+    border-radius: 1rem;
+    padding: .5rem 1rem 1rem;
+    margin-bottom: 1rem;
+    max-width: 420px;
+}
+
+.top-p {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.bottom-p {
+    text-align: end;
+    padding-right: .5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.prod-li {
+    list-style: none;
+}
+
+.span-cat {
+    font-weight: 600;
+}
