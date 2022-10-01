@@ -1,4 +1,4 @@
-@media screen and (min-width: 64em) {
+@media (min-width: 64em) {
     .prod-cont {
         display: grid;
         grid-template-rows: 1fr;
