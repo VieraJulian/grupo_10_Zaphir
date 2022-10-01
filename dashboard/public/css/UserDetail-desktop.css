@@ -19,6 +19,10 @@
         object-fit: cover;
     }
 
+    .main-user {
+        margin-left: 120px;
+    }
+
 }
 
 @media (min-width: 70em) {

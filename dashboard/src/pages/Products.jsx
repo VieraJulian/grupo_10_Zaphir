@@ -9,7 +9,6 @@ const lastProduct = data.products[data.products.length - 1]
 function Products() {
     return (
         <div className='main'>
-
             <div className="prod-cont">
                 <div className="div-cont-prod">
                     <p className="top-p-prod">Productos:</p>

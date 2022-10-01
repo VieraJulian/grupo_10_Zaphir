@@ -24,7 +24,7 @@ function Detail() {
         imagenes = prod.imagenes.map((image, i) => <li className="li-img" key={i}><img className="img-product" key={i} src={image} alt={image} /></li>)
     }
     return (
-        <div className="main">
+        <div className="main-product">
             <div className="div-cont-product">
                 <div className="cont-product">
                     <div className="div-left">
