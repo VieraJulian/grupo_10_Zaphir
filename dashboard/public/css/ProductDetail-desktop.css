@@ -1,0 +1,32 @@
+@media (min-width: 64em) {
+    .cont-product {
+        display: flex;
+        max-width: none;
+    }
+
+    .ul-images {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .div-left {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .div-right {
+        padding: .5rem;
+        width: 50%;
+    }
+
+    .li-img {
+        width: 50%;
+        padding: .5rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .cont-product {
+        max-width: 70em;
+    }
+}

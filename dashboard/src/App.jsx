@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import AllViews from './pages/AllViews'
-import Dashboard from "./pages/Dashboard";
-import Detail from "./pages/Detail";
+import Home from "./pages/Home";
+import ProductDetail from './pages/ProductDetail'
 import UserDetail from './pages/UserDetail'
 import Error from "./pages/error";
 import Users from "./pages/Users"
@@ -13,9 +13,9 @@ function App() {
     <>
       <AllViews />
       <Routes>
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/products" element={<Products />}></Route>
-        <Route path="/product/:id" element={<Detail />}></Route>
+        <Route path="/product/:id" element={<ProductDetail />}></Route>
         <Route path="/users" element={<Users />}></Route>
         <Route path="/user/:id" element={<UserDetail />}></Route>
         <Route path="*" element={<Error />}></Route>

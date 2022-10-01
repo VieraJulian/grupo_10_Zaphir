@@ -1,11 +1,8 @@
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
     .cont-users {
         flex-direction: row;
         justify-content: center;
         align-items: start;
         gap: 1rem;
-    }
-
-    .div-cont-user {
     }
 }
