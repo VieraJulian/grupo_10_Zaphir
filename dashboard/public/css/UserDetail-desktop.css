@@ -1,0 +1,28 @@
+@media (min-width: 64em) {
+    .cont-user {
+        display: flex;
+        max-width: none;
+    }
+
+    .div-user-left {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .div-user-right {
+        padding: 1rem;
+        width: 50%;
+    }
+
+    .avatar-user {
+        height: 28rem;
+        object-fit: cover;
+    }
+
+}
+
+@media (min-width: 70em) {
+    .cont-user {
+        max-width: 70em;
+    }
+}
