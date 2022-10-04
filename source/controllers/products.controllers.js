@@ -282,17 +282,17 @@ module.exports = {
             return res.redirect('/productos/')
         }
         productDB.images.forEach(async (i, index) => {
-            await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } })
-            await image.destroy({ where: { id: productDB.images[index].id } })
-            unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))
+            Promise.all([await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } }),
+            await image.destroy({ where: { id: productDB.images[index].id } }),
+            unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))])
         })
         productDB.colors.forEach(async (c, index) => {
-            await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } })
-            await color.destroy({ where: { id: productDB.colors[index].id } })
+            Promise.all([await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } }),
+            await color.destroy({ where: { id: productDB.colors[index].id } })])
         })
         productDB.sizes.forEach(async (s, index) => {
-            await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } })
-            await size.destroy({ where: { id: productDB.sizes[index].id } })
+            Promise.all([await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } }),
+            await size.destroy({ where: { id: productDB.sizes[index].id } })])
         });
         await productDB.destroy()
         return res.redirect('/productos/')
