@@ -13,7 +13,7 @@ function Products() {
                 <div className="div-cont-prod">
                     <p className="top-p-prod">Productos:</p>
                     <ul>
-                        {data.products.map((product, index) => <li className="prod-list" key={index}><Link to={`/product/${product.id}`}>{product.nombre}</Link></li>)}
+                        {data.products.map((product, index) => <li className="prod-list" key={index}><Link className="a-user" to={`/product/${product.id}`}>{product.nombre}</Link></li>)}
                     </ul>
                 </div>
                 <div className="div-cont-prod">

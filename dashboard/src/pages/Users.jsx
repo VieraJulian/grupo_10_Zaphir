@@ -13,7 +13,7 @@ function Users() {
                 <div className='div-cont-user'>
                     <p className='top-p-user'>Usuarios:</p>
                     <ul>
-                        {users.users.map((u, i) => <li className="li-users" key={i}><Link to={`/user/${u.id}`}>{u.nombre}</Link></li>)}
+                        {users.users.map((u, i) => <li className="li-users" key={i}><Link className='a-products' to={`/user/${u.id}`}>{u.nombre}</Link></li>)}
                     </ul>
                 </div>
                 <div className='div-cont-user'>

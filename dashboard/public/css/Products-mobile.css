@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.ul-users:hover {
+    background-color: aqua;
+}
+
 .div-cont-prod {
     width: 90%;
     border: 2px solid #787777;
@@ -32,6 +36,10 @@
 .prod-list {
     margin-bottom: .5rem;
     list-style: none;
+}
+
+.a-user:hover {
+    color: #909090;
 }
 
 .prod-list a {
