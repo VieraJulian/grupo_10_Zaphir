@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head.ejs") %>
-
+<script defer src="/scripts/carousel.js"></script>
     <body>
         <%- include("./partials/header.ejs") %>
             <main>
-                <figure class="banner">
+                <section id="carousel">
+                    <ul id="track">
+                        <% for( let index = 1; index < 3; index++ ) { %>
+                            <li class="slide">
+                                <picture>
+                                    <img src="/assets/logos/<%= index %>-banner.jpg" alt="slide <%= index %>">
+                                </picture>
+                            </li>
+                        <% } %>
+                    </ul>
+                    <nav id="btns">
+                        <a id="btn-prev" href="#">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                        <a id="btn-next" href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </nav>
+                </section>
+                <!-- <figure class="banner">
                     <img class="Imagen-Zaphir" src="/assets/logos/banner-nuevo.jpg" alt="imagen">
-                </figure>
+                </figure> -->
                 <section class="banner-bottom">
                     <section>
                         <p class="p-title"><i class="fa-solid fa-truck"></i>Envíos gratis</p>

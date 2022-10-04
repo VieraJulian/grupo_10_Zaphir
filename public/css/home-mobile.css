@@ -153,6 +153,63 @@ article {
     background-color: #1bd741
 }
 
+#carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#track {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 500ms;
+}
+
+.slide {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    list-style: none;
+}
+
+#btns {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    width: 100%;
+    height: 2rem;
+    padding: 1rem;
+}
+
+#btns a {
+    background-color: #909090;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: snow;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    transition: all 300ms;
+}
+
+#btns a:hover {
+    background-color: #b0b0b0;
+}
+
+
+picture,img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media screen and (min-width: 36em) {
 
     .productosdestacados article {
