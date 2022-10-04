@@ -154,6 +154,7 @@ module.exports = {
         }
 
         await productDB.update(req.body)
+        console.log(productDB.id)
         return res.redirect("/productos/detalle/" + productDB.id)
     },
 
@@ -282,16 +283,16 @@ module.exports = {
             return res.redirect('/productos/')
         }
         productDB.images.forEach(async (i, index) => {
-            Promise.all([await imageproduct.destroy({ where: { image_id: productDB.images[index].imagesproducts.image_id } }),
+            Promise.all([await imageproduct.destroy({ where: { product_id: productDB.id } }),
             await image.destroy({ where: { id: productDB.images[index].id } }),
             unlinkSync(resolve(__dirname, "../../public/assets/productos/" + productDB.images[index].imagen))])
         })
         productDB.colors.forEach(async (c, index) => {
-            Promise.all([await productcolor.destroy({ where: { color_id: productDB.colors[index].productscolors.color_id } }),
+            Promise.all([await productcolor.destroy({ where: { product_id: productDB.id } }),
             await color.destroy({ where: { id: productDB.colors[index].id } })])
         })
         productDB.sizes.forEach(async (s, index) => {
-            Promise.all([await productsize.destroy({ where: { size_id: productDB.sizes[index].productssizes.size_id } }),
+            Promise.all([await productsize.destroy({ where: { product_id: productDB.id } }),
             await size.destroy({ where: { id: productDB.sizes[index].id } })])
         });
         await productDB.destroy()
