@@ -54,7 +54,6 @@
     }
 
     #menu-1 a {
-        text-align: start;
         color: #000;
         text-decoration: none;
         border: none;
@@ -91,26 +90,32 @@
     }
 
     .a-2 {
+        text-align: center;
         grid-area: element3;
     }
 
     .a-3 {
+        text-align: center;
         grid-area: element4;
     }
 
     .a-4 {
+        text-align: center;
         grid-area: element5;
     }
 
     .a-5 {
+        text-align: center;
         grid-area: element6;
     }
 
     .a-6 {
+        text-align: center;
         grid-area: element7;
     }
 
     .a-7 {
+        text-align: center;
         grid-area: element8;
     }
 

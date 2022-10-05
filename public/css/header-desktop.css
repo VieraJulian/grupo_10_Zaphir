@@ -10,8 +10,8 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             "element1 element1 element1 element1"
-            "element3 element7 element5 element6"
-            "element4 element8 . ."
+            "element3 element4 element5 element6"
+            "element7 element8 . ."
     }
 }
 
