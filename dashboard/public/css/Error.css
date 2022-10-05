@@ -1,0 +1,25 @@
+.div-error {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    font-size: 100px;
+}
+
+.not {
+    font-size: 20px;
+}
+
+.back {
+    color: #000;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.back:hover {
+    color: #909090
+}
