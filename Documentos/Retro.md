@@ -26,3 +26,6 @@ El equipo sigue con esa buena comunicación que mejoramos en el sprint anterior,
 
 Sprint 7: 
 En este sprint perdimos un poco la comunicación entre nosotros, si pudimos separar bien las tareas pero no hubo tanta charla entre nosotros, obviamente es algo que podemos mejorar y esperamos que para el próximo sprint nos vaya mejor en ese aspecto. Pudimos llegar a tiempo con la entrega y eso es algo que nos alegra. 
+
+Sprint 8: 
+En este último sprint, mejoramos considerablemente la comunicación en el equipo, eso resultó en una mejor y rápida organización de las tareas, y aprovechamos ese tiempo sobrante para preparar la presentación del proyecto, Gracias Edu y Flor por tanto <3
