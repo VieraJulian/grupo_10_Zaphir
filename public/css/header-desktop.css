@@ -34,3 +34,10 @@
     }
 
 }
+
+@media (min-width: 105rem) {
+    #menu-1:target {
+        left: 30vw;
+        width: 40%;
+    }
+}
