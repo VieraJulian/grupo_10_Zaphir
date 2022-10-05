@@ -54,25 +54,64 @@
     }
 
     #menu-1 a {
+        text-align: start;
         color: #000;
         text-decoration: none;
-        padding: 12px;
         border: none;
-        width: 120px;
     }
 
     #menu-1:target {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
         position: fixed;
         top: 126px;
-        left: 25%;
-        background-color: #F4F6F8;
-        border: 1px solid #909090;
-        width: 50%;
+        left: 15vw;
+        width: 70%;
         height: auto;
         border-top: none;
+        background-color: #F4F6F8;
+        border: 1px solid #909090;
+        grid-template-columns: repeat(3, .5fr);
+        grid-template-rows: repeat(3, .5fr);
+        grid-template-areas:
+            "element1 element1 element1"
+            "element3 element4 element5"
+            "element6 element7 element8"
+    }
+
+    .fa-x {
+        padding: 0
+    }
+    .x-menu {
+        padding: 0;
+        grid-area: element1;
+    }
+
+    .a-1 {
+        display: none;
+    }
+
+    .a-2 {
+        grid-area: element3;
+    }
+
+    .a-3 {
+        grid-area: element4;
+    }
+
+    .a-4 {
+        grid-area: element5;
+    }
+
+    .a-5 {
+        grid-area: element6;
+    }
+
+    .a-6 {
+        grid-area: element7;
+    }
+
+    .a-7 {
+        grid-area: element8;
     }
 
     #menu-1 :first-child {

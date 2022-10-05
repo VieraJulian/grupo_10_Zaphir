@@ -4,8 +4,14 @@
     }
 
     #menu-1:target {
-        width: 40%;
-        left: 30%;
+        left: 25vw;
+        width: 50%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "element1 element1 element1 element1"
+            "element3 element7 element5 element6"
+            "element4 element8 . ."
     }
 }
 
@@ -19,11 +25,11 @@
         width: 387.3px;
     }
 
-    .header-form form fieldset{
+    .header-form form fieldset {
         width: 387.3px
     }
 
-    .header-form form input{
+    .header-form form input {
         max-width: 387.3px;
     }
 
