@@ -14,8 +14,8 @@
                                 </nav>
                                 <nav id=menu-2>
                                     <a href="#"><i class="fa-solid fa-x x"></i></a>
-                                    <form action="/productos/ofertas/" method="get">
-                                        <p>Talle</p>
+                                    <form class="formFilter" action="/productos/ofertas/" method="get">
+                                        <p class="sizeFilter">Talle</p>
                                         <div>
                                             <input type="checkbox" name="talle" id="xs" value="XS">XS
                                         </div>
@@ -34,7 +34,7 @@
                                         <div>
                                             <input type="checkbox" name="talle" id="xxl" value="XL">XXL
                                         </div>
-                                        <p>Color</p>
+                                        <p class="colorFilter">Color</p>
                                         <div>
                                             <input type="checkbox" name="color" id="blanco" value="Blanco">Blanco
                                         </div>
@@ -71,7 +71,7 @@
                                         <div>
                                             <input type="checkbox" name="color" id="morado" value="Morado">Morado
                                         </div>
-                                        <button>Filtrar</button>
+                                        <button class="boton-filtrar">Filtrar</button>
                                     </form>
                                 </nav>
                             </section>
@@ -92,7 +92,7 @@
                         <h2 class="titleSale">Ofertas</h2>
                         <section class="section-left">
                             <form action="/productos/ofertas/" method="get">
-                                <p>Talle</p>
+                                <p class="p-talle">Talle</p>
                                 <div>
                                     <input type="checkbox" name="talle" id="xs" value="XS">XS
                                 </div>
@@ -111,7 +111,7 @@
                                 <div>
                                     <input type="checkbox" name="talle" id="xxl" value="XL">XXL
                                 </div>
-                                <p>Color</p>
+                                <p class="p-color">Color</p>
                                 <div>
                                     <input type="checkbox" name="color" id="blanco" value="Blanco">Blanco
                                 </div>
@@ -145,7 +145,7 @@
                                 <div>
                                     <input type="checkbox" name="color" id="beige" value="Beige">Beige
                                 </div>
-                                <p>Precio</p>
+                                <p class="p-precio">Precio</p>
                                 <input class="range" type="range" name="range" id="range" min="1000" max="50000"
                                     value="1000">
                                 <button class="boton-filtrar">Filtrar</button>

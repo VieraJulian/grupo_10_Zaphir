@@ -70,4 +70,12 @@
     .titleSale{
         display: block
     }
+
+    .p-color {
+        margin-top: 1.5rem;
+    }
+
+    .p-precio {
+        margin-top: 1.5rem;
+    }
 }

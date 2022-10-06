@@ -207,3 +207,10 @@ header {
 #iconBottom{
     margin-left: 8px;
 }
+
+.navbar-main a:hover {
+    color: #4c4c4c;
+}
+#menu-1 a:hover {
+    color: #4c4c4c;
+}

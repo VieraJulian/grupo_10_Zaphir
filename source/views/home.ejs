@@ -7,10 +7,10 @@
             <main>
                 <section id="carousel">
                     <ul id="track">
-                        <% for( let index = 1; index < 3; index++ ) { %>
+                        <% for( let index = 1; index < 4; index++ ) { %>
                             <li class="slide">
                                 <picture>
-                                    <img src="/assets/logos/<%= index %>-banner.jpg" alt="slide <%= index %>">
+                                    <a href="/productos"><img src="/assets/logos/<%= index %>-banner.jpg" alt="slide <%= index %>"></a>
                                 </picture>
                             </li>
                         <% } %>
@@ -24,9 +24,6 @@
                         </a>
                     </nav>
                 </section>
-                <!-- <figure class="banner">
-                    <img class="Imagen-Zaphir" src="/assets/logos/banner-nuevo.jpg" alt="imagen">
-                </figure> -->
                 <section class="banner-bottom">
                     <section>
                         <p class="p-title"><i class="fa-solid fa-truck"></i>Envíos gratis</p>

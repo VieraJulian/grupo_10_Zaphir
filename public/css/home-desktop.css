@@ -84,3 +84,14 @@
         object-position: cover
     }
 }
+
+@media (min-width: 105em) {
+    .banner-bottom {
+        height: 100px;
+    }
+
+    .p-title {
+        font-size: 20px;
+        margin-right: 1rem;
+    }
+}

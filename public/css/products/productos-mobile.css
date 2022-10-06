@@ -215,6 +215,10 @@ div {
 .notProduct {
     text-align: center;
 }
+.filterSubmit,
+.boton-filtrar {
+    display: none;
+}
 
 @media screen and (min-width: 520px) {
     .section-secundaria article {
