@@ -172,7 +172,7 @@ module.exports = {
                     { association: "images" }
                 ],
                 where: {
-                    categoria: {
+                    nombre: {
                         [Op.like]: "%" + req.query.name + "%"
                     }
                 },
