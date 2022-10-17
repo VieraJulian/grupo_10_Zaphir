@@ -86,9 +86,6 @@ module.exports = {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
-            /* if (req.files && req.files.length > 0) {
-                req.files.forEach(file => { unlinkSync(resolve(__dirname, "../../public/assets/productos/" + file.filename)) })
-            } */
             return res.render("products/edit", {
                 title: "Editar producto",
                 styles: ["products/edit-mobile"],
