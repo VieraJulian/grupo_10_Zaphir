@@ -23,3 +23,6 @@ Para el próximo sprint esperamos seguir con estas fortalezas ya que sentimos qu
 
 Sprint 6:
 El equipo sigue con esa buena comunicación que mejoramos en el sprint anterior, supimos organizarnos bien con las tares y poder llegar con la entrega.
+
+Sprint 7: 
+En este sprint perdimos un poco la comunicación entre nosotros, si pudimos separar bien las tareas pero no hubo tanta charla entre nosotros, obviamente es algo que podemos mejorar y esperamos que para el próximo sprint nos vaya mejor en ese aspecto. Pudimos llegar a tiempo con la entrega y eso es algo que nos alegra. 

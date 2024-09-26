@@ -34,6 +34,7 @@ label {
     margin-bottom: 10px;
     padding: 10px 12px;
     border-color: 1px solid #909090;
+    outline: none;
 }
 
 .select {
@@ -56,6 +57,7 @@ textarea {
     max-height: 80px;
     width: 100%;
     padding: 10px 12px;
+    outline: none;
 }
 
 .button-editar {
@@ -91,6 +93,69 @@ textarea {
     background-color: #1bd741
 }
 
+.feed {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feed.invalid {
+    display: block;
+    color: red;
+}
+
+.feed.valid {
+    display: block;
+    color: #0d9829
+}
+
+.feedSale {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feedSale.invalid {
+    display: block;
+    color: red;
+}
+
+.feedSale.valid {
+    display: block;
+    color: #0d9829
+}
+
+.feedImage {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feedImage.invalid {
+    display: block;
+    color: red;
+}
+
+.feedImage.valid {
+    display: block;
+    color: #0d9829
+}
+
+.feedCat {
+    margin-top: .7rem;
+    text-align: center;
+    display: none;
+}
+
+.feedCat.invalid {
+    display: block;
+    color: red;
+}
+
+.feedCat.valid {
+    display: block;
+    color: #0d9829
+}
 @media screen and (min-width: 580px) {
     main {
         margin: auto;

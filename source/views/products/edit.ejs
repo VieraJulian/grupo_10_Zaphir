@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs") %>
-
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="/scripts/edit.js"></script>
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
                 <h1>Editar producto</h1>
-                <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" enctype="multipart/form-data">
+                <form action="/productos/editar/<%= product.id %>?m=PUT" method="post" id="form" enctype="multipart/form-data">
                     <fieldset>
                         <label>Nombre del producto</label>
-                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto"
-                            value="<%= product.nombre %>">
+                        <input class="input" type="text" name="nombre" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.nombre : product.nombre %>">
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descripción</label>
-                        <textarea name="descripcion" placeholder="Descripción"><%= product.descripcion %></textarea>
+                        <textarea name="descripcion" placeholder="Descripción"><%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Imagen</label>
                         <input class="imput-imagen" type="file" name="imagen" placeholder="Imagen" multiple>
+                        <p class="feedImage"></p>
                     </fieldset>
                     <fieldset>
                         <label>Categoría</label>
@@ -32,45 +36,38 @@
                                     <% } %>
                                 <% } %>
                         </select>
+                        <p class="feedCat"></p>
                     </fieldset>
                     <fieldset>
                         <label>Colores</label>
-                        <% for( let index=0; index < 5; index++ ) { %>
-                            <% if (product.colors[index] !=null) { %>
-                                <input class="input" type="text" name="color" placeholder="Color <%= index %>"
-                                    value="<%= product.colors[index].color %>">
-                                <% } else { %>
-                                    <input class="input" type="text" name="color" placeholder="Color <%= index %>"
-                                        value="<%= product.colors[index] %>">
-                                    <% } %>
-                                        <% } %>
+                            <% let colores = product.colors.map(element => { %>
+                                <% return element.color %>
+                            <% }) %>
+                            <input class="input" type="text" name="color" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.color : colores %>">
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Talle</label>
-                        <% for( let index=0; index < 5; index++ ) { %>
-                            <% if (product.sizes[index] !=null) { %>
-                                <input class="input" type="text" name="talle" placeholder="Talle <%= index %>"
-                                    value="<%= product.sizes[index].size %>">
-                                <% } else { %>
-                                    <input class="input" type="text" name="talle" placeholder="talle <%= index %>"
-                                        value="<%= product.sizes[index] %>">
-                                    <% } %>
-                                        <% } %>
+                            <% let talles = product.sizes.map(element => { %>
+                                <% return element.size %>
+                            <% }) %>
+                            <input class="input" type="text" name="talle" placeholder="Separar por comas y no dejar espacios" value="<%= locals.oldData ? oldData.talle : talles %>">
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Stock</label>
-                        <input class="input" type="number" name="stock" placeholder="Stock"
-                            value="<%= product.stock %>">
+                        <input class="input" type="number" name="stock" placeholder="Stock" value="<%= locals.oldData ? oldData.stock : product.stock %>">
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Precio</label>
-                        <input class="input" type="number" name="precio" placeholder="Precio"
-                            value="<%= product.precio %>">
+                        <input class="input" type="number" name="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.precio : product.precio %>">
+                        <p class="feed"></p>
                     </fieldset>
                     <fieldset>
                         <label>Descuento</label>
-                        <input class="input" type="number" name="descuento" placeholder="Descuento"
-                            value="<%= product.descuento %>">
+                        <input class="input" type="number" name="descuento" placeholder="Descuento" value="<%= locals.oldData ? oldData.descuento : product.descuento %>">
+                        <p class="feedSale"></p>
                     </fieldset>
                     <button class="button-editar">
                         Editar
